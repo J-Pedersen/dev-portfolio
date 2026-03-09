@@ -31,7 +31,7 @@ const Home = () => {
             transition={{ duration: 0.4 }}
             className="text-xs uppercase tracking-[0.3em] text-brand mb-2"
           >
-            Software Developer · Project Manager
+            Software Developer · Web Designer · Project Manager
           </motion.p>
 
           <motion.h1
@@ -66,9 +66,12 @@ const Home = () => {
             <Link
               to="/projects"
               className="
-                inline-flex items-center rounded-full 
-                bg-brand px-5 py-2 text-sm font-medium text-white 
-                shadow-lg shadow-brand/30 hover:bg-brand-soft transition
+                inline-flex items-center rounded-full
+                border border-slate-300 text-slate-700
+                px-5 py-2 text-sm font-medium
+                hover:bg-brand hover:text-white hover:border-brand-soft
+                dark:border-slate-700 dark:text-slate-200
+                transition
               "
             >
               View Projects
@@ -77,10 +80,10 @@ const Home = () => {
             <Link
               to="/case-studies"
               className="
-                inline-flex items-center rounded-full 
+                inline-flex items-center rounded-full
                 border border-slate-300 text-slate-700
-                px-5 py-2 text-sm font-medium 
-                hover:border-brand-soft hover:text-brand-soft
+                px-5 py-2 text-sm font-medium
+                hover:bg-brand hover:text-white hover:border-brand-soft
                 dark:border-slate-700 dark:text-slate-200
                 transition
               "
