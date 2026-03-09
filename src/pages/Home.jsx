@@ -103,9 +103,18 @@ const Home = () => {
             border border-slate-300 bg-gradient-to-br from-slate-100 to-slate-200
             dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
             p-4
+            flex flex-col
           "
         >
-          <div className="h-full w-full grid grid-cols-3 sm:grid-cols-4 gap-x-2 gap-y-3 place-items-center">
+          {/* Title */}
+          <div className="text-center mb-2">
+            <span className="text-xs font-semibold text-brand tracking-wide">
+              Tech Snapshot
+            </span>
+          </div>
+
+          {/* Icon Grid */}
+          <div className="flex-1 grid grid-cols-3 sm:grid-cols-4 gap-x-2 gap-y-3 place-items-center">
             {snapshotTech.map((tech) => (
               <TechIcon key={tech} tech={tech} />
             ))}
