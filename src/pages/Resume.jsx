@@ -19,11 +19,7 @@ const Resume = () => {
           href={resumeUrl}
           target="_blank"
           rel="noreferrer"
-          className="
-            inline-flex items-center rounded-full
-            bg-brand px-5 py-2 text-sm font-medium text-white
-            shadow-lg shadow-brand/30 hover:bg-brand-soft transition
-          "
+          className="btn-primary"
         >
           Open PDF in new tab
         </a>
@@ -32,13 +28,7 @@ const Resume = () => {
         <a
           href={resumeUrl}
           download
-          className="
-            inline-flex items-center rounded-full px-5 py-2 text-sm font-medium
-            border border-slate-300 text-slate-700
-            hover:border-brand-soft hover:text-brand-soft
-            dark:border-slate-700 dark:text-slate-200
-            transition
-          "
+          className="btn-primary"
         >
           Download resume
         </a>
