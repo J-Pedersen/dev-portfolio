@@ -229,7 +229,7 @@ const ProjectDetail = () => {
                   href={project.videoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-primary"
+                  className="btn-sm-primary"
                 >
                   <Play size={14} />
                   Watch Demo
