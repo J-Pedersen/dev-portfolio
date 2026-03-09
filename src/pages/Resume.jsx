@@ -29,6 +29,7 @@ const Resume = () => {
           href={resumeUrl}
           download
           className="btn-primary"
+          
         >
           Download resume
         </a>
