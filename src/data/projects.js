@@ -8,7 +8,7 @@ export const projects = [
     shortDescription:
       'React-based version of the Little Lemon website with reusable components and routing.',
     role: 'React Developer',
-    techStack: ['React', 'JavaScript'],
+    techStack: ['React', 'Bootstrap', 'JavaScript'],
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/little-lemon-react',
     demoUrl: 'https://j-pedersen.github.io/little-lemon-react/',
@@ -35,7 +35,7 @@ Section Components (header, hero, menu, etc.)
 Presentational components (cards, buttons, etc.)
     `,
 
-    
+
     decisions: [
       'Use functional components and hooks rather than class components.',
       'Break the layout into logical components that mirror the page sections.',
@@ -59,7 +59,7 @@ Presentational components (cards, buttons, etc.)
     shortDescription:
       'A Spring Boot application modeling a book club with server-side Java, templated views, and persistent data.',
     role: 'Full-Stack Developer',
-    techStack: ['Java', 'Spring Boot', 'Thymeleaf', 'MongoDB', 'HTML', 'CSS'],
+    techStack: ['Java', 'Spring Boot', 'CSS', 'MongoDB'],
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/bookclub',
     icon: 'bookclub-icon',
@@ -108,7 +108,7 @@ Persistence (simple backing data source for books)
     shortDescription:
       'A JavaFX desktop application for managing student grades, featuring modular design and CSV persistence.',
     role: 'Java Developer',
-    techStack: ['Java', 'JavaFX', 'CSS', 'CSV'],
+    techStack: ['Java', 'CSS', 'JavaFX' , 'CSV'],
     type: 'featured',
     githubUrl:
       'https://github.com/J-Pedersen/cis-505/tree/main/Module_12/GradeBookApp',
