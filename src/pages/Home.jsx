@@ -65,42 +65,14 @@ const Home = () => {
           <div className="flex flex-wrap gap-3">
             <Link
               to="/projects"
-              className="
-                inline-flex items-center rounded-full
-                border border-slate-300
-                bg-gradient-to-br from-slate-100 to-slate-200
-                text-slate-700
-                px-5 py-2 text-sm font-medium
-                transition
-
-                hover:bg-brand hover:text-white hover:border-brand
-                hover:bg-none
-
-                dark:border-slate-700
-                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
-                dark:text-slate-200
-              "
+              className="btn-primary"
             >
               View Projects
             </Link>
 
             <Link
               to="/case-studies"
-              className="
-                inline-flex items-center rounded-full
-                border border-slate-300
-                bg-gradient-to-br from-slate-100 to-slate-200
-                text-slate-700
-                px-5 py-2 text-sm font-medium
-                transition
-
-                hover:bg-brand hover:text-white hover:border-brand
-                hover:bg-none
-
-                dark:border-slate-700
-                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
-                dark:text-slate-200
-              "
+              className="btn-primary"
             >
               Read Case Studies
             </Link>
