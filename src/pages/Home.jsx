@@ -67,10 +67,14 @@ const Home = () => {
               to="/projects"
               className="
                 inline-flex items-center rounded-full
-                border border-slate-300 text-slate-700
+                border border-slate-300
+                bg-gradient-to-br from-slate-100 to-slate-200
+                text-slate-700
                 px-5 py-2 text-sm font-medium
                 hover:bg-brand hover:text-white hover:border-brand-soft
-                dark:border-slate-700 dark:text-slate-200
+                dark:border-slate-700
+                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
+                dark:text-slate-200
                 transition
               "
             >
@@ -79,12 +83,16 @@ const Home = () => {
 
             <Link
               to="/case-studies"
-              className="
+                className="
                 inline-flex items-center rounded-full
-                border border-slate-300 text-slate-700
+                border border-slate-300
+                bg-gradient-to-br from-slate-100 to-slate-200
+                text-slate-700
                 px-5 py-2 text-sm font-medium
                 hover:bg-brand hover:text-white hover:border-brand-soft
-                dark:border-slate-700 dark:text-slate-200
+                dark:border-slate-700
+                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
+                dark:text-slate-200
                 transition
               "
             >
@@ -141,8 +149,12 @@ const Home = () => {
               to={`/projects/${p.slug}`}
               className="
                 group rounded-2xl p-4 transition
-                border border-slate-300 bg-white hover:border-brand-soft
-                dark:border-slate-800 dark:bg-slate-900/60 dark:hover:bg-slate-900
+                border border-slate-300
+                bg-gradient-to-br from-slate-100 to-slate-200
+                hover:border-brand-soft
+                dark:border-slate-800
+                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
+                dark:hover:bg-slate-900
                 flex flex-col
               "
             >
