@@ -82,7 +82,9 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
     iconFileBase = name.replace(/\.svg$/i, "");
   }
 
-  const src = iconFileBase ? `/icons/${iconFileBase}.svg` : null;
+  const src = iconFileBase
+  ? `${import.meta.env.BASE_URL}icons/${iconFileBase}.svg`
+  : null;
 
   const initials = label
     .split(/\s+/)
