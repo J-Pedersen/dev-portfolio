@@ -215,12 +215,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={status.submitting}
-                className="
-                  inline-flex items-center rounded-full bg-brand px-5 py-2
-                  text-sm font-medium text-white shadow-lg shadow-brand/30
-                  hover:bg-brand-soft transition
-                  disabled:opacity-60 disabled:cursor-not-allowed
-                "
+                className="btn-primary"
               >
                 {status.submitting ? 'Sending...' : 'Send message'}
               </button>

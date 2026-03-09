@@ -229,11 +229,7 @@ const ProjectDetail = () => {
                   href={project.videoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="
-                    inline-flex items-center gap-1 rounded-full px-3 py-1
-                    bg-brand text-white text-[11px] font-medium
-                    hover:bg-brand-soft transition
-                  "
+                  className="btn-primary"
                 >
                   <Play size={14} />
                   Watch Demo
