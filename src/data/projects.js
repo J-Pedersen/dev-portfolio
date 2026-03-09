@@ -14,7 +14,7 @@ export const projects = [
     demoUrl: 'https://j-pedersen.github.io/little-lemon-react/',
     icon: 'little_lemon-icon',
     tags: ['React', 'Bootstrap', 'JavaScript', 'Coursera'],
-    videoUrl: '/videos/little-lemon-react-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-react-demo.mp4`,
 
     longDescription:
       'Little Lemon (React) is a React-based version of the restaurant site that turns the original static layout into a component-driven application. It uses reusable components, props, and routing to structure the UI. This project helped bridge the gap between static pages and modern single-page applications.',
@@ -63,7 +63,7 @@ Presentational components (cards, buttons, etc.)
     githubUrl: 'https://github.com/J-Pedersen/bookclub',
     icon: 'bookclub-icon',
     tags: ['Java', 'Spring Boot', 'Server-Side'],
-    videoUrl: '/videos/bookclub-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/bookclub-demo.mp4`,
 
     longDescription:
       'Book Club is a Spring Boot application that models the core flows of a book club: displaying books, managing lists, and working with server-rendered views. It uses Spring MVC controllers with Thymeleaf templates to deliver HTML pages backed by Java models and persistent data. This project gave me a chance to practice structuring a full-stack Java application rather than a single script or stand-alone assignment.',
@@ -113,7 +113,7 @@ Persistence (simple backing data source for books)
       'https://github.com/J-Pedersen/cis-505/tree/main/Module_12/GradeBookApp',
     icon: 'gradebook-icon',
     tags: ['Java', 'JavaFX', 'CSS', 'CSV'],
-    videoUrl: '/videos/grade-book-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/grade-book-demo.mp4`,
 
     longDescription:
       'Grade Book App is a JavaFX desktop application that collects and displays student grade data. It started as a single-file UI project and grew into an exercise in separation of concerns, event handling, file storage, and UI refinement. The app persists entries to CSV and presents them in a table so the user can see the full dataset at a glance.',
@@ -162,7 +162,7 @@ CSV File Storage
     githubUrl: 'https://github.com/J-Pedersen/moffat-bay-marina-java',
     icon: 'moffat_bay_marina-icon',
     tags: ['Java', 'Jakarta EE', 'CSS', 'Server-Side'],
-    videoUrl: '/videos/moffat-bay-marina-java-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/moffat-bay-marina-java-demo.mp4`,
 
     longDescription:
       'Moffat Bay Marina (Java) is a console-based Java group project that models a marina’s business logic: boat rentals, customer information, and scheduling. The project emphasizes object-oriented design, basic data structures, and control flow rather than UI. It serves as a good example of how I approach requirements-driven business logic in a pure Java environment.',
@@ -209,7 +209,7 @@ In-Memory Collections (lists/maps)
     demoUrl: 'https://j-pedersen.github.io/little-lemon-html/',
     icon: 'little_lemon-icon',
     tags: ['HTML', 'CSS', 'JavaScript', 'Coursera'],
-    videoUrl: '/videos/little-lemon-html-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-html-demo.mp4`,
 
     longDescription:
       'Little Lemon (HTML/CSS/JavaScript) is a responsive restaurant website built using semantic HTML, modern CSS, and a bit of JavaScript. It focuses on layout, accessibility basics, and content structure without the overhead of a framework. It’s a good snapshot of my early front-end work using the core building blocks of the web.',
@@ -498,7 +498,7 @@ Basic data handling and navigation flows
       'https://github.com/J-Pedersen/diy-computer-assembly-html-tabbed',
     icon: 'circuit-icon',
     tags: ['HTML', 'CSS'],
-    videoUrl: '/videos/diy-pc-building-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/diy-pc-building-demo.mp4`,
 
     longDescription:
       'DIY Computer Assembly is a multi-page HTML/CSS site that walks through the steps of building a PC. It uses simple navigation and content sections to break the process into understandable pieces. This project reflects my ability to take a technical topic and present it clearly using core web technologies.',
@@ -590,7 +590,7 @@ HTML Output + CSS Styling
     githubUrl: 'https://github.com/J-Pedersen/my-bio-html-responsive',
     icon: 'biography-icon',
     tags: ['HTML', 'CSS'],
-    videoUrl: '/videos/my-bio-responsive-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/my-bio-responsive-demo.mp4`,
 
     longDescription:
       'My Bio is a simple responsive HTML/CSS page that introduces who I am and what I do. It focuses on clean layout, typography, and basic responsiveness without any framework overhead.',
@@ -636,7 +636,7 @@ Responsive behavior via simple media queries
     githubUrl: 'https://github.com/J-Pedersen/bioSite',
     icon: 'biography-icon',
     tags: ['HTML', 'CSS'],
-    videoUrl: '/videos/terri-bio-responsive-demo.mp4',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/terri-bio-responsive-demo.mp4`,
 
     longDescription:
       'bioSite is a multi-page biography site built as part of CSD 340 coursework. It uses static HTML and CSS to tell the story of a selected person, with an emphasis on structure, consistent styling, and navigation.',
