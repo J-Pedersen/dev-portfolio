@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 8.8230791 8.8230791"
+   width="128"
+   height="128"
+   version="1.1"
+   id="svg10"
+   sodipodi:docname="kotlin-icon.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.4359902"
+     inkscape:cx="65.825213"
+     inkscape:cy="62.331066"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg10" />
+  <defs
+     id="defs8">
+    <linearGradient
+       id="A"
+       x1="2.039"
+       y1="11.659"
+       x2="9.9499998"
+       y2="3.7479999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset=".108"
+         stop-color="#c757bc"
+         id="stop1" />
+      <stop
+         offset=".173"
+         stop-color="#cd5ca9"
+         id="stop2" />
+      <stop
+         offset=".492"
+         stop-color="#e8744f"
+         id="stop3" />
+      <stop
+         offset=".716"
+         stop-color="#f88316"
+         id="stop4" />
+      <stop
+         offset=".823"
+         stop-color="#ff8900"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="B"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset=".296"
+         stop-color="#00afff"
+         id="stop6" />
+      <stop
+         offset=".694"
+         stop-color="#5282ff"
+         id="stop7" />
+      <stop
+         offset="1"
+         stop-color="#945dff"
+         id="stop8" />
+    </linearGradient>
+    <linearGradient
+       id="C"
+       x1="3.369"
+       y1="6.1890001"
+       x2="6.073"
+       y2="3.484"
+       xlink:href="#B" />
+    <linearGradient
+       xlink:href="#B"
+       id="D"
+       x1="6.184"
+       y1="13.878"
+       x2="10.04"
+       y2="10.022" />
+  </defs>
+  <g
+     transform="matrix(1.016327,0,0,1.016327,-3.4184879,-3.8003509)"
+     id="g10">
+    <path
+       d="M 7.74,3.843 3.47,8.33 v 4.013 l 4.262,-4.27 4.24,-4.232 z"
+       fill="url(#A)"
+       id="path8"
+       style="fill:url(#A)" />
+    <path
+       d="m 3.47,12.344 4.262,-4.27 4.24,4.27 z"
+       fill="url(#D)"
+       id="path9"
+       style="fill:url(#D)" />
+    <path
+       d="M 3.47,3.843 H 7.74 L 3.47,8.33 Z"
+       fill="url(#C)"
+       id="path10"
+       style="fill:url(#C)" />
+  </g>
+</svg>

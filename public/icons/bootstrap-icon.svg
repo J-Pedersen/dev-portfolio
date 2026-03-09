@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="bootstrap-icon.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.5064027"
+     inkscape:cx="43.937484"
+     inkscape:cy="55.809481"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <path
+     id="path1"
+     style="display:inline;fill:#7952b3;fill-opacity:1"
+     d="m 27.34568,14.928402 c -7.177,0 -12.487,6.284609 -12.25,13.09961 0.227,6.546 -0.06813,15.025453 -2.203125,21.939453 -2.14,6.936 -5.7588745,11.319812 -11.6718745,11.882812 v 6.386719 c 5.913,0.564 9.5318745,4.947813 11.6718745,11.882813 2.135,6.914 2.431125,15.395406 2.203125,21.941411 -0.237,6.814 5.073,13.09765 12.25,13.09765 h 73.53906 c 7.177,0 12.487,-6.28265 12.25,-13.09765 -0.228,-6.546005 0.0672,-15.027411 2.20117,-21.941411 2.141,-6.936 5.75106,-11.319813 11.66406,-11.882813 v -6.386719 c -5.913,-0.564 -9.52306,-4.946812 -11.66406,-11.882812 -2.134,-6.914 -2.42917,-15.393453 -2.20117,-21.939453 0.237,-6.815001 -5.073,-13.09961 -12.25,-13.09961 z m 17.960937,23.814453 h 21.800782 c 9.689,0 16.046875,5.245828 16.046875,13.298828 0,5.653 -4.276563,10.715563 -9.726563,11.601563 v 0.294922 c 7.418,0.813 12.414063,5.948015 12.414063,13.041015 0,9.383001 -7.002094,15.072266 -18.621094,15.072266 H 45.306617 Z m 8.478516,6.761719 v 15.921875 h 9.5 c 7.342,0 11.392578,-2.956281 11.392578,-8.238281 0,-4.951 -3.483281,-7.683594 -9.613281,-7.683594 z m 0,22.238281 v 17.548828 h 11.695313 c 7.645,0 11.693359,-3.067078 11.693359,-8.830078 0,-5.763 -4.162547,-8.71875 -12.185547,-8.71875 z" />
+  <defs
+     id="defs9">
+    <linearGradient
+       id="SVGrtNhteup"
+       x1="19.799999"
+       x2="129.70799"
+       y1="4.704"
+       y2="91.949997"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#9013FE"
+         id="stop4" />
+      <stop
+         offset="1"
+         stop-color="#6610F2"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="SVG4suLEe2b"
+       x1="49.032001"
+       x2="73.598"
+       y1="29.374001"
+       y2="70.921997"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#fff"
+         id="stop6" />
+      <stop
+         offset="1"
+         stop-color="#F1E5FC"
+         id="stop7" />
+    </linearGradient>
+    <filter
+       id="SVGK1NZcOOU"
+       width="48.640999"
+       height="61.415001"
+       x="41.143002"
+       y="22.795"
+       color-interpolation-filters="sRGB"
+       filterUnits="userSpaceOnUse">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix"
+         id="feFlood7" />
+      <feColorMatrix
+         in="SourceAlpha"
+         result="hardAlpha"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+         id="feColorMatrix7" />
+      <feOffset
+         dy=".983"
+         id="feOffset7" />
+      <feGaussianBlur
+         stdDeviation="1.965"
+         id="feGaussianBlur7" />
+      <feColorMatrix
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+         id="feColorMatrix8" />
+      <feBlend
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_2_2"
+         id="feBlend8"
+         mode="normal" />
+      <feBlend
+         in="SourceGraphic"
+         in2="effect1_dropShadow_2_2"
+         result="shape"
+         id="feBlend9"
+         mode="normal" />
+    </filter>
+  </defs>
+</svg>
