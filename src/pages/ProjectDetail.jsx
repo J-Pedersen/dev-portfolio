@@ -196,8 +196,7 @@ const ProjectDetail = () => {
 
           {/* LINKS */}
           <div className="space-y-2 text-center w-full">
-            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300 mb-2">
-              <BrandIcon name="github" size={14} />
+            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
               <h3 className="text-sm font-semibold">Links</h3>
             </div>
 
@@ -208,6 +207,7 @@ const ProjectDetail = () => {
                 rel="noreferrer"
                 className="block text-brand hover:text-brand-soft transition"
               >
+                <BrandIcon name="github" size={14} />
                 GitHub →
               </a>
             )}
