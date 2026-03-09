@@ -117,6 +117,7 @@ const Home = () => {
             Featured work
           </h2>
 
+
           <Link
             to="/projects"
             className="text-xs text-brand-700 hover:text-brand-900 dark:text-brand dark:hover:text-brand-soft"
