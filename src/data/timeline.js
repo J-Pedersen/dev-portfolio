@@ -236,4 +236,28 @@ export const timelineItems = [
     description:
       "Built REST APIs, learned JPA, Spring Security, and Spring Boot architecture.",
   },
+    {
+    title: "Android Capstone",
+    period: "Early 2026",
+    description:
+      "Built a full-stack Android app, and learned Android Studio",
+  },
+    {
+    title: "Software Testing",
+    period: "Early 2026",
+    description:
+      "Built Full Test Plans, learned Testing Techniques, and Studied for ISTQB Certification.",
+  },
+  {
+    title: "Master's Degree Completed",
+    period: "Early 2026",
+    description:
+      "Graduated with a Master's Degree in Computer Information Technology in March 2026.",
+  },
+  {
+    title: "Basic Portfolio React Website Completed?",
+    period: "Early 2026",
+    description:
+      "I built this portfolio website using React, Tailwind CSS, and Vite. It’s a work in progress but it probably will always be since I am constantly learning new things to add.",
+  },
 ];

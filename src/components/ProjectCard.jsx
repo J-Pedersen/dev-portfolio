@@ -18,7 +18,7 @@ const ProjectCard = ({ project }) => (
           <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-900">
             <TechIcon
               name={project.icon}
-              hideLabel={true}   // 🔥 hides label only here
+              hideLabel={true}   // hides label only here
               className="h-4 w-4 group-hover:scale-110 transition-transform"
             />
           </span>
