@@ -1,9 +1,25 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects.js';
+import TechIcon from '../components/TechIcon.jsx';
 
 const Home = () => {
   const featured = projects.filter((p) => p.type === 'featured').slice(0, 3);
+
+  const snapshotTech = [
+    'Java',
+    'Spring Boot',
+    'React',
+    'MongoDB',
+    'SQL',
+    'Git',
+    'Docker',
+    'AWS',
+    'JavaScript',
+    'TypeScript',
+    'MySQL',
+    'GitHub',
+  ];
 
   return (
     <div className="space-y-10">
@@ -74,7 +90,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Snapshot / Orbit Graphic */}
+        {/* Tech Snapshot Grid */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -83,30 +99,13 @@ const Home = () => {
             relative h-48 sm:h-64 md:h-72 rounded-3xl overflow-hidden
             border border-slate-300 bg-gradient-to-br from-slate-100 to-slate-200
             dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
+            p-4
           "
         >
-          <div className="absolute inset-0">
-            <motion.div
-              className="h-6 w-6 rounded-full bg-brand/80 blur-[1px]"
-              animate={{
-                x: ['0%', '80%', '10%', '60%', '0%'],
-                y: ['10%', '60%', '20%', '80%', '10%'],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 10,
-                ease: 'easeInOut',
-              }}
-            />
-          </div>
-
-          <div className="relative z-10 p-4 text-xs text-slate-700 dark:text-slate-300 flex flex-col gap-1">
-            <span className="text-[11px] font-semibold text-brand">
-              Tech Snapshot
-            </span>
-            <span>Java · Spring Boot · React · MongoDB · SQL</span>
-            <span>Project Management · WBS · Risk · Network Diagrams</span>
-            <span>Deployments · CI/CD · Git</span>
+          <div className="h-full w-full grid grid-cols-3 sm:grid-cols-4 gap-x-2 gap-y-3 place-items-center">
+            {snapshotTech.map((tech) => (
+              <TechIcon key={tech} tech={tech} />
+            ))}
           </div>
         </motion.div>
       </section>
@@ -137,11 +136,13 @@ const Home = () => {
                 dark:border-slate-800 dark:bg-slate-900/60 dark:hover:bg-slate-900
               "
             >
-              <h3 className="
-                text-sm font-semibold 
-                text-slate-900 dark:text-slate-50 
-                group-hover:text-brand-soft mb-1
-              ">
+              <h3
+                className="
+                  text-sm font-semibold 
+                  text-slate-900 dark:text-slate-50 
+                  group-hover:text-brand-soft mb-1
+                "
+              >
                 {p.title}
               </h3>
 
