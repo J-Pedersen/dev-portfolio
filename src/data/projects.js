@@ -28,7 +28,7 @@ export const projects = [
     architecture: `
 React App
 ↓
-Routing (if used) / top-level layout
+Routing / top-level layout
 ↓
 Section Components (header, hero, menu, etc.)
 ↓
