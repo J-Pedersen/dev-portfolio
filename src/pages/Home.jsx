@@ -102,13 +102,12 @@ const Home = () => {
             relative h-48 sm:h-64 md:h-72 rounded-3xl overflow-hidden
             border border-slate-300 bg-gradient-to-br from-slate-100 to-slate-200
             dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
-            p-4
-            flex flex-col
+            p-4 flex flex-col
           "
         >
           {/* Title */}
-          <div className="text-center mb-2">
-            <span className="text-xs font-semibold text-brand tracking-wide">
+          <div className="text-center border-b border-slate-300 dark:border-slate-800 pb-2 mb-3">
+            <span className="text-sm font-semibold text-slate-900 dark:text-white tracking-wide">
               Tech Snapshot
             </span>
           </div>
