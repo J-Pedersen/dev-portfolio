@@ -35,6 +35,7 @@ Section Components (header, hero, menu, etc.)
 Presentational components (cards, buttons, etc.)
     `,
 
+    
     decisions: [
       'Use functional components and hooks rather than class components.',
       'Break the layout into logical components that mirror the page sections.',
