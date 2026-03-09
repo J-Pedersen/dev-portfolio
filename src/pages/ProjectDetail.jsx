@@ -235,6 +235,7 @@ const ProjectDetail = () => {
                   Watch Demo
                 </a>
               </div>
+              
             )}
           </div>
 
