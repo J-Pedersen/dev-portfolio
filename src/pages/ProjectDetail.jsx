@@ -207,7 +207,6 @@ const ProjectDetail = () => {
                 rel="noreferrer"
                 className="block text-brand hover:text-brand-soft transition"
               >
-                <BrandIcon name="github" size={14} />
                 GitHub →
               </a>
             )}
