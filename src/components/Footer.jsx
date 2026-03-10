@@ -2,7 +2,7 @@ const Footer = () => (
   <footer
     className="
       border-t mt-8 
-      border-slate-300 text-slate-600 bg-white
+      border-slate-300 text-slate-600 bg-slate-100
       dark:border-slate-800 dark:text-slate-400 dark:bg-slate-950
     "
   >
