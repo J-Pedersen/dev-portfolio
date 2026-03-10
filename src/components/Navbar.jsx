@@ -22,7 +22,7 @@ const Navbar = () => (
     className="
       sticky top-0 z-20 backdrop-blur
       bg-slate-100/80 text-slate-900
-      dark:bg-slate-950/80 dark:text-slate-100
+      dark:bg-slate-750/80 dark:text-slate-100
       border-b border-slate-200 dark:border-slate-800
       transition-colors
     "

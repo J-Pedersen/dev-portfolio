@@ -3,7 +3,7 @@ const Footer = () => (
     className="
       border-t mt-8 
       border-slate-300 text-slate-600 bg-slate-100
-      dark:border-slate-800 dark:text-slate-400 dark:bg-slate-950
+      dark:border-slate-800 dark:text-slate-400 dark:bg-slate-750
     "
   >
     <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16 py-4 
