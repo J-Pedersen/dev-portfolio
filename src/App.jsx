@@ -1,5 +1,7 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import Layout from './components/Layout.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 import Home from './pages/Home.jsx';
 import Projects from './pages/Projects.jsx';
@@ -16,6 +18,8 @@ import Playground from './pages/Playground.jsx';
 import Gallery from "./pages/Gallery.jsx";
 
 function App() {
+  const location = useLocation();
+
   return (
     <div
       className="
@@ -26,22 +30,35 @@ function App() {
       "
     >
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/case-studies/bookclub" element={<CaseStudyBookClub />} />
-          <Route path="/case-studies/gradebook" element={<CaseStudyGradeBook />} />
-          <Route path="/case-studies/careware" element={<CaseStudyCareWare />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/playground" element={<Playground />} />
-          <Route path="/gallery" element={<Gallery />} />
-          {/* Blog route will be added later */}
-        </Routes>
+        <ScrollToTop />
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.35, 
+                          ease: "easeOut" }}
+          >
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/case-studies/bookclub" element={<CaseStudyBookClub />} />
+              <Route path="/case-studies/gradebook" element={<CaseStudyGradeBook />} />
+              <Route path="/case-studies/careware" element={<CaseStudyCareWare />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/playground" element={<Playground />} />
+              <Route path="/gallery" element={<Gallery />} />
+            </Routes>
+          </motion.div>
+        </AnimatePresence>
+
       </Layout>
     </div>
   );
