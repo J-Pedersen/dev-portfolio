@@ -103,7 +103,7 @@ const Contact = () => {
         <div
           className="
             rounded-2xl p-4
-            border border-slate-300 bg-white
+            border border-slate-300 bg-slate-100
             dark:border-slate-800 dark:bg-slate-900/60
           "
         >
@@ -230,7 +230,7 @@ const Contact = () => {
         <aside
           className="
             space-y-4 p-4 rounded-2xl text-sm
-            border border-slate-300 bg-white text-slate-700
+            border border-slate-300 bg-slate-100 text-slate-700
             dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-300
           "
         >

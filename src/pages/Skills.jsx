@@ -124,7 +124,7 @@ const Skills = () => {
               key={category}
               className="
                 rounded-2xl p-4
-                border border-slate-300 bg-white
+                border border-slate-300 bg-slate-100
                 dark:border-slate-800 dark:bg-slate-900/60
               "
             >
