@@ -93,7 +93,7 @@ const Timeline = ({ items, mobile = false }) => {
             {/* YEAR HEADER */}
             <div
               className={`
-                px-3 py-2 font-semibold text-slate-900 dark:text-slate-100
+                px-3 py-2 font-semibold text-slate-900 dark:text-slate-100 z-20
                 ${mobile
                   ? "border-b border-slate-300 dark:border-slate-700 bg-slate-300/90 dark:bg-slate-900/90 backdrop-blur shadow-sm"
                   : "sticky top-0 bg-slate-300/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-300/70 dark:border-slate-700/70 rounded-md shadow-sm"
@@ -120,12 +120,12 @@ const Timeline = ({ items, mobile = false }) => {
                   }}
                   viewport={{ once: false, margin: "-20% 0px -20% 0px" }}
                   transition={{ duration: 0.45, ease: "easeOut" }}
-                  className={`relative space-y-2 transition-opacity duration-300 ${
+                  className={`relative space-y-2 z-5 transition-opacity duration-300 ${
                     isInView ? "opacity-100" : "opacity-70"
                   }`}
                 >
                   {/* TITLE PILL */}
-                  <motion.div className="w-full flex justify-center">
+                  <motion.div className="w-full flex justify-center z-10">
                     <motion.span
                       className="
                         inline-block
