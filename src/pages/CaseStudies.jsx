@@ -103,7 +103,7 @@ const CaseStudies = () => {
                 to={`/case-studies/${caseStudy.slug}`}
                 className="
                   group rounded-2xl 
-                  border border-slate-300 bg-white
+                  border border-slate-300 bg-slate-100
                   dark:border-slate-800 dark:bg-slate-900/60
                   p-4 transition hover:border-brand-soft flex flex-col gap-3
                 "
