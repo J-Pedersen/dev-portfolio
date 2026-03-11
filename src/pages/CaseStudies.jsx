@@ -1,9 +1,9 @@
 import PageHeader from "../components/PageHeader.jsx";
 import { caseStudies } from "../data/caseStudies.js";
 import { Link } from "react-router-dom";
+import TechIcon from "../components/TechIcon.jsx";
 
 const CaseStudies = () => {
-  // Optional grouping by type
   const technical = caseStudies.filter((c) => c.category === "technical");
   const pm = caseStudies.filter((c) => c.category === "pm");
 
@@ -19,7 +19,6 @@ const CaseStudies = () => {
         that shaped each solution.
       </PageHeader>
 
-      {/* ----- Technical case studies ----- */}
       {technical.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
@@ -32,18 +31,20 @@ const CaseStudies = () => {
                 key={caseStudy.slug}
                 to={`/case-studies/${caseStudy.slug}`}
                 className="
-                  group rounded-2xl 
+                  group rounded-2xl
                   border border-slate-300 bg-slate-100
                   dark:border-slate-800 dark:bg-slate-900/60
                   p-4 transition hover:border-brand-soft flex flex-col gap-3
                 "
               >
-                <div className="flex items-center justify-between">
-                  <h3 className="
-                    text-lg font-semibold 
-                    text-slate-900 group-hover:text-brand-soft
-                    dark:text-slate-50
-                  ">
+                <div className="flex items-center justify-between gap-2">
+                  <h3
+                    className="
+                      text-lg font-semibold
+                      text-slate-900 group-hover:text-brand-soft
+                      dark:text-slate-50
+                    "
+                  >
                     {caseStudy.title}
                   </h3>
 
@@ -62,20 +63,10 @@ const CaseStudies = () => {
                   {caseStudy.summary}
                 </p>
 
-                {/* Tags */}
                 {caseStudy.techStack && (
-                  <div className="flex flex-wrap gap-1 mt-auto">
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {caseStudy.techStack.map((t) => (
-                      <span
-                        key={t}
-                        className="
-                          text-[11px] rounded-full px-2 py-0.5
-                          border border-slate-300 text-slate-600
-                          dark:border-slate-700 dark:text-slate-400
-                        "
-                      >
-                        {t}
-                      </span>
+                      <TechIcon key={t} tech={t} />
                     ))}
                   </div>
                 )}
@@ -89,7 +80,6 @@ const CaseStudies = () => {
         </section>
       )}
 
-      {/* ----- Project Management case studies ----- */}
       {pm.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
@@ -102,18 +92,20 @@ const CaseStudies = () => {
                 key={caseStudy.slug}
                 to={`/case-studies/${caseStudy.slug}`}
                 className="
-                  group rounded-2xl 
+                  group rounded-2xl
                   border border-slate-300 bg-slate-100
                   dark:border-slate-800 dark:bg-slate-900/60
                   p-4 transition hover:border-brand-soft flex flex-col gap-3
                 "
               >
-                <div className="flex items-center justify-between">
-                  <h3 className="
-                    text-lg font-semibold 
-                    text-slate-900 group-hover:text-brand-soft
-                    dark:text-slate-50
-                  ">
+                <div className="flex items-center justify-between gap-2">
+                  <h3
+                    className="
+                      text-lg font-semibold
+                      text-slate-900 group-hover:text-brand-soft
+                      dark:text-slate-50
+                    "
+                  >
                     {caseStudy.title}
                   </h3>
 
@@ -133,18 +125,9 @@ const CaseStudies = () => {
                 </p>
 
                 {caseStudy.techStack && (
-                  <div className="flex flex-wrap gap-1 mt-auto">
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {caseStudy.techStack.map((t) => (
-                      <span
-                        key={t}
-                        className="
-                          text-[11px] rounded-full px-2 py-0.5
-                          border border-slate-300 text-slate-600
-                          dark:border-slate-700 dark:text-slate-400
-                        "
-                      >
-                        {t}
-                      </span>
+                      <TechIcon key={t} tech={t} />
                     ))}
                   </div>
                 )}
