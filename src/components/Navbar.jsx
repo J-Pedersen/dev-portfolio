@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import ThemeToggle from "./ThemeToggle.jsx";
 
 const navLinkClasses = ({ isActive }) =>
@@ -151,52 +152,62 @@ const Navbar = () => {
         </nav>
       </header>
 
-      {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-40">
-          {/* Backdrop */}
-          <button
-            type="button"
-            aria-label="Close menu"
-            onClick={closeMobileMenu}
-            className="absolute inset-0 w-full h-full bg-slate-950/40 backdrop-blur-sm"
-          />
+      <AnimatePresence>
+        {mobileOpen && (
+          <div className="md:hidden fixed inset-0 z-40">
+            {/* Backdrop */}
+            <motion.button
+              type="button"
+              aria-label="Close menu"
+              onClick={closeMobileMenu}
+              className="absolute inset-0 w-full h-full bg-slate-950/40 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            />
 
-          {/* Overlay panel */}
-          <div
-            className="
-              absolute top-16 left-4 right-4
-              rounded-2xl border border-slate-300 bg-slate-100/95 p-4 shadow-xl
-              dark:border-slate-800 dark:bg-slate-900/95
-            "
-          >
-            <div className="flex flex-col gap-2">
-              <NavLink to="/projects" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
-                Projects
-              </NavLink>
+            {/* Overlay panel */}
+            <motion.div
+              initial={{ opacity: 0, y: -12, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -8, scale: 0.98 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+              className="
+                absolute top-16 left-4 right-4
+                rounded-2xl border border-slate-300 bg-slate-100/95 p-4 shadow-xl
+                dark:border-slate-800 dark:bg-slate-900/95
+              "
+            >
+              <div className="flex flex-col gap-2">
+                <NavLink to="/projects" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
+                  Projects
+                </NavLink>
 
-              <NavLink to="/case-studies" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
-                Case Studies
-              </NavLink>
+                <NavLink to="/case-studies" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
+                  Case Studies
+                </NavLink>
 
-              <NavLink to="/about" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
-                About
-              </NavLink>
+                <NavLink to="/about" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
+                  About
+                </NavLink>
 
-              <NavLink to="/skills" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
-                Skills
-              </NavLink>
+                <NavLink to="/skills" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
+                  Skills
+                </NavLink>
 
-              <NavLink to="/resume" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
-                Resume
-              </NavLink>
+                <NavLink to="/resume" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
+                  Resume
+                </NavLink>
 
-              <NavLink to="/contact" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
-                Contact
-              </NavLink>
-            </div>
+                <NavLink to="/contact" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
+                  Contact
+                </NavLink>
+              </div>
+            </motion.div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
     </>
   );
 };
