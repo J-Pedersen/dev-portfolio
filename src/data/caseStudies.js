@@ -14,8 +14,8 @@ export const caseStudies = [
       "Spring Boot",
       "MongoDB",
       "Thymeleaf",
-      "REST",
-      "JSONPath",
+      "RESTful APIs",
+      "JSON",
     ],
   },
 
