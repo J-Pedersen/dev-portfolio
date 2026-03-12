@@ -122,9 +122,9 @@ const Navbar = () => {
                 aria-expanded={mobileOpen}
                 className="
                   inline-flex h-10 w-10 items-center justify-center rounded-xl
-                  border border-slate-300 bg-slate-100 text-slate-700
+                  border border-brand-soft bg-slate-100 text-slate-700
                   hover:bg-slate-200
-                  dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800
+                  dark:border-brand-soft dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800
                   transition-colors
                 "
               >
