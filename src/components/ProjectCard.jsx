@@ -7,9 +7,9 @@ const ProjectCard = ({ project }) => (
     to={`/projects/${project.slug}`}
     className="
       group rounded-2xl p-4 flex flex-col gap-3 transition
-      border border-brand-800 bg-slate-100 hover:bg-slate-50 hover:border-brand-soft
+      border border-indigo-800 bg-slate-100 hover:bg-slate-50 hover:border-brand-soft
       dark:border-slate-800 dark:bg-slate-900/60 dark:hover:bg-slate-900
-      border border-slate-300 dark:border-slate-800 hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+      border border-slate-300 dark:border-indigo-800 hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
     "
   >
     {/* Title row */}
