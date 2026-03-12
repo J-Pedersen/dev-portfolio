@@ -33,12 +33,12 @@ const ThemeToggle = () => {
         transition-colors duration-200
 
         /* Light mode */
-        bg-white border border-slate-300 text-slate-700 
-        hover:border-brand-soft hover:text-brand
+        bg-white border border-brand-soft text-slate-700 
+        hover:border-slate-300 hover:text-brand
 
         /* Dark mode */
-        dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200 
-        dark:hover:border-brand-soft dark:hover:text-brand-soft
+        dark:bg-slate-900 dark:border-brand-soft dark:text-slate-200 
+        dark:hover:border-slate-700 dark:hover:text-brand-soft
       "
     >
       <span className="transition-transform duration-300">
