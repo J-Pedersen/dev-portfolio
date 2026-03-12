@@ -2,8 +2,14 @@ const Footer = () => (
   <footer
     className="
       border-t mt-8 
-      border-slate-300 text-slate-600 bg-slate-100
-      dark:border-slate-800 dark:text-slate-400 dark:bg-slate-900
+    bg-slate-100/80 
+    text-slate-900
+    dark:text-slate-100
+      transition-colors
+    border-brand-soft 
+    bg-slate-100 
+    dark:bg-slate-900/60 
+    dark:border-brand-soft
     "
   >
     <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16 py-4 
