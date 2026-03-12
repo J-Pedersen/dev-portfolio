@@ -62,10 +62,15 @@ const Navbar = () => {
       <header
         className="
           sticky top-0 z-30 backdrop-blur
-          bg-slate-100/80 text-slate-900
-          dark:bg-slate-900/80 dark:text-slate-100
-          border-b border-slate-200 dark:border-slate-800
+          border-b
+          bg-slate-100/80 
+          text-slate-900
+          dark:text-slate-100
           transition-colors
+          border-brand-soft 
+          bg-slate-100 
+          dark:bg-slate-900/60 
+          dark:border-brand-soft
         "
       >
         <nav className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16 py-3">
