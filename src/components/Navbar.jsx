@@ -24,12 +24,10 @@ const navLinkClasses = ({ isActive }) =>
         : `
           group rounded-2xl p-4 flex flex-col gap-3 transition
           hover:bg-slate-50 
-          border:transparent
-          hover:border
+          border border-transparent
           hover:border-brand-soft 
           hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
           dark:hover:bg-slate-950
-          dark:hover:border-brand-soft
         `
     }
   `;
