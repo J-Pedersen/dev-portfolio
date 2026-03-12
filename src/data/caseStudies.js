@@ -38,7 +38,7 @@ export const caseStudies = [
     categoryLabel: "Project Management",
     title: "CAREWare Support Software: PMBOK-Aligned Project Deliverables",
     summary:
-      "A complete suite of project management deliverables for a CAREWare-style support system modernization effort. Includes the project charter, WBS, WBS dictionary, network diagrams, risk register, RFP, and quality management plan for a multi-phase implementation from Oct 2025 to Jun 2026.",
+      "A complete suite of project management deliverables for a CAREWare-style support system modernization effort. Includes the project charter, WBS, WBS dictionary, network diagrams, risk register, RFP, and quality management plan for a multi-phase implementation.",
     techStack: [
       "PMBOK",
       "WBS & WBS Dictionary",
