@@ -32,13 +32,11 @@ const ThemeToggle = () => {
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full 
         transition-colors duration-200
 
-        /* Light mode */
-        bg-white border border-brand-soft text-slate-700 
-        hover:border-slate-300 hover:text-brand
-
-        /* Dark mode */
-        dark:bg-slate-900 dark:border-brand-soft dark:text-slate-200 
-        dark:hover:border-slate-700 dark:hover:text-brand-soft
+          hover:bg-slate-50 
+          border border-transparent
+          hover:border-brand-soft 
+          hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+          dark:hover:bg-slate-950
       "
     >
       <span className="transition-transform duration-300">
