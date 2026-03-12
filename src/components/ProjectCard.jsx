@@ -8,14 +8,14 @@ const ProjectCard = ({ project }) => (
     className="
       group rounded-2xl p-4 flex flex-col gap-3 transition
       border-2 
-      border-slate-900 
+      border-brand-soft 
       bg-slate-100 
       hover:bg-slate-50 
-      hover:border-brand-soft
+      hover:border-slate-950 
       hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
       dark:bg-slate-900/60 
       dark:hover:bg-slate-950 
-      dark:border-slate-900 
+      dark:border-brand-soft 
     "
   >
     {/* Title row */}
