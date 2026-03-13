@@ -38,9 +38,16 @@ const Resume = () => {
       {/* Viewer container */}
       <div
         className="
-          rounded-2xl p-4
-          border border-slate-300 bg-white
-          dark:border-slate-800 dark:bg-slate-900/60
+        border
+        border-brand-soft 
+        bg-slate-100 
+        hover:bg-slate-50 
+        hover:border-brand 
+        hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+        dark:bg-slate-900/60 
+        dark:hover:bg-slate-950
+        dark:hover:border-brand
+        dark:border-brand-soft 
         "
       >
         <p className="text-xs text-slate-600 dark:text-slate-400 mb-2">
