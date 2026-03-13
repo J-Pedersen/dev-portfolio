@@ -19,7 +19,7 @@ const Footer = () => (
       </span>
 
       <span className="text-slate-500 dark:text-slate-500">
-        Built with React & Tailwind · Portfolio
+        Built with React & Tailwind
       </span>
     </div>
   </footer>
