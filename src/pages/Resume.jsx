@@ -1,7 +1,7 @@
 import PageHeader from '../components/PageHeader.jsx';
 
 const Resume = () => {
-  const resumeUrl = `${import.meta.env.BASE_URL}/pdfs/Jeff-Pedersen-Resume.pdf`;
+  const resumeUrl = `${import.meta.env.BASE_URL}/pdfs/Jeff-Pedersen-Resume.pdf`; /* updated March 2026 */
 
   return (
     <div className="space-y-6">
