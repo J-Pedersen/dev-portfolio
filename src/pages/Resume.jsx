@@ -1,7 +1,7 @@
 import PageHeader from '../components/PageHeader.jsx';
 
 const Resume = () => {
-  const resumeUrl = `${import.meta.env.BASE_URL}/Jeff-Pedersen-Resume.pdf`;
+  const resumeUrl = `${import.meta.env.BASE_URL}/pdfs/Jeff-Pedersen-Resume.pdf`;
 
   return (
     <div className="space-y-6">
@@ -29,7 +29,7 @@ const Resume = () => {
           href={resumeUrl}
           download
           className="btn-primary"
-          
+
         >
           Download resume
         </a>
