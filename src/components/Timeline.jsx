@@ -58,21 +58,6 @@ const Timeline = ({ items, mobile = false }) => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    return smoothVelocity.on("change", (v) => {
-      if (v > 1) setDirection("down");
-      else if (v < -1) setDirection("up");
-    });
-  }, [smoothVelocity]);
-
-  const glowBase = isDark
-    ? "rgba(165, 180, 252, 0.25)"
-    : "rgba(99, 102, 241, 0.18)";
-
-  const glowActive = isDark
-    ? "rgba(165, 180, 252, 0.45)"
-    : "rgba(99, 102, 241, 0.35)";
-
   return (
     <aside
       className={`
@@ -146,15 +131,6 @@ const Timeline = ({ items, mobile = false }) => {
                       dark:border-brand-soft
                         text-center
                       "
-                      style={{
-                        boxShadow: `0 0 8px ${glowBase}`,
-                      }}
-                      animate={{
-                        boxShadow: isInView
-                          ? `0 0 14px ${glowActive}`
-                          : `0 0 8px ${glowBase}`,
-                      }}
-                      transition={{ duration: 0.25 }}
                     >
                       {item.title}
                     </motion.span>
