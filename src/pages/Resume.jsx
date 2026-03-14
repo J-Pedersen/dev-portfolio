@@ -38,6 +38,7 @@ const Resume = () => {
       {/* Viewer container */}
       <div
         className="
+        rounded-2xl p-4 gap-3 transition
         border
         border-brand-soft 
         bg-slate-100 
