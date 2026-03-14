@@ -123,6 +123,7 @@ const Skills = () => {
             <div
               key={category}
               className="
+                group rounded-2xl p-4 flex flex-col gap-3 transition
                 border
               border-brand-soft 
               bg-slate-100 
