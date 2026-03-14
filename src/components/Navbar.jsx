@@ -9,26 +9,21 @@ const navLinkClasses = ({ isActive }) =>
     ${
       isActive
         ? `
-          className="btn-primary" 
-          // group rounded-2xl p-4 flex flex-col gap-3 transition
-          // border
-          // border-brand-soft 
-          // bg-slate-100 
-          // hover:bg-slate-50 
-          // hover:border-brand 
-          // hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-          // dark:bg-slate-900/60 
-          // dark:hover:bg-slate-950
-          // dark:hover:border-brand
-          // dark:border-brand-soft
+          group rounded-2xl p-4 flex flex-col gap-3 transition
+          border
+          border-brand-soft 
+          bg-slate-100 
+          hover:bg-slate-50 
+          hover:border-brand 
+          hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+          dark:bg-slate-900/60 
+          dark:hover:bg-slate-950
+          dark:hover:border-brand
+          dark:border-brand-soft
         `
         : `
-          group rounded-2xl p-4 flex flex-col gap-3 transition
-          hover:bg-slate-50 
           border border-transparent
-          hover:border-brand-soft 
-          hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-          dark:hover:bg-slate-950
+          className="primary-btn"
         `
     }
   `;
