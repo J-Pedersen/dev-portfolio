@@ -103,8 +103,8 @@ const Timeline = ({ items, mobile = false }) => {
               className={`
                 px-3 py-2 font-semibold text-slate-900 dark:text-slate-100 z-20 text-center
                 ${mobile
-                  ? "border border-brand-soft dark:border-brand-soft bg-brand dark:bg-brand/80 backdrop-blur shadow-sm"
-                  : "sticky top-0 bg-brand/80 dark:bg-brand/60 backdrop-blur-md border border-brand-soft/70 dark:border-brand-soft/70 rounded-md shadow-sm"
+                  ? "border border-brand-soft/50 dark:border-brand-soft/50 bg-brand/50 dark:bg-brand/50 backdrop-blur shadow-sm"
+                  : "sticky top-0 bg-brand/50 dark:bg-brand/50 backdrop-blur-md border border-brand-soft/50 dark:border-brand-soft/50 rounded-md shadow-sm"
                 }
               `}
             >
