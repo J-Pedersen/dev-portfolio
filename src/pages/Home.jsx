@@ -86,8 +86,16 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="
             relative h-48 sm:h-64 md:h-72 rounded-3xl overflow-hidden
-            border border-slate-300 bg-gradient-to-br from-slate-100 to-slate-200
-            dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950
+            border
+          border-brand-soft 
+          bg-slate-100 
+          hover:bg-slate-50 
+          hover:border-brand 
+            hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+          dark:bg-slate-900/60 
+          dark:hover:bg-slate-950
+          dark:hover:border-brand
+          dark:border-brand-soft
             p-4 flex flex-col
           "
         >
