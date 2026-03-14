@@ -77,9 +77,17 @@ const Timeline = ({ items, mobile = false }) => {
     <aside
       className={`
         ${mobile ? "" : "hidden md:block sticky top-24 h-[80vh] overflow-y-auto pr-4"}
-        bg-slate-100 dark:bg-slate-900/60
-        border border-slate-300 dark:border-slate-800
-        rounded-2xl p-4
+                group rounded-2xl p-4 flex flex-col gap-3 transition
+                border
+              border-brand-soft 
+              bg-slate-100 
+              hover:bg-slate-50 
+              hover:border-brand 
+                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+              dark:bg-slate-900/60 
+              dark:hover:bg-slate-950
+              dark:hover:border-brand
+              dark:border-brand-soft
       `}
     >
       <div
