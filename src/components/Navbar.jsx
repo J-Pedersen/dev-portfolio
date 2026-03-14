@@ -22,8 +22,7 @@ const navLinkClasses = ({ isActive }) =>
           dark:border-brand-soft
         `
         : `
-          border border-transparent
-          className="primary-btn"
+          className="btn-third"
         `
     }
   `;
