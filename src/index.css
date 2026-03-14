@@ -51,7 +51,8 @@ video {
     hover:bg-brand hover:text-white hover:border-brand
     dark:border-brand-soft dark:text-slate-200;
   }
-    .btn-third {
+  
+  .btn-third {
     @apply inline-flex items-center rounded-full px-5 py-2 text-sm font-medium transition
     border border-transparent
     bg-gradient-to-br from-slate-100 to-slate-200
