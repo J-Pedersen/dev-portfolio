@@ -47,8 +47,8 @@ video {
 
   .btn-secondary {
     @apply inline-flex items-center rounded-full px-5 py-2 text-sm font-medium transition
-    border border-slate-300 text-slate-700
+    border border-brand-soft text-slate-700
     hover:bg-brand hover:text-white hover:border-brand
-    dark:border-slate-700 dark:text-slate-200;
+    dark:border-brand-soft dark:text-slate-200;
   }
 }
