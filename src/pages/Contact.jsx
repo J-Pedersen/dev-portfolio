@@ -102,9 +102,17 @@ const Contact = () => {
       <section className="grid gap-6 md:grid-cols-[1.3fr,1fr] items-start">
         <div
           className="
-            rounded-2xl p-4
-            border border-slate-300 bg-slate-100
-            dark:border-slate-800 dark:bg-slate-900/60
+                group rounded-2xl p-4 flex flex-col gap-3 transition
+                border
+              border-brand-soft 
+              bg-slate-100 
+              hover:bg-slate-50 
+              hover:border-brand 
+                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+              dark:bg-slate-900/60 
+              dark:hover:bg-slate-950
+              dark:hover:border-brand
+              dark:border-brand-soft
           "
         >
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">
@@ -229,9 +237,17 @@ const Contact = () => {
 
         <aside
           className="
-            space-y-4 p-4 rounded-2xl text-sm
-            border border-slate-300 bg-slate-100 text-slate-700
-            dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-300
+                group rounded-2xl p-4 flex flex-col gap-3 transition
+                border
+              border-brand-soft 
+              bg-slate-100 
+              hover:bg-slate-50 
+              hover:border-brand 
+                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+              dark:bg-slate-900/60 
+              dark:hover:bg-slate-950
+              dark:hover:border-brand
+              dark:border-brand-soft
           "
         >
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">
