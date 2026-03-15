@@ -2,6 +2,10 @@
 import PageHeader from '../components/PageHeader.jsx';
 import TechIcon from '../components/TechIcon.jsx';
 
+import Card from '../components/ui/Card.jsx';
+import CardHeader from '../components/ui/CardHeader.jsx';
+import CardBody from '../components/ui/CardBody.jsx';
+
 const skills = {
   Languages: [
     'HTML',
@@ -115,45 +119,36 @@ const Skills = () => {
         dabbled in all of them.
       </PageHeader>
 
-      <section className="grid gap-6 md:grid-cols-2">
+      <section className="grid gap-6 md:grid-cols-2 items-stretch">
         {Object.entries(skills).map(([category, items]) => {
           const heading = category.replace(/([A-Z])/g, ' $1').trim();
 
           return (
-            <div
-              key={category}
-              className="
-                group rounded-2xl p-4 flex flex-col gap-3 transition
-                border
-              border-brand-soft 
-              bg-slate-100 
-              hover:bg-slate-50 
-              hover:border-brand 
-                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-              dark:bg-slate-900/60 
-              dark:hover:bg-slate-950
-              dark:hover:border-brand
-              dark:border-brand-soft
-              "
-            >
-              <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">
-                {heading}
-              </h2>
+            <Card key={category} className="h-full">
 
-              <ul
-                className="
-                  grid grid-cols-3 sm:grid-cols-4
-                  gap-x-6 gap-y-6
-                  justify-items-center
-                "
-              >
-                {items.map((item) => (
-                  <li key={item} className="list-none">
-                    <TechIcon tech={item} />
-                  </li>
-                ))}
-              </ul>
-            </div>
+              <CardHeader>
+                <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 text-center w-full">
+                  {heading}
+                </h2>
+              </CardHeader>
+
+              <CardBody>
+                <ul
+                  className="
+                    grid grid-cols-3 sm:grid-cols-4
+                    gap-x-6 gap-y-6
+                    justify-items-center
+                  "
+                >
+                  {items.map((item) => (
+                    <li key={item} className="list-none">
+                      <TechIcon tech={item} />
+                    </li>
+                  ))}
+                </ul>
+              </CardBody>
+
+            </Card>
           );
         })}
       </section>
@@ -162,6 +157,7 @@ const Skills = () => {
         <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
           How I prefer to work
         </h2>
+
         <p>
           I like structure and order, but I’m not glued to a single methodology 
           when it comes to software and web development. On the project side, 
