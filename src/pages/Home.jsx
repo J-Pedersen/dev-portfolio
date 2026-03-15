@@ -128,7 +128,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3 items-stretch">
           {featured.map((p) => (
             <Link
               key={p.slug}

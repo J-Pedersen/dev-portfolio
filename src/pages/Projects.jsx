@@ -22,7 +22,7 @@ const Projects = () => {
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200">
             Featured
           </h2>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-3 items-stretch">
             {featured.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))}

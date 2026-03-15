@@ -2,6 +2,8 @@ const Card = ({ children, className = "" }) => {
   return (
     <div
       className={`
+        h-full
+        flex flex-col
         rounded-2xl overflow-hidden
         border border-brand-soft
         bg-white dark:bg-slate-900
