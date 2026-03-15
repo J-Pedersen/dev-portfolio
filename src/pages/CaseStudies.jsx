@@ -141,12 +141,6 @@ const CaseStudies = () => {
                       ))}
                     </div>
                   </CardFooter>
-
-                  <div className="px-4 pb-3">
-                    <p className="text-xs text-brand-700 dark:text-brand-soft">
-                      View case study →
-                    </p>
-                  </div>
                 </Card>
               </Link>
             ))}
