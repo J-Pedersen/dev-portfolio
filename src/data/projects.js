@@ -299,7 +299,7 @@ Data Structures (lists/dicts representing records)
   // -----------------------------------------
   {
     slug: 'cis-505-coursework',
-    title: 'Intermediate Java Programming',
+    title: 'Java Programming',
     shortDescription:
       'Collection of Java assignments and the final JavaFX GradeBook project.',
     role: 'Java Developer',
@@ -345,7 +345,7 @@ Focus on OOP, I/O, and modular structure
 
   {
     slug: 'csd-340-coursework',
-    title: 'Web Development Fundamentals',
+    title: 'Web Development',
     shortDescription:
       'Assignments for CSD 340 including early HTML structure, CSS styling, and static web design.',
     role: 'Front-End Developer',
@@ -582,7 +582,7 @@ HTML Output + CSS Styling
 
   {
     slug: 'my-bio-html-responsive',
-    title: 'My Single Page Bio Website',
+    title: 'Single Page Bio Website',
     shortDescription:
       'A responsive personal bio page with basic layout and CSS styling.',
     role: 'Front-End Developer',
