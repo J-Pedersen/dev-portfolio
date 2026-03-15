@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { projects } from '../data/projects.js';
 import TechIcon from '../components/TechIcon.jsx';
 
+import Card from '../components/ui/Card.jsx';
+import CardHeader from '../components/ui/CardHeader.jsx';
+import CardBody from '../components/ui/CardBody.jsx';
+import CardFooter from '../components/ui/CardFooter.jsx';
+
 const Home = () => {
   const featured = projects.filter((p) => p.type === 'featured').slice(0, 3);
 
@@ -63,17 +68,11 @@ const Home = () => {
           </motion.p>
 
           <div className="flex flex-wrap gap-3">
-            <Link
-              to="/projects"
-              className="btn-primary"
-            >
+            <Link to="/projects" className="btn-primary">
               View Projects
             </Link>
 
-            <Link
-              to="/case-studies"
-              className="btn-primary"
-            >
+            <Link to="/case-studies" className="btn-primary">
               Read Case Studies
             </Link>
           </div>
@@ -87,15 +86,15 @@ const Home = () => {
           className="
             relative h-48 sm:h-64 md:h-72 rounded-3xl overflow-hidden
             border
-          border-brand-soft 
-          bg-slate-100 
-          hover:bg-slate-50 
-          hover:border-brand 
+            border-brand-soft 
+            bg-slate-100 
+            hover:bg-slate-50 
+            hover:border-brand 
             hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-          dark:bg-slate-900/60 
-          dark:hover:bg-slate-950
-          dark:hover:border-brand
-          dark:border-brand-soft
+            dark:bg-slate-900/60 
+            dark:hover:bg-slate-950
+            dark:hover:border-brand
+            dark:border-brand-soft
             p-4 flex flex-col
           "
         >
@@ -133,52 +132,46 @@ const Home = () => {
             <Link
               key={p.slug}
               to={`/projects/${p.slug}`}
-              className="
-                group rounded-2xl p-4 transition
-                border
-              border-brand-soft 
-              bg-slate-100 
-              hover:bg-slate-50 
-              hover:border-brand 
-                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-              dark:bg-slate-900/60 
-              dark:hover:bg-slate-950
-              dark:hover:border-brand
-              dark:border-brand-soft
-                flex flex-col
-              "
+              className="block group h-full"
             >
-              {/* Project title row with icon */}
-              <div className="flex items-center gap-2 mb-2">
-                {p.icon && (
-                  <TechIcon
-                    name={p.icon}
-                    hideLabel={true}
-                    className="!w-auto !mx-0 !my-0 shrink-0"
-                  />
-                )}
+              <Card className="h-full">
+                <CardHeader>
+                  <div className="flex items-center gap-2">
+                    {p.icon && (
+                      <TechIcon
+                        name={p.icon}
+                        hideLabel={true}
+                        className="!w-auto !mx-0 !my-0 shrink-0 group-hover:scale-110 transition-transform"
+                      />
+                    )}
 
-                <h3
-                  className="
-                    text-sm font-semibold 
-                    text-slate-900 dark:text-slate-50 
-                    group-hover:text-brand-soft
-                  "
-                >
-                  {p.title}
-                </h3>
-              </div>
+                    <h3
+                      className="
+                        text-sm font-semibold 
+                        text-slate-900 dark:text-slate-50 
+                        group-hover:text-brand-soft
+                        transition-colors
+                      "
+                    >
+                      {p.title}
+                    </h3>
+                  </div>
+                </CardHeader>
 
-              <p className="text-xs text-slate-700 dark:text-slate-300 mb-3">
-                {p.shortDescription}
-              </p>
+                <CardBody>
+                  <p className="text-xs text-slate-700 dark:text-slate-300">
+                    {p.shortDescription}
+                  </p>
+                </CardBody>
 
-              {/* Tech stack as icons with labels */}
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {p.techStack.map((tech) => (
-                  <TechIcon key={tech} tech={tech} />
-                ))}
-              </div>
+                <CardFooter>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {p.techStack.map((tech) => (
+                      <TechIcon key={tech} tech={tech} />
+                    ))}
+                  </div>
+                </CardFooter>
+              </Card>
             </Link>
           ))}
         </div>
