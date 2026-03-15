@@ -85,26 +85,27 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="
             relative h-48 sm:h-64 md:h-72 rounded-3xl overflow-hidden
-            border
-            border-brand-soft 
-            bg-slate-100 
-            hover:bg-slate-50 
-            hover:border-brand 
+            border border-brand-soft
+            bg-slate-100
+            hover:bg-slate-50
+            hover:border-brand
             hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-            dark:bg-slate-900/60 
+            dark:bg-slate-900/60
             dark:hover:bg-slate-950
             dark:hover:border-brand
             dark:border-brand-soft
-            p-4 flex flex-col
+            flex flex-col
           "
         >
-          <div className="text-center border-b border-slate-300 dark:border-slate-800 pb-2 mb-3">
-            <span className="text-sm font-semibold text-slate-900 dark:text-white tracking-wide">
-              Tech Snapshot
-            </span>
-          </div>
+          <CardHeader>
+            <div className="text-center w-full">
+              <span className="text-sm font-semibold text-slate-900 dark:text-white tracking-wide">
+                Tech Snapshot
+              </span>
+            </div>
+          </CardHeader>
 
-          <div className="flex-1 grid grid-cols-3 sm:grid-cols-4 gap-x-2 gap-y-3 place-items-center">
+          <div className="flex-1 grid grid-cols-3 sm:grid-cols-4 gap-x-2 gap-y-3 place-items-center p-4">
             {snapshotTech.map((tech) => (
               <TechIcon key={tech} tech={tech} />
             ))}
