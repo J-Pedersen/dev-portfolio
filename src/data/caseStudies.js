@@ -36,7 +36,7 @@ export const caseStudies = [
     slug: "careware",
     category: "pm",
     categoryLabel: "Project Management",
-    title: "CAREWare Support Software Management Project",
+    title: "CAREWare Project Management",
     summary:
       "A complete suite of project management deliverables for a CAREWare-style support system modernization effort. Includes the project charter, WBS, WBS dictionary, network diagrams, risk register, RFP, and quality management plan for a multi-phase implementation.",
     techStack: [
