@@ -30,15 +30,15 @@ const ThemeToggle = () => {
       aria-label="Toggle theme"
       className="
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full
-        border border-transparent hover:bg-brand hover:border-brand 
+        border border-transparent hover:bg-brand-soft hover:border-brand
         hover:shadow-lg hover:shadow-brand/30 bg-slate-200 
-        dark:bg-slate-800/50 hover:dark:bg-brand
+        dark:bg-slate-800/50 hover:dark:bg-brand-soft
       "
     >
       <img
         src={dark ? sunIcon : moonIcon}
         alt={dark ? "Switch to light mode" : "Switch to dark mode"}
-        className="w-5 h-5 transition-transform duration-300
+        className="w-6 h-6 transition-transform duration-300
         "
       />
     </button>
