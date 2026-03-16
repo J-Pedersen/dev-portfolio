@@ -31,9 +31,9 @@ const ThemeToggle = () => {
       className="
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full
         transition-colors duration-200
-        border border-transparent bg-gradient-to-br from-slate-100 to-slate-200
-      hover:bg-brand hover:border-brand hover:bg-none hover:shadow-lg hover:shadow-brand/30
-      dark:from-slate-900 dark:via-slate-900 dark:to-slate-950;
+        border border-transparent hover:bg-brand hover:border-brand 
+        hover:bg-none hover:shadow-lg hover:shadow-brand/30
+      bg-slate-200 dark:bg-slate-700
       "
 
     >
