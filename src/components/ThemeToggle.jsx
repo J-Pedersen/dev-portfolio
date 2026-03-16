@@ -32,8 +32,8 @@ const ThemeToggle = () => {
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full
         transition-colors duration-200
         border border-transparent hover:bg-brand hover:border-brand 
-        hover:bg-none hover:shadow-lg hover:shadow-brand/30
-      bg-slate-200 dark:bg-slate-900
+        hover:shadow-lg hover:shadow-brand/30
+      bg-slate-200 dark:bg-slate-800
       "
 
     >
