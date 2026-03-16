@@ -9,6 +9,7 @@ const ThemeToggle = () => {
   });
 
   const [isHovered, setIsHovered] = useState(false);
+  const [canHover, setCanHover] = useState(false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -22,6 +23,27 @@ const ThemeToggle = () => {
     }
   }, [dark]);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+    const updateCanHover = () => {
+      setCanHover(mediaQuery.matches);
+      if (!mediaQuery.matches) {
+        setIsHovered(false);
+      }
+    };
+
+    updateCanHover();
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", updateCanHover);
+      return () => mediaQuery.removeEventListener("change", updateCanHover);
+    } else {
+      mediaQuery.addListener(updateCanHover);
+      return () => mediaQuery.removeListener(updateCanHover);
+    }
+  }, []);
+
   const sunIcon = `${import.meta.env.BASE_URL}icons/sun-icon.svg`;
   const moonIcon = `${import.meta.env.BASE_URL}icons/moon-icon.svg`;
   const moonHoverIcon = `${import.meta.env.BASE_URL}icons/moon-icon-hover.svg`;
@@ -30,18 +52,21 @@ const ThemeToggle = () => {
     <button
       type="button"
       onClick={() => setDark((d) => !d)}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => {
+        if (!dark && canHover) setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        if (canHover) setIsHovered(false);
+      }}
       aria-label="Toggle theme"
       className="
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full 
         transition-colors duration-200
         border border-transparent
-        hover:border-brand
-        hover:shadow-lg hover:shadow-brand/30
-        hover:bg-brand
+        hover:border-brand-soft
+        hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+        hover:bg-brand/40
       "
-      
     >
       <img
         src={dark ? sunIcon : isHovered ? moonHoverIcon : moonIcon}
