@@ -34,14 +34,17 @@ const ThemeToggle = () => {
         border border-transparent
         hover:border-brand-soft
         hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-        hover:bg-brand/40
+        border-brand-soft bg-slate-100 text-slate-700
+       hover:bg-slate-200 dark:border-brand-soft dark:bg-slate-900 
+       dark:text-slate-200 dark:hover:bg-slate-800
       "
-      
+
     >
       <img
         src={dark ? sunIcon : moonIcon}
         alt={dark ? "Switch to light mode" : "Switch to dark mode"}
-        className="w-5 h-5 transition-transform duration-300"
+        className="w-5 h-5 transition-transform duration-300
+        "
       />
     </button>
   );
