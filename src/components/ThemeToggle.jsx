@@ -2,15 +2,12 @@ import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
   const [dark, setDark] = useState(() => {
-    // Load saved preference
     const saved = localStorage.getItem("theme");
     if (saved) return saved === "dark";
 
-    // Fallback to system preference
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
-  // Apply theme to <html> + persist
   useEffect(() => {
     const root = document.documentElement;
 
@@ -23,24 +20,26 @@ const ThemeToggle = () => {
     }
   }, [dark]);
 
+  const sunIcon = `${import.meta.env.BASE_URL}icons/sun-icon.svg`;
+  const moonIcon = `${import.meta.env.BASE_URL}icons/moon-icon.svg`;
+
   return (
     <button
       type="button"
       onClick={() => setDark((d) => !d)}
       aria-label="Toggle theme"
       className="
-        ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full 
+        ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full
         transition-colors duration-200
-
         border border-transparent
-        hover:border-brand-soft 
+        hover:border-brand-soft
         hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
         hover:bg-brand/40
       "
     >
       <img
-        src={dark ? "public/icons/sun-icon.svg" : "public/icons/moon-icon.svg"}
-        alt="Theme icon"
+        src={dark ? sunIcon : moonIcon}
+        alt={dark ? "Switch to light mode" : "Switch to dark mode"}
         className="w-4 h-4 transition-transform duration-300"
       />
     </button>
