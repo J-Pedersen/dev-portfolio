@@ -32,15 +32,17 @@ const ThemeToggle = () => {
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full 
         transition-colors duration-200
 
-          border border-transparent
-          hover:border-brand-soft 
-          hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-          hover:bg-brand/40
+        border border-transparent
+        hover:border-brand-soft 
+        hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+        hover:bg-brand/40
       "
     >
-      <span className="transition-transform duration-300">
-        {dark ? "🌙" : "☀️"}
-      </span>
+      <img
+        src={dark ? "/icons/sun-icon.svg" : "/icons/moon-icon.svg"}
+        alt="Theme icon"
+        className="w-4 h-4 transition-transform duration-300"
+      />
     </button>
   );
 };
