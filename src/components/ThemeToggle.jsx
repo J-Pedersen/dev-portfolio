@@ -30,10 +30,9 @@ const ThemeToggle = () => {
       aria-label="Toggle theme"
       className="
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full
-        transition-colors duration-200
         border border-transparent hover:bg-brand hover:border-brand 
         hover:shadow-lg hover:shadow-brand/30
-      bg-slate-200 dark:bg-slate-850
+      bg-slate-200 dark:bg-slate-900
       "
 
     >
