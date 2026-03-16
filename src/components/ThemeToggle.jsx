@@ -32,7 +32,7 @@ const ThemeToggle = () => {
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full
         border border-transparent hover:bg-brand hover:border-brand 
         hover:shadow-lg hover:shadow-brand/30
-      bg-slate-200 dark:bg-slate-900
+      bg-slate-200 dark:bg-slate-850
       "
 
     >
