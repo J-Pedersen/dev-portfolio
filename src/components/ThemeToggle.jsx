@@ -40,7 +40,7 @@ const ThemeToggle = () => {
       <img
         src={dark ? sunIcon : moonIcon}
         alt={dark ? "Switch to light mode" : "Switch to dark mode"}
-        className="w-4 h-4 transition-transform duration-300"
+        className="w-5 h-5 transition-transform duration-300"
       />
     </button>
   );
