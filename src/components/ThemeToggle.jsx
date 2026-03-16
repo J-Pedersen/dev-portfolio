@@ -39,7 +39,7 @@ const ThemeToggle = () => {
       "
     >
       <img
-        src={dark ? "/icons/sun-icon.svg" : "/icons/moon-icon.svg"}
+        src={dark ? "public/icons/sun-icon.svg" : "public/icons/moon-icon.svg"}
         alt="Theme icon"
         className="w-4 h-4 transition-transform duration-300"
       />
