@@ -34,7 +34,6 @@ const ThemeToggle = () => {
         hover:shadow-lg hover:shadow-brand/30 bg-slate-200 
         dark:bg-slate-800/50 hover:dark:bg-brand
       "
-
     >
       <img
         src={dark ? sunIcon : moonIcon}
