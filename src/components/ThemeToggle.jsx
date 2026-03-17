@@ -63,6 +63,7 @@ const ThemeToggle = () => {
         ml-2 inline-flex items-center justify-center h-8 w-8 rounded-full 
         transition-colors duration-200
         border border-transparent
+        bg-gradient-to-br from-slate-100 to-slate-200
         hover:border-brand-soft
         hover:bg-brand-soft
         hover:shadow-lg hover:shadow-brand/30
