@@ -36,7 +36,7 @@ const Home = () => {
             transition={{ duration: 0.4 }}
             className="text-xs uppercase tracking-[0.3em] text-brand mb-2"
           >
-            Software Developer · Web Designer · Project Manager
+            Software Developer · Web Designer · Database Engineer
           </motion.p>
 
           <motion.h1
