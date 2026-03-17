@@ -63,7 +63,7 @@ const Home = () => {
           >
             I’m Jeff Pedersen, a full-stack developer and project
             manager. I work across Java, Spring Boot, React,
-            cloud technologies, and databases, and I also build the PM artifacts that keep projects
+            cloud technologies, and databases, and I also build the PM artifacts which keep projects
             on track such as WBS, risk registers, and network diagrams.
           </motion.p>
 
