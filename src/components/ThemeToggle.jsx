@@ -65,7 +65,7 @@ const ThemeToggle = () => {
         border border-transparent
         hover:border-brand-soft
         hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-        hover:bg-brand/40
+        hover:bg-brand-soft
       "
     >
       <img
