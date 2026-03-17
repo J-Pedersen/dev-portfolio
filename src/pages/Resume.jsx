@@ -7,7 +7,7 @@ const Resume = () => {
     <div className="space-y-6">
       <PageHeader
         kicker="Resume"
-        title="One-page snapshot of what I can do."
+        title="One-Page Snapshot of Things I Have Done and Can Do."
       >
         You can view my resume directly on this page or download the PDF if
         you’d rather keep a copy.
@@ -21,7 +21,7 @@ const Resume = () => {
           rel="noreferrer"
           className="btn-primary"
         >
-          Open PDF in new tab
+          Open PDF In A New Tab
         </a>
 
         {/* Download PDF */}
@@ -31,7 +31,7 @@ const Resume = () => {
           className="btn-primary"
 
         >
-          Download resume
+          Download Resume
         </a>
       </div>
 

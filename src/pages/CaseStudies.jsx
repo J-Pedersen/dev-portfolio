@@ -18,10 +18,10 @@ const CaseStudies = () => {
         kicker="Case Studies"
         title="How I build, structure, and think through real projects."
       >
-        These case studies break down the design choices, architecture,
-        debugging steps, and project-management reasoning behind my larger
-        projects. They go beyond code samples and explain the thinking
-        that shaped each solution.
+        These case studies break down all the design choices, architecture,
+        debugging steps, and project-management reasoning behind some of my larger
+        projects. They go beyond just code samples and explain my thinking
+        which shaped each of these solution.
       </PageHeader>
 
       {technical.length > 0 && (

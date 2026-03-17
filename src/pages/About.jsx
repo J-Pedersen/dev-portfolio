@@ -85,7 +85,7 @@ const About = () => {
                   flex justify-between items-center
                 "
               >
-                <span>Close timeline</span>
+                <span>Close Timeline</span>
                 <span className="text-lg leading-none">✕</span>
               </button>
 
@@ -108,20 +108,20 @@ const About = () => {
             capable of making amazing things using just code and I wanted to know how to do it.
           </p>
           <p>  
-            I began by learning the basic skillset of Java, SQL, and web
-            fundamentals. From there, I moved into building full-stack
+            I began my learning with the basics of HTML, CSS, JavaScript, Java, SQL, and other web development 
+            fundamentals such as JSON, AJAX, and jQuery. From there, I moved on to learning how to build full-stack
             applications using Spring Boot, React, and various types of databases.
           </p>
           <p>
-            Over time, I found that I really enjoy not just writing code, but also understanding how all the pieces 
-            fit together to create a functional and efficient system.
-            Along the way, I leaned into project management and discovered I
-            actually enjoy the planning side—figuring out how work breaks down,
-            who does what, and how the pieces fit together.  
+            Over time, I have found that I really enjoy not just writing the code, but also understanding how all the pieces 
+            will fit together to create a functional and efficient system.
+            Project management and artifact creation are a more recent interest but I have discovered that I
+            actually enjoy the planning side of figuring out how the work gets broken down and the
+            who does what of it all.
           </p>
           <p>
-            My approach to software development is grounded in a desire for continuous improvement.
-            I am still learning and I hope that I always will feel like there is a lot more to know and discover 
+            My approach to software development is that of continuous improvement.
+            I am still learning and I hope that I will always feel like there is a lot more to know and discover 
             because I think if I were ever to get to the point of feeling like I know all there is to know and I can 
             no longer improve then it would be time to find a new path to focus my efforts on. 
           </p>

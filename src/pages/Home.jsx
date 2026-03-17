@@ -117,7 +117,7 @@ const Home = () => {
       <section className="space-y-4">
         <div className="flex items-center justify-between gap-2">
           <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
-            Featured work
+            Featured Work
           </h2>
 
           <Link

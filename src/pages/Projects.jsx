@@ -10,17 +10,17 @@ const Projects = () => {
     <div className="space-y-10">
       <PageHeader
         kicker="Projects"
-        title="Code I’m not afraid to show other people."
+        title="The code I’m willing to show other people."
       >
-        This is a curated set of software projects across Java, Spring Boot,
-        React, databases, and project management artifacts. Featured projects
-        get deeper write-ups; everything else lives in the gallery.
+        This is a curated set of software projects across HTML, PHP, Java, Spring Boot,
+        React, databases, and project management artifacts. The featured projects
+        have a bit deeper write-up than everything else in the project gallery.
       </PageHeader>
 
       {featured.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200">
-            Featured
+            Featured Projects
           </h2>
           <div className="grid gap-4 md:grid-cols-3 items-stretch">
             {featured.map((project) => (
@@ -33,12 +33,12 @@ const Projects = () => {
       {gallery.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200">
-            Project gallery
+            Project Gallery
           </h2>
 
           <p className="text-xs text-slate-600 dark:text-slate-400 max-w-2xl">
             This includes smaller Java apps, course assignments, and experiments
-            across HTML/CSS/JS, React, PHP, Rails, and .NET. Many of these
+            across HTML/CSS/JS, Python, React, PHP, Rails, and .NET. Many of these
             projects link directly to GitHub.
           </p>
 

@@ -251,7 +251,7 @@ const Contact = () => {
           "
         >
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">
-            Direct links
+            Direct Links
           </h2>
 
           <div className="space-y-2">
