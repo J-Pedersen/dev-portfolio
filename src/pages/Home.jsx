@@ -48,7 +48,7 @@ const Home = () => {
               text-slate-900 dark:text-slate-50 mb-4
             "
           >
-            I build software and systems that actually ship.
+            I build software and systems.
           </motion.h1>
 
           <motion.p
@@ -61,10 +61,10 @@ const Home = () => {
               max-w-xl mb-6
             "
           >
-            I’m Jeff Pedersen, a full-stack developer with a strong project
-            management background. I work across Java, Spring Boot, React, and
-            cloud tooling, and I also build the PM artifacts that keep projects
-            on track—WBS, risk registers, and network diagrams included.
+            I’m Jeff Pedersen, a full-stack developer and project
+            manager. I work across Java, Spring Boot, React,
+            cloud technologies, and databases, and I also build the PM artifacts that keep projects
+            on track such as WBS, risk registers, and network diagrams.
           </motion.p>
 
           <div className="flex flex-wrap gap-3">
