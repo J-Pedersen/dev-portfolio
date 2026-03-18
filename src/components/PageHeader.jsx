@@ -1,7 +1,7 @@
 const PageHeader = ({ title, kicker, children }) => (
   <header className="mb-8">
     {kicker && (
-      <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-brand mb-2">
+      <p className="text-md font-extrabold uppercase tracking-[0.2em] text-brand mb-2">
         {kicker}
       </p>
     )}
