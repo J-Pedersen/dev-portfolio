@@ -99,7 +99,7 @@ const Home = () => {
         >
           <CardHeader>
             <div className="text-center w-full">
-              <span className="text-xs font-extrabold text-slate-900 dark:text-white tracking-wide">
+              <span className="text-sm font-semibold text-slate-900 dark:text-white tracking-wide">
                 Tech Snapshot
               </span>
             </div>
