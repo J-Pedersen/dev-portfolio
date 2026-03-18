@@ -56,7 +56,7 @@ const CaseStudies = () => {
                           text-[11px] px-2 py-0.5 rounded-full
                           border border-brand-soft bg-brand
                           dark:border-brand-soft dark:bg-brand text-white
-                          font-semibold
+                          font-semibold text-center
                         "
                       >
                         {caseStudy.categoryLabel || "Technical"}
@@ -116,7 +116,7 @@ const CaseStudies = () => {
                           text-[11px] px-2 py-0.5 rounded-full
                           border border-brand-soft bg-brand
                           dark:border-brand-soft dark:bg-brand text-white
-                          font-semibold
+                          font-semibold text-center
                         "
                       >
                         {caseStudy.categoryLabel || "PM / Analysis"}
