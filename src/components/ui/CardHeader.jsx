@@ -3,7 +3,7 @@ const CardHeader = ({ children }) => {
     <div
       className="
         px-4 py-3
-        bg-gradient-to-r from-brand/10 to-brand/5
+         bg-brand-soft/30
         border-b border-brand-soft
       "
     >
