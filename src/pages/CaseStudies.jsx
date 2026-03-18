@@ -54,8 +54,9 @@ const CaseStudies = () => {
                       <span
                         className="
                           text-[11px] px-2 py-0.5 rounded-full
-                          border border-brand-soft bg-brand text-slate-600
-                          dark:border-brand-soft dark:bg-brand dark:text-slate-400
+                          border border-brand-soft bg-brand
+                          dark:border-brand-soft dark:bg-brand text-white
+                          text-sm font-bold
                         "
                       >
                         {caseStudy.categoryLabel || "Technical"}
