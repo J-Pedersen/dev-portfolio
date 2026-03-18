@@ -116,13 +116,13 @@ const Home = () => {
       {/* Featured row */}
       <section className="space-y-4">
         <div className="flex items-center justify-between gap-2">
-          <h2 className="text-xs font-extrabold text-slate-900 dark:text-slate-50">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-50">
             Featured Work
           </h2>
 
           <Link
             to="/projects"
-            className="text-xs text-brand-700 hover:text-brand-900 dark:text-brand dark:hover:text-brand-soft"
+            className="text-lg font-extrabold text-brand-700 hover:text-brand-900 dark:text-brand dark:hover:text-brand-soft"
           >
             View all projects →
           </Link>
