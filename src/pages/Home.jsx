@@ -34,7 +34,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-lg font-extrabold uppercase tracking-[0.3em] text-brand mb-2"
+            className="text-xs font-extrabold uppercase tracking-[0.3em] text-brand mb-2"
           >
             Software Developer · Web Designer · Database Engineer
           </motion.p>
