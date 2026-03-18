@@ -3,7 +3,7 @@ const CardFooter = ({ children }) => {
     <div
       className="
         px-4 py-3
-        bg-brand
+        bg-brand/60
         border-t border-brand-soft
         flex flex-wrap justify-center gap-3
       "
