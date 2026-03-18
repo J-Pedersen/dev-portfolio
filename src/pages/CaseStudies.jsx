@@ -26,7 +26,7 @@ const CaseStudies = () => {
 
       {technical.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
             Technical Case Studies
           </h2>
 
@@ -85,7 +85,7 @@ const CaseStudies = () => {
 
       {pm.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
             Project Management Case Studies
           </h2>
 
