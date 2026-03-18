@@ -99,7 +99,7 @@ const Home = () => {
         >
           <CardHeader>
             <div className="text-center w-full">
-              <span className="text-sm font-semibold text-slate-900 dark:text-white tracking-wide">
+              <span className="text-xs font-extrabold text-slate-900 dark:text-white tracking-wide">
                 Tech Snapshot
               </span>
             </div>
@@ -116,7 +116,7 @@ const Home = () => {
       {/* Featured row */}
       <section className="space-y-4">
         <div className="flex items-center justify-between gap-2">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+          <h2 className="text-xs font-extrabold text-slate-900 dark:text-slate-50">
             Featured Work
           </h2>
 
