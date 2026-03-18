@@ -19,7 +19,7 @@ const Projects = () => {
 
       {featured.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-200">
             Featured Projects
           </h2>
           <div className="grid gap-4 md:grid-cols-3 items-stretch">
@@ -32,7 +32,7 @@ const Projects = () => {
 
       {gallery.length > 0 && (
         <section className="space-y-4">
-          <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-200">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-200">
             Project Gallery
           </h2>
 

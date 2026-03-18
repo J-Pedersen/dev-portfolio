@@ -154,7 +154,7 @@ const Skills = () => {
       </section>
 
       <section className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
-        <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100">
+        <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
           How I prefer to work
         </h2>
 
