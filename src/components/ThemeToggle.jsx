@@ -64,6 +64,7 @@ const ThemeToggle = () => {
         transition-colors duration-200
         border border-transparent
         bg-slate-200
+        dark:bg-slate-900
         hover:border-brand
         hover:bg-brand
         hover:shadow-lg hover:shadow-brand/30
