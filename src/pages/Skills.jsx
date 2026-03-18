@@ -155,7 +155,7 @@ const Skills = () => {
 
       <section className="space-y-3 text-sm text-slate-700 dark:text-slate-300">
         <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
-          How I prefer to work
+          How I Prefer To Work
         </h2>
 
         <p>
