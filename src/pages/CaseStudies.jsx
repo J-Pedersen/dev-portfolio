@@ -59,6 +59,7 @@ const CaseStudies = () => {
                           font-semibold text-center
                         "
                       >
+                        
                         {caseStudy.categoryLabel || "Technical"}
                       </span>
                     </div>
