@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="4.4359902"
-     inkscape:cx="19.612307"
-     inkscape:cy="58.498777"
+     inkscape:zoom="6.2734375"
+     inkscape:cx="52.124533"
+     inkscape:cy="108.47323"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -354,10 +354,10 @@
     <filter
        id="a"
        class="B"
-       x="-0.0094225245"
-       y="-0.0095629062"
-       width="1.0188025"
-       height="1.0191397">
+       x="-0.0071720893"
+       y="-0.0072882281"
+       width="1.0143442"
+       height="1.0145765">
       <feGaussianBlur
          stdDeviation=".326"
          id="feGaussianBlur19" />
@@ -553,7 +553,8 @@
     </g>
     <path
        d="M 54.1,12.5 12.9,54.7 C -2.7,70.3 23,69 32.3,74.9 36.6,77.7 18.5,81.3 22.2,85 c 3.6,3.7 21.7,7.1 25.3,10.7 3.6,3.7 -7.3,7.6 -3.7,11.3 3.5,3.7 11.9,0.2 13.4,8.6 1.1,6.2 15.4,3.1 21.8,-2.2 4,-3.4 -6.9,-3.4 -3.3,-7.1 9,-9.1 17,-4.1 20.3,-12.5 1.8,-4.5 -13.6,-7.7 -9.5,-10.6 9.8,-6.9 45.8,-10.4 29.2,-27 L 73,12.5 c -5.3,-5 -14,-5 -18.9,0 z m 47.3,81.3 c 0,2.1 16.3,3.3 15.4,-0.5 -1.3,-6.4 -13.6,-5.9 -15.4,0.5 z m -69.5,11.1 c 3.7,3.2 9.3,-0.7 11.1,-5.2 -3.6,-4.7 -16.9,0.3 -11.1,5.2 z m 67.5,-6.7 c -4.6,4.2 0.8,8.6 5.3,5.7 1.2,-0.8 -0.1,-4.7 -5.3,-5.7 z"
-       id="path29" />
+       id="path29"
+       style="stroke:#ffffff;stroke-opacity:1;stroke-width:1.00050552;stroke-dasharray:none" />
     <use
        transform="matrix(0.990544,0,0,0.990544,0.605154,0.604136)"
        clip-path="url(#D)"
@@ -564,7 +565,7 @@
        fill="url(#C)"
        filter="url(#E)"
        id="use29"
-       style="fill:url(#C)" />
+       style="fill:url(#C);opacity:1" />
     <path
        d="m 16.565,57.04 c -11.202,11.1 8.477,7.973 23.615,13.927 l 31.285,-55 c -4.743,-4.844 -10.798,-4.44 -15.138,0 z"
        opacity="0.505"
@@ -699,7 +700,7 @@
        stroke-width="0.488"
        filter="url(#a)"
        id="path42"
-       style="stroke:#ffffff;stroke-opacity:1;stroke-width:0.48837886;stroke-dasharray:none;paint-order:stroke markers fill" />
+       style="stroke:none;stroke-opacity:1;stroke-width:0.48837886;stroke-dasharray:none;paint-order:stroke markers fill" />
     <g
        class="C"
        id="g45">
