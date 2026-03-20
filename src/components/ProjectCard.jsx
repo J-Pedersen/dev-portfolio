@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => (
 
             <h3
               className="
-                text-lg font-semibold
+                text-lg text-center font-semibold
                 text-slate-900 group-hover:text-brand-soft
                 dark:text-slate-50
                 transition-colors
