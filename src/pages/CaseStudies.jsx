@@ -1,12 +1,6 @@
 import PageHeader from "../components/PageHeader.jsx";
 import { caseStudies } from "../data/caseStudies.js";
-import { Link } from "react-router-dom";
-import TechIcon from "../components/TechIcon.jsx";
-
-import Card from "../components/ui/Card.jsx";
-import CardHeader from "../components/ui/CardHeader.jsx";
-import CardBody from "../components/ui/CardBody.jsx";
-import CardFooter from "../components/ui/CardFooter.jsx";
+import CaseStudyCard from "../components/CaseStudyCard.jsx";
 
 const CaseStudies = () => {
   const technical = caseStudies.filter((c) => c.category === "technical");
@@ -32,42 +26,7 @@ const CaseStudies = () => {
 
           <div className="grid gap-4 md:grid-cols-2 items-stretch">
             {technical.map((caseStudy) => (
-              <Link
-                key={caseStudy.slug}
-                to={`/case-studies/${caseStudy.slug}`}
-                className="block group h-full"
-              >
-                <Card className="h-full">
-                  <CardHeader>
-                    <div className="flex items-center justify-between gap-2">
-                      <h3
-                        className="
-                          text-lg font-semibold
-                          text-slate-900 group-hover:text-brand-soft
-                          dark:text-slate-50
-                          transition-colors
-                        "
-                      >
-                        {caseStudy.title}
-                      </h3>
-                    </div>
-                  </CardHeader>
-
-                  <CardBody>
-                    <p className="text-sm text-slate-700 dark:text-slate-300">
-                      {caseStudy.summary}
-                    </p>
-                  </CardBody>
-
-                  <CardFooter>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {caseStudy.techStack?.map((t) => (
-                        <TechIcon key={t} tech={t} />
-                      ))}
-                    </div>
-                  </CardFooter>
-                </Card>
-              </Link>
+              <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
             ))}
           </div>
         </section>
@@ -81,42 +40,7 @@ const CaseStudies = () => {
 
           <div className="grid gap-4 md:grid-cols-2 items-stretch">
             {pm.map((caseStudy) => (
-              <Link
-                key={caseStudy.slug}
-                to={`/case-studies/${caseStudy.slug}`}
-                className="block group h-full"
-              >
-                <Card className="h-full">
-                  <CardHeader>
-                    <div className="flex items-center justify-between gap-2">
-                      <h3
-                        className="
-                          text-lg font-semibold
-                          text-slate-900 group-hover:text-brand-soft
-                          dark:text-slate-50
-                          transition-colors
-                        "
-                      >
-                        {caseStudy.title}
-                      </h3>
-                    </div>
-                  </CardHeader>
-
-                  <CardBody>
-                    <p className="text-sm text-slate-700 dark:text-slate-300">
-                      {caseStudy.summary}
-                    </p>
-                  </CardBody>
-
-                  <CardFooter>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {caseStudy.techStack?.map((t) => (
-                        <TechIcon key={t} tech={t} />
-                      ))}
-                    </div>
-                  </CardFooter>
-                </Card>
-              </Link>
+              <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
             ))}
           </div>
         </section>
