@@ -13,7 +13,7 @@ const About = () => {
     <div className="space-y-8 relative">
       <PageHeader
         kicker="About"
-        title="Hi, I'm Jeff. I like to write code, create structure where there is none, and overdeliver."
+        title="Hello, I'm Jeff. I like to write code and create structure where there is none."
       >
         I consider myself a life long learner of software development and programming concepts.
         I enjoy building applications, websites and learning about new technologies and 
