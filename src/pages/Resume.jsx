@@ -7,7 +7,7 @@ const Resume = () => {
     <div className="space-y-6">
       <PageHeader
         kicker="Resume"
-        title="One-Page Snapshot of Things I Have Done and Can Do."
+        title="A One-Page Snapshot of The Things I Have Done and Can Do"
       >
         You can view my resume directly on this page or download the PDF if
         you’d rather keep a copy.
