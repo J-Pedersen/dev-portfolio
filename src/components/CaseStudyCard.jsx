@@ -15,18 +15,6 @@ const CaseStudyCard = ({ caseStudy }) => (
     <Card className="h-full">
       <CardHeader>
         <div className="flex flex-col items-center text-center gap-2">
-          {caseStudy.categoryLabel && (
-            <span
-              className="
-                text-[11px] rounded-full px-2 py-0.5
-                bg-slate-200 text-brand
-                dark:bg-slate-800 dark:text-brand-soft
-              "
-            >
-              {caseStudy.categoryLabel}
-            </span>
-          )}
-
           <div className="flex items-center justify-center gap-2">
             {caseStudy.icon && (
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-900">
