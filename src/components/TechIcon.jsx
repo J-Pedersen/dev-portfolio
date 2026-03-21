@@ -142,21 +142,21 @@ const NAME_TO_BG = {
 
 const RANDOM_BG_COLORS = [
   "bg-red-100/35",
-  "bg-orange-500/35",
-  "bg-amber-500/35",
-  "bg-yellow-500/35",
+  "bg-orange-200/35",
+  "bg-amber-300/35",
+  "bg-yellow-400/35",
   "bg-lime-500/35",
-  "bg-green-500/35",
-  "bg-emerald-500/35",
-  "bg-teal-500/35",
-  "bg-cyan-500/35",
+  "bg-green-100/35",
+  "bg-emerald-200/35",
+  "bg-teal-300/35",
+  "bg-cyan-400/35",
   "bg-sky-500/35",
-  "bg-blue-500/35",
-  "bg-indigo-500/35",
-  "bg-violet-500/35",
-  "bg-purple-500/35",
+  "bg-blue-100/35",
+  "bg-indigo-200/35",
+  "bg-violet-300/35",
+  "bg-purple-400/35",
   "bg-fuchsia-500/35",
-  "bg-pink-500/35",
+  "bg-pink-100/35",
 ];
 
 const getRandomColorFromString = (str) => {
