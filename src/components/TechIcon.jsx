@@ -64,7 +64,7 @@ const NAME_TO_ICON = {
   Azure: "azure-icon",
   "Google Cloud": "google_cloud-icon",
   Heroku: "heroku-icon",
-  "RESTful APIs": "restful_api-icon",
+  "REST APIs": "rest_api-icon",
   Coursera: "coursera-icon",
   "Server-Side": "server_side-icon",
   CSV: "csv-icon",

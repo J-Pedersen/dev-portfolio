@@ -37,7 +37,7 @@ const skills = {
     'Tailwind',
     'jQuery',
     'AJAX',
-    'RESTful APIs',
+    'REST APIs',
     'WordPress',
     'Drupal',
   ],
