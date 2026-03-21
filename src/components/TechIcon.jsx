@@ -228,7 +228,8 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
           className={`
             h-8 w-8 mb-0.5 rounded-full
             flex items-center justify-center
-            text-[10px] font-semibold text-white
+            text-[10px] font-semibold text-black
+            dark:text-white
             ${bgColor}
             shadow-[0_0_10px_rgba(0,0,0,0.12)]
             dark:shadow-[0_0_12px_rgba(99,102,241,0.18)]
