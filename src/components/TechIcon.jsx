@@ -70,34 +70,77 @@ const NAME_TO_ICON = {
   CSV: "csv-icon",
 };
 
-const BG_COLORS = [
-  "bg-red-500/20",
-  "bg-orange-500/20",
-  "bg-amber-500/20",
-  "bg-yellow-500/20",
-  "bg-lime-500/20",
-  "bg-green-500/20",
-  "bg-emerald-500/20",
-  "bg-teal-500/20",
-  "bg-cyan-500/20",
-  "bg-sky-500/20",
-  "bg-blue-500/20",
-  "bg-indigo-500/20",
-  "bg-violet-500/20",
-  "bg-purple-500/20",
-  "bg-fuchsia-500/20",
-  "bg-pink-500/20",
-];
-
-const getColorFromString = (str) => {
-  let hash = 0;
-
-  for (let i = 0; i < str.length; i += 1) {
-    hash = str.charCodeAt(i) + ((hash << 5) - hash);
-  }
-
-  return BG_COLORS[Math.abs(hash) % BG_COLORS.length];
+const NAME_TO_BG = {
+  Java: "bg-orange-500",
+  "Spring Boot": "bg-green-600",
+  "Jakarta EE": "bg-red-600",
+  HTML: "bg-orange-600",
+  React: "bg-cyan-500",
+  Python: "bg-yellow-500",
+  PHP: "bg-indigo-600",
+  Android: "bg-green-500",
+  JavaFX: "bg-blue-600",
+  CSS: "bg-blue-500",
+  SQL: "bg-sky-700",
+  JavaScript: "bg-yellow-400",
+  TypeScript: "bg-blue-700",
+  Ruby: "bg-red-700",
+  "Ruby on Rails": "bg-rose-700",
+  Ajax: "bg-indigo-500",
+  "Visual Basic": "bg-blue-800",
+  XML: "bg-orange-700",
+  JSON: "bg-amber-600",
+  YAML: "bg-pink-600",
+  Kotlin: "bg-violet-600",
+  Sass: "bg-pink-500",
+  JSP: "bg-orange-500",
+  "Node.js": "bg-lime-600",
+  Bootstrap: "bg-purple-700",
+  Tailwind: "bg-cyan-600",
+  Git: "bg-orange-500",
+  Docker: "bg-sky-600",
+  ".NET": "bg-violet-700",
+  Drupal: "bg-blue-700",
+  WordPress: "bg-sky-700",
+  jQuery: "bg-blue-600",
+  AJAX: "bg-indigo-500",
+  MongoDB: "bg-green-700",
+  MySQL: "bg-sky-700",
+  PostgreSQL: "bg-blue-800",
+  "SQL Server": "bg-red-700",
+  MariaDB: "bg-amber-700",
+  SQLite: "bg-blue-500",
+  "Amazon RDS": "bg-orange-600",
+  DynamoDB: "bg-indigo-700",
+  GitHub: "bg-slate-700",
+  "VS Code": "bg-blue-500",
+  "IntelliJ IDEA": "bg-fuchsia-600",
+  Eclipse: "bg-purple-800",
+  Maven: "bg-red-800",
+  Gradle: "bg-teal-700",
+  Figma: "bg-pink-600",
+  JUnit: "bg-green-700",
+  Photoshop: "bg-blue-900",
+  Inkscape: "bg-slate-600",
+  "Microsoft Office": "bg-orange-600",
+  Slack: "bg-fuchsia-700",
+  Zoom: "bg-blue-600",
+  Teams: "bg-indigo-600",
+  NPM: "bg-red-600",
+  Yarn: "bg-sky-600",
+  AWS: "bg-orange-500",
+  Netlify: "bg-teal-600",
+  "GitHub Pages": "bg-slate-700",
+  Azure: "bg-sky-600",
+  "Google Cloud": "bg-blue-500",
+  Heroku: "bg-purple-700",
+  "REST APIs": "bg-emerald-600",
+  Coursera: "bg-blue-700",
+  "Server-Side": "bg-slate-700",
+  CSV: "bg-green-600",
 };
+
+const DEFAULT_BG = "bg-brand";
 
 const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
   const label = tech ?? name;
@@ -122,7 +165,7 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
     .slice(0, 2)
     .toUpperCase();
 
-  const bgColor = getColorFromString(label);
+  const bgColor = NAME_TO_BG[label] || DEFAULT_BG;
 
   return (
     <div
