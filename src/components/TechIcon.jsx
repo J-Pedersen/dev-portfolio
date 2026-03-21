@@ -70,6 +70,35 @@ const NAME_TO_ICON = {
   CSV: "csv-icon",
 };
 
+const BG_COLORS = [
+  "bg-red-500",
+  "bg-orange-500",
+  "bg-amber-500",
+  "bg-yellow-500",
+  "bg-lime-500",
+  "bg-green-500",
+  "bg-emerald-500",
+  "bg-teal-500",
+  "bg-cyan-500",
+  "bg-sky-500",
+  "bg-blue-500",
+  "bg-indigo-500",
+  "bg-violet-500",
+  "bg-purple-500",
+  "bg-fuchsia-500",
+  "bg-pink-500",
+];
+
+const getColorFromString = (str) => {
+  let hash = 0;
+
+  for (let i = 0; i < str.length; i += 1) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+
+  return BG_COLORS[Math.abs(hash) % BG_COLORS.length];
+};
+
 const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
   const label = tech ?? name;
   if (!label) return null;
@@ -83,8 +112,8 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
   }
 
   const src = iconFileBase
-  ? `${import.meta.env.BASE_URL}icons/${iconFileBase}.svg`
-  : null;
+    ? `${import.meta.env.BASE_URL}icons/${iconFileBase}.svg`
+    : null;
 
   const initials = label
     .split(/\s+/)
@@ -92,6 +121,8 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
     .join("")
     .slice(0, 2)
     .toUpperCase();
+
+  const bgColor = getColorFromString(label);
 
   return (
     <div
@@ -102,27 +133,37 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
       `}
     >
       {src ? (
-        <img
-          src={src}
-          alt={label}
-          className="h-7 w-7 object-contain mb-0.5"
-          draggable="false"
-        />
+        <div
+          className={`
+            h-8 w-8 mb-0.5 rounded-full
+            flex items-center justify-center
+            ${bgColor}
+            shadow-[0_0_10px_rgba(0,0,0,0.12)]
+            dark:shadow-[0_0_12px_rgba(99,102,241,0.18)]
+          `}
+        >
+          <img
+            src={src}
+            alt={label}
+            className="h-4 w-4 object-contain"
+            draggable="false"
+          />
+        </div>
       ) : (
         <div
-          className="
-            h-7 w-7 mb-0.5 rounded-full
-            border border-slate-300 dark:border-slate-700
+          className={`
+            h-8 w-8 mb-0.5 rounded-full
             flex items-center justify-center
-            text-[10px] text-slate-500 dark:text-slate-200
-            bg-slate-50 dark:bg-slate-900
-          "
+            text-[10px] font-semibold text-white
+            ${bgColor}
+            shadow-[0_0_10px_rgba(0,0,0,0.12)]
+            dark:shadow-[0_0_12px_rgba(99,102,241,0.18)]
+          `}
         >
           {initials}
         </div>
       )}
 
-      {/* 🔥 Only show text label when hideLabel=false */}
       {!hideLabel && (
         <span className="text-[10px] text-slate-700 dark:text-slate-300 text-center leading-tight">
           {label}
