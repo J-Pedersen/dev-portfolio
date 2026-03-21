@@ -114,7 +114,7 @@ const Skills = () => {
         title="My Current Toolbelt"
       >
         As a Software and Web Developer, Database Engineer, 
-        and Aspiring Project Manager, this is a list of just 
+        and Project Manager, this is a list of just 
         some of the technologies, frameworks, libraries, languages, and 
         project management tools I have previously used. Some 
         are more familiar to me than others but I have at least 
