@@ -140,7 +140,34 @@ const NAME_TO_BG = {
   CSV: "bg-green-600",
 };
 
-const DEFAULT_BG = "bg-brand";
+const RANDOM_BG_COLORS = [
+  "bg-red-500",
+  "bg-orange-500",
+  "bg-amber-500",
+  "bg-yellow-500",
+  "bg-lime-500",
+  "bg-green-500",
+  "bg-emerald-500",
+  "bg-teal-500",
+  "bg-cyan-500",
+  "bg-sky-500",
+  "bg-blue-500",
+  "bg-indigo-500",
+  "bg-violet-500",
+  "bg-purple-500",
+  "bg-fuchsia-500",
+  "bg-pink-500",
+];
+
+const getRandomColorFromString = (str) => {
+  let hash = 0;
+
+  for (let i = 0; i < str.length; i += 1) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+
+  return RANDOM_BG_COLORS[Math.abs(hash) % RANDOM_BG_COLORS.length];
+};
 
 const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
   const label = tech ?? name;
@@ -154,7 +181,9 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
     iconFileBase = name.replace(/\.svg$/i, "");
   }
 
-  const src = iconFileBase
+  const hasIcon = Boolean(iconFileBase);
+
+  const src = hasIcon
     ? `${import.meta.env.BASE_URL}icons/${iconFileBase}.svg`
     : null;
 
@@ -165,7 +194,9 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
     .slice(0, 2)
     .toUpperCase();
 
-  const bgColor = NAME_TO_BG[label] || DEFAULT_BG;
+  const bgColor = hasIcon
+    ? NAME_TO_BG[label] || "bg-brand"
+    : getRandomColorFromString(label);
 
   return (
     <div
