@@ -141,7 +141,7 @@ const NAME_TO_BG = {
 };
 
 const RANDOM_BG_COLORS = [
-  "bg-red-500/35",
+  "bg-red-100/35",
   "bg-orange-500/35",
   "bg-amber-500/35",
   "bg-yellow-500/35",
