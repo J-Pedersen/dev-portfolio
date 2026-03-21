@@ -71,22 +71,22 @@ const NAME_TO_ICON = {
 };
 
 const BG_COLORS = [
-  "bg-red-500/50",
-  "bg-orange-500/50",
-  "bg-amber-500/50",
-  "bg-yellow-500/50",
-  "bg-lime-500/50",
-  "bg-green-500",
-  "bg-emerald-500/50",
-  "bg-teal-500/50",
-  "bg-cyan-500/50",
-  "bg-sky-500/50",
-  "bg-blue-500/50",
-  "bg-indigo-500/50",
-  "bg-violet-500/50",
-  "bg-purple-500/50",
-  "bg-fuchsia-500/50",
-  "bg-pink-500/50",
+  "bg-red-500/20",
+  "bg-orange-500/20",
+  "bg-amber-500/20",
+  "bg-yellow-500/20",
+  "bg-lime-500/20",
+  "bg-green-500/20",
+  "bg-emerald-500/20",
+  "bg-teal-500/20",
+  "bg-cyan-500/20",
+  "bg-sky-500/20",
+  "bg-blue-500/20",
+  "bg-indigo-500/20",
+  "bg-violet-500/20",
+  "bg-purple-500/20",
+  "bg-fuchsia-500/20",
+  "bg-pink-500/20",
 ];
 
 const getColorFromString = (str) => {
