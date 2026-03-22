@@ -32,11 +32,11 @@
      showgrid="false"
      inkscape:zoom="5.1577201"
      inkscape:cx="103.92189"
-     inkscape:cy="55.547799"
+     inkscape:cy="55.353915"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg3055"
+     inkscape:current-layer="g8927"
      inkscape:showpageshadow="2"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1" />
@@ -246,7 +246,7 @@
   <g
      id="g8927"
      style="display:inline"
-     transform="translate(3.3389756,-1.0085512)">
+     transform="matrix(0.89411004,-0.22941086,0.22941086,0.89411004,4.9224242,9.5152039)">
     <g
        transform="matrix(0.09561334,-0.07017507,0.07017507,0.09561334,-19.399884,20.52763)"
        id="g7248"
