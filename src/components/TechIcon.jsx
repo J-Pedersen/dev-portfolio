@@ -219,7 +219,7 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
           <img
             src={src}
             alt={label}
-            className="h-4 w-4 object-contain"
+            className="h-5 w-5 object-contain"
             draggable="false"
           />
         </div>
