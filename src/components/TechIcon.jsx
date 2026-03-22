@@ -115,7 +115,7 @@ const NAME_TO_BG = {
   GitHub: "bg-slate-800/20 border border-brand dark:border-brand-soft",
   "VS Code": "bg-yellow-300/20 border border-brand dark:border-brand-soft",
   "IntelliJ IDEA": "bg-fuchsia-500/20 border border-brand dark:border-brand-soft",
-  Eclipse: "bg-slate-200/20 border border-brand dark:border-brand-soft",
+  Eclipse: "bg-neutral-400/20 border border-brand dark:border-brand-soft",
   Maven: "bg-emerald-600/20 border border-brand dark:border-brand-soft",
   Gradle: "bg-pink-500/20 border border-brand dark:border-brand-soft",
   Figma: "bg-stone-400/20 border border-brand dark:border-brand-soft",
