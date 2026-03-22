@@ -22,7 +22,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="6.2734375"
      inkscape:cx="63.920299"
-     inkscape:cy="63.840598"
+     inkscape:cy="64"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -34,9 +34,19 @@
      fill="#cb171e"
      id="path1"
      style="display:inline" />
-  <path
+  <polygon
+     transform="matrix(0.24805,0,0,0.24805,0.5,5.6287)"
+     points="63.25,0 119.02,88.646 175.24,0 235.79,0 143.98,137.67 143.98,224.95 87.702,224.95 87.702,137.67 0,0 "
      id="polygon1"
-     style="display:inline;stroke:#ffffff;stroke-opacity:1;stroke-width:6.24067728;stroke-dasharray:none;paint-order:stroke fill markers"
-     d="M 0,8.3148559e-4 87.699683,137.66839 v 87.28236 H 143.98244 V 137.66839 L 235.7923,8.3148559e-4 H 175.24189 L 119.02212,88.645384 63.251172,8.3148559e-4 Z M 347.43657,250.12366 v 219.5248 H 512.00142 V 422.74354 H 395.64068 V 250.12366 Z m -259.736887,0.0551 V 470.64845 H 134.9983 V 318.57162 l 49.51119,102.21919 h 37.22787 L 272.94144,314.98112 V 470.6012 h 45.37738 V 250.17878 h -61.95984 l -54.97569,99.69953 -52.36155,-99.69953 z"
-     transform="matrix(0.24805,0,0,0.24805,0.5,5.6287)" />
+     style="display:inline" />
+  <polygon
+     transform="matrix(0.24805,0,0,0.24805,0.5,5.6287)"
+     points="135,470.65 135,318.57 184.51,420.79 221.74,420.79 272.94,314.98 272.94,470.6 318.32,470.6 318.32,250.18 256.36,250.18 201.38,349.88 149.02,250.18 87.701,250.18 87.701,470.65 "
+     id="polygon2"
+     style="display:inline" />
+  <polygon
+     transform="matrix(0.24805,0,0,0.24805,0.5,5.6287)"
+     points="395.64,422.74 395.64,250.12 347.44,250.12 347.44,469.65 512,469.65 512,422.74 "
+     id="polygon3"
+     style="display:inline" />
 </svg>
