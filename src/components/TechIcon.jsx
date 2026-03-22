@@ -209,7 +209,7 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
       {src ? (
         <div
           className={`
-            h-8 w-8 mb-0.5 rounded-full
+            h-9 w-9 mb-0.5 rounded-full
             flex items-center justify-center
             ${bgColor}
             shadow-[0_0_10px_rgba(0,0,0,0.12)]
@@ -219,7 +219,7 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
           <img
             src={src}
             alt={label}
-            className="h-5 w-5 object-contain"
+            className="h-7 w-7 object-contain"
             draggable="false"
           />
         </div>
