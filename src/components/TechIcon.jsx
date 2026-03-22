@@ -133,7 +133,7 @@ const NAME_TO_BG = {
   "GitHub Pages": "bg-zinc-600/20 border border-brand dark:border-brand-soft",
   Azure: "bg-orange-700/20 border border-brand dark:border-brand-soft",
   "Google Cloud": "bg-blue-200/20 border border-brand dark:border-brand-soft",
-  Heroku: "bg-yellow-400/20 border border-brand dark:border-brand-soft",
+  Heroku: "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   "REST APIs": "bg-purple-800/20 border border-brand dark:border-brand-soft",
   Coursera: "bg-blue-700/20 border border-brand dark:border-brand-soft",
   "Server-Side": "bg-slate-700/20 border border-brand dark:border-brand-soft",
