@@ -88,7 +88,7 @@ const NAME_TO_BG = {
   "Ruby on Rails": "bg-blue-400/20 border border-brand dark:border-brand-soft",
   Ajax: "bg-indigo-500/20 border border-brand dark:border-brand-soft",
   "Visual Basic": "bg-neutral-300/20 border border-brand dark:border-brand-soft",
-  XML: "bg-neutral-200/20 border border-brand dark:border-brand-soft",
+  XML: "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   JSON: "bg-blue-300/20 border border-brand dark:border-brand-soft",
   YAML: "bg-sky-300/20 border border-brand dark:border-brand-soft",
   Kotlin: "bg-gray-800/20 border border-brand dark:border-brand-soft",
