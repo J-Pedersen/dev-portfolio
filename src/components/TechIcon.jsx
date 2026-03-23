@@ -71,7 +71,7 @@ const NAME_TO_ICON = {
 };
 
 const NAME_TO_BG = {
-  Java: "bg-green-400/20 border border-brand dark:border-brand-soft",
+  Java: "bg-green-200/20 border border-brand dark:border-brand-soft",
   "Spring Boot": "bg-orange-600/20 border border-brand dark:border-brand-soft",
   "Jakarta EE": "bg-red-600/20 border border-brand dark:border-brand-soft",
   HTML: "bg-sky-600/20 border border-brand dark:border-brand-soft",

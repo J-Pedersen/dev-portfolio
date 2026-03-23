@@ -7,11 +7,33 @@
    viewBox="0 0 65.979381 65.979381"
    id="svg3476"
    version="1.1"
+   sodipodi:docname="css-icon.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.2734375"
+     inkscape:cx="63.920299"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3476" />
   <defs
      id="defs3478" />
   <metadata
@@ -27,25 +49,25 @@
   </metadata>
   <g
      id="layer1"
-     transform="translate(-193.633,-739.48031)">
+     transform="translate(-193.79733,-739.64464)">
     <path
        id="polygon2989"
        style="display:inline;fill:#264de4"
-       d="M 74.630929 100.61986 L 107.641 470.87527 L 255.77539 512.00038 L 404.32394 470.81703 L 437.36636 100.61986 L 74.630929 100.61986 z M 142.13299 176.30818 L 255.8401 176.30818 L 256.00188 176.30818 L 369.59897 176.30818 L 361.39984 268.22005 L 360.29325 280.41198 L 349.62209 399.96277 L 348.93613 407.63126 L 256.00188 433.38703 L 256.00188 433.39998 L 255.78833 433.45822 L 162.76995 407.63126 L 156.40867 336.33048 L 177.42096 336.33048 L 201.99246 336.33048 L 205.22811 372.55035 L 255.80127 386.20479 L 255.8401 386.19185 L 306.49092 372.51799 L 311.75855 313.62916 L 256.00188 313.62916 L 255.8401 313.62916 L 154.38315 313.62916 L 150.31271 268.22005 L 255.8401 268.22005 L 256.00188 268.22005 L 315.69957 268.22005 L 319.82825 221.71729 L 256.00188 221.71729 L 255.8401 221.71729 L 146.26168 221.71729 L 142.13299 176.30818 z "
+       d="M 74.630929,100.61986 107.641,470.87527 255.77539,512.00038 404.32394,470.81703 437.36636,100.61986 Z m 67.502061,75.68832 h 113.70711 0.16178 113.59709 l -8.19913,91.91187 -1.10659,12.19193 -10.67116,119.55079 -0.68596,7.66849 -92.93425,25.75577 v 0.013 l -0.21355,0.0582 -93.01838,-25.82696 -6.36128,-71.30078 h 21.01229 24.5715 l 3.23565,36.21987 50.57316,13.65444 0.0388,-0.0129 50.65082,-13.67386 5.26763,-58.88883 H 256.00188 255.8401 154.38315 l -4.07044,-45.40911 h 105.52739 0.16178 59.69769 l 4.12868,-46.50276 H 256.00188 255.8401 146.26168 Z"
        transform="matrix(0.15557406,0,0,0.15557392,187.28674,725.08192)" />
     <polygon
-       style="display:inline;fill:#ebebeb;fill-opacity:0.15141957"
-       points="256,176.305 255.843,176.305 142.132,176.305 146.26,221.716 256,221.716 "
+       style="display:inline;fill:#ebebeb;fill-opacity:0.15142"
+       points="255.843,176.305 142.132,176.305 146.26,221.716 256,221.716 256,176.305 "
        id="polygon2995"
        transform="matrix(0.15557406,0,0,0.15557392,187.28674,725.08192)" />
     <polygon
-       style="display:inline;fill:#ebebeb;fill-opacity:0.15141957"
-       points="256,268.217 150.31,268.217 154.38,313.627 256,313.627 "
+       style="display:inline;fill:#ebebeb;fill-opacity:0.15142"
+       points="150.31,268.217 154.38,313.627 256,313.627 256,268.217 "
        id="polygon2993"
        transform="matrix(0.15557406,0,0,0.15557392,187.28674,725.08192)" />
     <polygon
-       style="display:inline;fill:#ebebeb;fill-opacity:0.15141957"
-       points="177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399 256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 "
+       style="display:inline;fill:#ebebeb;fill-opacity:0.15142"
+       points="156.409,336.333 162.771,407.634 255.791,433.457 256,433.399 256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 "
        id="polygon2997"
        transform="matrix(0.15557406,0,0,0.15557392,187.28674,725.08192)" />
   </g>

@@ -36,7 +36,7 @@
      style="display:inline" />
   <path
      id="polygon1"
-     style="display:inline;stroke:#ffffff;stroke-opacity:1;stroke-width:6.24067728;stroke-dasharray:none;paint-order:stroke fill markers"
+     style="display:inline;stroke:none;stroke-opacity:1;stroke-width:6.24067728;stroke-dasharray:none;paint-order:stroke fill markers"
      d="M 0,8.3148559e-4 87.699683,137.66839 v 87.28236 H 143.98244 V 137.66839 L 235.7923,8.3148559e-4 H 175.24189 L 119.02212,88.645384 63.251172,8.3148559e-4 Z M 347.43657,250.12366 v 219.5248 H 512.00142 V 422.74354 H 395.64068 V 250.12366 Z m -259.736887,0.0551 V 470.64845 H 134.9983 V 318.57162 l 49.51119,102.21919 h 37.22787 L 272.94144,314.98112 V 470.6012 h 45.37738 V 250.17878 h -61.95984 l -54.97569,99.69953 -52.36155,-99.69953 z"
      transform="matrix(0.24805,0,0,0.24805,0.5,5.6287)" />
 </svg>
