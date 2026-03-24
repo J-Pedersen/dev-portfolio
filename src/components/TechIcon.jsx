@@ -136,7 +136,7 @@ const NAME_TO_BG = {
   Heroku: "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   "REST APIs": "bg-purple-800/20 border border-brand dark:border-brand-soft",
   Coursera: "bg-blue-700/20 border border-brand dark:border-brand-soft",
-  "Server-Side": "bg-amber-300/20 border border-brand dark:border-brand-soft",
+  "Server-Side": "bg-lime-300/20 border border-brand dark:border-brand-soft",
   CSV: "bg-green-600/20 border border-brand dark:border-brand-soft",
 };
 
