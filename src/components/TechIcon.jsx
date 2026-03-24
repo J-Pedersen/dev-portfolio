@@ -78,7 +78,7 @@ const NAME_TO_BG = {
   React: "bg-yellow-600/20 border border-brand dark:border-brand-soft",
   Python: "bg-orange-300/20 border border-brand dark:border-brand-soft",
   PHP: "bg-orange-300/20 border border-brand dark:border-brand-soft",
-  Android: "bg-orange-500/20 border border-brand dark:border-brand-soft",
+  Android: "bg-orange-300/20 border border-brand dark:border-brand-soft",
   JavaFX: "bg-pink-200/20 border border-brand dark:border-brand-soft",
   CSS: "bg-yellow-500/20 border border-brand dark:border-brand-soft",
   SQL: "bg-slate-500/20 border border-brand dark:border-brand-soft",
