@@ -109,7 +109,7 @@ const NAME_TO_BG = {
   PostgreSQL: "bg-yellow-600/20 border border-brand dark:border-brand-soft",
   "SQL Server": "bg-lime-400/20 border border-brand dark:border-brand-soft",
   MariaDB: "bg-blue-950/20 border border-brand dark:border-brand-soft",
-  SQLite: "bg-gray-500/20 border border-brand dark:border-brand-soft",
+  SQLite: "bg-lime-300/20 border border-brand dark:border-brand-soft",
   "Amazon RDS": "bg-rose-300/20 border border-brand dark:border-brand-soft",
   DynamoDB: "bg-orange-300/20 border border-brand dark:border-brand-soft",
   GitHub: "bg-slate-800/20 border border-brand dark:border-brand-soft",
