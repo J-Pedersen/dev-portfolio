@@ -103,7 +103,7 @@ const NAME_TO_BG = {
   Drupal: "bg-amber-300/20 border border-brand dark:border-brand-soft",
   WordPress: "bg-yellow-300/20 border border-brand dark:border-brand-soft",
   jQuery: "bg-amber-300/20 border border-brand dark:border-brand-soft",
-  AJAX: "bg-red-900/20 border border-brand dark:border-brand-soft",
+  AJAX: "bg-red-300/20 border border-brand dark:border-brand-soft",
   MongoDB: "bg-neutral-400/20 border border-brand dark:border-brand-soft",
   MySQL: "bg-orange-300/20 border border-brand dark:border-brand-soft",
   PostgreSQL: "bg-yellow-300/20 border border-brand dark:border-brand-soft",
