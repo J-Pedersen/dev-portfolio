@@ -79,7 +79,7 @@ const NAME_TO_BG = {
   Python: "bg-orange-300/20 border border-brand dark:border-brand-soft",
   PHP: "bg-orange-600/20 border border-brand dark:border-brand-soft",
   Android: "bg-orange-500/20 border border-brand dark:border-brand-soft",
-  JavaFX: "bg-pink-400/20 border border-brand dark:border-brand-soft",
+  JavaFX: "bg-pink-300/20 border border-brand dark:border-brand-soft",
   CSS: "bg-yellow-500/20 border border-brand dark:border-brand-soft",
   SQL: "bg-slate-500/20 border border-brand dark:border-brand-soft",
   JavaScript: "bg-green-500/20 border border-brand dark:border-brand-soft",
@@ -136,7 +136,7 @@ const NAME_TO_BG = {
   Heroku: "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   "REST APIs": "bg-purple-800/20 border border-brand dark:border-brand-soft",
   Coursera: "bg-blue-700/20 border border-brand dark:border-brand-soft",
-  "Server-Side": "bg-slate-700/20 border border-brand dark:border-brand-soft",
+  "Server-Side": "bg-slate-300/20 border border-brand dark:border-brand-soft",
   CSV: "bg-green-600/20 border border-brand dark:border-brand-soft",
 };
 
