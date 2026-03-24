@@ -38,6 +38,7 @@ const ProjectCard = ({ project }) => (
               <TechIcon
                 name={project.icon}
                 hideLabel={true}
+                showBg={false}
                 className="h-4 w-4 group-hover:scale-110 transition-transform"
               />
             </span>

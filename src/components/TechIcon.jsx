@@ -169,7 +169,13 @@ const getRandomColorFromString = (str) => {
   return RANDOM_BG_COLORS[Math.abs(hash) % RANDOM_BG_COLORS.length];
 };
 
-const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
+const TechIcon = ({
+  tech,
+  name,
+  hideLabel = false,
+  className = "",
+  showBg = true,
+}) => {
   const label = tech ?? name;
   if (!label) return null;
 
@@ -207,22 +213,31 @@ const TechIcon = ({ tech, name, hideLabel = false, className = "" }) => {
       `}
     >
       {src ? (
-        <div
-          className={`
-            h-10 w-10 mb-0.5 rounded-full
-            flex items-center justify-center
-            ${bgColor}
-            shadow-[0_0_10px_rgba(0,0,0,0.12)]
-            dark:shadow-[0_0_12px_rgba(99,102,241,0.18)]
-          `}
-        >
+        showBg ? (
+          <div
+            className={`
+              h-10 w-10 mb-0.5 rounded-full
+              flex items-center justify-center
+              ${bgColor}
+              shadow-[0_0_10px_rgba(0,0,0,0.12)]
+              dark:shadow-[0_0_12px_rgba(99,102,241,0.18)]
+            `}
+          >
+            <img
+              src={src}
+              alt={label}
+              className="h-7 w-7 object-contain"
+              draggable="false"
+            />
+          </div>
+        ) : (
           <img
             src={src}
             alt={label}
-            className="h-7 w-7 object-contain"
+            className="h-7 w-7 object-contain mb-0.5"
             draggable="false"
           />
-        </div>
+        )
       ) : (
         <div
           className={`
