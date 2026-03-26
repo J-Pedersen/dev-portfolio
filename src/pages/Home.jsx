@@ -149,7 +149,7 @@ const Home = () => {
 
                     <h3
                       className="
-                        text-sm font-semibold 
+                        text-sm text-center font-semibold 
                         text-slate-900 dark:text-slate-50 
                         group-hover:text-brand-soft
                         transition-colors
