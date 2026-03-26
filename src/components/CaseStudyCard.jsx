@@ -17,7 +17,7 @@ const CaseStudyCard = ({ caseStudy }) => (
         <div className="flex flex-col items-center text-center gap-2">
           <div className="flex items-center justify-center gap-2">
             {caseStudy.icon && (
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-400 dark:bg-slate-900">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-900">
                 <TechIcon
                   name={caseStudy.icon}
                   hideLabel={true}
