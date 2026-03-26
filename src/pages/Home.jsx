@@ -137,7 +137,7 @@ const Home = () => {
             >
               <Card className="h-full">
                 <CardHeader>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 text-center justify-center">
                     {p.icon && (
                       <TechIcon
                         name={p.icon}
@@ -149,7 +149,7 @@ const Home = () => {
 
                     <h3
                       className="
-                        text-sm text-center font-semibold 
+                        text-sm font-semibold 
                         text-slate-900 dark:text-slate-50 
                         group-hover:text-brand-soft
                         transition-colors
