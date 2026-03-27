@@ -391,7 +391,7 @@ const TechIcon = ({
             pointer-events-none absolute left-1/2 top-0 z-20
             -translate-x-1/2 -translate-y-full
             rounded-lg border border-brand-soft/40
-            bg-slate-100/95 dark:bg-slate-900/95
+            bg-slate-200/95 dark:bg-brand/95
             px-3 py-2 min-w-[180px]
             opacity-0 group-hover/tech:opacity-100
             transition-opacity duration-200
