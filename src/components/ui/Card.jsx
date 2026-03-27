@@ -4,7 +4,7 @@ const Card = ({ children, className = "" }) => {
       className={`
         h-full
         flex flex-col
-        rounded-2xl overflow-hidden
+        rounded-2xl overflow-visible
         border border-brand-soft
         bg-white dark:bg-slate-900
         transition
