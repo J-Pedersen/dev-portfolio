@@ -21,6 +21,8 @@ const CaseStudyCard = ({ caseStudy }) => (
                 <TechIcon
                   name={caseStudy.icon}
                   hideLabel={true}
+                  showBg={false}
+                  interactive={false}
                   className="h-4 w-4 group-hover:scale-110 transition-transform"
                 />
               </span>

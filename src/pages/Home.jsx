@@ -143,6 +143,7 @@ const Home = () => {
                         name={p.icon}
                         hideLabel={true}
                         showBg={false}
+                        interactive={false}
                         className="!w-auto !mx-0 !my-0 shrink-0 group-hover:scale-110 transition-transform"
                       />
                     )}

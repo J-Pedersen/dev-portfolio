@@ -39,6 +39,7 @@ const ProjectCard = ({ project }) => (
                 name={project.icon}
                 hideLabel={true}
                 showBg={false}
+                interactive={false}
                 className="h-4 w-4 group-hover:scale-110 transition-transform"
               />
             </span>
