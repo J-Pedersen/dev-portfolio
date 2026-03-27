@@ -393,7 +393,7 @@ const TechIcon = ({
             rounded-lg border border-brand-soft/40
             bg-slate-100/95 dark:bg-slate-900/95
             px-3 py-2 min-w-[180px]
-            opacity-0 group-hover:opacity-100
+            opacity-0 group-hover/tech:opacity-100
             transition-opacity duration-200
             shadow-lg backdrop-blur-sm
           "
@@ -415,7 +415,7 @@ const TechIcon = ({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="group bg-transparent p-0 text-left"
+          className="group/tech bg-transparent p-0 text-left"
           aria-label={`Open details for ${label}`}
         >
           {content}
