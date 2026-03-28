@@ -414,7 +414,11 @@ const TechIcon = ({
       {interactive ? (
         <button
           type="button"
-          onClick={() => setOpen(true)}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setOpen(true);
+          }}
           className="group/tech bg-transparent p-0 text-left"
           aria-label={`Open details for ${label}`}
         >
