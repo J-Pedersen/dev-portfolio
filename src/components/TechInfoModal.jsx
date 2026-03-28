@@ -19,13 +19,29 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
 
   if (!open) return null;
 
+  const handleClose = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onClose();
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      }}
+    >
       <button
         type="button"
         aria-label="Close tech details"
-        onClick={onClose}
-        className="absolute inset-0 bg-slate-950/50 backdrop-blur-sm"
+        onClick={handleClose}
+        onMouseDown={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+        className="absolute inset-0 w-full h-full bg-slate-950/50 backdrop-blur-sm"
       />
 
       <div
@@ -36,6 +52,14 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           shadow-[0_12px_40px_rgba(0,0,0,0.25)]
           p-5
         "
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+        onMouseDown={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
       >
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
@@ -49,7 +73,11 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
 
           <button
             type="button"
-            onClick={onClose}
+            onClick={handleClose}
+            onMouseDown={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
             className="
               inline-flex h-9 w-9 items-center justify-center rounded-full
               border border-slate-300 dark:border-slate-700
@@ -74,6 +102,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                   <a
                     href={item.href}
                     className="text-sm text-brand hover:text-brand-soft transition"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     {item.title}
                   </a>
@@ -93,5 +122,3 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
     </div>
   );
 };
-
-export default TechInfoModal;
