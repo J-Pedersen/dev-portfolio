@@ -1,5 +1,6 @@
 // src/components/TechIcon.jsx
 import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import { techDetails } from "../data/techDetails.js";
 import { projects } from "../data/projects.js";
 import { caseStudies } from "../data/caseStudies.js";
