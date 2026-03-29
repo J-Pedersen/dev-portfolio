@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: glow background */
 body {
-  @apply bg-slate-950 text-slate-100;
+  @apply bg-slate-950 text-slate-100 bg-slate-300 dark:bg-slate-900;
 }
 
 html {
   scroll-behavior: smooth;
-  @apply bg-slate-300 dark:bg-slate-900;
 }
 
 @keyframes fadeInSlow {
