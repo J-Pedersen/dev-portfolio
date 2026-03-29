@@ -27,7 +27,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 bg-slate-300">
       <section className="grid gap-8 md:grid-cols-[2fr,1.2fr] items-center">
         <div>
           <motion.p
@@ -162,7 +162,7 @@ const Home = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p className="text-xs text-slate-700 dark:text-slate-300 bg-slate-300">
+                  <p className="text-xs text-slate-700 dark:text-slate-300">
                     {p.shortDescription}
                   </p>
                 </CardBody>
