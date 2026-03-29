@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: glow background */
-body {
-  @apply bg-slate-950 text-slate-100;
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
 }
 
 html {
