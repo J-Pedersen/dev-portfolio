@@ -84,7 +84,7 @@ const Home = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.15 }}
           className="
-            relative h-48 sm:h-64 md:h-72 rounded-3xl overflow-visible
+            relative h-56 sm:h-64 md:h-72 rounded-3xl overflow-hidden md:overflow-visible
             border border-brand-soft
             bg-slate-100
             hover:bg-slate-50
