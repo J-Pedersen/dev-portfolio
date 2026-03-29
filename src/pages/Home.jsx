@@ -27,7 +27,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="space-y-10 bg-slate-300">
+    <div className="space-y-10">
       <section className="grid gap-8 md:grid-cols-[2fr,1.2fr] items-center">
         <div>
           <motion.p
