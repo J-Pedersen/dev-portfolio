@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <div
       className="
         min-h-screen flex flex-col
-        bg-gradient-to-br from-brand/5 via-transparent to-brand/10 text-slate-900
+        bg-slate-300 text-slate-900
         dark:bg-slate-950 dark:text-slate-100
         transition-colors
       "
