@@ -162,7 +162,7 @@ const Home = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p className="text-xs text-slate-700 dark:text-slate-300">
+                  <p className="text-xs text-slate-700 dark:text-slate-300 bg-slate-300">
                     {p.shortDescription}
                   </p>
                 </CardBody>
