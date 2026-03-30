@@ -26,7 +26,7 @@ const linkify = (text) => {
   });
 };
 
-// Group by year
+// ✅ FIXED: returns ARRAY instead of object (preserves sort order)
 const groupByYear = (items) => {
   const groups = {};
 
@@ -36,19 +36,16 @@ const groupByYear = (items) => {
     groups[year].push(item);
   });
 
-  const sorted = Object.fromEntries(
-    Object.entries(groups).sort(([a], [b]) => {
+  return Object.entries(groups)
+    .sort(([a], [b]) => {
       if (a === "Other") return 1;
       if (b === "Other") return -1;
-      return Number(b) - Number(a);
+      return Number(b) - Number(a); // newest year first
     })
-  );
-
-  Object.keys(sorted).forEach((year) => {
-    sorted[year] = [...sorted[year]].reverse();
-  });
-
-  return sorted;
+    .map(([year, entries]) => [
+      year,
+      [...entries].reverse(), // newest items first
+    ]);
 };
 
 const Timeline = ({ items, mobile = false }) => {
@@ -58,7 +55,6 @@ const Timeline = ({ items, mobile = false }) => {
   const velocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(velocity, { stiffness: 50, damping: 20 });
 
-  const [direction, setDirection] = useState("down");
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -67,7 +63,10 @@ const Timeline = ({ items, mobile = false }) => {
 
     check();
     const observer = new MutationObserver(check);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
 
     return () => observer.disconnect();
   }, []);
@@ -76,34 +75,33 @@ const Timeline = ({ items, mobile = false }) => {
     <aside
       className={`
         ${mobile ? "" : "hidden md:block sticky top-24 h-[80vh] overflow-y-auto pr-4"}
-                group rounded-2xl p-4 flex flex-col gap-3 transition
-                border
-              border-brand-soft 
-              bg-slate-100 
-              hover:bg-slate-50 
-              hover:border-brand 
-                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-              dark:bg-slate-900/60 
-              dark:hover:bg-slate-950
-              dark:hover:border-brand
-              dark:border-brand-soft
+        group rounded-2xl p-4 flex flex-col gap-3 transition
+        border border-brand-soft 
+        bg-slate-100 hover:bg-slate-50 hover:border-brand 
+        hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+        dark:bg-slate-900/60 dark:hover:bg-slate-950
+        dark:hover:border-brand dark:border-brand-soft
       `}
     >
       <div
         className={`
           relative 
-          ${mobile ? "space-y-10" : "border-r border-slate-300/60 dark:border-slate-700/60 mr-4 pr-6 space-y-10"}
+          ${mobile
+            ? "space-y-10"
+            : "border-r border-slate-300/60 dark:border-slate-700/60 mr-4 pr-6 space-y-10"}
         `}
       >
-        {Object.entries(grouped).map(([year, entries]) => (
+        {/* ✅ FIXED: using grouped.map (NOT Object.entries) */}
+        {grouped.map(([year, entries]) => (
           <div key={year} className="space-y-8">
             {/* YEAR HEADER */}
             <div
               className={`
                 px-3 py-2 font-semibold text-slate-900 dark:text-slate-100 z-20 text-center
-                ${mobile
-                  ? "border border-brand-soft/50 dark:border-brand-soft/50 bg-brand/50 dark:bg-brand/50 backdrop-blur shadow-sm"
-                  : "sticky top-0 bg-brand/50 dark:bg-brand/50 backdrop-blur-md border border-brand-soft/50 dark:border-brand-soft/50 rounded-md shadow-sm"
+                ${
+                  mobile
+                    ? "border border-brand-soft/50 bg-brand/50 backdrop-blur shadow-sm"
+                    : "sticky top-0 bg-brand/50 backdrop-blur-md border border-brand-soft/50 rounded-md shadow-sm"
                 }
               `}
             >
@@ -131,18 +129,13 @@ const Timeline = ({ items, mobile = false }) => {
                     isInView ? "opacity-100" : "opacity-70"
                   }`}
                 >
-                  {/* TITLE PILL */}
+                  {/* TITLE */}
                   <motion.div className="w-full flex justify-center z-10">
                     <motion.span
                       className="
-                        inline-block
-                        px-3 py-1
-                        text-xs font-semibold
-                        border
-                      border-brand-soft 
-                      bg-slate-100 
-                      dark:bg-slate-900/60 
-                      dark:border-brand-soft
+                        inline-block px-3 py-1 text-xs font-semibold
+                        border border-brand-soft 
+                        bg-slate-100 dark:bg-slate-900/60 
                         text-center
                       "
                     >
