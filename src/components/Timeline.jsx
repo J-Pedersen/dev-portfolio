@@ -29,12 +29,26 @@ const linkify = (text) => {
 // Group by year
 const groupByYear = (items) => {
   const groups = {};
+
   items.forEach((item) => {
     const year = (item.period || "").match(/\d{4}/)?.[0] || "Other";
     if (!groups[year]) groups[year] = [];
     groups[year].push(item);
   });
-  return groups;
+
+  const sorted = Object.fromEntries(
+    Object.entries(groups).sort(([a], [b]) => {
+      if (a === "Other") return 1;
+      if (b === "Other") return -1;
+      return Number(b) - Number(a);
+    })
+  );
+
+  Object.keys(sorted).forEach((year) => {
+    sorted[year] = [...sorted[year]].reverse();
+  });
+
+  return sorted;
 };
 
 const Timeline = ({ items, mobile = false }) => {
