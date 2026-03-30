@@ -4,9 +4,9 @@ const Card = ({ children, className = "" }) => {
       className={`
         h-full
         flex flex-col
-        rounded-2xl overflow-visible
+        rounded-2xl overflow-hidden
         border border-brand-soft
-        bg-white dark:bg-slate-900
+        bg-slate-100 dark:bg-slate-900
         transition
         hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
         ${className}

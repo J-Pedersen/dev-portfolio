@@ -1,4 +1,6 @@
-import { useMemo, useState } from "react";
+// src/components/TechIcon.jsx
+import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { techDetails } from "../data/techDetails.js";
 import { projects } from "../data/projects.js";
 import { caseStudies } from "../data/caseStudies.js";
@@ -171,6 +173,48 @@ const getRandomColorFromString = (str) => {
   return RANDOM_BG_COLORS[Math.abs(hash) % RANDOM_BG_COLORS.length];
 };
 
+const TechTooltip = ({ visible, anchorRect, label, description }) => {
+  if (!visible || !anchorRect) return null;
+
+  const tooltipWidth = 180;
+  const spacing = 10;
+
+  let left = anchorRect.left + anchorRect.width / 2;
+  let top = anchorRect.top - spacing;
+
+  const minLeft = tooltipWidth / 2 + 8;
+  const maxLeft = window.innerWidth - tooltipWidth / 2 - 8;
+
+  if (left < minLeft) left = minLeft;
+  if (left > maxLeft) left = maxLeft;
+
+  const tooltip = (
+    <div
+      className="
+        pointer-events-none fixed z-[9998]
+        rounded-lg border border-brand-soft/40
+        bg-slate-200/95 dark:bg-slate-700/95
+        px-3 py-2 min-w-[180px] max-w-[220px]
+        shadow-lg backdrop-blur-sm
+      "
+      style={{
+        left,
+        top,
+        transform: "translate(-50%, -100%)",
+      }}
+    >
+      <p className="text-xs font-bold text-slate-900 dark:text-slate-100">
+        {label}
+      </p>
+      <p className="mt-1 text-[11px] text-slate-700 dark:text-slate-300">
+        {description || "Click for details."}
+      </p>
+    </div>
+  );
+
+  return createPortal(tooltip, document.body);
+};
+
 const TechIcon = ({
   tech,
   name,
@@ -180,6 +224,9 @@ const TechIcon = ({
   interactive = true,
 }) => {
   const [open, setOpen] = useState(false);
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+  const [anchorRect, setAnchorRect] = useState(null);
+  const triggerRef = useRef(null);
 
   const label = tech ?? name;
   if (!label) return null;
@@ -232,6 +279,24 @@ const TechIcon = ({
 
     return [...projectMatches, ...caseStudyMatches];
   }, [label]);
+
+  useEffect(() => {
+    if (!tooltipVisible) return;
+
+    const updatePosition = () => {
+      if (!triggerRef.current) return;
+      setAnchorRect(triggerRef.current.getBoundingClientRect());
+    };
+
+    updatePosition();
+    window.addEventListener("scroll", updatePosition, true);
+    window.addEventListener("resize", updatePosition);
+
+    return () => {
+      window.removeEventListener("scroll", updatePosition, true);
+      window.removeEventListener("resize", updatePosition);
+    };
+  }, [tooltipVisible]);
 
   const iconNode = src ? (
     showBg ? (
@@ -290,28 +355,6 @@ const TechIcon = ({
           {label}
         </span>
       )}
-
-      {interactive && (
-        <div
-          className="
-            pointer-events-none absolute left-1/2 top-0 z-20
-            -translate-x-1/2 -translate-y-full
-            rounded-lg border border-brand-soft/40
-            bg-slate-200/95 dark:bg-slate-600/95
-            px-3 py-2 min-w-[180px]
-            opacity-0 group-hover/tech:opacity-100
-            transition-opacity duration-200
-            shadow-lg backdrop-blur-sm
-          "
-        >
-          <p className="text-xs font-bold text-slate-900 dark:text-slate-100">
-            {label}
-          </p>
-          <p className="mt-1 text-[11px] text-slate-700 dark:text-slate-300">
-            {description || "Click for details."}
-          </p>
-        </div>
-      )}
     </div>
   );
 
@@ -319,6 +362,7 @@ const TechIcon = ({
     <>
       {interactive ? (
         <button
+          ref={triggerRef}
           type="button"
           onClick={(e) => {
             e.preventDefault();
@@ -329,13 +373,26 @@ const TechIcon = ({
             e.preventDefault();
             e.stopPropagation();
           }}
-          className="group/tech bg-transparent p-0 text-left"
+          onMouseEnter={() => setTooltipVisible(true)}
+          onMouseLeave={() => setTooltipVisible(false)}
+          onFocus={() => setTooltipVisible(true)}
+          onBlur={() => setTooltipVisible(false)}
+          className="bg-transparent p-0 text-left"
           aria-label={`Open details for ${label}`}
         >
           {content}
         </button>
       ) : (
         content
+      )}
+
+      {interactive && (
+        <TechTooltip
+          visible={tooltipVisible}
+          anchorRect={anchorRect}
+          label={label}
+          description={description}
+        />
       )}
 
       <TechInfoModal
