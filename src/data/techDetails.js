@@ -267,4 +267,80 @@ export const techDetails = {
     description:
       "File format I use for storing and exchanging structured data in applications.",
   },
+  "Requirements Gathering": {
+    description:
+      "Process I use to identify user needs, define system functionality, and establish clear project scope.",
+  },
+  "Project Scheduling": {
+    description:
+      "Planning approach I use to organize tasks, timelines, and milestones across a project lifecycle.",
+  },
+  "Resource Allocation": {
+    description:
+      "Method I use to assign people, tools, and time effectively to project tasks and priorities.",
+  },
+  "Cost Estimation": {
+    description:
+      "Process I use to forecast project costs based on scope, effort, and required resources.",
+  },
+  "Request for Proposal": {
+    description:
+      "Formal document I use to outline project requirements and solicit vendor or solution proposals.",
+  },
+  "RFPs": {
+    description:
+      "Formal documents used to define requirements and evaluate potential solutions or vendors.",
+  },
+  "Project Charters": {
+    description:
+      "Documents I create to define project objectives, stakeholders, scope, and overall direction.",
+  },
+  "WBS": {
+    description:
+      "Work Breakdown Structure I use to decompose projects into manageable tasks and deliverables.",
+  },
+  "WBS Dictionaries": {
+    description:
+      "Detailed descriptions I create for WBS elements to clarify scope, ownership, and deliverables.",
+  },
+  "Network Diagrams": {
+    description:
+      "Visual planning tools I use to map task dependencies and identify critical paths in projects.",
+  },
+  "Risk Registers": {
+    description:
+      "Documents I maintain to track project risks, likelihood, impact, and mitigation strategies.",
+  },
+  "Risk Analysis": {
+    description:
+      "Process I use to evaluate potential risks and determine appropriate mitigation plans.",
+  },
+  "Quality Management Plans": {
+    description:
+      "Plans I create to define quality standards, validation processes, and acceptance criteria.",
+  },
+  Agile: {
+    description:
+      "Flexible development approach I use to adapt to changing requirements and deliver iteratively.",
+  },
+  Scrum: {
+    description:
+      "Agile framework I use for organizing work into sprints with defined roles and ceremonies.",
+  },
+  Scheduling: {
+    description:
+      "Process I use to organize and prioritize tasks to ensure timely project delivery.",
+  },
+  "Communication Plans": {
+    description:
+      "Strategies I use to ensure stakeholders receive timely, clear, and relevant project updates.",
+  },
+  "Stakeholder Management": {
+    description:
+      "Approach I use to identify stakeholders, manage expectations, and maintain alignment.",
+  },
+  "Status Reporting": {
+    description:
+      "Process I use to communicate project progress, risks, and updates to stakeholders.",
+  },
 };
