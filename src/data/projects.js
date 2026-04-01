@@ -8,12 +8,12 @@ export const projects = [
     shortDescription:
       'React-based version of the Little Lemon website with reusable components and routing.',
     role: 'React Developer',
-    techStack: ['React', 'Bootstrap', 'JavaScript'],
+    techStack: ['React', 'Bootstrap', 'JavaScript','Photoshop', 'Figma', 'Inkscape'],
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/little-lemon-react',
     demoUrl: 'https://j-pedersen.github.io/little-lemon-react/',
     icon: 'little_lemon-icon',
-    tags: ['React', 'Bootstrap', 'JavaScript', 'Coursera', 'PhotoShop', 'Figma', 'Inkscape'],
+    tags: ['React', 'Bootstrap', 'JavaScript', 'Coursera'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-react-demo.mp4`,
 
     longDescription:
