@@ -13,7 +13,7 @@ export const projects = [
     githubUrl: 'https://github.com/J-Pedersen/little-lemon-react',
     demoUrl: 'https://j-pedersen.github.io/little-lemon-react/',
     icon: 'little_lemon-icon',
-    tags: ['React', 'Bootstrap', 'JavaScript', 'Coursera'],
+    tags: ['React', 'Bootstrap', 'JavaScript', 'Coursera', 'PhotoShop', 'Figma', 'Inkscape'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-react-demo.mp4`,
 
     longDescription:
