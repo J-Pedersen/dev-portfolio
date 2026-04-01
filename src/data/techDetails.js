@@ -41,7 +41,7 @@ export const techDetails = {
   },
   SQL: {
     description:
-      "A Query language which I have used for creating relational databases, data modeling, and allowing applications to access data.",
+      "A query language which I have used for creating relational databases, data modeling, and allowing applications to access data.",
   },
   JavaScript: {
     description:
@@ -49,7 +49,7 @@ export const techDetails = {
   },
   TypeScript: {
     description:
-      "Typed superset of JavaScript I have used when creating React applications.",
+      "A typed superset of JavaScript I have used when creating React applications.",
   },
   Ruby: {
     description:
