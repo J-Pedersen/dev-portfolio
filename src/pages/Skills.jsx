@@ -35,6 +35,7 @@ const skills = {
     'JSP',
     'Bootstrap',
     'Tailwind',
+    'ThymeLeaf',
     'jQuery',
     'AJAX',
     'REST APIs',
