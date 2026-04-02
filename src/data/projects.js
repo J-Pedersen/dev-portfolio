@@ -59,7 +59,7 @@ Presentational components (cards, buttons, etc.)
     shortDescription:
       'A Spring Boot application modeling a book club with server-side Java, templated views, and persistent data.',
     role: 'Full-Stack Developer',
-    techStack: ['Java', 'Spring Boot', 'CSS', 'MongoDB'],
+    techStack: ['Java', 'Spring Boot', 'ThymeLeaf', 'MongoDB'],
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/bookclub',
     icon: 'bookclub-icon',
