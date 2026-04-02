@@ -88,7 +88,7 @@ const skills = {
     'Project Scheduling',
     'Resource Allocation',
     'Cost Estimation',
-    'Request for Proposal',
+    'RFPs',
     'WBS',
     'WBS Dictionaries',
     'Network Diagrams',

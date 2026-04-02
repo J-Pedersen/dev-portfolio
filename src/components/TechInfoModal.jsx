@@ -65,7 +65,6 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           e.stopPropagation();
         }}
       >
-        {/* Header */}
         <div
           className="
             px-4 py-3
@@ -99,7 +98,6 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           </button>
         </div>
 
-        {/* Body */}
         <div className="p-4 space-y-4">
           <div>
             <p className="text-sm text-slate-700 dark:text-slate-300">

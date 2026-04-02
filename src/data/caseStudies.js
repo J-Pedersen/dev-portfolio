@@ -51,7 +51,7 @@ export const caseStudies = [
       "Risk Analysis",
       "Risk Registers",
       "Quality Management Plans",
-      "Request for Proposals",
+      "RfPs",
     ],
   },
 ];

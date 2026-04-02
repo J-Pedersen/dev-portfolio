@@ -5,7 +5,7 @@ export const techDetails = {
   },
   "Spring Boot": {
     description:
-      "A java framework which I have used for building backend services, MVC apps, and REST APIs.",
+      "A Java framework which I have used for building backend services, MVC apps, and REST APIs.",
   },
   "Jakarta EE": {
     description:
@@ -29,7 +29,7 @@ export const techDetails = {
   },
   Android: {
     description:
-      "A platform which I have used for the developing and testing of mobile applications.",
+      "A platform which I have used for developing and testing mobile applications.",
   },
   JavaFX: {
     description:
@@ -53,13 +53,17 @@ export const techDetails = {
   },
   Ruby: {
     description:
-      "An Object-oriented language which I have used for scripting and web development projects.",
+      "An object-oriented language which I have used for scripting and web development projects.",
   },
   "Ruby on Rails": {
     description:
       "A web framework which I have used for building full-stack applications with rapid development workflows.",
   },
   Ajax: {
+    description:
+      "A technique I have used to fetch data asynchronously and update the UI without full page reloads.",
+  },
+  AJAX: {
     description:
       "A technique I have used to fetch data asynchronously and update the UI without full page reloads.",
   },
@@ -105,7 +109,7 @@ export const techDetails = {
   },
   Git: {
     description:
-      "A Version control system which I have used to manage my code history, branches, and collaboration.",
+      "A version control system which I have used to manage my code history, branches, and collaboration.",
   },
   Docker: {
     description:
@@ -117,7 +121,7 @@ export const techDetails = {
   },
   Drupal: {
     description:
-      "A Content management system which I have used for building and managing websites.",
+      "A content management system which I have used for building and managing websites.",
   },
   WordPress: {
     description:
@@ -185,7 +189,7 @@ export const techDetails = {
   },
   Figma: {
     description:
-      "A Design tool which I have used for UI/UX mockups and prototyping interfaces on many of my projects.",
+      "A design tool which I have used for UI/UX mockups and prototyping interfaces on many of my projects.",
   },
   JUnit: {
     description:
@@ -193,7 +197,7 @@ export const techDetails = {
   },
   Photoshop: {
     description:
-      "A Design tool which I use for image editing and visual asset creation quite often.",
+      "A design tool which I use for image editing and visual asset creation quite often.",
   },
   Inkscape: {
     description:
@@ -201,7 +205,7 @@ export const techDetails = {
   },
   "Microsoft Office": {
     description:
-      "A productivity suite which I use for documentation, reports, and project planning. Primarily Word and PowerPoint but I have used most of them at some point.",
+      "A productivity suite which I use for documentation, reports, and project planning. Primarily Word and PowerPoint, but I have used most of the apps at some point.",
   },
   Slack: {
     description:
@@ -233,7 +237,7 @@ export const techDetails = {
   },
   "GitHub Pages": {
     description:
-      "Static hosting service which I use for deploying my portfolio and other frontend projects.",
+      "A static hosting service which I use for deploying my portfolio and other frontend projects.",
   },
   Azure: {
     description:
@@ -261,15 +265,25 @@ export const techDetails = {
   },
   CSV: {
     description:
-      "A File format which I have used for storing and exchanging structured data in applications.",
+      "A file format which I have used for storing and exchanging structured data in applications.",
   },
+
+  ThymeLeaf: {
+    description:
+      "A Java server-side templating engine which I have used with Spring Boot to render dynamic HTML views.",
+  },
+  "UI Design": {
+    description:
+      "User interface design work focused on layout, usability, visual hierarchy, and creating clear application flows.",
+  },
+
   "Requirements Gathering": {
     description:
-      "A process which I use to identify the users' needs, define a systems needed functionality, and establish a clear project scope.",
+      "A process which I use to identify user needs, define system functionality, and establish a clear project scope.",
   },
   "Project Scheduling": {
     description:
-      "A planning approach which I use to organize tasks, timelines, and milestones across a projects lifecycle.",
+      "A planning approach which I use to organize tasks, timelines, and milestones across a project's lifecycle.",
   },
   "Resource Allocation": {
     description:
@@ -277,35 +291,31 @@ export const techDetails = {
   },
   "Cost Estimation": {
     description:
-      "A process which I use to forecast a projects costs based on the scope, effort, and the required resources.",
+      "A process which I use to forecast project costs based on scope, effort, and required resources.",
   },
-  "Request for Proposal": {
+  RFPs: {
     description:
-      "A formal document which I use to outline all project requirements and solicit vendor or solution proposals.",
-  },
-  "RFPs": {
-    description:
-      "The formal documents that are used to define requirements and evaluate potential solutions or vendors.",
+      "Formal documents used to define requirements and evaluate potential solutions or vendors.",
   },
   "Project Charters": {
     description:
-      "The documents I create to define a projects objectives, identify stakeholders, establish a projects scope, and detail the overall direction.",
+      "Documents I create to define project objectives, identify stakeholders, establish project scope, and outline overall direction.",
   },
-  "WBS": {
+  WBS: {
     description:
-      "The Work Breakdown Structure I use to decompose a project into the smallest possible manageable tasks and deliverables.",
+      "The Work Breakdown Structure I use to decompose a project into manageable tasks and deliverables.",
   },
   "WBS Dictionaries": {
     description:
-      "The WBS Dictionary provides a detailed description for each WBS element to clarify its scope, ownership, and the exact deliverables which will be produced.",
+      "Detailed companion documents for the WBS which clarify scope, ownership, and expected deliverables for each work package.",
   },
   "Network Diagrams": {
     description:
-      "The visual planning tools I use to map task dependencies and identify the critical paths in projects which will keep a project on track.",
+      "Visual planning tools I use to map task dependencies and identify the critical path needed to keep a project on track.",
   },
   "Risk Registers": {
     description:
-      "These are the documents I maintain to track projects risks, their likelihood, their impact, and mitigation strategies for each risk.",
+      "Documents I maintain to track project risks, their likelihood, impact, and mitigation strategies.",
   },
   "Risk Analysis": {
     description:
@@ -313,11 +323,11 @@ export const techDetails = {
   },
   "Quality Management Plans": {
     description:
-      "The plans I create to define quality standards, validation processes, and acceptance criteria.",
+      "Plans I create to define quality standards, validation processes, and acceptance criteria.",
   },
   Agile: {
     description:
-      "Agile is a flexible development approach which I have used to adapt to changing requirements and deliver project artifacts iteratively.",
+      "A flexible development approach which I have used to adapt to changing requirements and deliver project artifacts iteratively.",
   },
   Scrum: {
     description:
@@ -329,11 +339,11 @@ export const techDetails = {
   },
   "Communication Plans": {
     description:
-      "The strategies used to make certain stakeholders receive timely, clear, and relevant project updates.",
+      "Strategies used to make certain stakeholders receive timely, clear, and relevant project updates.",
   },
   "Stakeholder Management": {
     description:
-      "The approach I use to identify all stakeholders, manage their expectations, and maintain project alignment.",
+      "The approach I use to identify stakeholders, manage their expectations, and maintain project alignment.",
   },
   "Status Reporting": {
     description:

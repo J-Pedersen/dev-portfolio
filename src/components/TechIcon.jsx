@@ -74,7 +74,6 @@ const NAME_TO_ICON = {
   Coursera: "coursera-icon",
   "Server-Side": "server_side-icon",
   CSV: "csv-icon",
-  ThymeLeaf: "thymeleaf-icon",
 };
 
 const NAME_TO_BG = {
@@ -145,7 +144,6 @@ const NAME_TO_BG = {
   Coursera: "bg-blue-700/20 border border-brand dark:border-brand-soft",
   "Server-Side": "bg-lime-300/20 border border-brand dark:border-brand-soft",
   CSV: "bg-green-600/20 border border-brand dark:border-brand-soft",
-  ThymeLeaf: "bg-orange-400/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
@@ -205,7 +203,6 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
         transform: "translate(-50%, -100%)",
       }}
     >
-      {/* Header */}
       <div
         className="
           px-3 py-2
@@ -218,7 +215,6 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
         </p>
       </div>
 
-      {/* Body */}
       <div className="px-3 py-2">
         <p className="text-[11px] text-slate-700 dark:text-slate-300">
           {description || "Click for details."}
