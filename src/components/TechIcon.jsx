@@ -145,7 +145,7 @@ const NAME_TO_BG = {
   Coursera: "bg-blue-700/20 border border-brand dark:border-brand-soft",
   "Server-Side": "bg-lime-300/20 border border-brand dark:border-brand-soft",
   CSV: "bg-green-600/20 border border-brand dark:border-brand-soft",
-  ThymeLeaf: "bg-lime-300/20 border border-brand dark:border-brand-soft",
+  ThymeLeaf: "bg-orange-400/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
