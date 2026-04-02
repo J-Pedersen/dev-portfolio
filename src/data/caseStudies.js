@@ -13,8 +13,8 @@ export const caseStudies = [
       "Java",
       "Spring Boot",
       "MongoDB",
-      "Thymeleaf",
-      "RESTful APIs",
+      "ThymeLeaf",
+      "REST APIs",
       "JSON",
     ],
   },
@@ -26,7 +26,11 @@ export const caseStudies = [
     title: "GradeBookApp JavaFX Desktop Application",
     summary:
       "A JavaFX desktop application built with clean separation of concerns, dynamic layout handling, CSV storage, and light/dark theme switching. This case study highlights UI architecture, controller/service refactoring, responsive layout strategies, and modular animated UI components.",
-    techStack: ["Java", "JavaFX", "CSV", "UI Design"],
+    techStack: [
+      "Java", 
+      "JavaFX", 
+      "CSV", 
+      "UI Design"],
   },
 
   // -------------------------------------------------
@@ -40,12 +44,14 @@ export const caseStudies = [
     summary:
       "A complete suite of project management deliverables for a CAREWare-style support system modernization effort. Includes the project charter, WBS, WBS dictionary, network diagrams, risk register, RFP, and quality management plan for a multi-phase implementation.",
     techStack: [
-      "PMBOK",
-      "WBS & WBS Dictionary",
+      "Project Charters",
+      "WBS",
+      "WBS Dictionaries",
       "Network Diagrams",
       "Risk Analysis",
-      "Quality Planning",
-      "RFP Development",
+      "Risk Registers",
+      "Quality Management Plans",
+      "Request for Proposals",
     ],
   },
 ];
