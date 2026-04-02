@@ -74,6 +74,7 @@ const NAME_TO_ICON = {
   Coursera: "coursera-icon",
   "Server-Side": "server_side-icon",
   CSV: "csv-icon",
+  ThymeLeaf: "thymeleaf-icon",
 };
 
 const NAME_TO_BG = {
