@@ -689,10 +689,10 @@ Simple navigation between sections
   ],
 
   tags: [
+    "Android",
     "Mobile Development",
-    "Data Persistence",
-    "UI Design",
-    "Android Lifecycle"
+    "Java",
+    "SQLite"    
   ],
 
   githubUrl: "https://github.com/J-Pedersen/weight-tracker-android",
