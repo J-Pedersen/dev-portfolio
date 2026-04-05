@@ -695,8 +695,6 @@ Simple navigation between sections
     "Android Lifecycle"
   ],
 
-  highlight: "Mobile App",
-
   githubUrl: "https://github.com/J-Pedersen/weight-tracker-android",
 
   details: {
