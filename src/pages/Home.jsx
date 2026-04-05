@@ -61,9 +61,8 @@ const Home = () => {
               max-w-xl mb-6
             "
           >
-            I’m Jeff Pedersen, a full-stack developer and project
-            manager. I work across Java, Spring Boot, React,
-            cloud technologies, and databases, and I also build the PM artifacts which keep projects
+            I’m Jeff Pedersen, a full-stack developer and database engineer. I work across HTML, CSS, JavaScript, Java, Spring Boot, React,
+            cloud technologies, and databases, and I also can build the PM artifacts which keep projects
             on track such as WBS, risk registers, and network diagrams.
           </motion.p>
 
