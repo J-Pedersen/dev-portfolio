@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects.js';
 import TechIcon from '../components/TechIcon.jsx';
-
 import Card from '../components/ui/Card.jsx';
 import CardHeader from '../components/ui/CardHeader.jsx';
 import CardBody from '../components/ui/CardBody.jsx';

@@ -52,7 +52,6 @@ Presentational components (cards, buttons, etc.)
       'The React version of Little Lemon shows that I can move from static layouts to a component-based architecture and reason about how to carve up a UI cleanly.'
   },
 
-
   {
     slug: 'book-club-springboot',
     title: 'Bookclub Application',
@@ -670,5 +669,73 @@ Simple navigation between sections
 
     outcome:
       'bioSite is a good example of early multi-page site work and shows how I structure content-driven pages with plain HTML and CSS.'
+  },
+
+  {
+  title: "WeightMate Android App",
+  slug: "weightmate-android",
+  shortDescription:
+    "A full-featured Android application for tracking weight progress, managing user profiles, and visualizing goal completion with dynamic UI elements and local data persistence.",
+
+  type: "featured",
+
+  techStack: [
+    "Java",
+    "Android",
+    "SQLite",
+    "XML",
+    "Photoshop",
+    "Inkscape"
+  ],
+
+  tags: [
+    "Mobile Development",
+    "Data Persistence",
+    "UI Design",
+    "Android Lifecycle"
+  ],
+
+  highlight: "Mobile App",
+
+  githubUrl: "https://github.com/J-Pedersen/weight-tracker-android",
+
+  details: {
+    overview:
+      "WeightMate is a mobile application designed to help users track their weight progress over time. The app supports profile creation, goal tracking, progress visualization, and media storage, all within a clean and responsive Android UI.",
+
+    features: [
+      "Multi-step user profile creation workflow",
+      "Weight entry logging with full history tracking",
+      "Progress visualization with goal tracking bar",
+      "Unit conversion between standard and metric systems",
+      "Profile and progress photo storage",
+      "Editable user profile screen",
+      "Light and dark theme support"
+    ],
+
+    architecture: [
+      "SQLite database used for persistent storage of user data and weight entries",
+      "Local file storage for image handling",
+      "XML-based layouts for structured UI design",
+      "Activity-based navigation across multiple screens"
+    ],
+
+    challenges: [
+      "Managing multi-screen navigation and maintaining consistent state",
+      "Handling image storage and retrieval efficiently",
+      "Designing a responsive UI across different device sizes",
+      "Implementing reliable unit conversion logic"
+    ],
+
+    outcome:
+      "Delivered a fully functional Android application with persistent data storage, user-friendly navigation, and a clean UI. The project demonstrates strong understanding of mobile development fundamentals, state management, and local data handling.",
+
+    nextSteps: [
+      "Add data visualization charts for progress tracking",
+      "Introduce cloud sync for cross-device access",
+      "Implement authentication for multiple users",
+      "Enhance UI animations and transitions"
+    ]
   }
+}
 ];
