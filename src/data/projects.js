@@ -2,9 +2,61 @@ export const projects = [
   // -----------------------------------------
   // FEATURED PROJECTS
   // -----------------------------------------
+    {
+    slug: 'weightmate-android',
+    title: 'WeightMate',
+    shortDescription:
+      'A full-featured Android application for tracking weight progress, managing user profiles, and visualizing goal completion with dynamic UI elements and local data persistence.',
+    role: 'Android Developer',
+    techStack: ['Java', 'Android', 'SQLite', 'XML', 'Photoshop', 'Inkscape'],
+    type: 'featured',
+    githubUrl: 'https://github.com/J-Pedersen/weight-tracker-android',
+    icon: 'android-icon',
+    tags: ['Java', 'Android', 'SQLite', 'XML'],
+    videoUrl: '',
+
+    longDescription:
+      'WeightMate is a mobile application designed to help users track their weight progress over time. The app supports profile creation, goal tracking, progress visualization, and media storage, all within a clean and responsive Android UI.',
+
+    problem:
+      'I wanted to build a mobile application that did more than just log weight entries. The app needed to support profile setup, progress tracking, image storage, unit conversion, and a UI that made progress easy to understand at a glance.',
+
+    solution:
+      'I built WeightMate as a multi-screen Android application using Java, XML layouts, SQLite for persistent storage, and local image storage for profile and progress photos. The app includes profile creation and editing, entry history tracking, automatic unit conversion, theme support, and a progress bar on the home screen so users can quickly see how close they are to their goals.',
+
+    architecture: `
+  Android App
+  ↓
+  Activities / XML Layouts
+  ↓
+  SQLite Database (profiles + weight entries)
+  ↓
+  Local Storage (profile and progress photos)
+    `,
+
+    decisions: [
+      'Use SQLite to persist user account data and weight entries locally on device.',
+      'Store profile and progress images in local storage rather than trying to depend on a remote backend.',
+      'Use a multi-screen flow so profile creation, tracking, and profile management remain clear and organized.',
+      'Include support for both light and dark themes to improve usability and visual comfort.',
+      'Add a progress tracking bar on the home screen so users can understand goal progress immediately.'
+    ],
+
+    challenges: [
+      'Managing a multi-page profile creation workflow while keeping the user experience intuitive.',
+      'Handling storage and retrieval of both profile images and progress photos.',
+      'Implementing reliable unit conversion between standard and metric values.',
+      'Designing a clean mobile UI that keeps progress information visible without cluttering the screen.',
+      'Keeping profile data and entry history synchronized across the app screens.'
+    ],
+
+    outcome:
+      'WeightMate became a strong example of my mobile development skills, combining persistent data storage, user profile management, image handling, theming, and progress visualization into a practical Android application. It shows I can build more than static interfaces and can structure a feature-rich mobile app with real functionality.'
+  },
+
   {
     slug: 'little-lemon-react',
-    title: 'Little Lemon',
+    title: 'Little Lemon Restaurant',
     shortDescription:
       'React-based version of the Little Lemon website with reusable components and routing.',
     role: 'React Developer',
@@ -481,57 +533,6 @@ Basic data handling and navigation flows
 
     outcome:
       'This specialization gave me a baseline understanding of Android app structure and development workflows, which adds another dimension to my Java experience.'
-  },
-  {
-    slug: 'weightmate-android',
-    title: 'WeightMate Android App',
-    shortDescription:
-      'A full-featured Android application for tracking weight progress, managing user profiles, and visualizing goal completion with dynamic UI elements and local data persistence.',
-    role: 'Android Developer',
-    techStack: ['Java', 'Android', 'SQLite', 'XML', 'Photoshop', 'Inkscape'],
-    type: 'featured',
-    githubUrl: 'https://github.com/J-Pedersen/weight-tracker-android',
-    icon: 'android-icon',
-    tags: ['Java', 'Android', 'SQLite', 'XML'],
-    videoUrl: '',
-
-    longDescription:
-      'WeightMate is a mobile application designed to help users track their weight progress over time. The app supports profile creation, goal tracking, progress visualization, and media storage, all within a clean and responsive Android UI.',
-
-    problem:
-      'I wanted to build a mobile application that did more than just log weight entries. The app needed to support profile setup, progress tracking, image storage, unit conversion, and a UI that made progress easy to understand at a glance.',
-
-    solution:
-      'I built WeightMate as a multi-screen Android application using Java, XML layouts, SQLite for persistent storage, and local image storage for profile and progress photos. The app includes profile creation and editing, entry history tracking, automatic unit conversion, theme support, and a progress bar on the home screen so users can quickly see how close they are to their goals.',
-
-    architecture: `
-  Android App
-  ↓
-  Activities / XML Layouts
-  ↓
-  SQLite Database (profiles + weight entries)
-  ↓
-  Local Storage (profile and progress photos)
-    `,
-
-    decisions: [
-      'Use SQLite to persist user account data and weight entries locally on device.',
-      'Store profile and progress images in local storage rather than trying to depend on a remote backend.',
-      'Use a multi-screen flow so profile creation, tracking, and profile management remain clear and organized.',
-      'Include support for both light and dark themes to improve usability and visual comfort.',
-      'Add a progress tracking bar on the home screen so users can understand goal progress immediately.'
-    ],
-
-    challenges: [
-      'Managing a multi-page profile creation workflow while keeping the user experience intuitive.',
-      'Handling storage and retrieval of both profile images and progress photos.',
-      'Implementing reliable unit conversion between standard and metric values.',
-      'Designing a clean mobile UI that keeps progress information visible without cluttering the screen.',
-      'Keeping profile data and entry history synchronized across the app screens.'
-    ],
-
-    outcome:
-      'WeightMate became a strong example of my mobile development skills, combining persistent data storage, user profile management, image handling, theming, and progress visualization into a practical Android application. It shows I can build more than static interfaces and can structure a feature-rich mobile app with real functionality.'
   },
 
   // -----------------------------------------
