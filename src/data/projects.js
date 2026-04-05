@@ -11,7 +11,7 @@ export const projects = [
     techStack: ['Java', 'Android', 'SQLite', 'XML'],
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/weight-tracker-android',
-    icon: 'android-icon',
+    icon: 'weightmate-icon',
     tags: ['Java', 'Android', 'SQLite', 'XML'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/weight-tracker-demo.mp4`,
 
