@@ -13,7 +13,7 @@ export const projects = [
     githubUrl: 'https://github.com/J-Pedersen/weight-tracker-android',
     icon: 'android-icon',
     tags: ['Java', 'Android', 'SQLite', 'XML'],
-    videoUrl: '',
+    videoUrl: `${import.meta.env.BASE_URL}/videos/weight-tracker-demo.mp4`,
 
     longDescription:
       'WeightMate is a mobile application designed to help users track their weight progress over time. The app supports profile creation, goal tracking, progress visualization, and media storage, all within a clean and responsive Android UI.',
