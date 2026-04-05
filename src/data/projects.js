@@ -8,7 +8,7 @@ export const projects = [
     shortDescription:
       'A full-featured Android application for tracking weight progress, managing user profiles, and visualizing goal completion with dynamic UI elements and local data persistence.',
     role: 'Android Developer',
-    techStack: ['Java', 'Android', 'SQLite', 'XML', 'Photoshop', 'Inkscape'],
+    techStack: ['Java', 'Android', 'SQLite', 'XML'],
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/weight-tracker-android',
     icon: 'android-icon',
