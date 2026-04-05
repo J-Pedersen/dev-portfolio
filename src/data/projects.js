@@ -16,7 +16,7 @@ export const projects = [
     videoUrl: `${import.meta.env.BASE_URL}/videos/weight-tracker-demo.mp4`,
 
     longDescription:
-      'WeightMate is a mobile application designed to help users track their weight progress over time. The app supports profile creation, goal tracking, progress visualization, and media storage, all within a clean and responsive Android UI.',
+      'WeightMate is a android mobile application designed to help users track their weight progress over time. The app supports profile creation, goal tracking, progress visualization, and media storage, all within a clean and responsive Android UI.',
 
     problem:
       'I wanted to build a mobile application that did more than just log weight entries. The app needed to support profile setup, progress tracking, image storage, unit conversion, and a UI that made progress easy to understand at a glance.',
