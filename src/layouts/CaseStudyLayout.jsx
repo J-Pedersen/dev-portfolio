@@ -11,19 +11,6 @@ const CaseStudyLayout = ({ title, children }) => {
       {/* Breadcrumbs */}
       <Breadcrumbs current={title} />
 
-      {/* Top back link */}
-      <Link
-        to="/case-studies"
-        className="
-          text-xs
-          text-brand-700 hover:text-brand-900
-          dark:text-brand dark:hover:text-brand-soft
-          block
-        "
-      >
-        ← Back to Case Studies
-      </Link>
-
       {/* Page content injected */}
       {children}
 
