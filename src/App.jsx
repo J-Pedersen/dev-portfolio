@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx';
 import Projects from './pages/Projects.jsx';
 import ProjectDetail from './pages/ProjectDetail.jsx';
 import CaseStudies from './pages/CaseStudies.jsx';
+import CaseStudyWeightMate from './pages/case-studies/CaseStudyWeightMate.jsx';
 import CaseStudyBookClub from './pages/case-studies/CaseStudyBookClub.jsx';
 import CaseStudyGradeBook from './pages/case-studies/CaseStudyGradeBook.jsx';
 import CaseStudyCareWare from './pages/case-studies/CaseStudyCareWare.jsx';
@@ -46,6 +47,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/case-studies/weightmate" element={<CaseStudyWeightMate />} />
               <Route path="/case-studies/bookclub" element={<CaseStudyBookClub />} />
               <Route path="/case-studies/gradebook" element={<CaseStudyGradeBook />} />
               <Route path="/case-studies/careware" element={<CaseStudyCareWare />} />

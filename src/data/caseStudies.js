@@ -2,6 +2,23 @@ export const caseStudies = [
   // -------------------------------------------------
   // TECHNICAL CASE STUDIES
   // -------------------------------------------------
+  
+  {
+    slug: "weightmate",
+    category: "technical",
+    categoryLabel: "Technical",
+    title: "WeightMate Android Application",
+    summary:
+      "A multi-screen Android application for tracking weight progress, managing user profiles, and handling persistent data with SQLite and local image storage. This case study highlights mobile UI design, data persistence strategies, and handling real-world application complexity on Android.",
+    techStack: [
+      "Java",
+      "Android",
+      "SQLite",
+      "XML",
+      "UI Design"
+    ],
+  },
+  
   {
     slug: "bookclub",
     category: "technical",
