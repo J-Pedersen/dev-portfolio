@@ -3,7 +3,8 @@ import { projects } from "../data/projects.js";
 import PageHeader from "../components/PageHeader.jsx";
 import TagPill from "../components/TagPill.jsx";
 import { Layers, Tag, Play, CircuitBoard } from "lucide-react";
-import BrandIcon from "../components/BrandIcon.jsx";
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
+import FloatingBackButton from "../components/FloatingBackButton.jsx";
 import VideoPlayer from "../components/VideoPlayer.jsx";
 
 const ProjectDetail = () => {
@@ -28,6 +29,8 @@ const ProjectDetail = () => {
 
   return (
     <div className="space-y-12">
+      {/* Breadcrumbs */}
+      <Breadcrumbs current={title} />
       {/* HEADER */}
       <PageHeader kicker="Project" title={project.title}>
         {project.shortDescription}
@@ -259,6 +262,9 @@ const ProjectDetail = () => {
       >
         ← Back to all projects
       </Link>
+
+      {/* Floating button */}
+      <FloatingBackButton />
     </div>
   );
 };
