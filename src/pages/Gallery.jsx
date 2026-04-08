@@ -14,7 +14,7 @@ const images = [
 
 const videos = [
   {
-    src: "/videos/weight-tracker-demo.mp4",
+    videoUrl: `${import.meta.env.BASE_URL}/videos/weight-tracker-demo.mp4`,
     title: "WeightMate Demo",
   },
   {
