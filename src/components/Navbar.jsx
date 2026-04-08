@@ -94,6 +94,10 @@ const Navbar = () => {
                 Case Studies
               </NavLink>
 
+              <NavLink to="/gallery" className={navLinkClasses}>
+                Gallery
+              </NavLink>
+
               <NavLink to="/about" className={navLinkClasses}>
                 About
               </NavLink>
