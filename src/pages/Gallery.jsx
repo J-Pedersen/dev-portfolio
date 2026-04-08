@@ -14,8 +14,48 @@ const images = [
 
 const videos = [
   {
-    src: "/gallery/weightmate-demo.mp4",
+    src: "/videos/weight-tracker-demo.mp4",
     title: "WeightMate Demo",
+  },
+  {
+    src: "/videos/bookclub-demo.mp4",
+    title: "BookClub Demo",
+  },
+  {
+    src: "/videos/diy-pc-building-demo.mp4",
+    title: "DIY PC Building Demo",
+  },
+  {
+    src: "/videos/grade-book-demo.mp4",
+    title: "Grade Book Demo",
+  },
+  {
+    src: "/videos/image-carousel-demo.mp4",
+    title: "Image Carousel Demo",
+  },
+  {
+    src: "/videos/lightbox-demo.mp4",
+    title: "Lightbox Demo",
+  },
+  {
+    src: "/videos/little-lemon-html-demo.mp4",
+    title: "Little Lemon HTML Demo",
+  },
+  {
+    src: "/videos/little-lemon-react-demo.mp4",
+    title: "Little Lemon React Demo",
+  },
+  {
+    src: "/videos/moffat-bay-marina-java-demo.mp4",
+    title: "Moffat Bay Marina Java Demo",
+  },
+  {
+    src: "/videos/my-bio-responsive-demo.mp4",
+    title: "My Bio Demo",
+  },
+  {
+    src: "/videos/terri-bio-responsive-demo.mp4",
+    title: "Terri's Bio Demo",
   },
 ];
 
