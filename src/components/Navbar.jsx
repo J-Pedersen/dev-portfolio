@@ -198,6 +198,10 @@ const Navbar = () => {
                   Case Studies
                 </NavLink>
 
+                <NavLink to="/gallery" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
+                  Gallery
+                </NavLink>
+
                 <NavLink to="/about" className={mobileNavLinkClasses} onClick={closeMobileMenu}>
                   About
                 </NavLink>
