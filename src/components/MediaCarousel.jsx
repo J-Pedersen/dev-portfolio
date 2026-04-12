@@ -100,6 +100,14 @@ const MediaCarousel = ({ media = [] }) => {
     isDraggingThumbsRef.current = false;
   };
 
+  const scrollThumbsBy = (ref, amount) => {
+    if (!ref.current) return;
+    ref.current.scrollBy({
+      left: amount,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isFullscreen) return;
@@ -121,6 +129,7 @@ const MediaCarousel = ({ media = [] }) => {
   return (
     <>
       <div className="rounded-2xl overflow-hidden border border-brand-soft bg-slate-100 dark:bg-slate-900 min-w-0">
+        {/* MAIN MEDIA */}
         <div
           className="relative"
           onTouchStart={onTouchStart}
@@ -209,66 +218,113 @@ const MediaCarousel = ({ media = [] }) => {
           )}
         </div>
 
+        {/* TITLE */}
         <div className="px-4 py-3 bg-brand-soft/30 border-t border-brand-soft text-sm text-center">
           {current.title}
         </div>
 
+        {/* THUMBNAILS */}
         {media.length > 1 && (
           <div className="p-4 border-t border-brand-soft min-w-0">
-            <div
-              ref={thumbStripRef}
-              className="
-                w-full overflow-x-auto overflow-y-hidden pb-2 cursor-grab active:cursor-grabbing
-                [-ms-overflow-style:none] [scrollbar-width:none]
-                [&::-webkit-scrollbar]:hidden
-              "
-              onMouseDown={(e) => handleThumbMouseDown(e, thumbStripRef)}
-              onMouseMove={(e) => handleThumbMouseMove(e, thumbStripRef)}
-              onMouseUp={stopThumbDragging}
-              onMouseLeave={stopThumbDragging}
-            >
-              <div className="flex gap-3 w-max">
-                {media.map((item, index) => (
+            <div className="relative">
+              {!isTouchDevice && (
+                <>
                   <button
-                    key={index}
-                    ref={(el) => {
-                      thumbButtonRefs.current[index] = el;
-                    }}
                     type="button"
-                    onClick={() => setCurrentIndex(index)}
-                    className={`
-                      shrink-0 rounded-xl overflow-hidden border-2 transition
-                      ${
-                        index === currentIndex
-                          ? "border-brand"
-                          : "border-transparent hover:border-brand-soft"
-                      }
-                    `}
-                    aria-label={`Go to media ${index + 1}`}
+                    onClick={() => scrollThumbsBy(thumbStripRef, -220)}
+                    className="
+                      absolute left-0 top-1/2 -translate-y-1/2 z-10
+                      h-9 w-9 rounded-full
+                      border border-brand-soft
+                      bg-slate-100/95 dark:bg-slate-900/95
+                      flex items-center justify-center
+                      text-slate-800 dark:text-slate-100
+                      hover:border-brand hover:text-brand
+                      transition
+                    "
+                    aria-label="Scroll thumbnails left"
                   >
-                    {item.type === "image" ? (
-                      <div className="h-16 sm:h-20 px-2 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
-                        <img
-                          src={item.src}
-                          alt={item.alt || item.title}
-                          className="h-full w-auto object-contain"
-                          draggable="false"
-                        />
-                      </div>
-                    ) : (
-                      <div className="h-16 sm:h-20 min-w-[110px] px-3 bg-black flex items-center justify-center gap-2 text-white">
-                        <Play size={16} />
-                        <span className="text-xs whitespace-nowrap">Video</span>
-                      </div>
-                    )}
+                    <ChevronLeft size={16} />
                   </button>
-                ))}
+
+                  <button
+                    type="button"
+                    onClick={() => scrollThumbsBy(thumbStripRef, 220)}
+                    className="
+                      absolute right-0 top-1/2 -translate-y-1/2 z-10
+                      h-9 w-9 rounded-full
+                      border border-brand-soft
+                      bg-slate-100/95 dark:bg-slate-900/95
+                      flex items-center justify-center
+                      text-slate-800 dark:text-slate-100
+                      hover:border-brand hover:text-brand
+                      transition
+                    "
+                    aria-label="Scroll thumbnails right"
+                  >
+                    <ChevronRight size={16} />
+                  </button>
+                </>
+              )}
+
+              <div
+                ref={thumbStripRef}
+                className={`
+                  w-full overflow-x-auto overflow-y-hidden pb-2
+                  cursor-grab active:cursor-grabbing
+                  [-ms-overflow-style:none] [scrollbar-width:none]
+                  [&::-webkit-scrollbar]:hidden
+                  ${!isTouchDevice ? "px-10" : ""}
+                `}
+                onMouseDown={(e) => handleThumbMouseDown(e, thumbStripRef)}
+                onMouseMove={(e) => handleThumbMouseMove(e, thumbStripRef)}
+                onMouseUp={stopThumbDragging}
+                onMouseLeave={stopThumbDragging}
+              >
+                <div className="flex gap-3 w-max">
+                  {media.map((item, index) => (
+                    <button
+                      key={index}
+                      ref={(el) => {
+                        thumbButtonRefs.current[index] = el;
+                      }}
+                      type="button"
+                      onClick={() => setCurrentIndex(index)}
+                      className={`
+                        shrink-0 rounded-xl overflow-hidden border-2 transition
+                        ${
+                          index === currentIndex
+                            ? "border-brand"
+                            : "border-transparent hover:border-brand-soft"
+                        }
+                      `}
+                      aria-label={`Go to media ${index + 1}`}
+                    >
+                      {item.type === "image" ? (
+                        <div className="h-16 sm:h-20 px-2 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
+                          <img
+                            src={item.src}
+                            alt={item.alt || item.title}
+                            className="h-full w-auto object-contain"
+                            draggable="false"
+                          />
+                        </div>
+                      ) : (
+                        <div className="h-16 sm:h-20 min-w-[110px] px-3 bg-black flex items-center justify-center gap-2 text-white">
+                          <Play size={16} />
+                          <span className="text-xs whitespace-nowrap">Video</span>
+                        </div>
+                      )}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         )}
       </div>
 
+      {/* FULLSCREEN (images only) */}
       {isFullscreen && current.type === "image" && (
         <div
           className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center"
@@ -354,59 +410,98 @@ const MediaCarousel = ({ media = [] }) => {
             </div>
 
             {media.length > 1 && (
-              <div
-                ref={fullscreenThumbStripRef}
-                className="
-                  mt-4 w-full max-w-full overflow-x-auto overflow-y-hidden pb-2
-                  cursor-grab active:cursor-grabbing
-                  [-ms-overflow-style:none] [scrollbar-width:none]
-                  [&::-webkit-scrollbar]:hidden
-                "
-                onMouseDown={(e) =>
-                  handleThumbMouseDown(e, fullscreenThumbStripRef)
-                }
-                onMouseMove={(e) =>
-                  handleThumbMouseMove(e, fullscreenThumbStripRef)
-                }
-                onMouseUp={stopThumbDragging}
-                onMouseLeave={stopThumbDragging}
-              >
-                <div className="flex gap-3 w-max">
-                  {media.map((item, index) => (
+              <div className="relative mt-4 w-full max-w-full">
+                {!isTouchDevice && (
+                  <>
                     <button
-                      key={`fullscreen-${index}`}
-                      ref={(el) => {
-                        fullscreenThumbButtonRefs.current[index] = el;
-                      }}
                       type="button"
-                      onClick={() => setCurrentIndex(index)}
-                      className={`
-                        shrink-0 rounded-lg overflow-hidden border-2 transition
-                        ${
-                          index === currentIndex
-                            ? "border-white"
-                            : "border-transparent opacity-70 hover:opacity-100"
-                        }
-                      `}
-                      aria-label={`Go to fullscreen media ${index + 1}`}
+                      onClick={() => scrollThumbsBy(fullscreenThumbStripRef, -220)}
+                      className="
+                        absolute left-0 top-1/2 -translate-y-1/2 z-10
+                        h-9 w-9 rounded-full
+                        border border-white/20
+                        bg-white/10 text-white
+                        flex items-center justify-center
+                        hover:bg-white/20 transition
+                      "
+                      aria-label="Scroll fullscreen thumbnails left"
                     >
-                      {item.type === "image" ? (
-                        <div className="h-14 px-2 bg-slate-900 flex items-center justify-center">
-                          <img
-                            src={item.src}
-                            alt={item.alt || item.title}
-                            className="h-full w-auto object-contain"
-                            draggable="false"
-                          />
-                        </div>
-                      ) : (
-                        <div className="h-14 min-w-[90px] px-3 bg-black flex items-center justify-center gap-2 text-white">
-                          <Play size={14} />
-                          <span className="text-xs whitespace-nowrap">Video</span>
-                        </div>
-                      )}
+                      <ChevronLeft size={16} />
                     </button>
-                  ))}
+
+                    <button
+                      type="button"
+                      onClick={() => scrollThumbsBy(fullscreenThumbStripRef, 220)}
+                      className="
+                        absolute right-0 top-1/2 -translate-y-1/2 z-10
+                        h-9 w-9 rounded-full
+                        border border-white/20
+                        bg-white/10 text-white
+                        flex items-center justify-center
+                        hover:bg-white/20 transition
+                      "
+                      aria-label="Scroll fullscreen thumbnails right"
+                    >
+                      <ChevronRight size={16} />
+                    </button>
+                  </>
+                )}
+
+                <div
+                  ref={fullscreenThumbStripRef}
+                  className={`
+                    w-full max-w-full overflow-x-auto overflow-y-hidden pb-2
+                    cursor-grab active:cursor-grabbing
+                    [-ms-overflow-style:none] [scrollbar-width:none]
+                    [&::-webkit-scrollbar]:hidden
+                    ${!isTouchDevice ? "px-10" : ""}
+                  `}
+                  onMouseDown={(e) =>
+                    handleThumbMouseDown(e, fullscreenThumbStripRef)
+                  }
+                  onMouseMove={(e) =>
+                    handleThumbMouseMove(e, fullscreenThumbStripRef)
+                  }
+                  onMouseUp={stopThumbDragging}
+                  onMouseLeave={stopThumbDragging}
+                >
+                  <div className="flex gap-3 w-max">
+                    {media.map((item, index) => (
+                      <button
+                        key={`fullscreen-${index}`}
+                        ref={(el) => {
+                          fullscreenThumbButtonRefs.current[index] = el;
+                        }}
+                        type="button"
+                        onClick={() => setCurrentIndex(index)}
+                        className={`
+                          shrink-0 rounded-lg overflow-hidden border-2 transition
+                          ${
+                            index === currentIndex
+                              ? "border-white"
+                              : "border-transparent opacity-70 hover:opacity-100"
+                          }
+                        `}
+                        aria-label={`Go to fullscreen media ${index + 1}`}
+                      >
+                        {item.type === "image" ? (
+                          <div className="h-14 px-2 bg-slate-900 flex items-center justify-center">
+                            <img
+                              src={item.src}
+                              alt={item.alt || item.title}
+                              className="h-full w-auto object-contain"
+                              draggable="false"
+                            />
+                          </div>
+                        ) : (
+                          <div className="h-14 min-w-[90px] px-3 bg-black flex items-center justify-center gap-2 text-white">
+                            <Play size={14} />
+                            <span className="text-xs whitespace-nowrap">Video</span>
+                          </div>
+                        )}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
