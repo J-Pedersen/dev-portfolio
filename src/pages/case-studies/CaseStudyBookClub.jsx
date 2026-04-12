@@ -6,9 +6,10 @@ const media = [
   {
     type: "video",
     src: `${import.meta.env.BASE_URL}videos/bookclub-demo.mp4`,
-    title: "Demo Video",
+    title: "BookClub Demo",
     poster: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
   },
+
   {
     type: "image",
     src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
@@ -32,12 +33,17 @@ const media = [
   {
     type: "image",
     src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-book-of-the-month-details1.jpg`,
-    title: "Book of the Month Details",
+    title: "Book Details",
   },
   {
     type: "image",
     src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist1.jpg`,
     title: "Wishlist",
+  },
+    {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist2.jpg`,
+    title: "Wishlist Part 2",
   },
   {
     type: "image",
