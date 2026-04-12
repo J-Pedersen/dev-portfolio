@@ -5,11 +5,11 @@ const base = import.meta.env.BASE_URL;
 
 const images = [
   {
-    src: `${base}gallery/weightmate-home.png`,
+    src: `${base}screenshots/weightmate-home.png`,
     title: "WeightMate Home Screen",
   },
   {
-    src: `${base}gallery/weightmate-profile.png`,
+    src: `${base}screenshots/weightmate-profile.png`,
     title: "Profile Setup",
   },
 ];
@@ -58,6 +58,14 @@ const videos = [
   {
     src: `${base}videos/terri-bio-responsive-demo.mp4`,
     title: "Terri's Bio Demo",
+  },
+  {
+    src: `${base}videos/zelda-fansite-asp.net-demo.mp4`,
+    title: "Zelda Fansite ASP.NET Demo",
+  },
+  {
+    src: `${base}videos/CareWare-WBS Dictionary.mp4`,
+    title: "CareWare WBS Dictionary",
   },
 ];
 
