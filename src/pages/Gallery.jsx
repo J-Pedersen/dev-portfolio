@@ -4,14 +4,52 @@ import PageHeader from "../components/PageHeader.jsx";
 const base = import.meta.env.BASE_URL;
 
 const images = [
-  {
-    src: `${base}screenshots/weightmate-home.png`,
-    title: "WeightMate Home Screen",
-  },
-  {
-    src: `${base}screenshots/weightmate-profile.png`,
-    title: "Profile Setup",
-  },
+  // -------- WeightMate --------
+  { src: `${base}screenshots/weightmate/WeightMate-Main.jpg`, title: "WeightMate Main Screen" },
+  { src: `${base}screenshots/weightmate/WeightMate-Profile.jpg`, title: "WeightMate Profile" },
+  { src: `${base}screenshots/weightmate/WeightMate-History.jpg`, title: "WeightMate History" },
+  { src: `${base}screenshots/weightmate/WeightMate-Weight-Entry.jpg`, title: "Weight Entry" },
+  { src: `${base}screenshots/weightmate/WeightMate-Welcome.jpg`, title: "Welcome Screen" },
+
+  // -------- BookClub --------
+  { src: `${base}screenshots/bookclub/bookclub-Home1.jpg`, title: "BookClub Home" },
+  { src: `${base}screenshots/bookclub/bookclub-about1.jpg`, title: "About Page" },
+  { src: `${base}screenshots/bookclub/bookclub-monthly-books1.jpg`, title: "Monthly Books" },
+  { src: `${base}screenshots/bookclub/bookclub-wishlist1.jpg`, title: "Wishlist" },
+  { src: `${base}screenshots/bookclub/bookclub-wishlist-add1.jpg`, title: "Add to Wishlist" },
+
+  // -------- GradeBook --------
+  { src: `${base}screenshots/gradebook/gradebook1.jpg`, title: "GradeBook Main Screen" },
+  { src: `${base}screenshots/gradebook/gradebook-view-grades1.jpg`, title: "View Grades" },
+  { src: `${base}screenshots/gradebook/gradebook-update1.jpg`, title: "Update Grades" },
+  { src: `${base}screenshots/gradebook/gradebook-export-csv1.jpg`, title: "Export CSV" },
+
+  // -------- Little Lemon React --------
+  { src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Home1.jpg`, title: "Little Lemon React Home" },
+  { src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Menu1.jpg`, title: "React Menu" },
+  { src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Login1.jpg`, title: "Login Page" },
+
+  // -------- Little Lemon HTML --------
+  { src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`, title: "Little Lemon HTML Home" },
+  { src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Menu1.jpg`, title: "HTML Menu" },
+  { src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Reservation1.jpg`, title: "Reservation Page" },
+
+  // -------- Moffat Bay Marina --------
+  { src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`, title: "Create Account" },
+  { src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`, title: "Create Reservation" },
+  { src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Reservation Lookup1.jpg`, title: "Reservation Lookup" },
+
+  // -------- CAREWare --------
+  { src: `${base}screenshots/careware/Careware-project-charter1.jpg`, title: "Project Charter" },
+  { src: `${base}screenshots/careware/Careware-RFP1.jpg`, title: "RFP Document" },
+  { src: `${base}screenshots/careware/Careware-WBS1.jpg`, title: "Work Breakdown Structure" },
+  { src: `${base}screenshots/careware/Careware-Quality-Management-Plan1.jpg`, title: "Quality Management Plan" },
+
+  // -------- Zelda ASP.NET --------
+  { src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`, title: "Zelda Fansite Home" },
+  { src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`, title: "Games Page" },
+  { src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items1.jpg`, title: "Items Page" },
+  { src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps1.jpg`, title: "Maps Page" },
 ];
 
 const videos = [
