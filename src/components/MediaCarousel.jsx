@@ -272,14 +272,6 @@ const MediaCarousel = ({ media = [] }) => {
         {media.length > 1 && (
           <div className="p-4 border-t border-brand-soft min-w-0">
             <div className="relative">
-              {!isTouchDevice && canScrollThumbsLeft && (
-                <div className="pointer-events-none absolute left-10 top-0 bottom-2 z-[1] w-8 bg-gradient-to-r from-slate-100 to-transparent dark:from-slate-900" />
-              )}
-
-              {!isTouchDevice && canScrollThumbsRight && (
-                <div className="pointer-events-none absolute right-10 top-0 bottom-2 z-[1] w-8 bg-gradient-to-l from-slate-100 to-transparent dark:from-slate-900" />
-              )}
-
               {!isTouchDevice && (
                 <>
                   <button
@@ -501,14 +493,6 @@ const MediaCarousel = ({ media = [] }) => {
 
             {media.length > 1 && (
               <div className="relative mt-4 w-full max-w-full">
-                {!isTouchDevice && canScrollFullscreenLeft && (
-                  <div className="pointer-events-none absolute left-10 top-0 bottom-2 z-[1] w-8 bg-gradient-to-r from-black/90 to-transparent" />
-                )}
-
-                {!isTouchDevice && canScrollFullscreenRight && (
-                  <div className="pointer-events-none absolute right-10 top-0 bottom-2 z-[1] w-8 bg-gradient-to-l from-black/90 to-transparent" />
-                )}
-
                 {!isTouchDevice && (
                   <>
                     <button
