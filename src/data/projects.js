@@ -13,77 +13,96 @@ export const projects = [
     githubUrl: 'https://github.com/J-Pedersen/weight-tracker-android',
     icon: 'weightmate-icon',
     tags: ['Java', 'Android', 'SQLite', 'XML'],
-    videoUrl: `${import.meta.env.BASE_URL}/videos/weight-tracker-demo.mp4`,
-    screenshots: [
+    media: [
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Welcome.jpg`,
         alt: "WeightMate welcome screen",
         title: "Welcome Screen",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Name.jpg`,
         alt: "WeightMate create profile name step",
         title: "Create Profile - Name",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Age.jpg`,
         alt: "WeightMate create profile age step",
         title: "Create Profile - Age",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Gender.jpg`,
         alt: "WeightMate create profile gender step",
         title: "Create Profile - Gender",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Height.jpg`,
         alt: "WeightMate create profile height step",
         title: "Create Profile - Height",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Weight.jpg`,
         alt: "WeightMate create profile weight step",
         title: "Create Profile - Weight",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Weight.jpg`,
         alt: "WeightMate create profile target weight step",
         title: "Create Profile - Target Weight",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Date.jpg`,
         alt: "WeightMate create profile target date step",
         title: "Create Profile - Target Date",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Image.jpg`,
         alt: "WeightMate create profile image step",
         title: "Create Profile - Image",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Confirmation.jpg`,
         alt: "WeightMate create profile confirmation screen",
         title: "Create Profile - Confirmation",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
         alt: "WeightMate main dashboard",
         title: "Main Dashboard",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Profile.jpg`,
         alt: "WeightMate profile screen",
         title: "Profile Screen",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-History.jpg`,
         alt: "WeightMate history screen",
         title: "Entry History",
       },
       {
+        type: "image",
         src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Weight-Entry.jpg`,
         alt: "WeightMate weight entry screen",
         title: "Weight Entry",
+      },
+      {
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/weight-tracker-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
       },
     ],
 

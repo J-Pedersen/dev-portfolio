@@ -3,9 +3,8 @@ import { projects } from "../data/projects.js";
 import PageHeader from "../components/PageHeader.jsx";
 import TagPill from "../components/TagPill.jsx";
 import { Layers, Tag, Play, CircuitBoard } from "lucide-react";
-import VideoPlayer from "../components/VideoPlayer.jsx";
 import ProjectLayout from "../layouts/ProjectLayout.jsx";
-import ImageCarousel from "../components/ImageCarousel.jsx";
+import MediaCarousel from "../components/MediaCarousel.jsx";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -36,23 +35,10 @@ const ProjectDetail = () => {
       <section className="grid gap-8 md:grid-cols-[2fr,1fr] items-start">
         <div className="space-y-8">
           {/* MEDIA */}
-          {project.screenshots?.length > 0 ? (
-            <div className="mb-6 space-y-4">
-              <ImageCarousel images={project.screenshots} />
-
-              {project.videoUrl && (
-                <VideoPlayer
-                  src={project.videoUrl}
-                  poster={project.poster || undefined}
-                />
-              )}
+          {project.media?.length > 0 ? (
+            <div className="mb-6">
+              <MediaCarousel media={project.media} />
             </div>
-          ) : project.videoUrl ? (
-            <VideoPlayer
-              src={project.videoUrl}
-              poster={project.poster || undefined}
-              className="mb-6"
-            />
           ) : project.githubUrl ? (
             <div
               className="
@@ -64,7 +50,7 @@ const ProjectDetail = () => {
               "
             >
               <p className="text-sm text-slate-700 dark:text-slate-300">
-                This project does not include a video demo.
+                This project does not include screenshots or a video demo yet.
               </p>
 
               <a
@@ -216,17 +202,11 @@ const ProjectDetail = () => {
               </a>
             )}
 
-            {project.videoUrl && (
+            {project.media?.some((item) => item.type === "video") && (
               <div className="mt-2 flex justify-center">
-                <a
-                  href={project.videoUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-primary gap-1 px-3 py-1 text-[11px]"
-                >
-                  <Play size={14} />
-                  Watch Demo
-                </a>
+                <span className="text-[11px] text-slate-500 dark:text-slate-400">
+                  Demo video included in carousel
+                </span>
               </div>
             )}
           </div>
