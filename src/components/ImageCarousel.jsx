@@ -26,11 +26,13 @@ const ImageCarousel = ({ images = [] }) => {
       "
     >
       <div className="relative">
-        <img
-          src={current.src}
-          alt={current.alt || current.title || `Screenshot ${currentIndex + 1}`}
-          className="w-full h-[260px] sm:h-[340px] md:h-[420px] object-cover"
-        />
+        <div className="bg-slate-200 dark:bg-slate-800 flex items-center justify-center p-2">
+            <img
+                src={current.src}
+                alt={current.alt || current.title}
+                className="max-h-[420px] w-auto object-contain rounded-lg"
+            />
+        </div>
 
         {images.length > 1 && (
           <>
