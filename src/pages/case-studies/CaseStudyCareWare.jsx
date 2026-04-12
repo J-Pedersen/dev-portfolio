@@ -1,5 +1,239 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
+import MediaCarousel from "../../components/MediaCarousel.jsx";
+
+const media = [
+  {
+    type: "video",
+    src: `${import.meta.env.BASE_URL}videos/CareWare-WBS Dictionary.mp4`,
+    title: "WBS Dictionary Demo",
+    poster: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS-dictionary1.jpg`,
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Identified-risks1.jpg`,
+    title: "Identified Risks (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Identified-risks2.jpg`,
+    title: "Identified Risks (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Identified-risks3.jpg`,
+    title: "Identified Risks (3)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Identified-risks4.jpg`,
+    title: "Identified Risks (4)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Identified-risks5.jpg`,
+    title: "Identified Risks (5)",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Precedence-Diagramming_Method1.jpg`,
+    title: "Precedence Diagramming Method",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter1.jpg`,
+    title: "Project Charter (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter2.jpg`,
+    title: "Project Charter (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter3.jpg`,
+    title: "Project Charter (3)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter4.jpg`,
+    title: "Project Charter (4)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter5.jpg`,
+    title: "Project Charter (5)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter6.jpg`,
+    title: "Project Charter (6)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter7.jpg`,
+    title: "Project Charter (7)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter8.jpg`,
+    title: "Project Charter (8)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-project-charter9.jpg`,
+    title: "Project Charter (9)",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Quality-Management-Plan1.jpg`,
+    title: "Quality Management Plan (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Quality-Management-Plan2.jpg`,
+    title: "Quality Management Plan (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Quality-Management-Plan3.jpg`,
+    title: "Quality Management Plan (3)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Quality-Management-Plan4.jpg`,
+    title: "Quality Management Plan (4)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Quality-Management-Plan5.jpg`,
+    title: "Quality Management Plan (5)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Quality-Management-Plan6.jpg`,
+    title: "Quality Management Plan (6)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Quality-Management-Plan7.jpg`,
+    title: "Quality Management Plan (7)",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-RFP1.jpg`,
+    title: "Request for Proposal (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-RFP2.jpg`,
+    title: "Request for Proposal (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-RFP3.jpg`,
+    title: "Request for Proposal (3)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-RFP4.jpg`,
+    title: "Request for Proposal (4)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-RFP5.jpg`,
+    title: "Request for Proposal (5)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-RFP6.jpg`,
+    title: "Request for Proposal (6)",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Risk-Gathering1.jpg`,
+    title: "Risk Gathering (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Risk-Gathering2.jpg`,
+    title: "Risk Gathering (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Risk-Gathering3.jpg`,
+    title: "Risk Gathering (3)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Risk-Gathering4.jpg`,
+    title: "Risk Gathering (4)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-Risk-Gathering5.jpg`,
+    title: "Risk Gathering (5)",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-scope-statement1.jpg`,
+    title: "Scope Statement (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-scope-statement2.jpg`,
+    title: "Scope Statement (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-scope-statement3.jpg`,
+    title: "Scope Statement (3)",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS-dictionary1.jpg`,
+    title: "WBS Dictionary (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS-dictionary2.jpg`,
+    title: "WBS Dictionary (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS-dictionary3.jpg`,
+    title: "WBS Dictionary (3)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS-dictionary4.jpg`,
+    title: "WBS Dictionary (4)",
+  },
+
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS1.jpg`,
+    title: "Work Breakdown Structure (1)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS2.jpg`,
+    title: "Work Breakdown Structure (2)",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/careware/Careware-WBS3.jpg`,
+    title: "Work Breakdown Structure (3)",
+  },
+];
 
 const CaseStudyCareWare = () => {
   return (
@@ -12,6 +246,8 @@ const CaseStudyCareWare = () => {
         Support System modernization effort for the Tennessee Department of
         Health.
       </PageHeader>
+
+      <MediaCarousel media={media} />
 
       {/* Overview */}
       <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
