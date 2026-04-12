@@ -1,44 +1,44 @@
 import { Link } from "react-router-dom";
 
-const Breadcrumbs = ({ current }) => {
+const Breadcrumbs = ({
+  current,
+  parentLabel = null,
+  parentTo = null,
+}) => {
   return (
     <nav
-      className="
-        text-xs mb-4 flex items-center gap-1
-        text-slate-600 dark:text-slate-400
-      "
+      aria-label="Breadcrumb"
+      className="text-xs text-slate-500 dark:text-slate-400"
     >
-      <Link
-        to="/"
-        className="
-          hover:text-brand transition
-          text-slate-700 dark:text-slate-300
-        "
-      >
-        Home
-      </Link>
+      <div className="flex flex-wrap items-center gap-2">
+        <Link
+          to="/"
+          className="hover:text-brand dark:hover:text-brand-soft transition"
+        >
+          Home
+        </Link>
 
-      <span className="text-slate-500 dark:text-slate-600">/</span>
+        {parentLabel && parentTo && (
+          <>
+            <span>/</span>
+            <Link
+              to={parentTo}
+              className="hover:text-brand dark:hover:text-brand-soft transition"
+            >
+              {parentLabel}
+            </Link>
+          </>
+        )}
 
-      <Link
-        to="/case-studies"
-        className="
-          hover:text-brand transition
-          text-slate-700 dark:text-slate-300
-        "
-      >
-        Case Studies
-      </Link>
-
-      <span className="text-slate-500 dark:text-slate-600">/</span>
-
-      <span
-        className="
-          text-slate-900 dark:text-slate-200 font-medium
-        "
-      >
-        {current}
-      </span>
+        {current && (
+          <>
+            <span>/</span>
+            <span className="text-slate-700 dark:text-slate-200">
+              {current}
+            </span>
+          </>
+        )}
+      </div>
     </nav>
   );
 };

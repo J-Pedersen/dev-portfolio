@@ -344,12 +344,6 @@ In-Memory Collections (lists/maps)
     icon: 'little_lemon-icon',
     tags: ['HTML', 'CSS', 'JavaScript', 'Coursera'],
     media: [
-      {
-        type: "video",
-        src: `${import.meta.env.BASE_URL}videos/little-lemon-html-demo.mp4`,
-        title: "Demo Video",
-        poster: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`,
-      },
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`, title: "Home 1" },
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home2.jpg`, title: "Home 2" },
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home3.jpg`, title: "Home 3" },
@@ -357,7 +351,12 @@ In-Memory Collections (lists/maps)
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Menu1.jpg`, title: "Menu" },
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Reservation1.jpg`, title: "Reservation" },
 
-
+      {
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/little-lemon-html-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`,
+      },
     ],
 
     longDescription:

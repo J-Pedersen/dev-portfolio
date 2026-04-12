@@ -9,7 +9,11 @@ const CaseStudyLayout = ({ title, children }) => {
   return (
     <div className="space-y-10 relative">
       {/* Breadcrumbs */}
-      <Breadcrumbs current={title} />
+      <Breadcrumbs
+        current={title}
+        parentLabel="Case Studies"
+        parentTo="/case-studies"
+      />
 
       {/* Page content injected */}
       {children}

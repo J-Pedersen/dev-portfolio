@@ -8,7 +8,11 @@ const ProjectLayout = ({ title, children }) => {
 
   return (
     <div className="space-y-10 relative">
-      <Breadcrumbs current={title} />
+      <Breadcrumbs
+        current={title}
+        parentLabel="Projects"
+        parentTo="/projects"
+      />
 
       {children}
 
