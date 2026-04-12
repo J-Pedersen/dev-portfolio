@@ -1,5 +1,100 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
+import MediaCarousel from "../../components/MediaCarousel.jsx";
+
+const media = [
+  // -------------------------------------------------
+  // VIDEO (loads first automatically)
+  // -------------------------------------------------
+  {
+    type: "video",
+    src: `${import.meta.env.BASE_URL}videos/weight-tracker-demo.mp4`,
+    title: "WeightMate Demo",
+    poster: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
+  },
+
+  // -------------------------------------------------
+  // WELCOME / ENTRY
+  // -------------------------------------------------
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Welcome.jpg`,
+    title: "Welcome Screen",
+  },
+
+  // -------------------------------------------------
+  // PROFILE CREATION FLOW (STEP-BY-STEP)
+  // -------------------------------------------------
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Name.jpg`,
+    title: "Profile Creation – Name",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Age.jpg`,
+    title: "Profile Creation – Age",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Gender.jpg`,
+    title: "Profile Creation – Gender",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Height.jpg`,
+    title: "Profile Creation – Height",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Weight.jpg`,
+    title: "Profile Creation – Current Weight",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Weight.jpg`,
+    title: "Profile Creation – Target Weight",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Date.jpg`,
+    title: "Profile Creation – Target Date",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Image.jpg`,
+    title: "Profile Creation – Profile Image",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Confirmation.jpg`,
+    title: "Profile Creation – Confirmation",
+  },
+
+  // -------------------------------------------------
+  // MAIN APP EXPERIENCE
+  // -------------------------------------------------
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
+    title: "Dashboard / Home Screen",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Weight-Entry.jpg`,
+    title: "Weight Entry",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-History.jpg`,
+    title: "Weight History",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Profile.jpg`,
+    title: "User Profile",
+  },
+];
 
 const CaseStudyWeightMate = () => {
   return (
@@ -12,6 +107,8 @@ const CaseStudyWeightMate = () => {
         managing user profiles, storing progress photos, and visualizing
         goal completion with local persistence.
       </PageHeader>
+
+      <MediaCarousel media={media} />
 
       {/* Overview */}
       <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">

@@ -1,5 +1,54 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
+import MediaCarousel from "../../components/MediaCarousel.jsx";
+
+const media = [
+  // -------------------------------------------------
+  // VIDEO DEMO
+  // -------------------------------------------------
+  {
+    type: "video",
+    src: `${import.meta.env.BASE_URL}videos/grade-book-demo.mp4`,
+    title: "GradeBook Application Demo",
+    poster: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`,
+  },
+
+  // -------------------------------------------------
+  // MAIN UI
+  // -------------------------------------------------
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`,
+    title: "Main Application Interface",
+  },
+
+  // -------------------------------------------------
+  // VIEW GRADES
+  // -------------------------------------------------
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-view-grades1.jpg`,
+    title: "View Student Grades",
+  },
+
+  // -------------------------------------------------
+  // UPDATE / EDIT
+  // -------------------------------------------------
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-update1.jpg`,
+    title: "Update Student Record",
+  },
+
+  // -------------------------------------------------
+  // EXPORT
+  // -------------------------------------------------
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-export-csv1.jpg`,
+    title: "Export Data to CSV",
+  },
+];
 
 const CaseStudyGradeBook = () => {
   return (
@@ -11,6 +60,8 @@ const CaseStudyGradeBook = () => {
         A JavaFX application built around clean separation of concerns,
         dynamic form handling, CSV storage, and theme switching.
       </PageHeader>
+
+      <MediaCarousel media={media} />
 
       {/* Overview */}
       <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
