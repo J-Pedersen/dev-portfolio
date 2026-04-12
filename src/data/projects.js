@@ -311,11 +311,12 @@ JavaScript (light enhancements where needed)
       "CSS",
       "JavaScript"
     ],
-    type: "project",
+    type: "featured",
     githubUrl: "https://github.com/J-Pedersen/zelda-fansite-aspnet",
+    demoUrl: 'https://j-pedersen.github.io/zelda-fansite-aspnet/',
     icon: "dotnet-icon",
     tags: ["ASP.NET", "Visual Basic", "Server-Side"],
-    videoUrl: "",
+    videoUrl: `${import.meta.env.BASE_URL}/videos/zelda-fansite-asp.net-demo.mp4`,
 
     longDescription:
       "The Zelda Fansite is a multi-page ASP.NET web application designed to present structured content related to The Legend of Zelda series. The application demonstrates server-side rendering, navigation between multiple pages, and structured data presentation for games, items, and maps.",
