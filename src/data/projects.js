@@ -305,7 +305,7 @@ JavaScript (light enhancements where needed)
       "A dynamic ASP.NET web application built with Visual Basic that showcases game data, maps, and items using server-side rendering and structured navigation.",
     role: "Full Stack Developer",
     techStack: [
-      "ASP.NET",
+      ".NET",
       "Visual Basic",
       "HTML",
       "CSS",
@@ -314,8 +314,8 @@ JavaScript (light enhancements where needed)
     type: "featured",
     githubUrl: "https://github.com/J-Pedersen/zelda-fansite-aspnet",
     demoUrl: 'https://j-pedersen.github.io/zelda-fansite-aspnet/',
-    icon: "dotnet-icon",
-    tags: ["ASP.NET", "Visual Basic", "Server-Side"],
+    icon: "zelda-icon",
+    tags: [".NET", "Visual Basic", "Server-Side"],
     videoUrl: `${import.meta.env.BASE_URL}/videos/zelda-fansite-asp.net-demo.mp4`,
 
     longDescription:
