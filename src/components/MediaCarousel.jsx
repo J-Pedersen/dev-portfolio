@@ -14,6 +14,11 @@ const MediaCarousel = ({ media = [] }) => {
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
 
+  const [canScrollThumbsLeft, setCanScrollThumbsLeft] = useState(false);
+  const [canScrollThumbsRight, setCanScrollThumbsRight] = useState(false);
+  const [canScrollFullscreenLeft, setCanScrollFullscreenLeft] = useState(false);
+  const [canScrollFullscreenRight, setCanScrollFullscreenRight] = useState(false);
+
   const thumbStripRef = useRef(null);
   const fullscreenThumbStripRef = useRef(null);
   const thumbButtonRefs = useRef([]);
@@ -31,6 +36,31 @@ const MediaCarousel = ({ media = [] }) => {
     setIsTouchDevice(window.matchMedia("(pointer: coarse)").matches);
   }, []);
 
+  const updateScrollButtons = (ref, setLeft, setRight) => {
+    const el = ref.current;
+    if (!el) return;
+
+    const maxScrollLeft = el.scrollWidth - el.clientWidth;
+    const currentLeft = el.scrollLeft;
+    const epsilon = 2;
+
+    setLeft(currentLeft > epsilon);
+    setRight(currentLeft < maxScrollLeft - epsilon);
+  };
+
+  useEffect(() => {
+    updateScrollButtons(
+      thumbStripRef,
+      setCanScrollThumbsLeft,
+      setCanScrollThumbsRight
+    );
+    updateScrollButtons(
+      fullscreenThumbStripRef,
+      setCanScrollFullscreenLeft,
+      setCanScrollFullscreenRight
+    );
+  }, [media.length, isFullscreen]);
+
   useEffect(() => {
     const activeThumb = thumbButtonRefs.current[currentIndex];
     if (activeThumb) {
@@ -38,6 +68,13 @@ const MediaCarousel = ({ media = [] }) => {
         behavior: "smooth",
         inline: "center",
         block: "nearest",
+      });
+      requestAnimationFrame(() => {
+        updateScrollButtons(
+          thumbStripRef,
+          setCanScrollThumbsLeft,
+          setCanScrollThumbsRight
+        );
       });
     }
 
@@ -47,6 +84,13 @@ const MediaCarousel = ({ media = [] }) => {
         behavior: "smooth",
         inline: "center",
         block: "nearest",
+      });
+      requestAnimationFrame(() => {
+        updateScrollButtons(
+          fullscreenThumbStripRef,
+          setCanScrollFullscreenLeft,
+          setCanScrollFullscreenRight
+        );
       });
     }
   }, [currentIndex]);
@@ -89,23 +133,27 @@ const MediaCarousel = ({ media = [] }) => {
     dragStartScrollLeftRef.current = ref.current.scrollLeft;
   };
 
-  const handleThumbMouseMove = (e, ref) => {
+  const handleThumbMouseMove = (e, ref, setLeft, setRight) => {
     if (!isDraggingThumbsRef.current || !ref.current) return;
     e.preventDefault();
     const walk = e.pageX - dragStartXRef.current;
     ref.current.scrollLeft = dragStartScrollLeftRef.current - walk;
+    updateScrollButtons(ref, setLeft, setRight);
   };
 
   const stopThumbDragging = () => {
     isDraggingThumbsRef.current = false;
   };
 
-  const scrollThumbsBy = (ref, amount) => {
+  const scrollThumbsBy = (ref, amount, setLeft, setRight) => {
     if (!ref.current) return;
     ref.current.scrollBy({
       left: amount,
       behavior: "smooth",
     });
+    window.setTimeout(() => {
+      updateScrollButtons(ref, setLeft, setRight);
+    }, 250);
   };
 
   useEffect(() => {
@@ -129,7 +177,6 @@ const MediaCarousel = ({ media = [] }) => {
   return (
     <>
       <div className="rounded-2xl overflow-hidden border border-brand-soft bg-slate-100 dark:bg-slate-900 min-w-0">
-        {/* MAIN MEDIA */}
         <div
           className="relative"
           onTouchStart={onTouchStart}
@@ -218,12 +265,10 @@ const MediaCarousel = ({ media = [] }) => {
           )}
         </div>
 
-        {/* TITLE */}
         <div className="px-4 py-3 bg-brand-soft/30 border-t border-brand-soft text-sm text-center">
           {current.title}
         </div>
 
-        {/* THUMBNAILS */}
         {media.length > 1 && (
           <div className="p-4 border-t border-brand-soft min-w-0">
             <div className="relative">
@@ -231,17 +276,29 @@ const MediaCarousel = ({ media = [] }) => {
                 <>
                   <button
                     type="button"
-                    onClick={() => scrollThumbsBy(thumbStripRef, -220)}
-                    className="
+                    onClick={() =>
+                      scrollThumbsBy(
+                        thumbStripRef,
+                        -220,
+                        setCanScrollThumbsLeft,
+                        setCanScrollThumbsRight
+                      )
+                    }
+                    disabled={!canScrollThumbsLeft}
+                    className={`
                       absolute left-0 top-1/2 -translate-y-1/2 z-10
                       h-9 w-9 rounded-full
                       border border-brand-soft
                       bg-slate-100/95 dark:bg-slate-900/95
                       flex items-center justify-center
                       text-slate-800 dark:text-slate-100
-                      hover:border-brand hover:text-brand
                       transition
-                    "
+                      ${
+                        canScrollThumbsLeft
+                          ? "hover:border-brand hover:text-brand opacity-100"
+                          : "opacity-30 cursor-default pointer-events-none"
+                      }
+                    `}
                     aria-label="Scroll thumbnails left"
                   >
                     <ChevronLeft size={16} />
@@ -249,17 +306,29 @@ const MediaCarousel = ({ media = [] }) => {
 
                   <button
                     type="button"
-                    onClick={() => scrollThumbsBy(thumbStripRef, 220)}
-                    className="
+                    onClick={() =>
+                      scrollThumbsBy(
+                        thumbStripRef,
+                        220,
+                        setCanScrollThumbsLeft,
+                        setCanScrollThumbsRight
+                      )
+                    }
+                    disabled={!canScrollThumbsRight}
+                    className={`
                       absolute right-0 top-1/2 -translate-y-1/2 z-10
                       h-9 w-9 rounded-full
                       border border-brand-soft
                       bg-slate-100/95 dark:bg-slate-900/95
                       flex items-center justify-center
                       text-slate-800 dark:text-slate-100
-                      hover:border-brand hover:text-brand
                       transition
-                    "
+                      ${
+                        canScrollThumbsRight
+                          ? "hover:border-brand hover:text-brand opacity-100"
+                          : "opacity-30 cursor-default pointer-events-none"
+                      }
+                    `}
                     aria-label="Scroll thumbnails right"
                   >
                     <ChevronRight size={16} />
@@ -276,8 +345,22 @@ const MediaCarousel = ({ media = [] }) => {
                   [&::-webkit-scrollbar]:hidden
                   ${!isTouchDevice ? "px-10" : ""}
                 `}
+                onScroll={() =>
+                  updateScrollButtons(
+                    thumbStripRef,
+                    setCanScrollThumbsLeft,
+                    setCanScrollThumbsRight
+                  )
+                }
                 onMouseDown={(e) => handleThumbMouseDown(e, thumbStripRef)}
-                onMouseMove={(e) => handleThumbMouseMove(e, thumbStripRef)}
+                onMouseMove={(e) =>
+                  handleThumbMouseMove(
+                    e,
+                    thumbStripRef,
+                    setCanScrollThumbsLeft,
+                    setCanScrollThumbsRight
+                  )
+                }
                 onMouseUp={stopThumbDragging}
                 onMouseLeave={stopThumbDragging}
               >
@@ -324,7 +407,6 @@ const MediaCarousel = ({ media = [] }) => {
         )}
       </div>
 
-      {/* FULLSCREEN (images only) */}
       {isFullscreen && current.type === "image" && (
         <div
           className="fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center"
@@ -415,15 +497,28 @@ const MediaCarousel = ({ media = [] }) => {
                   <>
                     <button
                       type="button"
-                      onClick={() => scrollThumbsBy(fullscreenThumbStripRef, -220)}
-                      className="
+                      onClick={() =>
+                        scrollThumbsBy(
+                          fullscreenThumbStripRef,
+                          -220,
+                          setCanScrollFullscreenLeft,
+                          setCanScrollFullscreenRight
+                        )
+                      }
+                      disabled={!canScrollFullscreenLeft}
+                      className={`
                         absolute left-0 top-1/2 -translate-y-1/2 z-10
                         h-9 w-9 rounded-full
                         border border-white/20
                         bg-white/10 text-white
                         flex items-center justify-center
-                        hover:bg-white/20 transition
-                      "
+                        transition
+                        ${
+                          canScrollFullscreenLeft
+                            ? "hover:bg-white/20 opacity-100"
+                            : "opacity-30 cursor-default pointer-events-none"
+                        }
+                      `}
                       aria-label="Scroll fullscreen thumbnails left"
                     >
                       <ChevronLeft size={16} />
@@ -431,15 +526,28 @@ const MediaCarousel = ({ media = [] }) => {
 
                     <button
                       type="button"
-                      onClick={() => scrollThumbsBy(fullscreenThumbStripRef, 220)}
-                      className="
+                      onClick={() =>
+                        scrollThumbsBy(
+                          fullscreenThumbStripRef,
+                          220,
+                          setCanScrollFullscreenLeft,
+                          setCanScrollFullscreenRight
+                        )
+                      }
+                      disabled={!canScrollFullscreenRight}
+                      className={`
                         absolute right-0 top-1/2 -translate-y-1/2 z-10
                         h-9 w-9 rounded-full
                         border border-white/20
                         bg-white/10 text-white
                         flex items-center justify-center
-                        hover:bg-white/20 transition
-                      "
+                        transition
+                        ${
+                          canScrollFullscreenRight
+                            ? "hover:bg-white/20 opacity-100"
+                            : "opacity-30 cursor-default pointer-events-none"
+                        }
+                      `}
                       aria-label="Scroll fullscreen thumbnails right"
                     >
                       <ChevronRight size={16} />
@@ -456,11 +564,23 @@ const MediaCarousel = ({ media = [] }) => {
                     [&::-webkit-scrollbar]:hidden
                     ${!isTouchDevice ? "px-10" : ""}
                   `}
+                  onScroll={() =>
+                    updateScrollButtons(
+                      fullscreenThumbStripRef,
+                      setCanScrollFullscreenLeft,
+                      setCanScrollFullscreenRight
+                    )
+                  }
                   onMouseDown={(e) =>
                     handleThumbMouseDown(e, fullscreenThumbStripRef)
                   }
                   onMouseMove={(e) =>
-                    handleThumbMouseMove(e, fullscreenThumbStripRef)
+                    handleThumbMouseMove(
+                      e,
+                      fullscreenThumbStripRef,
+                      setCanScrollFullscreenLeft,
+                      setCanScrollFullscreenRight
+                    )
                   }
                   onMouseUp={stopThumbDragging}
                   onMouseLeave={stopThumbDragging}
