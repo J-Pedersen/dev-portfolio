@@ -33,7 +33,7 @@ const ProjectDetail = () => {
       </PageHeader>
 
       <section className="grid gap-8 md:grid-cols-[2fr,1fr] items-start">
-        <div className="space-y-8">
+        <div className="space-y-8 min-w-0">
           {/* MEDIA */}
           {project.media?.length > 0 ? (
             <div className="mb-6">
