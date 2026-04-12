@@ -14,90 +14,21 @@ export const projects = [
     icon: 'weightmate-icon',
     tags: ['Java', 'Android', 'SQLite', 'XML'],
     media: [
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Welcome.jpg`,
-        alt: "WeightMate welcome screen",
-        title: "Welcome Screen",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Name.jpg`,
-        alt: "WeightMate create profile name step",
-        title: "Create Profile - Name",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Age.jpg`,
-        alt: "WeightMate create profile age step",
-        title: "Create Profile - Age",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Gender.jpg`,
-        alt: "WeightMate create profile gender step",
-        title: "Create Profile - Gender",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Height.jpg`,
-        alt: "WeightMate create profile height step",
-        title: "Create Profile - Height",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Weight.jpg`,
-        alt: "WeightMate create profile weight step",
-        title: "Create Profile - Weight",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Weight.jpg`,
-        alt: "WeightMate create profile target weight step",
-        title: "Create Profile - Target Weight",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Date.jpg`,
-        alt: "WeightMate create profile target date step",
-        title: "Create Profile - Target Date",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Image.jpg`,
-        alt: "WeightMate create profile image step",
-        title: "Create Profile - Image",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Confirmation.jpg`,
-        alt: "WeightMate create profile confirmation screen",
-        title: "Create Profile - Confirmation",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
-        alt: "WeightMate main dashboard",
-        title: "Main Dashboard",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Profile.jpg`,
-        alt: "WeightMate profile screen",
-        title: "Profile Screen",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-History.jpg`,
-        alt: "WeightMate history screen",
-        title: "Entry History",
-      },
-      {
-        type: "image",
-        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Weight-Entry.jpg`,
-        alt: "WeightMate weight entry screen",
-        title: "Weight Entry",
-      },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Welcome.jpg`, title: "Welcome Screen" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Name.jpg`, title: "Create Profile - Name" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Age.jpg`, title: "Create Profile - Age" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Gender.jpg`, title: "Create Profile - Gender" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Height.jpg`, title: "Create Profile - Height" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Weight.jpg`, title: "Create Profile - Weight" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Weight.jpg`, title: "Create Profile - Target Weight" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Date.jpg`, title: "Create Profile - Target Date" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Image.jpg`, title: "Create Profile - Image" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Confirmation.jpg`, title: "Confirmation" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`, title: "Main Dashboard" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Profile.jpg`, title: "Profile Screen" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-History.jpg`, title: "History" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Weight-Entry.jpg`, title: "Weight Entry" },
+
       {
         type: "video",
         src: `${import.meta.env.BASE_URL}videos/weight-tracker-demo.mp4`,
@@ -157,62 +88,24 @@ export const projects = [
     demoUrl: 'https://j-pedersen.github.io/little-lemon-react/',
     icon: 'little_lemon-icon',
     tags: ['React', 'Bootstrap', 'JavaScript', 'Coursera'],
-    videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-react-demo.mp4`,
-    screenshots: [
+    media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home1.jpg`, title: "Home Screen 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home2.jpg`, title: "Home Screen 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home3.jpg`, title: "Home Screen 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home4.jpg`, title: "Home Screen 4" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home5.jpg`, title: "Home Screen 5" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Login1.jpg`, title: "Login Screen" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu1.jpg`, title: "Menu 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu2.jpg`, title: "Menu 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu3.jpg`, title: "Menu 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu4.jpg`, title: "Menu 4" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Reservation1.jpg`, title: "Reservation" },
+
       {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home1.jpg`,
-        alt: "Little Lemon React home screen 1",
-        title: "Home Screen 1",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home2.jpg`,
-        alt: "Little Lemon React home screen 2",
-        title: "Home Screen 2",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home3.jpg`,
-        alt: "Little Lemon React home screen 3",
-        title: "Home Screen 3",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home4.jpg`,
-        alt: "Little Lemon React home screen 4",
-        title: "Home Screen 4",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home5.jpg`,
-        alt: "Little Lemon React home screen 5",
-        title: "Home Screen 5",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Login1.jpg`,
-        alt: "Little Lemon React login screen",
-        title: "Login Screen",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu1.jpg`,
-        alt: "Little Lemon React menu screen 1",
-        title: "Menu Screen 1",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu2.jpg`,
-        alt: "Little Lemon React menu screen 2",
-        title: "Menu Screen 2",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu3.jpg`,
-        alt: "Little Lemon React menu screen 3",
-        title: "Menu Screen 3",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu4.jpg`,
-        alt: "Little Lemon React menu screen 4",
-        title: "Menu Screen 4",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Reservation1.jpg`,
-        alt: "Little Lemon React reservation screen",
-        title: "Reservation Screen",
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/little-lemon-react-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home1.jpg`,
       },
     ],
 
@@ -263,47 +156,21 @@ Presentational components (cards, buttons, etc.)
     githubUrl: 'https://github.com/J-Pedersen/bookclub',
     icon: 'bookclub-icon',
     tags: ['Java', 'Spring Boot', 'Server-Side'],
-    videoUrl: `${import.meta.env.BASE_URL}/videos/bookclub-demo.mp4`,
-    screenshots: [
+    media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`, title: "Home" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-about1.jpg`, title: "About" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Contact1.jpg`, title: "Contact" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-monthly-books1.jpg`, title: "Monthly Books" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-book-of-the-month-details1.jpg`, title: "Book Details" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist1.jpg`, title: "Wishlist" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist2.jpg`, title: "Wishlist (Alt)" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist-add1.jpg`, title: "Add to Wishlist" },
+
       {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
-        alt: "BookClub home page",
-        title: "Home Page",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-about1.jpg`,
-        alt: "BookClub about page",
-        title: "About Page",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Contact1.jpg`,
-        alt: "BookClub contact page",
-        title: "Contact Page",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-monthly-books1.jpg`,
-        alt: "BookClub monthly books page",
-        title: "Monthly Books",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-book-of-the-month-details1.jpg`,
-        alt: "BookClub book of the month details page",
-        title: "Book of the Month Details",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist1.jpg`,
-        alt: "BookClub wishlist page",
-        title: "Wishlist",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist2.jpg`,
-        alt: "BookClub wishlist page alternate view",
-        title: "Wishlist View 2",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist-add1.jpg`,
-        alt: "BookClub add wishlist item page",
-        title: "Add to Wishlist",
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/bookclub-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
       },
     ],
 
@@ -355,27 +222,17 @@ Persistence (simple backing data source for books)
       'https://github.com/J-Pedersen/cis-505/tree/main/Module_12/GradeBookApp',
     icon: 'gradebook-icon',
     tags: ['Java', 'JavaFX', 'CSS', 'CSV'],
-    videoUrl: `${import.meta.env.BASE_URL}/videos/grade-book-demo.mp4`,
-    screenshots: [
+    media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`, title: "Main Screen" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-view-grades1.jpg`, title: "View Grades" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-update1.jpg`, title: "Update Grade" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-export-csv1.jpg`, title: "Export CSV" },
+
       {
-        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`,
-        alt: "GradeBook main screen",
-        title: "Main Screen",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-view-grades1.jpg`,
-        alt: "GradeBook view grades screen",
-        title: "View Grades",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-update1.jpg`,
-        alt: "GradeBook update screen",
-        title: "Update Grade",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-export-csv1.jpg`,
-        alt: "GradeBook export CSV screen",
-        title: "Export CSV",
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/grade-book-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`,
       },
     ],
 
@@ -426,42 +283,18 @@ CSV File Storage
     githubUrl: 'https://github.com/J-Pedersen/moffat-bay-marina-java',
     icon: 'moffat_bay_marina-icon',
     tags: ['Java', 'Jakarta EE', 'CSS', 'Server-Side'],
-    videoUrl: `${import.meta.env.BASE_URL}/videos/moffat-bay-marina-java-demo.mp4`,
-    screenshots: [
+    media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`, title: "Create Account" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`, title: "Create Reservation" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Reservation Lookup1.jpg`, title: "Reservation Lookup" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Upcoming Reservations1.jpg`, title: "Upcoming Reservations" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Add1.jpg`, title: "Waitlist Add" },
+
       {
-        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`,
-        alt: "Moffat Bay Marina create account screen",
-        title: "Create Account",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`,
-        alt: "Moffat Bay Marina create reservation screen",
-        title: "Create Reservation",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Reservation Lookup1.jpg`,
-        alt: "Moffat Bay Marina reservation lookup screen",
-        title: "Reservation Lookup",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Upcoming Reservations1.jpg`,
-        alt: "Moffat Bay Marina upcoming reservations screen",
-        title: "Upcoming Reservations",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Add1.jpg`,
-        alt: "Moffat Bay Marina waitlist add screen",
-        title: "Waitlist Add",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Mobile - Waitlist Add1.jpg`,
-        alt: "Moffat Bay Marina mobile waitlist add screen",
-        title: "Mobile Waitlist Add",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Lookup1.jpg`,
-        alt: "Moffat Bay Marina waitlist lookup screen",
-        title: "Waitlist Lookup",
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/moffat-bay-marina-java-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`,
       },
     ],
 
@@ -510,37 +343,19 @@ In-Memory Collections (lists/maps)
     demoUrl: 'https://j-pedersen.github.io/little-lemon-html/',
     icon: 'little_lemon-icon',
     tags: ['HTML', 'CSS', 'JavaScript', 'Coursera'],
-    videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-html-demo.mp4`,
-    screenshots: [
+    media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`, title: "Home 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home2.jpg`, title: "Home 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home3.jpg`, title: "Home 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-About1.jpg`, title: "About" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Menu1.jpg`, title: "Menu" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Reservation1.jpg`, title: "Reservation" },
+
       {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`,
-        alt: "Little Lemon HTML home screen 1",
-        title: "Home Screen 1",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home2.jpg`,
-        alt: "Little Lemon HTML home screen 2",
-        title: "Home Screen 2",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home3.jpg`,
-        alt: "Little Lemon HTML home screen 3",
-        title: "Home Screen 3",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-About1.jpg`,
-        alt: "Little Lemon HTML about page",
-        title: "About Page",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Menu1.jpg`,
-        alt: "Little Lemon HTML menu page",
-        title: "Menu Page",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Reservation1.jpg`,
-        alt: "Little Lemon HTML reservation page",
-        title: "Reservation Page",
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/little-lemon-html-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`,
       },
     ],
 
