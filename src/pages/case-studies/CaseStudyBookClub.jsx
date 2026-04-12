@@ -1,5 +1,50 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
+import MediaCarousel from "../../components/MediaCarousel.jsx";
+
+const media = [
+  {
+    type: "video",
+    src: `${import.meta.env.BASE_URL}videos/bookclub-demo.mp4`,
+    title: "Demo Video",
+    poster: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
+    title: "Home Page",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-about1.jpg`,
+    title: "About Page",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Contact1.jpg`,
+    title: "Contact Page",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-monthly-books1.jpg`,
+    title: "Monthly Books",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-book-of-the-month-details1.jpg`,
+    title: "Book of the Month Details",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist1.jpg`,
+    title: "Wishlist",
+  },
+  {
+    type: "image",
+    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist-add1.jpg`,
+    title: "Add to Wishlist",
+  },
+];
 
 const CaseStudyBookClub = () => {
   return (
@@ -12,6 +57,8 @@ const CaseStudyBookClub = () => {
         book-of-the-month selections, API integrations, and a clean,
         maintainable architecture.
       </PageHeader>
+
+      <MediaCarousel media={media} />
 
       {/* Overview */}
       <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
