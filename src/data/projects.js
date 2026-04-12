@@ -14,6 +14,78 @@ export const projects = [
     icon: 'weightmate-icon',
     tags: ['Java', 'Android', 'SQLite', 'XML'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/weight-tracker-demo.mp4`,
+    screenshots: [
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Welcome.jpg`,
+        alt: "WeightMate welcome screen",
+        title: "Welcome Screen",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Name.jpg`,
+        alt: "WeightMate create profile name step",
+        title: "Create Profile - Name",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Age.jpg`,
+        alt: "WeightMate create profile age step",
+        title: "Create Profile - Age",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Gender.jpg`,
+        alt: "WeightMate create profile gender step",
+        title: "Create Profile - Gender",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Height.jpg`,
+        alt: "WeightMate create profile height step",
+        title: "Create Profile - Height",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Weight.jpg`,
+        alt: "WeightMate create profile weight step",
+        title: "Create Profile - Weight",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Weight.jpg`,
+        alt: "WeightMate create profile target weight step",
+        title: "Create Profile - Target Weight",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Target-Date.jpg`,
+        alt: "WeightMate create profile target date step",
+        title: "Create Profile - Target Date",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Image.jpg`,
+        alt: "WeightMate create profile image step",
+        title: "Create Profile - Image",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Confirmation.jpg`,
+        alt: "WeightMate create profile confirmation screen",
+        title: "Create Profile - Confirmation",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
+        alt: "WeightMate main dashboard",
+        title: "Main Dashboard",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Profile.jpg`,
+        alt: "WeightMate profile screen",
+        title: "Profile Screen",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-History.jpg`,
+        alt: "WeightMate history screen",
+        title: "Entry History",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Weight-Entry.jpg`,
+        alt: "WeightMate weight entry screen",
+        title: "Weight Entry",
+      },
+    ],
 
     longDescription:
       'WeightMate is an android mobile application designed to help users track their weight progress over time. The app supports profile creation, goal tracking, progress visualization, and media storage, all within a clean and responsive Android UI.',
@@ -60,13 +132,70 @@ export const projects = [
     shortDescription:
       'React-based version of the Little Lemon website with reusable components and routing.',
     role: 'React Developer',
-    techStack: ['React', 'Bootstrap', 'JavaScript',, 'Figma'],
+    techStack: ['React', 'Bootstrap', 'JavaScript', 'Figma'],
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/little-lemon-react',
     demoUrl: 'https://j-pedersen.github.io/little-lemon-react/',
     icon: 'little_lemon-icon',
     tags: ['React', 'Bootstrap', 'JavaScript', 'Coursera'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-react-demo.mp4`,
+    screenshots: [
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home1.jpg`,
+        alt: "Little Lemon React home screen 1",
+        title: "Home Screen 1",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home2.jpg`,
+        alt: "Little Lemon React home screen 2",
+        title: "Home Screen 2",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home3.jpg`,
+        alt: "Little Lemon React home screen 3",
+        title: "Home Screen 3",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home4.jpg`,
+        alt: "Little Lemon React home screen 4",
+        title: "Home Screen 4",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Home5.jpg`,
+        alt: "Little Lemon React home screen 5",
+        title: "Home Screen 5",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Login1.jpg`,
+        alt: "Little Lemon React login screen",
+        title: "Login Screen",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu1.jpg`,
+        alt: "Little Lemon React menu screen 1",
+        title: "Menu Screen 1",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu2.jpg`,
+        alt: "Little Lemon React menu screen 2",
+        title: "Menu Screen 2",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu3.jpg`,
+        alt: "Little Lemon React menu screen 3",
+        title: "Menu Screen 3",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Menu4.jpg`,
+        alt: "Little Lemon React menu screen 4",
+        title: "Menu Screen 4",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-react/Little-Lemon-React-Reservation1.jpg`,
+        alt: "Little Lemon React reservation screen",
+        title: "Reservation Screen",
+      },
+    ],
 
     longDescription:
       'Little Lemon (React) is a React-based version of the restaurant site that turns the original static layout into a component-driven application. It uses reusable components, props, and routing to structure the UI. This project helped bridge the gap between static pages and modern single-page applications.',
@@ -116,6 +245,48 @@ Presentational components (cards, buttons, etc.)
     icon: 'bookclub-icon',
     tags: ['Java', 'Spring Boot', 'Server-Side'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/bookclub-demo.mp4`,
+    screenshots: [
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
+        alt: "BookClub home page",
+        title: "Home Page",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-about1.jpg`,
+        alt: "BookClub about page",
+        title: "About Page",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Contact1.jpg`,
+        alt: "BookClub contact page",
+        title: "Contact Page",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-monthly-books1.jpg`,
+        alt: "BookClub monthly books page",
+        title: "Monthly Books",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-book-of-the-month-details1.jpg`,
+        alt: "BookClub book of the month details page",
+        title: "Book of the Month Details",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist1.jpg`,
+        alt: "BookClub wishlist page",
+        title: "Wishlist",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist2.jpg`,
+        alt: "BookClub wishlist page alternate view",
+        title: "Wishlist View 2",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist-add1.jpg`,
+        alt: "BookClub add wishlist item page",
+        title: "Add to Wishlist",
+      },
+    ],
 
     longDescription:
       'Book Club is a Spring Boot application that models the core flows of a book club: displaying books, managing lists, and working with server-rendered views. It uses Spring MVC controllers with Thymeleaf templates to deliver HTML pages backed by Java models and persistent data. This project gave me a chance to practice structuring a full-stack Java application rather than a single script or stand-alone assignment.',
@@ -166,6 +337,28 @@ Persistence (simple backing data source for books)
     icon: 'gradebook-icon',
     tags: ['Java', 'JavaFX', 'CSS', 'CSV'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/grade-book-demo.mp4`,
+    screenshots: [
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`,
+        alt: "GradeBook main screen",
+        title: "Main Screen",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-view-grades1.jpg`,
+        alt: "GradeBook view grades screen",
+        title: "View Grades",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-update1.jpg`,
+        alt: "GradeBook update screen",
+        title: "Update Grade",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-export-csv1.jpg`,
+        alt: "GradeBook export CSV screen",
+        title: "Export CSV",
+      },
+    ],
 
     longDescription:
       'Grade Book App is a JavaFX desktop application that collects and displays student grade data. It started as a single-file UI project and grew into an exercise in separation of concerns, event handling, file storage, and UI refinement. The app persists entries to CSV and presents them in a table so the user can see the full dataset at a glance.',
@@ -215,6 +408,43 @@ CSV File Storage
     icon: 'moffat_bay_marina-icon',
     tags: ['Java', 'Jakarta EE', 'CSS', 'Server-Side'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/moffat-bay-marina-java-demo.mp4`,
+    screenshots: [
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`,
+        alt: "Moffat Bay Marina create account screen",
+        title: "Create Account",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`,
+        alt: "Moffat Bay Marina create reservation screen",
+        title: "Create Reservation",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Reservation Lookup1.jpg`,
+        alt: "Moffat Bay Marina reservation lookup screen",
+        title: "Reservation Lookup",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Upcoming Reservations1.jpg`,
+        alt: "Moffat Bay Marina upcoming reservations screen",
+        title: "Upcoming Reservations",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Add1.jpg`,
+        alt: "Moffat Bay Marina waitlist add screen",
+        title: "Waitlist Add",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Mobile - Waitlist Add1.jpg`,
+        alt: "Moffat Bay Marina mobile waitlist add screen",
+        title: "Mobile Waitlist Add",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Lookup1.jpg`,
+        alt: "Moffat Bay Marina waitlist lookup screen",
+        title: "Waitlist Lookup",
+      },
+    ],
 
     longDescription:
       'Moffat Bay Marina (Java) is a console-based Java group project that models a marina’s business logic: boat rentals, customer information, and scheduling. The project emphasizes object-oriented design, basic data structures, and control flow rather than UI. It serves as a good example of how I approach requirements-driven business logic in a pure Java environment.',
@@ -262,6 +492,38 @@ In-Memory Collections (lists/maps)
     icon: 'little_lemon-icon',
     tags: ['HTML', 'CSS', 'JavaScript', 'Coursera'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/little-lemon-html-demo.mp4`,
+    screenshots: [
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`,
+        alt: "Little Lemon HTML home screen 1",
+        title: "Home Screen 1",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home2.jpg`,
+        alt: "Little Lemon HTML home screen 2",
+        title: "Home Screen 2",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Home3.jpg`,
+        alt: "Little Lemon HTML home screen 3",
+        title: "Home Screen 3",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-About1.jpg`,
+        alt: "Little Lemon HTML about page",
+        title: "About Page",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Menu1.jpg`,
+        alt: "Little Lemon HTML menu page",
+        title: "Menu Page",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/little-lemon-html/Little-Lemon-HTML-Reservation1.jpg`,
+        alt: "Little Lemon HTML reservation page",
+        title: "Reservation Page",
+      },
+    ],
 
     longDescription:
       'Little Lemon (HTML/CSS/JavaScript) is a responsive restaurant website built using semantic HTML, modern CSS, and a bit of JavaScript. It focuses on layout, accessibility basics, and content structure without the overhead of a framework. It’s a good snapshot of my early front-end work using the core building blocks of the web.',
@@ -317,7 +579,48 @@ JavaScript (light enhancements where needed)
     icon: "zelda-icon",
     tags: [".NET", "Visual Basic", "Server-Side"],
     videoUrl: `${import.meta.env.BASE_URL}/videos/zelda-fansite-asp.net-demo.mp4`,
-
+    screenshots: [
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`,
+        alt: "Zelda Fansite home page",
+        title: "Home Page",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`,
+        alt: "Zelda Fansite games page 1",
+        title: "Games Page 1",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games2.jpg`,
+        alt: "Zelda Fansite games page 2",
+        title: "Games Page 2",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games3.jpg`,
+        alt: "Zelda Fansite games page 3",
+        title: "Games Page 3",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items1.jpg`,
+        alt: "Zelda Fansite items page 1",
+        title: "Items Page 1",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items2.jpg`,
+        alt: "Zelda Fansite items page 2",
+        title: "Items Page 2",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps1.jpg`,
+        alt: "Zelda Fansite maps page 1",
+        title: "Maps Page 1",
+      },
+      {
+        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps2.jpg`,
+        alt: "Zelda Fansite maps page 2",
+        title: "Maps Page 2",
+      },
+    ],
     longDescription:
       "The Zelda Fansite is a multi-page ASP.NET web application designed to present structured content related to The Legend of Zelda series. The application demonstrates server-side rendering, navigation between multiple pages, and structured data presentation for games, items, and maps.",
 

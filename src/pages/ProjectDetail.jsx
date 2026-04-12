@@ -5,6 +5,7 @@ import TagPill from "../components/TagPill.jsx";
 import { Layers, Tag, Play, CircuitBoard } from "lucide-react";
 import VideoPlayer from "../components/VideoPlayer.jsx";
 import ProjectLayout from "../layouts/ProjectLayout.jsx";
+import ImageCarousel from "../components/ImageCarousel.jsx";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -34,7 +35,19 @@ const ProjectDetail = () => {
 
       <section className="grid gap-8 md:grid-cols-[2fr,1fr] items-start">
         <div className="space-y-8">
-          {project.videoUrl ? (
+          {/* MEDIA */}
+          {project.screenshots?.length > 0 ? (
+            <div className="mb-6 space-y-4">
+              <ImageCarousel images={project.screenshots} />
+
+              {project.videoUrl && (
+                <VideoPlayer
+                  src={project.videoUrl}
+                  poster={project.poster || undefined}
+                />
+              )}
+            </div>
+          ) : project.videoUrl ? (
             <VideoPlayer
               src={project.videoUrl}
               poster={project.poster || undefined}
