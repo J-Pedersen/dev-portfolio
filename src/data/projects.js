@@ -299,6 +299,62 @@ JavaScript (light enhancements where needed)
   },
 
   {
+    slug: "zelda-fansite",
+    title: "Zelda Fansite ASP.NET Web Application",
+    shortDescription:
+      "A dynamic ASP.NET web application built with Visual Basic that showcases game data, maps, and items using server-side rendering and structured navigation.",
+    role: "Full Stack Developer",
+    techStack: [
+      "ASP.NET",
+      "Visual Basic",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    type: "project",
+    githubUrl: "https://github.com/J-Pedersen/zelda-fansite-aspnet",
+    icon: "dotnet-icon",
+    tags: ["ASP.NET", "Visual Basic", "Server-Side"],
+    videoUrl: "",
+
+    longDescription:
+      "The Zelda Fansite is a multi-page ASP.NET web application designed to present structured content related to The Legend of Zelda series. The application demonstrates server-side rendering, navigation between multiple pages, and structured data presentation for games, items, and maps.",
+
+    problem:
+      "The goal was to build a dynamic web application using ASP.NET that could organize and display structured content across multiple pages while maintaining a consistent layout and navigation experience.",
+
+    solution:
+      "I developed the application using ASP.NET with Visual Basic for server-side logic. The site includes multiple interconnected pages such as Home, Games, Items, and Maps. Each page dynamically renders content while maintaining a consistent UI layout. Styling and layout were handled using HTML and CSS, with additional interactivity provided by JavaScript where needed.",
+
+    architecture: `
+  ASP.NET Web Application
+  ↓
+  VB Code-Behind Logic
+  ↓
+  Server-Side Rendering
+  ↓
+  Multi-Page Navigation (Home, Games, Items, Maps)
+    `,
+
+    decisions: [
+      "Use ASP.NET with Visual Basic to implement server-side rendering and dynamic page generation.",
+      "Structure the application into multiple pages to separate content logically (games, items, maps).",
+      "Maintain consistent navigation and layout across all pages for usability.",
+      "Use server-side logic to manage content display rather than relying entirely on client-side scripting."
+    ],
+
+    challenges: [
+      "Understanding and implementing the ASP.NET page lifecycle.",
+      "Managing navigation between multiple pages while maintaining consistent layout.",
+      "Structuring content in a way that is easy to expand and maintain.",
+      "Balancing server-side rendering with client-side enhancements."
+    ],
+
+    outcome:
+      "This project demonstrates my ability to build a structured, multi-page web application using ASP.NET and server-side rendering. It highlights my understanding of web architecture, navigation design, and integrating backend logic with frontend presentation."
+  },
+
+  {
     slug: 'bacchus-winery-python',
     title: 'Bacchus Winery',
     shortDescription:
