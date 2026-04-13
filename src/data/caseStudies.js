@@ -40,7 +40,7 @@ export const caseStudies = [
     slug: "gradebook",
     category: "technical",
     categoryLabel: "Technical",
-    title: "GradeBookApp JavaFX Desktop Application",
+    title: "GradeBookApp Application",
     summary:
       "A JavaFX desktop application built with clean separation of concerns, dynamic layout handling, CSV storage, and light/dark theme switching. This case study highlights UI architecture, controller/service refactoring, responsive layout strategies, and modular animated UI components.",
     techStack: [
