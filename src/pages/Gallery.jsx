@@ -126,11 +126,11 @@ const Gallery = () => {
               key={i}
               className="
                 group rounded-2xl overflow-hidden
-                border border-brand-soft
-                bg-white dark:bg-slate-900
+                bg-brand-soft/30
+                dark:hover:text-brand-soft-soft
+                border-b border-brand-soft
                 transition
-                shadow-elevated dark:shadow-elevated-dark
-                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+                shadow-card dark:shadow-card-dark hover:shadow-card-hover
               "
             >
               <img
@@ -159,8 +159,10 @@ const Gallery = () => {
               key={i}
               className="
                 rounded-2xl overflow-hidden
-                border border-brand-soft
-                bg-white dark:bg-slate-900
+                bg-brand-soft/30
+                dark:hover:text-brand-soft-soft
+                border-b border-brand-soft
+                shadow-card dark:shadow-card-dark hover:shadow-card-hover
                 p-3
               "
             >
