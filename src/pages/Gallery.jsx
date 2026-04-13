@@ -130,10 +130,8 @@ const Gallery = () => {
                 border-b border-brand-soft
                 transition
                 shadow-card dark:shadow-card-dark 
-                bg-gradient-to-br from-slate-100 to-slate-200
                 hover:bg-brand hover:border-brand hover:shadow-card-hover
                 dark:border-brand-soft
-                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950;
               "
             >
               <img
@@ -166,10 +164,8 @@ const Gallery = () => {
                 border-b border-brand-soft
                 transition
                 shadow-card dark:shadow-card-dark 
-                bg-gradient-to-br from-slate-100 to-slate-200
                 hover:bg-brand hover:border-brand hover:shadow-card-hover
                 dark:border-brand-soft
-                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950;
               "
             >
               <video
