@@ -131,6 +131,7 @@ const Gallery = () => {
                 border-b border-brand-soft
                 transition
                 shadow-card dark:shadow-card-dark hover:shadow-card-hover
+                btn-primary
               "
             >
               <img
@@ -163,6 +164,7 @@ const Gallery = () => {
                 dark:hover:text-brand-soft-soft
                 border-b border-brand-soft
                 shadow-card dark:shadow-card-dark hover:shadow-card-hover
+                btn-primary
               "
             >
               <video

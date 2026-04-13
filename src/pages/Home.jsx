@@ -83,15 +83,10 @@ const Home = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="
             relative h-106 sm:h-64 md:h-72 rounded-3xl overflow-hidden
-            border border-brand-soft
-            bg-slate-100
-            hover:bg-slate-50
-            hover:border-brand
-            hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
-            dark:bg-slate-900/60
-            dark:hover:bg-slate-950
-            dark:hover:border-brand
-            dark:border-brand-soft
+            bg-brand-soft/30
+            dark:hover:text-brand-soft-soft
+            border-b border-brand-soft
+            shadow-card dark:shadow-card-dark hover:shadow-card-hover
             flex flex-col
           "
         >
