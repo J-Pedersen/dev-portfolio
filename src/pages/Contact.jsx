@@ -113,6 +113,7 @@ const Contact = () => {
               dark:hover:bg-slate-950
               dark:hover:border-brand
               dark:border-brand-soft
+              shadow-card dark:shadow-card-dark
           "
         >
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">
@@ -248,6 +249,7 @@ const Contact = () => {
               dark:hover:bg-slate-950
               dark:hover:border-brand
               dark:border-brand-soft
+              shadow-card dark:shadow-card-dark
           "
         >
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">

@@ -81,6 +81,7 @@ const Timeline = ({ items, mobile = false }) => {
         hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
         dark:bg-slate-900/60 dark:hover:bg-slate-950
         dark:hover:border-brand dark:border-brand-soft
+        shadow-card dark:shadow-card-dark
       `}
     >
       <div

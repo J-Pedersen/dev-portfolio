@@ -54,7 +54,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           relative z-10 w-full max-w-lg rounded-2xl overflow-hidden
           border border-brand-soft
           bg-slate-100 dark:bg-slate-900
-          shadow-[0_12px_40px_rgba(0,0,0,0.25)]
+          shadow-card dark:shadow-card-dark
         "
         onClick={(e) => {
           e.preventDefault();
