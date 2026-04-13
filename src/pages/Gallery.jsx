@@ -153,7 +153,7 @@ const Gallery = () => {
           Videos
         </h2>
 
-        <div className="grid md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           {videos.map((video, i) => (
             <div
               key={i}
@@ -163,7 +163,6 @@ const Gallery = () => {
                 dark:hover:text-brand-soft-soft
                 border-b border-brand-soft
                 shadow-card dark:shadow-card-dark hover:shadow-card-hover
-                p-3
               "
             >
               <video
