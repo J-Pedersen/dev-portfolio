@@ -127,14 +127,12 @@ const Gallery = () => {
               className="
                 group rounded-2xl overflow-hidden
                 bg-brand-soft/30
-                dark:hover:text-brand-soft-soft
                 border-b border-brand-soft
                 transition
-                shadow-card dark:shadow-card-dark hover:shadow-card-hover
+                shadow-card dark:shadow-card-dark 
                 bg-gradient-to-br from-slate-100 to-slate-200
-                text-slate-700
-                hover:bg-brand hover:text-white hover:border-brand hover:bg-none hover:shadow-lg hover:shadow-brand/30
-                dark:border-brand-soft dark:text-slate-200
+                hover:bg-brand hover:border-brand hover:shadow-card-hover
+                dark:border-brand-soft
                 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950;
               "
             >
@@ -144,7 +142,7 @@ const Gallery = () => {
                 className="w-full h-48 object-cover"
               />
 
-              <div className="p-3 text-sm font-bold text-slate-700 dark:text-slate-300 text-center">
+              <div className="p-3 text-sm font-bold text-slate-700 hover:text-white dark:text-slate-300 text-center">
                 {img.title}
               </div>
             </div>
