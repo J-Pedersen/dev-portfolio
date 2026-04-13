@@ -19,4 +19,22 @@ export default {
     },
   },
   plugins: [],
+  extend: {
+    boxShadow: {
+      // Light, clean card shadow
+      card: "0 6px 20px rgba(15,23,42,0.08)",
+      "card-hover": "0 10px 28px rgba(15,23,42,0.12)",
+
+      // Medium elevation (for important panels)
+      elevated: "0 12px 30px rgba(15,23,42,0.18)",
+
+      // Your existing strong sidebar shadow (refined slightly)
+      sidebar: "0 18px 40px rgba(15,23,42,0.35)",
+
+      // Dark mode variants
+      "card-dark": "0 8px 24px rgba(0,0,0,0.5)",
+      "elevated-dark": "0 14px 35px rgba(0,0,0,0.6)",
+      "sidebar-dark": "0 18px 40px rgba(0,0,0,0.75)",
+    },
+  }
 };

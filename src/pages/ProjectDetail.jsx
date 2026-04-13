@@ -140,8 +140,7 @@ const ProjectDetail = () => {
             p-5 rounded-2xl text-xs flex flex-col items-center space-y-6
             border border-slate-300 bg-gradient-to-b from-white to-slate-100
             dark:border-slate-800 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950
-            shadow-[0_18px_40px_rgba(15,23,42,0.75)]
-            dark:shadow-[0_18px_40px_rgba(15,23,42,0.85)]
+            shadow-sidebar dark:shadow-sidebar-dark
             ring-1 ring-indigo-400/10
             animate-fadeInSlow
             sticky top-24
