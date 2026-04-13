@@ -61,14 +61,12 @@ export const caseStudies = [
     summary:
       "A complete suite of project management deliverables for a CAREWare-style support system modernization effort. Includes the project charter, WBS, WBS dictionary, network diagrams, risk register, RFP, and quality management plan for a multi-phase implementation.",
     techStack: [
-      "Project Charters",
-      "WBS",
-      "WBS Dictionaries",
-      "Network Diagrams",
-      "Risk Analysis",
-      "Risk Registers",
+      "Project Charter",
+      "WBS Dictionary",
+      "Network Diagram",
+      "Risk Register",
       "Quality Management Plans",
-      "RfPs",
+      "RFPs",
     ],
   },
 ];
