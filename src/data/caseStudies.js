@@ -50,12 +50,9 @@ export const caseStudies = [
       "UI Design"],
   },
 
-  // -------------------------------------------------
-  // PROJECT MANAGEMENT CASE STUDIES
-  // -------------------------------------------------
   {
     slug: "careware",
-    category: "pm",
+    category: "technical",
     categoryLabel: "Project Management",
     title: "CAREWare Project Management",
     summary:

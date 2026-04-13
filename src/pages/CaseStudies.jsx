@@ -21,25 +21,11 @@ const CaseStudies = () => {
       {technical.length > 0 && (
         <section className="space-y-4">
           <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
-            Technical Case Studies
+            Case Study Projects
           </h2>
 
           <div className="grid gap-4 md:grid-cols-2 items-stretch">
             {technical.map((caseStudy) => (
-              <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {pm.length > 0 && (
-        <section className="space-y-4">
-          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-200 uppercase tracking-wide">
-            Project Management Case Studies
-          </h2>
-
-          <div className="grid gap-4 md:grid-cols-2 items-stretch">
-            {pm.map((caseStudy) => (
               <CaseStudyCard key={caseStudy.slug} caseStudy={caseStudy} />
             ))}
           </div>
