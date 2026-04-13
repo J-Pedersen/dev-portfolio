@@ -131,7 +131,11 @@ const Gallery = () => {
                 border-b border-brand-soft
                 transition
                 shadow-card dark:shadow-card-dark hover:shadow-card-hover
-                btn-primary
+                bg-gradient-to-br from-slate-100 to-slate-200
+                text-slate-700
+                hover:bg-brand hover:text-white hover:border-brand hover:bg-none hover:shadow-lg hover:shadow-brand/30
+                dark:border-brand-soft dark:text-slate-200
+                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950;
               "
             >
               <img
