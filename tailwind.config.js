@@ -24,6 +24,8 @@ export default {
         "card-dark": "0 8px 24px rgba(0,0,0,0.85)",
         "elevated-dark": "0 14px 35px rgba(0,0,0,0.70)",
         "sidebar-dark": "0 18px 40px rgba(0,0,0,0.85)",
+        "card-top": "0 -6px 20px rgba(15,23,42,0.25)",
+        "card-top-dark": "0 -8px 24px rgba(0,0,0,0.85)",
       },
     },
   },
