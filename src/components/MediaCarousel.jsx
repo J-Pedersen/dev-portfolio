@@ -176,7 +176,7 @@ const MediaCarousel = ({ media = [] }) => {
 
   return (
     <>
-      <div className="rounded-2xl overflow-hidden border border-brand-soft bg-slate-100 dark:bg-slate-900 min-w-0">
+      <div className="rounded-2xl overflow-hidden border border-brand-soft shadow-card dark:shadow-card-dark hover:shadow-card-hover bg-slate-100 dark:bg-slate-900 min-w-0">
         <div
           className="relative"
           onTouchStart={onTouchStart}

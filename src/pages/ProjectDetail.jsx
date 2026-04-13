@@ -47,7 +47,6 @@ const ProjectDetail = () => {
                 bg-slate-100 dark:bg-slate-900/60
                 flex flex-col items-center justify-center gap-3
                 text-center
-                shadow-card dark:shadow-card-dark hover:shadow-card-hover
               "
             >
               <p className="text-sm text-slate-700 dark:text-slate-300">

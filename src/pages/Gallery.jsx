@@ -163,8 +163,8 @@ const Gallery = () => {
                 bg-brand-soft/30
                 border-b border-brand-soft
                 transition
-                shadow-card dark:shadow-card-dark 
-                hover:bg-brand hover:border-brand hover:shadow-card-hover
+                shadow-card dark:shadow-card-dark hover:shadow-card-hover
+                hover:bg-brand hover:border-brand 
                 dark:border-brand-soft
               "
             >
