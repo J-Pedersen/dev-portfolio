@@ -153,7 +153,7 @@ const Gallery = () => {
           Videos
         </h2>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid md:grid-cols-2">
           {videos.map((video, i) => (
             <div
               key={i}
