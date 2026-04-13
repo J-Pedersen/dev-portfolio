@@ -10,7 +10,8 @@ const Footer = () => (
     bg-slate-100 
     dark:bg-slate-900/60 
     dark:border-brand-soft
-    "
+    shadow: 0 -6px 20px rgba(15,23,42,0.25)
+    dark:shadow: 0 -8px 24px rgba(0,0,0,0.85)" 
   >
     <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16 py-4 
                     flex flex-col sm:flex-row items-center justify-between gap-2 text-xs">
