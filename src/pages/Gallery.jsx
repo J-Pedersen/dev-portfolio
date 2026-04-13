@@ -142,7 +142,7 @@ const Gallery = () => {
                 className="w-full h-48 object-cover"
               />
 
-              <div className="p-3 text-sm font-bold text-slate-700 hover:text-white dark:text-slate-300 text-center">
+              <div className="p-3 text-sm font-bold hover:bg-brand text-slate-700 hover:text-white dark:text-slate-300 text-center">
                 {img.title}
               </div>
             </div>
