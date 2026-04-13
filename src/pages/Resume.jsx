@@ -44,7 +44,7 @@ const Resume = () => {
         bg-slate-100 
         hover:bg-slate-50 
         hover:border-brand 
-        hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+        shadow-card dark:shadow-card-dark 
         dark:bg-slate-900/60 
         dark:hover:bg-slate-950
         dark:hover:border-brand
