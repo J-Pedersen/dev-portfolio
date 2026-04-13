@@ -163,10 +163,13 @@ const Gallery = () => {
               className="
                 rounded-2xl overflow-hidden
                 bg-brand-soft/30
-                dark:hover:text-brand-soft-soft
                 border-b border-brand-soft
-                shadow-card dark:shadow-card-dark hover:shadow-card-hover
-                btn-primary
+                transition
+                shadow-card dark:shadow-card-dark 
+                bg-gradient-to-br from-slate-100 to-slate-200
+                hover:bg-brand hover:border-brand hover:shadow-card-hover
+                dark:border-brand-soft
+                dark:from-slate-900 dark:via-slate-900 dark:to-slate-950;
               "
             >
               <video
@@ -178,7 +181,7 @@ const Gallery = () => {
                 Your browser does not support the video tag.
               </video>
 
-              <p className="p-3 text-sm font-bold text-slate-700 dark:text-slate-300 text-center">
+              <p className="p-3 text-sm font-bold hover:bg-brand text-slate-700 hover:text-white dark:text-slate-300 text-center">
                 {video.title}
               </p>
             </div>
