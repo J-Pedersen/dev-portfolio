@@ -72,6 +72,7 @@ const Navbar = () => {
           bg-slate-100 
           dark:bg-slate-900/60 
           dark:border-brand-soft
+          shadow-card dark:shadow-card-dark
         "
       >
         <nav className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16 py-3">
