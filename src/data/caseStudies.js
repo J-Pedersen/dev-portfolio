@@ -7,7 +7,7 @@ export const caseStudies = [
     slug: "weightmate",
     category: "technical",
     categoryLabel: "Technical",
-    title: "WeightMate Android Application",
+    title: "WeightMate Android App",
     summary:
       "A multi-screen Android application for tracking weight progress, managing user profiles, and handling persistent data with SQLite and local image storage. This case study highlights mobile UI design, data persistence strategies, and handling real-world application complexity on Android.",
     techStack: [
@@ -23,7 +23,7 @@ export const caseStudies = [
     slug: "bookclub",
     category: "technical",
     categoryLabel: "Technical",
-    title: "BookClub Spring Boot Application",
+    title: "BookClub Application",
     summary:
       "A full-stack Java/Spring Boot application for managing a book club using REST APIs, DAO architecture, MongoDB documents, and external OpenLibrary integration. This case study covers architectural decisions, validation challenges, JSONPath handling, and solving real debugging issues.",
     techStack: [
@@ -40,7 +40,7 @@ export const caseStudies = [
     slug: "gradebook",
     category: "technical",
     categoryLabel: "Technical",
-    title: "GradeBookApp Application",
+    title: "Grade Book Application",
     summary:
       "A JavaFX desktop application built with clean separation of concerns, dynamic layout handling, CSV storage, and light/dark theme switching. This case study highlights UI architecture, controller/service refactoring, responsive layout strategies, and modular animated UI components.",
     techStack: [
