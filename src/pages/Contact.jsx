@@ -108,12 +108,11 @@ const Contact = () => {
               bg-slate-100 
               hover:bg-slate-50 
               hover:border-brand 
-                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
               dark:bg-slate-900/60 
               dark:hover:bg-slate-950
               dark:hover:border-brand
               dark:border-brand-soft
-              shadow-card dark:shadow-card-dark
+              shadow-card dark:shadow-card-dark hover:shadow-card-hover
           "
         >
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-3">
@@ -244,12 +243,11 @@ const Contact = () => {
               bg-slate-100 
               hover:bg-slate-50 
               hover:border-brand 
-                hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
               dark:bg-slate-900/60 
               dark:hover:bg-slate-950
               dark:hover:border-brand
               dark:border-brand-soft
-              shadow-card dark:shadow-card-dark
+              shadow-card dark:shadow-card-dark hover:shadow-card-hover
           "
         >
           <h2 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-1">
