@@ -110,7 +110,7 @@ const videos = [
 const Gallery = () => {
   return (
     <div className="space-y-10">
-      <PageHeader kicker="Gallery" title="Visual Showcase">
+      <PageHeader kicker="Gallery" title="Media Showcase">
         A collection of screenshots and demo videos from my projects.
       </PageHeader>
 
@@ -150,7 +150,7 @@ const Gallery = () => {
       {/* VIDEOS */}
       <section className="space-y-4">
         <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
-          Demo Videos
+          Videos
         </h2>
 
         <div className="grid gap-4 md:grid-cols-2">
