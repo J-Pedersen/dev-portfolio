@@ -8,7 +8,7 @@ const Card = ({ children, className = "" }) => {
         border border-brand-soft
         bg-slate-100 dark:bg-slate-900
         transition
-        hover:shadow-[0_4px_20px_rgba(99,102,241,0.15)]
+        shadow-card dark:shadow-card-dark hover:shadow-card-hover
         ${className}
       `}
     >
