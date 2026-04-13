@@ -51,7 +51,7 @@ const Resume = () => {
         dark:border-brand-soft 
         "
       >
-        <p className="p-3 font-bold text-xs text-slate-600 dark:text-slate-400 mb-2">
+        <p className="p-3 font-bold text-xs text-center text-slate-600 dark:text-slate-400 mb-2">
           If your browser supports it, the resume will appear below. If not,
           use the buttons above to open or download it.
         </p>
