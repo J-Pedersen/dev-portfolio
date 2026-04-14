@@ -55,24 +55,6 @@ const Resume = () => {
         </a>
       </div>
 
-      <div className="flex flex-wrap items-center gap-3 text-sm">
-        <button
-          type="button"
-          onClick={() => setViewMode('pdf')}
-          className={`btn-primary ${viewMode === 'pdf' ? 'opacity-100' : 'opacity-70'}`}
-        >
-          PDF View
-        </button>
-
-        <button
-          type="button"
-          onClick={() => setViewMode('images')}
-          className={`btn-primary ${viewMode === 'images' ? 'opacity-100' : 'opacity-70'}`}
-        >
-          Image View
-        </button>
-      </div>
-
       <div
         className="
           rounded-2xl gap-3 transition
@@ -88,18 +70,66 @@ const Resume = () => {
           dark:border-brand-soft
         "
       >
-        <p className="p-3 font-bold text-xs text-center text-slate-600 dark:text-slate-400 mb-2">
-          {viewMode === 'pdf'
-            ? 'PDF view is selected. If inline PDF viewing is limited on your device, switch to Image View.'
-            : 'Image view is selected for maximum compatibility across devices.'}
-        </p>
+        {/* Top bar */}
+        <div className="relative px-3 py-3 mb-2 min-h-[56px]">
+          <p className="mx-auto max-w-[70%] font-bold text-xs text-center text-slate-600 dark:text-slate-400">
+            {viewMode === 'pdf'
+              ? 'PDF view is selected. If inline PDF viewing is limited on your device, switch to Image View.'
+              : 'Image view is selected for maximum compatibility across devices.'}
+          </p>
+
+          {/* Slide toggle */}
+          <div className="absolute right-3 top-1/2 -translate-y-1/2">
+            <button
+              type="button"
+              onClick={() =>
+                setViewMode((prev) => (prev === 'pdf' ? 'images' : 'pdf'))
+              }
+              className="
+                relative flex items-center
+                w-36 h-8 rounded-full
+                bg-slate-200 dark:bg-slate-800
+                border border-brand-soft
+                transition
+              "
+              aria-label={`Switch to ${viewMode === 'pdf' ? 'Image' : 'PDF'} view`}
+            >
+              <span
+                className={`
+                  absolute top-1 left-1 h-6 w-[66px] rounded-full
+                  bg-brand transition-transform duration-300
+                  ${viewMode === 'images' ? 'translate-x-[64px]' : 'translate-x-0'}
+                `}
+              />
+
+              <span className="relative z-10 flex w-full text-xs font-semibold">
+                <span
+                  className={`
+                    flex-1 text-center transition-colors
+                    ${viewMode === 'pdf' ? 'text-white' : 'text-slate-500 dark:text-slate-400'}
+                  `}
+                >
+                  PDF
+                </span>
+                <span
+                  className={`
+                    flex-1 text-center transition-colors
+                    ${viewMode === 'images' ? 'text-white' : 'text-slate-500 dark:text-slate-400'}
+                  `}
+                >
+                  Images
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
 
         <div
           className="
             h-[70vh] w-full rounded-xl
             border border-slate-300 bg-slate-100
             dark:border-slate-800 dark:bg-slate-950
-            min-h-0
+            min-h-0 overflow-hidden
           "
         >
           {viewMode === 'pdf' ? (
