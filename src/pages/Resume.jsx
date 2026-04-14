@@ -3,7 +3,7 @@ import PageHeader from '../components/PageHeader.jsx';
 
 const Resume = () => {
   const base = import.meta.env.BASE_URL;
-  const resumeUrl = `${base}pdfs/Jeff Pedersen-Resume.pdf`; // updated March 2026
+  const resumeUrl = `${base}pdfs/Jeff-Pedersen-Resume.pdf`; // updated March 2026
 
   const resumeImages = useMemo(
     () => [
