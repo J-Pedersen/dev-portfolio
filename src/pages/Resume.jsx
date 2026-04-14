@@ -1,7 +1,8 @@
 import PageHeader from '../components/PageHeader.jsx';
+import ResumeViewer from '../components/ResumeViewer.jsx';
 
 const Resume = () => {
-  const resumeUrl = `${import.meta.env.BASE_URL}/pdfs/Jeff-Pedersen-Resume.pdf`; /* updated March 2026 */
+  const resumeUrl = `${import.meta.env.BASE_URL}pdfs/Jeff-Pedersen-Resume.pdf`;
 
   return (
     <div className="space-y-6">
@@ -14,7 +15,6 @@ const Resume = () => {
       </PageHeader>
 
       <div className="flex flex-wrap items-center gap-3 text-sm">
-        {/* Open PDF */}
         <a
           href={resumeUrl}
           target="_blank"
@@ -24,66 +24,16 @@ const Resume = () => {
           Open PDF In A New Tab
         </a>
 
-        {/* Download PDF */}
         <a
           href={resumeUrl}
           download
           className="btn-primary"
-
         >
           Download Resume
         </a>
       </div>
 
-      {/* Viewer container */}
-      <div
-        className="
-        rounded-2xl gap-3 transition
-        border
-        border-brand-soft 
-        bg-slate-100 
-        hover:bg-slate-50 
-        hover:border-brand 
-        shadow-card dark:shadow-card-dark 
-        dark:bg-slate-900/60 
-        dark:hover:bg-slate-950
-        dark:hover:border-brand
-        dark:border-brand-soft 
-        "
-      >
-        <p className="p-3 font-bold text-xs text-center text-slate-600 dark:text-slate-400 mb-2">
-          If your browser supports it, the resume will appear below. If not,
-          use the buttons above to open or download it.
-        </p>
-
-        <div
-          className="
-            h-[70vh] w-full rounded-xl overflow-hidden
-            border border-slate-300 bg-slate-100
-            dark:border-slate-800 dark:bg-slate-950
-          "
-        >
-          <object
-            data={resumeUrl}
-            type="application/pdf"
-            width="100%"
-            height="100%"
-          >
-            <p className="p-4 text-sm text-slate-700 dark:text-slate-300">
-              Your browser can’t display embedded PDFs. You can{' '}
-              <a
-                href={resumeUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="text-brand"
-              >
-                open the resume in a new tab
-              </a>{' '}
-              instead.
-            </p>
-          </object>
-        </div>
-      </div>
+      <ResumeViewer />
     </div>
   );
 };
