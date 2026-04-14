@@ -72,10 +72,10 @@ const Resume = () => {
       >
         {/* Top bar */}
         <div className="relative px-3 py-3 mb-2 min-h-[56px]">
-          <p className="mx-auto max-w-[70%] font-bold text-xs text-center text-slate-600 dark:text-slate-400">
+          <p className="mx-auto max-w-[70%] font-bold text-xl text-center text-slate-600 dark:text-slate-400">
             {viewMode === 'pdf'
-              ? 'PDF'
-              : 'Image'}
+              ? 'PDF View'
+              : 'Image View'}
           </p>
 
           {/* Slide toggle */}
