@@ -74,8 +74,8 @@ const Resume = () => {
         <div className="relative px-3 py-3 mb-2 min-h-[56px]">
           <p className="mx-auto max-w-[70%] font-bold text-xs text-center text-slate-600 dark:text-slate-400">
             {viewMode === 'pdf'
-              ? 'PDF view is selected. If inline PDF viewing is limited on your device, switch to Image View.'
-              : 'Image view is selected for maximum compatibility across devices.'}
+              ? 'PDF'
+              : 'Image'}
           </p>
 
           {/* Slide toggle */}
