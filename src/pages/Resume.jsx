@@ -126,18 +126,20 @@ const Resume = () => {
 
         <div
           className="
-            h-[70vh] w-full rounded-xl
+            h-[70vh] w-full rounded-xl overflow-hidden
             border border-slate-300 bg-slate-100
             dark:border-slate-800 dark:bg-slate-950
-            min-h-0 overflow-hidden
+            min-h-0
           "
         >
           {viewMode === 'pdf' ? (
-            <iframe
-              src={resumeUrl}
-              title="Jeff Pedersen Resume PDF"
-              className="h-full w-full rounded-xl"
-            />
+            <div className="h-full w-full overflow-hidden">
+              <iframe
+                src={resumeUrl}
+                title="Jeff Pedersen Resume PDF"
+                className="h-full w-full border-0"
+              />
+            </div>
           ) : (
             <div className="h-full overflow-y-auto overflow-x-hidden p-4 space-y-4 overscroll-contain">
               {resumeImages.map((src, index) => (
