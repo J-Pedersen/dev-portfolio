@@ -63,7 +63,7 @@ const Resume = () => {
           bg-slate-100
           hover:bg-slate-50
           hover:border-brand
-          shadow-card dark:shadow-card-dark
+          shadow-card dark:shadow-card-dark hover:shadow-card-hover
           dark:bg-slate-900/60
           dark:hover:bg-slate-950
           dark:hover:border-brand
