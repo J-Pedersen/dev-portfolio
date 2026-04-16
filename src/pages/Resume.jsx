@@ -49,7 +49,7 @@ const Resume = () => {
         <a
           href={resumeUrl}
           download
-          className="btn-primary"
+          className="btn-primary shadow-card dark:shadow-card-dark hover:shadow-card-hover"
         >
           Download Resume
         </a>
@@ -90,6 +90,7 @@ const Resume = () => {
                 w-36 h-8 rounded-full
                 bg-slate-200 dark:bg-slate-800
                 border border-brand-soft
+                shadow-card dark:shadow-card-dark hover:shadow-card-hover
                 transition
               "
               aria-label={`Switch to ${viewMode === 'pdf' ? 'Image' : 'PDF'} view`}
