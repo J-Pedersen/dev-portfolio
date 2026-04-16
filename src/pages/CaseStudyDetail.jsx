@@ -77,7 +77,7 @@ const CaseStudyDetail = () => {
 
       <Link
         to="/case-studies"
-        className="text-xs text-brand hover:text-brand-soft"
+        className="text-lg font-extrabold text-slate-700 hover:text-brand dark:text-brand dark:hover:text-brand-soft"
       >
         ← Back to case studies
       </Link>
