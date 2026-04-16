@@ -66,11 +66,11 @@ const Home = () => {
           </motion.p>
 
           <div className="flex flex-wrap gap-3">
-            <Link to="/projects" className="btn-primary">
+            <Link to="/projects" className="btn-primary shadow-card dark:shadow-card-dark hover:shadow-card-hover">
               View Projects
             </Link>
 
-            <Link to="/case-studies" className="btn-primary">
+            <Link to="/case-studies" className="btn-primary shadow-card dark:shadow-card-dark hover:shadow-card-hover">
               Read Case Studies
             </Link>
           </div>

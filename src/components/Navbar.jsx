@@ -13,9 +13,11 @@ const navLinkClasses = ({ isActive }) =>
           border-brand-soft
           text-slate-900
           dark:text-white
+          shadow-card dark:shadow-card-dark
         `
         : `
           hover:border-brand
+          hover:shadow-card-hover
         `
     }
   `;
