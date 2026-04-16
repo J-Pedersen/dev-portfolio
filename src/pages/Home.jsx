@@ -121,7 +121,7 @@ const Home = () => {
 
           <Link
             to="/projects"
-            className="text-lg font-extrabold text-brand-700 hover:text-brand-900 dark:text-brand dark:hover:text-brand-soft"
+            className="text-lg font-extrabold text-slate-700 hover:text-brand dark:text-brand dark:hover:text-brand-soft"
           >
             View all projects →
           </Link>
