@@ -41,7 +41,7 @@ const Resume = () => {
           href={resumeUrl}
           target="_blank"
           rel="noreferrer"
-          className="btn-primary"
+          className="btn-primary shadow-card dark:shadow-card-dark hover:shadow-card-hover"
         >
           Open PDF In A New Tab
         </a>
