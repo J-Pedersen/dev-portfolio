@@ -10,7 +10,7 @@ const CaseStudyDetail = () => {
     return (
       <div className="space-y-4">
         <p className="text-sm text-slate-300">Case study not found.</p>
-        <Link to="/case-studies" className="text-xs text-brand">
+        <Link to="/case-studies" className="text-lg font-extrabold text-slate-700 hover:text-brand dark:text-brand dark:hover:text-brand-soft">
           Back to all case studies
         </Link>
       </div>
