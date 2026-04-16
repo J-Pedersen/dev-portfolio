@@ -412,47 +412,21 @@ JavaScript (light enhancements where needed)
     demoUrl: 'https://j-pedersen.github.io/zelda-fansite-aspnet/',
     icon: "zelda-icon",
     tags: [".NET", "Visual Basic", "Server-Side"],
-    videoUrl: `${import.meta.env.BASE_URL}/videos/zelda-fansite-asp.net-demo.mp4`,
-    screenshots: [
+    media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`, title: "Home Page" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`, title: "Games Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games2.jpg`, title: "Games Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games3.jpg`, title: "Games Page 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items1.jpg`, title: "Items Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items2.jpg`, title: "Items Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps1.jpg`, title: "Maps Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps2.jpg`, title: "Maps Page 2" },
+      
       {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`,
-        alt: "Zelda Fansite home page",
-        title: "Home Page",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`,
-        alt: "Zelda Fansite games page 1",
-        title: "Games Page 1",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games2.jpg`,
-        alt: "Zelda Fansite games page 2",
-        title: "Games Page 2",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games3.jpg`,
-        alt: "Zelda Fansite games page 3",
-        title: "Games Page 3",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items1.jpg`,
-        alt: "Zelda Fansite items page 1",
-        title: "Items Page 1",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items2.jpg`,
-        alt: "Zelda Fansite items page 2",
-        title: "Items Page 2",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps1.jpg`,
-        alt: "Zelda Fansite maps page 1",
-        title: "Maps Page 1",
-      },
-      {
-        src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps2.jpg`,
-        alt: "Zelda Fansite maps page 2",
-        title: "Maps Page 2",
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/zelda-fansite-asp.net-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`,
       },
     ],
     longDescription:
