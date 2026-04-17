@@ -478,8 +478,14 @@ JavaScript (light enhancements where needed)
       'https://github.com/J-Pedersen/csd-310/tree/main/module_12',
     icon: 'bacchus_winery-icon',
     tags: ['Python', 'SQL'],
-    videoUrl: '',
-
+    media: [
+      {
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/bacchus-winery-presentation.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus-Winery-Home.jpg`,
+      },
+    ],
     longDescription:
       'Bacchus Winery is a Python group project built around managing a winery’s inventory, operations and producing reports. It focuses on modular design, functions, and structured data handling. The project highlights how I approach small business-domain logic using Python modules.',
 
