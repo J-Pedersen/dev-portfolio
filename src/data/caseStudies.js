@@ -33,9 +33,11 @@ export const caseStudies = [
       "ThymeLeaf",
       "REST APIs",
       "JSON",
+      "Photoshop",
+      "Inkscape"
     ],
 
-    cardTech: ["Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "JSON"],
+    cardTech: ["Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "JSON", "Photoshop"],
   },
 
   {
