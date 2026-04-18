@@ -412,6 +412,8 @@ JavaScript (light enhancements where needed)
     demoUrl: 'https://j-pedersen.github.io/zelda-fansite-aspnet/',
     icon: "zelda-icon",
     tags: [".NET", "Visual Basic", "Server-Side"],
+    cardTech: [".NET", "Visual Basic", "Server-Side"],
+
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`, title: "Home Page" },
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`, title: "Games Page 1" },

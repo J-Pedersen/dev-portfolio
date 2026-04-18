@@ -75,12 +75,12 @@ const ProjectCard = ({ project }) => (
 
         <div className="flex flex-wrap gap-3 justify-center">
 
-          {project.tags?.map((tag) => (
-            <TechIcon
-              key={tag}
-              tech={tag}
-            />
-          ))}
+        {(project.cardTech ?? project.tags)?.map((tech) => (
+          <TechIcon
+            key={tech}
+            tech={tech}
+          />
+        ))}
 
         </div>
 
