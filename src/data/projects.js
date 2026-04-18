@@ -479,6 +479,18 @@ JavaScript (light enhancements where needed)
     icon: 'bacchus_winery-icon',
     tags: ['Python', 'SQL'],
     media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Arrival Dates.jpg`, title: "Arrival Dates Report Output" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Delivery Report Code.png`, title: "Delivery Report Code" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Distributor Report Code.png`, title: "Distributor Report Code" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Distributor Report.jpg`, title: "Distributor Report Output" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Employee Hours Worked Report Code.png`, title: "Employee Hours Worked Report Code" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - ERD.png`, title: "Entity Relationship Diagram" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Hours worked.jpg`, title: "Hours Worked Report Output" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Monthly Sales Report Code.png`, title: "Monthly Sales Report Code" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Monthly Sales.jpg`, title: "Monthly Sales Report Output" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Wine Sold.jpg`, title: "Wine Sold Report Output" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Wines Sold Report Code.png`, title: "Wines Sold Report Code" },
+
       {
         type: "video",
         src: `${import.meta.env.BASE_URL}videos/bacchus-winery-presentation.mp4`,
