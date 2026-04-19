@@ -668,6 +668,7 @@ export const projects = [
       'The project demonstrates both communication and basic web design skills: explaining a technical process and delivering it in a clean, static site.'
   },
 
+  // Moffat Bay Marina (PHP)
   {
     slug: 'moffat-bay-marina-php',
     title: 'Moffat Bay Marina',
@@ -678,8 +679,8 @@ export const projects = [
     githubUrl: 'https://github.com/J-Pedersen/moffat-bay-marina-php',
     icon: 'moffat_bay_marina-icon',
     tags: ['PHP', 'HTML', 'CSS', 'Server-Side'],
-    techStack: ['PHP', 'HTML', 'CSS'],
-    cardTech: ['PHP', 'HTML', 'CSS'],
+    techStack: ['PHP', 'HTML', 'CSS', 'Server-Side'],
+    cardTech: ['PHP', 'HTML', 'CSS', 'Server-Side'],
     videoUrl: '',
     longDescription:
       'Moffat Bay Marina (PHP) is a server-side implementation of the marina concept using PHP, HTML, and CSS. It moves the business logic into PHP scripts and renders HTML on the server, which gives the project a different flavor compared to the Java version.',
