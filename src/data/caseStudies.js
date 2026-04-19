@@ -10,13 +10,8 @@ export const caseStudies = [
     title: "WeightMate Android App",
     summary:
       "A multi-screen Android application for tracking weight progress, managing user profiles, and handling persistent data with SQLite and local image storage. This case study highlights mobile UI design, data persistence strategies, and handling real-world application complexity on Android.",
-    techStack: [
-      "Java",
-      "Android",
-      "SQLite",
-      "XML",
-      "UI Design"
-    ],
+    techStack: [ "Java", "Android", "SQLite", "XML","UI Design" ],
+    cardTech: [ "Java", "Android", "SQLite", "XML","UI Design" ],
   },
   
   {
@@ -26,18 +21,8 @@ export const caseStudies = [
     title: "BookClub Application",
     summary:
       "A full-stack Java/Spring Boot application for managing a book club using REST APIs, DAO architecture, MongoDB documents, and external OpenLibrary integration. This case study covers architectural decisions, validation challenges, JSONPath handling, and solving real debugging issues.",
-    techStack: [
-      "Java",
-      "Spring Boot",
-      "MongoDB",
-      "ThymeLeaf",
-      "REST APIs",
-      "JSON",
-      "Photoshop",
-      "Inkscape"
-    ],
-
-    cardTech: ["Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "JSON", "Photoshop"],
+    techStack: [ "Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "JSON", "Photoshop", "Inkscape" ],
+    cardTech: [ "Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "JSON", "Photoshop" ],
   },
 
   {
@@ -47,11 +32,8 @@ export const caseStudies = [
     title: "Grade Book Application",
     summary:
       "A JavaFX desktop application built with clean separation of concerns, dynamic layout handling, CSV storage, and light/dark theme switching. This case study highlights UI architecture, controller/service refactoring, responsive layout strategies, and modular animated UI components.",
-    techStack: [
-      "Java", 
-      "JavaFX", 
-      "CSV", 
-      "UI Design"],
+    techStack: [ "Java", "JavaFX", "CSV", "UI Design" ],
+    cardTech: [ "Java", "JavaFX", "CSV", "UI Design" ],
   },
 
   {
@@ -61,13 +43,7 @@ export const caseStudies = [
     title: "CAREWare Project Management",
     summary:
       "A complete suite of project management deliverables for a CAREWare-style support system modernization effort. Includes the project charter, WBS, WBS dictionary, network diagrams, risk register, RFP, and quality management plan for a multi-phase implementation.",
-    techStack: [
-      "Project Charter",
-      "WBS Dictionary",
-      "Network Diagram",
-      "Risk Register",
-      "Quality Management Plans",
-      "RFPs",
-    ],
+    techStack: [ "Project Charter", "WBS Dictionary", "Network Diagram", "Risk Register", "Quality Management Plans", "RFPs", ],
+    cardTech: [ "Project Charter", "WBS Dictionary", "Network Diagram", "Risk Register", "Quality Management Plans", "RFPs", ],
   },
 ];
