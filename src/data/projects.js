@@ -348,7 +348,7 @@ export const projects = [
 
   {
     slug: "zelda-fansite",
-    title: "Zelda Fansite ASP.NET Web Application",
+    title: "Zelda Fansite",
     shortDescription:
       "A dynamic ASP.NET web application built with Visual Basic that showcases game data, maps, and items using server-side rendering and structured navigation.",
     role: "Full Stack Developer",  
