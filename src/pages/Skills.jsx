@@ -43,15 +43,25 @@ const skills = {
     'Drupal',
   ],
 
-  Databases: [
-    'MongoDB',
-    'MySQL',
-    'PostgreSQL',
-    'SQL Server',
-    'MariaDB',
-    'SQLite',
-    'Amazon RDS',
-    'DynamoDB',
+  ProjectManagement: [
+    'Requirements Gathering',
+    'Project Scheduling',
+    'Resource Allocation',
+    'Cost Estimation',
+    'RFPs',
+    'WBS',
+    'WBS Dictionaries',
+    'Network Diagrams',
+    'Risk Registers',
+    'Risk Analysis',
+    'Quality Management Plans', 
+    'Project Charters',
+    'Agile', 
+    'Scrum',
+    'Scheduling',
+    'Communication Plans',
+    'Stakeholder Management',
+    'Status Reporting',
   ],
 
   Tools: [
@@ -84,26 +94,17 @@ const skills = {
     'Heroku',
   ],
 
-  ProjectManagement: [
-    'Requirements Gathering',
-    'Project Scheduling',
-    'Resource Allocation',
-    'Cost Estimation',
-    'RFPs',
-    'WBS',
-    'WBS Dictionaries',
-    'Network Diagrams',
-    'Risk Registers',
-    'Risk Analysis',
-    'Quality Management Plans', 
-    'Project Charters',
-    'Agile', 
-    'Scrum',
-    'Scheduling',
-    'Communication Plans',
-    'Stakeholder Management',
-    'Status Reporting',
+    Databases: [
+    'MongoDB',
+    'MySQL',
+    'PostgreSQL',
+    'SQL Server',
+    'MariaDB',
+    'SQLite',
+    'Amazon RDS',
+    'DynamoDB',
   ],
+
 };
 
 const Skills = () => {
