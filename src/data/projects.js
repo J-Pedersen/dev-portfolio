@@ -356,9 +356,9 @@ export const projects = [
     githubUrl: "https://github.com/J-Pedersen/zelda-fansite-aspnet",
     demoUrl: 'https://j-pedersen.github.io/zelda-fansite-aspnet/',
     icon: "zelda-icon",
-    tags: ['.NET', 'Visual Basic', 'Server-Side'],
-    techStack: [ '.NET', 'Visual Basic', 'HTML', 'CSS', 'JavaScript' ],
-    cardTech: ['.NET', 'Visual Basic', 'Server-Side', 'Photoshop'],
+    tags: [ '.NET', 'Visual Basic', 'HTML', 'CSS', , 'Server-Side', 'Photoshop' ],
+    techStack: [ '.NET', 'Visual Basic', 'HTML', 'CSS', , 'Server-Side', 'Photoshop' ],
+    cardTech: [ '.NET', 'Visual Basic', 'Server-Side', 'Photoshop' ],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`, title: "Home Page" },
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`, title: "Games Page 1" },
