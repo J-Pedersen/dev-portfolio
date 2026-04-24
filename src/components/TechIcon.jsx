@@ -75,6 +75,7 @@ const NAME_TO_ICON = {
   "Server-Side": "server_side-icon",
   CSV: "csv-icon",
   ThymeLeaf: "thymeleaf-icon",
+  "Risk Analysis": "risk_analysis-icon",
 };
 
 const NAME_TO_BG = {
