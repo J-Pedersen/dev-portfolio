@@ -147,7 +147,7 @@ const NAME_TO_BG = {
   "Server-Side": "bg-lime-300/20 border border-brand dark:border-brand-soft",
   CSV: "bg-green-600/20 border border-brand dark:border-brand-soft",
   ThymeLeaf: "bg-neutral-300/20 border border-brand dark:border-brand-soft",
-  "Risk Analysis": "bg-red-300/20 border border-brand dark:border-brand-soft",
+  "Risk Analysis": "bg-lime-100/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
