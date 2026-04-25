@@ -78,6 +78,7 @@ const NAME_TO_ICON = {
   "Risk Analysis": "risk_analysis-icon",
   "Requirements Gathering": "requirements_gathering-icon",
   "Project Scheduling": "project_scheduling-icon",
+  "Resource Allocation": "resource_allocation-icon",
 };
 
 const NAME_TO_BG = {
@@ -152,6 +153,7 @@ const NAME_TO_BG = {
   "Risk Analysis": "bg-lime-100/20 border border-brand dark:border-brand-soft",
   "Requirements Gathering": "bg-yellow-300/20 border border-brand dark:border-brand-soft",
   "Project Scheduling": "bg-neutral-300/20 border border-brand dark:border-brand-soft",
+  "Resource Allocation": "bg-amber-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
