@@ -76,6 +76,7 @@ const NAME_TO_ICON = {
   CSV: "csv-icon",
   ThymeLeaf: "thymeleaf-icon",
   "Risk Analysis": "risk_analysis-icon",
+  "Requirements Gathering": "requirements_gathering-icon"
 };
 
 const NAME_TO_BG = {
@@ -148,6 +149,7 @@ const NAME_TO_BG = {
   CSV: "bg-green-600/20 border border-brand dark:border-brand-soft",
   ThymeLeaf: "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   "Risk Analysis": "bg-lime-100/20 border border-brand dark:border-brand-soft",
+  "Requirements Gathering": "bg-yellow-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
