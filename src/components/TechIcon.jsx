@@ -151,7 +151,7 @@ const NAME_TO_BG = {
   ThymeLeaf: "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   "Risk Analysis": "bg-lime-100/20 border border-brand dark:border-brand-soft",
   "Requirements Gathering": "bg-yellow-300/20 border border-brand dark:border-brand-soft",
-  "Project Scheduling": "bg-amber-300/20 border border-brand dark:border-brand-soft",
+  "Project Scheduling": "bg-neutral-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
