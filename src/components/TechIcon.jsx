@@ -79,6 +79,7 @@ const NAME_TO_ICON = {
   "Requirements Gathering": "requirements_gathering-icon",
   "Project Scheduling": "project_scheduling-icon",
   "Resource Allocation": "resource_allocation-icon",
+  "Cost Estimation": "cost_estimation-icon",
 };
 
 const NAME_TO_BG = {
@@ -154,6 +155,7 @@ const NAME_TO_BG = {
   "Requirements Gathering": "bg-yellow-300/20 border border-brand dark:border-brand-soft",
   "Project Scheduling": "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   "Resource Allocation": "bg-amber-300/20 border border-brand dark:border-brand-soft",
+  "Cost Estimation": "bg-fuchsia-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
