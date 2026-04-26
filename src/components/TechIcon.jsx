@@ -86,6 +86,7 @@ const NAME_TO_ICON = {
   "Stakeholder Management": "stakeholder_management-icon",
   Agile: "agile-icon",
   Scrum: "scrum-icon",
+  "Risk Register": "risk_register-icon",
 };
 
 const NAME_TO_BG = {
@@ -168,6 +169,7 @@ const NAME_TO_BG = {
   "Stakeholder Management": "bg-yellow-300/20 border border-brand dark:border-brand-soft",
   Agile: "bg-green-300/20 border border-brand dark:border-brand-soft",
   Scrum: "bg-blue-300/20 border border-brand dark:border-brand-soft",
+  "Risk Register": "bg-red-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
