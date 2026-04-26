@@ -84,6 +84,8 @@ const NAME_TO_ICON = {
   "Status Reporting": "status_reporting-icon",
   "Quality Management Plans": "quality_management_plan-icon",
   "Stakeholder Management": "stakeholder_management-icon",
+  Agile: "agile-icon",
+  Scrum: "scrum-icon",
 };
 
 const NAME_TO_BG = {
@@ -164,6 +166,8 @@ const NAME_TO_BG = {
   "Status Reporting": "bg-green-300/20 border border-brand dark:border-brand-soft",
   "Quality Management Plans": "bg-blue-300/20 border border-brand dark:border-brand-soft",
   "Stakeholder Management": "bg-yellow-300/20 border border-brand dark:border-brand-soft",
+  Agile: "bg-green-300/20 border border-brand dark:border-brand-soft",
+  Scrum: "bg-blue-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
