@@ -80,6 +80,7 @@ const NAME_TO_ICON = {
   "Project Scheduling": "project_scheduling-icon",
   "Resource Allocation": "resource_allocation-icon",
   "Cost Estimation": "cost_estimation-icon",
+  "Project Charter": "project_charter-icon",
 };
 
 const NAME_TO_BG = {
@@ -156,6 +157,7 @@ const NAME_TO_BG = {
   "Project Scheduling": "bg-neutral-300/20 border border-brand dark:border-brand-soft",
   "Resource Allocation": "bg-amber-300/20 border border-brand dark:border-brand-soft",
   "Cost Estimation": "bg-fuchsia-300/20 border border-brand dark:border-brand-soft",
+  "Project Charter": "bg-slate-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
