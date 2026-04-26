@@ -87,6 +87,7 @@ const NAME_TO_ICON = {
   Agile: "agile-icon",
   Scrum: "scrum-icon",
   "Risk Registers": "risk_register-icon",
+  RFP: "rfp-icon",
 };
 
 const NAME_TO_BG = {
@@ -170,6 +171,7 @@ const NAME_TO_BG = {
   Agile: "bg-green-300/20 border border-brand dark:border-brand-soft",
   Scrum: "bg-blue-300/20 border border-brand dark:border-brand-soft",
   "Risk Registers": "bg-red-300/20 border border-brand dark:border-brand-soft",
+  RFP: "bg-purple-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
