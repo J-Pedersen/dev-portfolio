@@ -22,7 +22,7 @@ export const caseStudies = [
     summary:
       "A full-stack Java/Spring Boot application for managing a book club using REST APIs, DAO architecture, MongoDB documents, and external OpenLibrary integration. This case study covers architectural decisions, validation challenges, JSONPath handling, and solving real debugging issues.",
     techStack: [ "Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "JSON", "Photoshop", "Inkscape" ],
-    cardTech: [ "Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "JSON", ],
+    cardTech: [ "Java", "Spring Boot", "MongoDB", "ThymeLeaf", "REST APIs", "UI/UX Design", ],
   },
 
   {
