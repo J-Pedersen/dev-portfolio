@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   height="128"
+   width="128"
+   version="1.1"
+   id="_x32_"
+   viewBox="0 0 81.92 81.92"
+   xml:space="preserve"
+   sodipodi:docname="wbs_dictionary-icon.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs3" /><sodipodi:namedview
+   id="namedview3"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="5.6780674"
+   inkscape:cx="81.189596"
+   inkscape:cy="68.597283"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="_x32_" />
+<style
+   type="text/css"
+   id="style1">
+	.st0{fill:#000000;}
+</style>
+<g
+   id="g3"
+   style="fill:#803300"
+   transform="matrix(0.15599212,0,0,0.15599212,0.90171529,1.0654876)">
+	<path
+   class="st0"
+   d="m 511.414,217.728 c -1.902,-9.034 -8.242,-16.503 -16.852,-19.856 l -30.197,-11.736 v 31.046 l 5.718,2.223 c 2.58,1.008 4.483,3.25 5.048,5.953 0.565,2.712 -0.263,5.538 -2.223,7.497 L 279.14,426.609 c -3.834,3.824 -9.561,5.03 -14.62,3.071 l -43.064,-16.748 v 31.046 l 30.226,11.755 c 17.18,6.678 36.678,2.581 49.715,-10.454 l 202.594,-202.59 c 6.528,-6.528 9.326,-15.919 7.423,-24.961 z"
+   id="path1"
+   style="fill:#c27b4b;fill-opacity:1" />
+	<path
+   class="st0"
+   d="m 30.914,299.684 c 1.356,-18.895 7.423,-43.649 28.466,-42.481 l 192.2,74.751 c 17.228,6.698 36.782,2.553 49.818,-10.558 L 487.169,134.405 c 6.5,-6.538 9.269,-15.919 7.357,-24.933 -1.912,-9.023 -8.242,-16.474 -16.832,-19.809 L 286.666,15.374 C 269.438,8.676 249.875,12.821 236.848,25.933 L 21.646,242.538 C 4.625,256.545 0,282.664 0,305.863 c 0,23.2 1.545,51.043 27.844,61.866 l -6.198,-1.451 57.942,22.532 v -20.742 c 0,-3.372 0.42,-6.668 1.107,-9.88 L 41.755,343.041 C 29.37,338.35 29.36,321.499 30.914,299.684 Z"
+   id="path2"
+   style="display:inline;fill:#c27b4b;fill-opacity:1" />
+	<path
+   class="st0"
+   d="m 111.048,352.658 c -4.088,4.107 -6.381,9.645 -6.381,15.41 v 96.076 l 40.823,-8.741 50.888,44.383 v -96.048 c 0,-5.793 2.298,-11.331 6.386,-15.419 l 16.272,-16.276 -91.706,-35.662 z"
+   id="path3"
+   style="display:inline;fill:#e479e4;fill-opacity:1" />
+</g>
+<text
+   xml:space="preserve"
+   style="font-weight:bold;font-size:15.9736px;font-family:'David CLM';-inkscape-font-specification:'David CLM Bold';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.0900512;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4.1;paint-order:stroke fill markers"
+   x="9.4771891"
+   y="53.30434"
+   id="text3"
+   transform="rotate(-46.46052)"><tspan
+     sodipodi:role="line"
+     id="tspan3"
+     style="font-size:15.9736px;fill:#ffffff;stroke-width:0.0900512"
+     x="9.4771891"
+     y="53.30434">WBS</tspan></text></svg>

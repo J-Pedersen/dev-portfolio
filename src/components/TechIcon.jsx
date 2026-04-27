@@ -91,6 +91,7 @@ const NAME_TO_ICON = {
   "Communication Plans": "communication_plan-icon",
   "Network Diagrams": "network_diagram-icon",
   "WBS": "wbs-icon",
+  "WBS Dictionaries": "wbs_dictionary-icon",
 };
 
 const NAME_TO_BG = {
@@ -178,6 +179,7 @@ const NAME_TO_BG = {
   "Communication Plans": "bg-amber-300/20 border border-brand dark:border-brand-soft",
   "Network Diagrams": "bg-sky-300/20 border border-brand dark:border-brand-soft",
   "WBS": "bg-lime-300/20 border border-brand dark:border-brand-soft",
+  "WBS Dictionaries": "bg-pink-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
