@@ -90,6 +90,7 @@ const NAME_TO_ICON = {
   RFPs: "rfp-icon",
   "Communication Plans": "communication_plan-icon",
   "Network Diagrams": "network_diagram-icon",
+  "WBS": "wbs-icon",
 };
 
 const NAME_TO_BG = {
@@ -176,6 +177,7 @@ const NAME_TO_BG = {
   RFPs: "bg-purple-300/20 border border-brand dark:border-brand-soft",
   "Communication Plans": "bg-amber-300/20 border border-brand dark:border-brand-soft",
   "Network Diagrams": "bg-sky-300/20 border border-brand dark:border-brand-soft",
+  "WBS": "bg-lime-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
