@@ -7,9 +7,9 @@ export const caseStudies = [
     summary:
       "A multi-screen Android application for tracking weight progress, managing user profiles, and handling persistent data with SQLite and local image storage. This case study highlights mobile UI design, data persistence strategies, and handling real-world application complexity on Android.",
     role: "Mobile App Developer",
-    techStack: ["Java", "Android", "SQLite", "XML", "UI/UX Design"],
-    tags: ["Java", "Android", "SQLite", "XML", "UI/UX Design"],
-    cardTech: ["Java", "Android", "SQLite", "XML", "UI/UX Design"],
+    techStack: ["Java", "Android", "SQLite", "XML", "UI/UX Design", "Photoshop", "Inkscape" ],
+    tags: ["Java", "Android", "SQLite", "XML", "UI/UX Design", "Photoshop", "Inkscape" ],
+    cardTech: ["Java", "Android", "SQLite", "XML", "UI/UX Design", "Photoshop" ],
     githubUrl: "https://github.com/J-Pedersen/weight-tracker-android",
     demoUrl: "",
     media: [
