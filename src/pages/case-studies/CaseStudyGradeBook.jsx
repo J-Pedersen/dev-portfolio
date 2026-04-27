@@ -137,13 +137,17 @@ const CaseStudyGradeBook = () => {
 
         {/* RIGHT COLUMN (ASIDE) */}
         <CaseStudyAside
-          techStack={["Java", "JavaFX", "CSV", "CSS", "UI Design"]}
+          techStack={["Java",
+            "JavaFX",
+            "CSV",
+            "CSS",
+            "UI Design"]}
           tags={[
-            "Desktop App",
-            "Separation of Concerns",
-            "CSV Storage",
-            "Theme Switching",
-            "Responsive Layout",
+            "Java",
+            "JavaFX",
+            "CSV",
+            "CSS",
+            "UI Design"
           ]}
           media={media}
           links={[
