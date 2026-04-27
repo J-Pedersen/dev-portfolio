@@ -141,13 +141,13 @@ const CaseStudyGradeBook = () => {
             "JavaFX",
             "CSV",
             "CSS",
-            "UI Design"]}
+            "UI/UX Design"]}
           tags={[
             "Java",
             "JavaFX",
             "CSV",
             "CSS",
-            "UI Design"
+            "UI/UX Design"
           ]}
           media={media}
           links={[
