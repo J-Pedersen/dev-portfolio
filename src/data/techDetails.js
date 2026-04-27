@@ -272,10 +272,6 @@ export const techDetails = {
     description:
       "A Java server-side templating engine which I have used with Spring Boot to render dynamic HTML views.",
   },
-  "UI Design": {
-    description:
-      "User interface design work focused on layout, usability, visual hierarchy, and creating clear application flows.",
-  },
 
   "Requirements Gathering": {
     description:
@@ -321,7 +317,7 @@ export const techDetails = {
     description:
       "The process I use to evaluate potential risks and determine appropriate mitigation plans.",
   },
-  "Quality Management Plans": {
+  "Quality Management": {
     description:
       "Plans I create to define quality standards, validation processes, and acceptance criteria.",
   },
