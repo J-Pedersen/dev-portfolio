@@ -89,6 +89,7 @@ const NAME_TO_ICON = {
   "Risk Registers": "risk_register-icon",
   RFPs: "rfp-icon",
   "Communication Plans": "communication_plan-icon",
+  "Network Diagrams": "network_diagram-icon",
 };
 
 const NAME_TO_BG = {
@@ -174,6 +175,7 @@ const NAME_TO_BG = {
   "Risk Registers": "bg-red-300/20 border border-brand dark:border-brand-soft",
   RFPs: "bg-purple-300/20 border border-brand dark:border-brand-soft",
   "Communication Plans": "bg-amber-300/20 border border-brand dark:border-brand-soft",
+  "Network Diagrams": "bg-sky-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
