@@ -181,9 +181,9 @@ Thymeleaf Views + External OpenLibrary API`,
     summary:
       "A JavaFX desktop application built with clean separation of concerns, dynamic layout handling, CSV storage, and light/dark theme switching. This case study highlights UI architecture, controller/service refactoring, responsive layout strategies, and modular animated UI components.",
     role: "Desktop App Developer",
-    techStack: ["Java", "JavaFX", "CSV", "CSS", "UI/UX Design"],
-    tags: ["Java", "JavaFX", "CSV", "CSS", "UI/UX Design"],
-    cardTech: ["Java", "JavaFX", "CSV", "CSS", "UI/UX Design"],
+    techStack: ["Java", "JavaFX", "CSV", "CSS", "UI/UX Design", "Photoshop" ],
+    tags: ["Java", "JavaFX", "CSV", "CSS", "UI/UX Design", "Photoshop" ],
+    cardTech: ["Java", "JavaFX", "CSV", "CSS", "UI/UX Design", "Photoshop" ],
     githubUrl:
       "https://github.com/J-Pedersen/cis-505/tree/main/Module_12/GradeBookApp",
     demoUrl: "",
