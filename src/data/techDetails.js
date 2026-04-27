@@ -349,4 +349,8 @@ export const techDetails = {
     description:
       "The process I use to communicate project progress, risks, and updates to stakeholders.",
   },
+  "UI/UX Design": {
+    description:
+      "User interface and user experience design work focused on creating intuitive and visually appealing applications.",
+  },
 };
