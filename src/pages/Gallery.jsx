@@ -1,4 +1,5 @@
 // src/pages/Gallery.jsx
+import { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader.jsx";
 
 const base = import.meta.env.BASE_URL;
@@ -108,6 +109,24 @@ const videos = [
 ];
 
 const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    if (!selectedImage) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setSelectedImage(null);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [selectedImage]);
+
   return (
     <div className="space-y-10">
       <PageHeader kicker="Gallery" title="Media Showcase">
@@ -122,28 +141,20 @@ const Gallery = () => {
 
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {images.map((img, i) => (
-            <div
+            <button
               key={i}
-              className="
-                group rounded-2xl overflow-hidden
-                bg-brand-soft/30
-                border-b border-brand-soft
-                transition
-                shadow-card dark:shadow-card-dark 
-                hover:bg-brand hover:border-brand hover:shadow-card-hover
-                dark:border-brand-soft
-              "
+              onClick={() => setSelectedImage(img)}
+              className="group rounded-2xl overflow-hidden text-left bg-brand-soft/30 border-b border-brand-soft shadow-card dark:shadow-card-dark hover:bg-brand hover:border-brand hover:shadow-card-hover"
             >
               <img
                 src={img.src}
                 alt={img.title}
                 className="w-full h-48 object-cover"
               />
-
-              <div className="p-3 text-sm font-bold bg-brand-soft/30 hover:bg-brand text-slate-700 hover:text-white dark:text-slate-300 text-center">
+              <div className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
                 {img.title}
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </section>
@@ -156,34 +167,41 @@ const Gallery = () => {
 
         <div className="grid gap-4 md:grid-cols-2">
           {videos.map((video, i) => (
-            <div
-              key={i}
-              className="
-                rounded-2xl overflow-hidden
-                bg-brand-soft/30
-                border-b border-brand-soft
-                transition
-                shadow-card dark:shadow-card-dark hover:shadow-card-hover
-                hover:bg-brand hover:border-brand 
-                dark:border-brand-soft
-              "
-            >
-              <video
-                controls
-                preload="metadata"
-                className="w-full rounded-lg"
-              >
+            <div key={i} className="rounded-2xl overflow-hidden bg-brand-soft/30 border-b border-brand-soft shadow-card dark:shadow-card-dark hover:shadow-card-hover">
+              <video controls className="w-full rounded-lg">
                 <source src={video.src} type="video/mp4" />
-                Your browser does not support the video tag.
               </video>
-
-              <p className="p-3 text-sm font-bold bg-brand-soft/30 hover:bg-brand text-slate-700 hover:text-white dark:text-slate-300 text-center">
+              <p className="p-3 text-sm font-bold text-center text-slate-700 dark:text-slate-300">
                 {video.title}
               </p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* MODAL */}
+      {selectedImage && (
+        <div
+          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-[9999] bg-black/80 flex items-center justify-center p-4"
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
+            className="absolute top-4 right-4 text-white text-2xl"
+          >
+            ×
+          </button>
+
+          <img
+            src={selectedImage.src}
+            alt={selectedImage.title}
+            className="max-w-[95vw] max-h-[90vh] object-contain"
+          />
+        </div>
+      )}
     </div>
   );
 };
