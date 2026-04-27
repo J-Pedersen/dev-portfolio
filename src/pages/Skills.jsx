@@ -58,7 +58,6 @@ const skills = {
     'Project Charters',
     'Agile', 
     'Scrum',
-    'Scheduling',
     'Communication Plans',
     'Stakeholder Management',
     'Status Reporting',

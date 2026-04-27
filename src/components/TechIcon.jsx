@@ -88,6 +88,7 @@ const NAME_TO_ICON = {
   Scrum: "scrum-icon",
   "Risk Registers": "risk_register-icon",
   RFPs: "rfp-icon",
+  "Communication Plans": "communication_plan-icon",
 };
 
 const NAME_TO_BG = {
@@ -172,6 +173,7 @@ const NAME_TO_BG = {
   Scrum: "bg-blue-300/20 border border-brand dark:border-brand-soft",
   "Risk Registers": "bg-red-300/20 border border-brand dark:border-brand-soft",
   RFPs: "bg-purple-300/20 border border-brand dark:border-brand-soft",
+  "Communication Plans": "bg-amber-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [
