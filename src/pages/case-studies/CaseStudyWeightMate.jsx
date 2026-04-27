@@ -1,30 +1,20 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
 import MediaCarousel from "../../components/MediaCarousel.jsx";
+import CaseStudyAside from "../../components/CaseStudyAside.jsx";
 
 const media = [
-  // -------------------------------------------------
-  // VIDEO (loads first automatically)
-  // -------------------------------------------------
   {
     type: "video",
     src: `${import.meta.env.BASE_URL}videos/weight-tracker-demo.mp4`,
     title: "WeightMate Demo",
     poster: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
   },
-
-  // -------------------------------------------------
-  // WELCOME / ENTRY
-  // -------------------------------------------------
   {
     type: "image",
     src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Welcome.jpg`,
     title: "Welcome Screen",
   },
-
-  // -------------------------------------------------
-  // PROFILE CREATION FLOW (STEP-BY-STEP)
-  // -------------------------------------------------
   {
     type: "image",
     src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Name.jpg`,
@@ -70,10 +60,6 @@ const media = [
     src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-CP-Confirmation.jpg`,
     title: "Profile Creation – Confirmation",
   },
-
-  // -------------------------------------------------
-  // MAIN APP EXPERIENCE
-  // -------------------------------------------------
   {
     type: "image",
     src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Main.jpg`,
@@ -108,7 +94,12 @@ const CaseStudyWeightMate = () => {
         goal completion with local persistence.
       </PageHeader>
 
-      <MediaCarousel media={media} />
+      {/* GRID LAYOUT */}
+      <section className="grid gap-8 md:grid-cols-[2fr,1fr] items-start">
+        
+        {/* LEFT COLUMN */}
+        <div className="space-y-8 min-w-0">
+          <MediaCarousel media={media} />
 
       {/* Overview */}
       <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
@@ -238,6 +229,44 @@ const CaseStudyWeightMate = () => {
           how I approach application structure, user experience, and local data
           management.
         </p>
+      </section>
+ </div>
+
+        {/* RIGHT COLUMN (ASIDE) */}
+        <CaseStudyAside
+          techStack={[
+            "Java",
+            "Android",
+            "XML",
+            "SQLite",
+            "Local Storage",
+            "UI/UX Design",
+          ]}
+          tags={[
+            "Mobile App",
+            "Profile Management",
+            "Data Persistence",
+            "Image Handling",
+            "Unit Conversion",
+            "Multi-Screen Navigation",
+          ]}
+          media={media}
+          links={[
+            {
+              label: "GitHub",
+              href: "https://github.com/J-Pedersen/weight-tracker-android",
+            },
+          ]}
+          architecture={`Android Application
+↓
+Java Business Logic
+↓
+XML UI Layouts
+↓
+SQLite Database
+↓
+Local Image Storage`}
+        />
       </section>
     </CaseStudyLayout>
   );
