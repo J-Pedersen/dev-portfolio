@@ -2,37 +2,32 @@ import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
 import MediaCarousel from "../../components/MediaCarousel.jsx";
 import CaseStudyAside from "../../components/CaseStudyAside.jsx";
-
-const media = [
-  {
-    type: "video",
-    src: `${import.meta.env.BASE_URL}videos/grade-book-demo.mp4`,
-    title: "GradeBook Application Demo",
-    poster: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`,
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`,
-    title: "Main Application Interface",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-view-grades1.jpg`,
-    title: "View Student Grades",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-update1.jpg`,
-    title: "Update Student Record",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook-export-csv1.jpg`,
-    title: "Export Data to CSV",
-  },
-];
+import { caseStudies } from "../../data/caseStudies.js";
 
 const CaseStudyGradeBook = () => {
+  const caseStudy = caseStudies.find((c) => c.slug === "gradebook");
+
+  if (!caseStudy) {
+    return (
+      <CaseStudyLayout title="Case Study Not Found">
+        <p className="text-sm text-slate-700 dark:text-slate-300">
+          Case study not found.
+        </p>
+      </CaseStudyLayout>
+    );
+  }
+
+  const links = [
+    caseStudy.githubUrl && {
+      label: "GitHub",
+      href: caseStudy.githubUrl,
+    },
+    caseStudy.demoUrl && {
+      label: "Live Demo",
+      href: caseStudy.demoUrl,
+    },
+  ].filter(Boolean);
+
   return (
     <CaseStudyLayout title="GradeBookApp">
       <PageHeader
@@ -44,10 +39,8 @@ const CaseStudyGradeBook = () => {
       </PageHeader>
 
       <section className="grid gap-8 md:grid-cols-[2fr,1fr] items-start">
-        
-        {/* LEFT COLUMN */}
         <div className="space-y-8 min-w-0">
-          <MediaCarousel media={media} />
+          <MediaCarousel media={caseStudy.media} />
 
           {/* Overview */}
           <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
@@ -90,10 +83,30 @@ const CaseStudyGradeBook = () => {
             <p>I refactored the app into:</p>
 
             <ul className="list-disc pl-5 space-y-1">
-              <li><span className="font-semibold text-slate-900 dark:text-slate-200">Student</span> — data model</li>
-              <li><span className="font-semibold text-slate-900 dark:text-slate-200">GradeBookService</span> — CSV I/O</li>
-              <li><span className="font-semibold text-slate-900 dark:text-slate-200">GradeBookController</span> — logic</li>
-              <li><span className="font-semibold text-slate-900 dark:text-slate-200">GradeBookApp</span> — UI only</li>
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-slate-200">
+                  Student
+                </span>{" "}
+                — data model
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-slate-200">
+                  GradeBookService
+                </span>{" "}
+                — CSV I/O
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-slate-200">
+                  GradeBookController
+                </span>{" "}
+                — logic
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-slate-200">
+                  GradeBookApp
+                </span>{" "}
+                — UI only
+              </li>
             </ul>
           </section>
 
@@ -135,36 +148,12 @@ const CaseStudyGradeBook = () => {
           </section>
         </div>
 
-        {/* RIGHT COLUMN (ASIDE) */}
         <CaseStudyAside
-          techStack={["Java",
-            "JavaFX",
-            "CSV",
-            "CSS",
-            "UI/UX Design"]}
-          tags={[
-            "Java",
-            "JavaFX",
-            "CSV",
-            "CSS",
-            "UI/UX Design"
-          ]}
-          media={media}
-          links={[
-            {
-              label: "GitHub",
-              href: "https://github.com/J-Pedersen/cis-505/tree/main/Module_12/GradeBookApp",
-            },
-          ]}
-          architecture={`JavaFX Desktop App
-↓
-UI Layer (GradeBookApp)
-↓
-Controller (Events)
-↓
-Service (CSV Logic)
-↓
-Student Model`}
+          techStack={caseStudy.techStack}
+          tags={caseStudy.tags}
+          media={caseStudy.media}
+          links={links}
+          architecture={caseStudy.architecture}
         />
       </section>
     </CaseStudyLayout>

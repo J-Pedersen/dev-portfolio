@@ -2,57 +2,32 @@ import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
 import MediaCarousel from "../../components/MediaCarousel.jsx";
 import CaseStudyAside from "../../components/CaseStudyAside.jsx";
-
-const media = [
-  {
-    type: "video",
-    src: `${import.meta.env.BASE_URL}videos/bookclub-demo.mp4`,
-    title: "BookClub Demo",
-    poster: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`,
-    title: "Home Page",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-about1.jpg`,
-    title: "About Page",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Contact1.jpg`,
-    title: "Contact Page",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-monthly-books1.jpg`,
-    title: "Monthly Books",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-book-of-the-month-details1.jpg`,
-    title: "Book Details",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist1.jpg`,
-    title: "Wishlist",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist2.jpg`,
-    title: "Wishlist Part 2",
-  },
-  {
-    type: "image",
-    src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-wishlist-add1.jpg`,
-    title: "Add to Wishlist",
-  },
-];
+import { caseStudies } from "../../data/caseStudies.js";
 
 const CaseStudyBookClub = () => {
+  const caseStudy = caseStudies.find((c) => c.slug === "bookclub");
+
+  if (!caseStudy) {
+    return (
+      <CaseStudyLayout title="Case Study Not Found">
+        <p className="text-sm text-slate-700 dark:text-slate-300">
+          Case study not found.
+        </p>
+      </CaseStudyLayout>
+    );
+  }
+
+  const links = [
+    caseStudy.githubUrl && {
+      label: "GitHub",
+      href: caseStudy.githubUrl,
+    },
+    caseStudy.demoUrl && {
+      label: "Live Demo",
+      href: caseStudy.demoUrl,
+    },
+  ].filter(Boolean);
+
   return (
     <CaseStudyLayout title="BookClub">
       <PageHeader
@@ -66,7 +41,7 @@ const CaseStudyBookClub = () => {
 
       <section className="grid gap-8 md:grid-cols-[2fr,1fr] items-start">
         <div className="space-y-8 min-w-0">
-          <MediaCarousel media={media} />
+          <MediaCarousel media={caseStudy.media} />
 
           {/* Overview */}
           <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
@@ -188,40 +163,11 @@ const CaseStudyBookClub = () => {
         </div>
 
         <CaseStudyAside
-          techStack={[
-            "Java",
-            "Spring Boot",
-            "MongoDB",
-            "ThymeLeaf",
-            "REST APIs",
-            "JSON",
-            "UI/UX Design",
-          ]}
-          tags={[
-            "Java",
-            "Spring Boot",
-            "MongoDB",
-            "ThymeLeaf",
-            "REST APIs",
-            "JSON",
-            "UI/UX Design",
-          ]}
-          media={media}
-          links={[
-            {
-              label: "GitHub",
-              href: "https://github.com/J-Pedersen/bookclub/tree/main/bookclub",
-            },
-          ]}
-          architecture={`Spring Boot Application
-↓
-Spring MVC Controllers
-↓
-DAO Interfaces
-↓
-MongoDB / REST / Memory Implementations
-↓
-Thymeleaf Views + External OpenLibrary API`}
+          techStack={caseStudy.techStack}
+          tags={caseStudy.tags}
+          media={caseStudy.media}
+          links={links}
+          architecture={caseStudy.architecture}
         />
       </section>
     </CaseStudyLayout>
