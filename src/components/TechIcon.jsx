@@ -92,6 +92,7 @@ const NAME_TO_ICON = {
   "Network Diagrams": "network_diagram-icon",
   "WBS": "wbs-icon",
   "WBS Dictionaries": "wbs_dictionary-icon",
+  "UI/UX Design": "ui_ux_design-icon",
 };
 
 const NAME_TO_BG = {
@@ -180,6 +181,7 @@ const NAME_TO_BG = {
   "Network Diagrams": "bg-sky-300/20 border border-brand dark:border-brand-soft",
   "WBS": "bg-lime-300/20 border border-brand dark:border-brand-soft",
   "WBS Dictionaries": "bg-pink-300/20 border border-brand dark:border-brand-soft",
+  "UI/UX Design": "bg-cyan-300/20 border border-brand dark:border-brand-soft",
 };
 
 const RANDOM_BG_COLORS = [

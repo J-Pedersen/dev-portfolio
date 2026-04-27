@@ -10,8 +10,8 @@ export const caseStudies = [
     title: "WeightMate Android App",
     summary:
       "A multi-screen Android application for tracking weight progress, managing user profiles, and handling persistent data with SQLite and local image storage. This case study highlights mobile UI design, data persistence strategies, and handling real-world application complexity on Android.",
-    techStack: [ "Java", "Android", "SQLite", "XML","UI Design" ],
-    cardTech: [ "Java", "Android", "SQLite", "XML","UI Design" ],
+    techStack: [ "Java", "Android", "SQLite", "XML","UI/UX Design" ],
+    cardTech: [ "Java", "Android", "SQLite", "XML","UI/UX Design" ],
   },
   
   {
@@ -32,8 +32,8 @@ export const caseStudies = [
     title: "Grade Book Application",
     summary:
       "A JavaFX desktop application built with clean separation of concerns, dynamic layout handling, CSV storage, and light/dark theme switching. This case study highlights UI architecture, controller/service refactoring, responsive layout strategies, and modular animated UI components.",
-    techStack: [ "Java", "JavaFX", "CSV", "UI Design" ],
-    cardTech: [ "Java", "JavaFX", "CSV", "UI Design" ],
+    techStack: [ "Java", "JavaFX", "CSV", "UI/UX Design" ],
+    cardTech: [ "Java", "JavaFX", "CSV", "UI/UX Design" ],
   },
 
   {
