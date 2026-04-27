@@ -43,7 +43,7 @@ export const caseStudies = [
     title: "CAREWare Project Management",
     summary:
       "A complete suite of project management deliverables for a CAREWare-style support system modernization effort. Includes the project charter, WBS, WBS dictionary, network diagrams, risk register, RFP, and quality management plan for a multi-phase implementation.",
-    techStack: [ "Project Charters", "WBS Dictionaries", "Network Diagrams", "Risk Registers", "Quality Management Plans", "RFPs", ],
-    cardTech: [ "Project Charters", "WBS Dictionaries", "Network Diagrams", "Risk Registers", "Quality Management Plans", "RFPs", ],
+    techStack: [ "Project Charters", "WBS Dictionaries", "Network Diagrams", "Risk Registers", "Quality Management", "RFPs", ],
+    cardTech: [ "Project Charters", "WBS Dictionaries", "Network Diagrams", "Risk Registers", "Quality Management", "RFPs", ],
   },
 ];

@@ -54,7 +54,7 @@ const skills = {
     'Network Diagrams',
     'Risk Registers',
     'Risk Analysis',
-    'Quality Management Plans', 
+    'Quality Management', 
     'Project Charters',
     'Agile', 
     'Scrum',
