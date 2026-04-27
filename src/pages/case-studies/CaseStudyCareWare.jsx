@@ -1,6 +1,7 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
 import MediaCarousel from "../../components/MediaCarousel.jsx";
+import CaseStudyAside from "../../components/CaseStudyAside.jsx";
 
 const media = [
   {
@@ -247,7 +248,9 @@ const CaseStudyCareWare = () => {
         Health.
       </PageHeader>
 
-      <MediaCarousel media={media} />
+      <section className="grid gap-8 md:grid-cols-[2fr,1fr] items-start">
+        <div className="space-y-8 min-w-0">
+        <MediaCarousel media={media} />
 
       {/* Overview */}
       <section className="space-y-4 text-sm text-slate-700 dark:text-slate-300">
@@ -395,6 +398,41 @@ const CaseStudyCareWare = () => {
           deliverables.
         </p>
       </section>
+      </div>
+
+  <CaseStudyAside
+    techStack={[
+      "Project Charters",
+      "WBS",
+      "WBS Dictionaries",
+      "Network Diagrams",
+      "Risk Registers",
+      "Quality Management Plans",
+      "RFPs",
+    ]}
+    tags={[
+      "Project Planning",
+      "Risk Analysis",
+      "Quality Planning",
+      "Scope Management",
+      "Vendor Support",
+      "Training",
+    ]}
+    media={media}
+    architecture={`
+      CAREWare PM Package
+↓
+Project Charter
+↓
+WBS + WBS Dictionary
+↓
+Network Diagram + Critical Path
+↓
+Risk Register + Quality Plan
+↓
+RFP for Support & Training`}
+  />
+</section>
     </CaseStudyLayout>
   );
 };
