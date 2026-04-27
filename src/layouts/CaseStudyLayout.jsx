@@ -32,7 +32,7 @@ const CaseStudyLayout = ({ title, children }) => {
       </Link>
 
       {/* Floating button */}
-      <FloatingBackButton />
+      <FloatingBackButton to="/case-studies" label="Back to Case Studies" />
     </div>
   );
 };

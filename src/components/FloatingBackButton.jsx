@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 
-const FloatingBackButton = () => {
+const FloatingBackButton = ({ to = "/projects", label = "Back" }) => {
   return (
     <Link
-      to="/case-studies"
+      to={to}
+      aria-label={label}
       className="
         fixed bottom-6 right-6 z-40
         px-4 py-2 text-xs font-medium rounded-full transition-colors
@@ -18,7 +19,7 @@ const FloatingBackButton = () => {
         dark:hover:bg-brand dark:hover:text-white dark:hover:border-brand-soft
       "
     >
-      ← Back to Case Studies
+       ← {label}
     </Link>
   );
 };

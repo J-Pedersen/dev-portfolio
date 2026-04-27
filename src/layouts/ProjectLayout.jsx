@@ -28,7 +28,7 @@ const ProjectLayout = ({ title, children }) => {
         ← Back to Projects
       </Link>
 
-      <FloatingBackButton />
+      <FloatingBackButton to="/projects" label="Back to Projects" />
     </div>
   );
 };
