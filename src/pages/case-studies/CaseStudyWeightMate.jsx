@@ -239,16 +239,14 @@ const CaseStudyWeightMate = () => {
             "Android",
             "XML",
             "SQLite",
-            "Local Storage",
             "UI/UX Design",
           ]}
           tags={[
-            "Mobile App",
-            "Profile Management",
-            "Data Persistence",
-            "Image Handling",
-            "Unit Conversion",
-            "Multi-Screen Navigation",
+            "Java",
+            "Android",
+            "XML",
+            "SQLite",
+            "UI/UX Design",
           ]}
           media={media}
           links={[
