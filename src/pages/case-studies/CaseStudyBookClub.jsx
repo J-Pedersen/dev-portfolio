@@ -192,18 +192,19 @@ const CaseStudyBookClub = () => {
             "Java",
             "Spring Boot",
             "MongoDB",
-            "Thymeleaf",
+            "ThymeLeaf",
             "REST APIs",
             "JSON",
-            "JSONPath",
+            "UI/UX Design",
           ]}
           tags={[
-            "Full-Stack Java",
-            "DAO Architecture",
-            "External APIs",
-            "Validation",
-            "MongoDB Documents",
-            "Server-Side Rendering",
+            "Java",
+            "Spring Boot",
+            "MongoDB",
+            "ThymeLeaf",
+            "REST APIs",
+            "JSON",
+            "UI/UX Design",
           ]}
           media={media}
           links={[
