@@ -38,7 +38,7 @@ const Gallery = () => {
   });
 
   const selectedImage =
-    selectedIndex !== null ? filteredgalleryImages[selectedIndex] : null;
+    selectedIndex !== null ? filteredImages[selectedIndex] : null;
 
   const visibleModalThumbnails = useMemo(() => {
     if (selectedIndex === null) return [];
@@ -189,9 +189,9 @@ const Gallery = () => {
           Screenshots
         </h2>
 
-        {filteredgalleryImages.length > 0 ? (
+        {filteredImages.length > 0 ? (
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {filteredgalleryImages.map((img, i) => (
+            {filteredImages.map((img, i) => (
               <button
                 key={img.src}
                 type="button"
