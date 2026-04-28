@@ -5,48 +5,40 @@ import PageHeader from "../components/PageHeader.jsx";
 const base = import.meta.env.BASE_URL;
 
 const images = [
-  // -------- WeightMate --------
   { project: "WeightMate", src: `${base}screenshots/weightmate/WeightMate-Main.jpg`, title: "WeightMate Main Screen" },
   { project: "WeightMate", src: `${base}screenshots/weightmate/WeightMate-Profile.jpg`, title: "WeightMate Profile" },
   { project: "WeightMate", src: `${base}screenshots/weightmate/WeightMate-History.jpg`, title: "WeightMate History" },
   { project: "WeightMate", src: `${base}screenshots/weightmate/WeightMate-Weight-Entry.jpg`, title: "Weight Entry" },
   { project: "WeightMate", src: `${base}screenshots/weightmate/WeightMate-Welcome.jpg`, title: "Welcome Screen" },
 
-  // -------- BookClub --------
   { project: "BookClub", src: `${base}screenshots/bookclub/bookclub-Home1.jpg`, title: "BookClub Home" },
   { project: "BookClub", src: `${base}screenshots/bookclub/bookclub-about1.jpg`, title: "About Page" },
   { project: "BookClub", src: `${base}screenshots/bookclub/bookclub-monthly-books1.jpg`, title: "Monthly Books" },
   { project: "BookClub", src: `${base}screenshots/bookclub/bookclub-wishlist1.jpg`, title: "Wishlist" },
   { project: "BookClub", src: `${base}screenshots/bookclub/bookclub-wishlist-add1.jpg`, title: "Add to Wishlist" },
 
-  // -------- GradeBook --------
   { project: "GradeBook", src: `${base}screenshots/gradebook/gradebook1.jpg`, title: "GradeBook Main Screen" },
   { project: "GradeBook", src: `${base}screenshots/gradebook/gradebook-view-grades1.jpg`, title: "View Grades" },
   { project: "GradeBook", src: `${base}screenshots/gradebook/gradebook-update1.jpg`, title: "Update Grades" },
   { project: "GradeBook", src: `${base}screenshots/gradebook/gradebook-export-csv1.jpg`, title: "Export CSV" },
 
-  // -------- Little Lemon React --------
   { project: "Little Lemon React", src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Home1.jpg`, title: "Little Lemon React Home" },
   { project: "Little Lemon React", src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Menu1.jpg`, title: "React Menu" },
   { project: "Little Lemon React", src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Login1.jpg`, title: "Login Page" },
 
-  // -------- Little Lemon HTML --------
   { project: "Little Lemon HTML", src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`, title: "Little Lemon HTML Home" },
   { project: "Little Lemon HTML", src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Menu1.jpg`, title: "HTML Menu" },
   { project: "Little Lemon HTML", src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Reservation1.jpg`, title: "Reservation Page" },
 
-  // -------- Moffat Bay Marina --------
   { project: "Moffat Bay Marina", src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`, title: "Create Account" },
   { project: "Moffat Bay Marina", src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`, title: "Create Reservation" },
   { project: "Moffat Bay Marina", src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Reservation Lookup1.jpg`, title: "Reservation Lookup" },
 
-  // -------- CAREWare --------
   { project: "CAREWare", src: `${base}screenshots/careware/Careware-project-charter1.jpg`, title: "Project Charter" },
   { project: "CAREWare", src: `${base}screenshots/careware/Careware-RFP1.jpg`, title: "RFP Document" },
   { project: "CAREWare", src: `${base}screenshots/careware/Careware-WBS1.jpg`, title: "Work Breakdown Structure" },
   { project: "CAREWare", src: `${base}screenshots/careware/Careware-Quality-Management-Plan1.jpg`, title: "Quality Management Plan" },
 
-  // -------- Zelda ASP.NET --------
   { project: "Zelda Fansite", src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`, title: "Zelda Fansite Home" },
   { project: "Zelda Fansite", src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`, title: "Games Page" },
   { project: "Zelda Fansite", src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items1.jpg`, title: "Items Page" },
@@ -71,6 +63,7 @@ const videos = [
 
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
@@ -80,15 +73,27 @@ const Gallery = () => {
     return ["All", ...new Set(projects)];
   }, []);
 
-  const filteredImages =
-    selectedProject === "All"
-      ? images
-      : images.filter((img) => img.project === selectedProject);
+  const filteredImages = images.filter((img) => {
+    const matchesProject =
+      selectedProject === "All" || img.project === selectedProject;
 
-  const filteredVideos =
-    selectedProject === "All"
-      ? videos
-      : videos.filter((video) => video.project === selectedProject);
+    const matchesSearch =
+      img.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      img.project.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesProject && matchesSearch;
+  });
+
+  const filteredVideos = videos.filter((video) => {
+    const matchesProject =
+      selectedProject === "All" || video.project === selectedProject;
+
+    const matchesSearch =
+      video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      video.project.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesProject && matchesSearch;
+  });
 
   const selectedImage =
     selectedIndex !== null ? filteredImages[selectedIndex] : null;
@@ -128,7 +133,7 @@ const Gallery = () => {
 
   useEffect(() => {
     setSelectedIndex(null);
-  }, [selectedProject]);
+  }, [selectedProject, searchTerm]);
 
   useEffect(() => {
     if (selectedIndex === null) return;
@@ -155,25 +160,51 @@ const Gallery = () => {
       </PageHeader>
 
       {/* FILTERS */}
-      <div className="flex flex-wrap gap-2">
-        {projectFilters.map((project) => (
-          <button
-            key={project}
-            type="button"
-            onClick={() => setSelectedProject(project)}
-            className={`
-              rounded-full px-3 py-1.5 text-xs font-bold transition
+      <div className="space-y-4">
+        <div className="flex flex-wrap gap-2">
+          {projectFilters.map((project) => (
+            <button
+              key={project}
+              type="button"
+              onClick={() => setSelectedProject(project)}
+              className={`
+                rounded-full px-3 py-1.5 text-xs font-bold transition
+                border border-brand-soft
+                ${
+                  selectedProject === project
+                    ? "bg-brand text-white shadow-card dark:shadow-card-dark"
+                    : "bg-slate-100 text-slate-700 hover:bg-brand hover:text-white dark:bg-slate-900 dark:text-slate-300"
+                }
+              `}
+            >
+              {project}
+            </button>
+          ))}
+        </div>
+
+        {/* SEARCH */}
+        <div className="max-w-md">
+          <label className="sr-only" htmlFor="gallery-search">
+            Search gallery
+          </label>
+
+          <input
+            id="gallery-search"
+            type="search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search screenshots or videos..."
+            className="
+              w-full rounded-full px-4 py-2 text-sm
               border border-brand-soft
-              ${
-                selectedProject === project
-                  ? "bg-brand text-white shadow-card dark:shadow-card-dark"
-                  : "bg-slate-100 text-slate-700 hover:bg-brand hover:text-white dark:bg-slate-900 dark:text-slate-300"
-              }
-            `}
-          >
-            {project}
-          </button>
-        ))}
+              bg-slate-100 dark:bg-slate-900
+              text-slate-800 dark:text-slate-100
+              placeholder:text-slate-400
+              shadow-card dark:shadow-card-dark
+              focus:outline-none focus:ring-2 focus:ring-brand/40
+            "
+          />
+        </div>
       </div>
 
       {/* IMAGES */}
@@ -227,7 +258,7 @@ const Gallery = () => {
           </div>
         ) : (
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            No screenshots found for this filter.
+            No screenshots found for this filter or search.
           </p>
         )}
       </section>
@@ -254,11 +285,7 @@ const Gallery = () => {
                 "
               >
                 <div className="relative">
-                  <video
-                    controls
-                    preload="none"
-                    className="w-full rounded-lg"
-                  >
+                  <video controls preload="none" className="w-full rounded-lg">
                     <source src={video.src} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
@@ -283,7 +310,7 @@ const Gallery = () => {
           </div>
         ) : (
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            No videos found for this filter.
+            No videos found for this filter or search.
           </p>
         )}
       </section>
@@ -322,45 +349,49 @@ const Gallery = () => {
             ×
           </button>
 
-          <button
-            type="button"
-            aria-label="Previous image"
-            onClick={(e) => {
-              e.stopPropagation();
-              showPrevious();
-            }}
-            className="
-              absolute left-4 top-1/2 -translate-y-1/2 z-20
-              h-11 w-11 rounded-full
-              border border-white/20
-              bg-white/10 text-white
-              flex items-center justify-center
-              text-3xl leading-none
-              hover:bg-white/20 transition
-            "
-          >
-            ‹
-          </button>
+          {filteredImages.length > 1 && (
+            <>
+              <button
+                type="button"
+                aria-label="Previous image"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  showPrevious();
+                }}
+                className="
+                  absolute left-4 top-1/2 -translate-y-1/2 z-20
+                  h-11 w-11 rounded-full
+                  border border-white/20
+                  bg-white/10 text-white
+                  flex items-center justify-center
+                  text-3xl leading-none
+                  hover:bg-white/20 transition
+                "
+              >
+                ‹
+              </button>
 
-          <button
-            type="button"
-            aria-label="Next image"
-            onClick={(e) => {
-              e.stopPropagation();
-              showNext();
-            }}
-            className="
-              absolute right-4 top-1/2 -translate-y-1/2 z-20
-              h-11 w-11 rounded-full
-              border border-white/20
-              bg-white/10 text-white
-              flex items-center justify-center
-              text-3xl leading-none
-              hover:bg-white/20 transition
-            "
-          >
-            ›
-          </button>
+              <button
+                type="button"
+                aria-label="Next image"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  showNext();
+                }}
+                className="
+                  absolute right-4 top-1/2 -translate-y-1/2 z-20
+                  h-11 w-11 rounded-full
+                  border border-white/20
+                  bg-white/10 text-white
+                  flex items-center justify-center
+                  text-3xl leading-none
+                  hover:bg-white/20 transition
+                "
+              >
+                ›
+              </button>
+            </>
+          )}
 
           <div
             className="
@@ -375,9 +406,10 @@ const Gallery = () => {
             <img
               src={selectedImage.src}
               alt={selectedImage.title}
+              loading="eager"
               onClick={closeModal}
               className="
-                max-w-[95vw] max-h-[82vh]
+                max-w-[95vw] max-h-[72vh]
                 object-contain cursor-zoom-out
                 bg-slate-200 dark:bg-slate-950
               "
@@ -387,10 +419,48 @@ const Gallery = () => {
               <p className="text-sm font-bold text-slate-700 dark:text-slate-300">
                 {selectedImage.title}
               </p>
+
               <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                 {selectedImage.project} · {selectedIndex + 1} /{" "}
                 {filteredImages.length}
               </p>
+
+              {filteredImages.length > 1 && (
+                <div
+                  className="
+                    mt-3 flex gap-2 overflow-x-auto pb-1
+                    [-ms-overflow-style:none] [scrollbar-width:none]
+                    [&::-webkit-scrollbar]:hidden
+                  "
+                >
+                  {filteredImages.map((img, index) => (
+                    <button
+                      key={`thumb-${img.src}`}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedIndex(index);
+                      }}
+                      className={`
+                        shrink-0 rounded-lg overflow-hidden border-2 transition
+                        ${
+                          index === selectedIndex
+                            ? "border-brand"
+                            : "border-transparent opacity-70 hover:opacity-100"
+                        }
+                      `}
+                      aria-label={`View ${img.title}`}
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.title}
+                        loading="lazy"
+                        className="h-12 w-20 object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
