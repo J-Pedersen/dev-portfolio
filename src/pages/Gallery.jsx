@@ -98,6 +98,40 @@ const Gallery = () => {
   const selectedImage =
     selectedIndex !== null ? filteredImages[selectedIndex] : null;
 
+  const visibleModalThumbnails = useMemo(() => {
+    if (selectedIndex === null) return [];
+
+    const maxVisible = 9;
+    const half = 4;
+
+    if (filteredImages.length <= maxVisible) {
+      return filteredImages.map((img, index) => ({
+        ...img,
+        originalIndex: index,
+      }));
+    }
+
+    let start = selectedIndex - half;
+    let end = selectedIndex + half;
+
+    if (start < 0) {
+      end += Math.abs(start);
+      start = 0;
+    }
+
+    if (end > filteredImages.length - 1) {
+      start -= end - (filteredImages.length - 1);
+      end = filteredImages.length - 1;
+    }
+
+    start = Math.max(0, start);
+
+    return filteredImages.slice(start, end + 1).map((img, index) => ({
+      ...img,
+      originalIndex: start + index,
+    }));
+  }, [filteredImages, selectedIndex]);
+
   const closeModal = () => setSelectedIndex(null);
 
   const showPrevious = () => {
@@ -364,11 +398,11 @@ const Gallery = () => {
                   border border-white/20
                   bg-white/10 text-white
                   flex items-center justify-center
-                  text-3xl leading-none
+                  text-3xl leading-none pb-1
                   hover:bg-white/20 transition
                 "
               >
-                ‹
+                <span className="block -translate-y-[1px]">‹</span>
               </button>
 
               <button
@@ -384,11 +418,11 @@ const Gallery = () => {
                   border border-white/20
                   bg-white/10 text-white
                   flex items-center justify-center
-                  text-3xl leading-none
+                  text-3xl leading-none pb-1
                   hover:bg-white/20 transition
                 "
               >
-                ›
+                <span className="block -translate-y-[1px]">›</span>
               </button>
             </>
           )}
@@ -400,6 +434,7 @@ const Gallery = () => {
               border border-brand-soft
               bg-slate-100 dark:bg-slate-900
               shadow-sidebar dark:shadow-sidebar-dark
+              flex flex-col items-center
             "
             onClick={(e) => e.stopPropagation()}
           >
@@ -409,13 +444,14 @@ const Gallery = () => {
               loading="eager"
               onClick={closeModal}
               className="
+                block mx-auto
                 max-w-[95vw] max-h-[72vh]
                 object-contain cursor-zoom-out
                 bg-slate-200 dark:bg-slate-950
               "
             />
 
-            <div className="p-3 text-center bg-brand-soft/30">
+            <div className="w-full p-3 text-center bg-brand-soft/30">
               <p className="text-sm font-bold text-slate-700 dark:text-slate-300">
                 {selectedImage.title}
               </p>
@@ -426,39 +462,41 @@ const Gallery = () => {
               </p>
 
               {filteredImages.length > 1 && (
-                <div
-                  className="
-                    mt-3 flex gap-2 overflow-x-auto pb-1
-                    [-ms-overflow-style:none] [scrollbar-width:none]
-                    [&::-webkit-scrollbar]:hidden
-                  "
-                >
-                  {filteredImages.map((img, index) => (
-                    <button
-                      key={`thumb-${img.src}`}
-                      type="button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedIndex(index);
-                      }}
-                      className={`
-                        shrink-0 rounded-lg overflow-hidden border-2 transition
-                        ${
-                          index === selectedIndex
-                            ? "border-brand"
-                            : "border-transparent opacity-70 hover:opacity-100"
-                        }
-                      `}
-                      aria-label={`View ${img.title}`}
-                    >
-                      <img
-                        src={img.src}
-                        alt={img.title}
-                        loading="lazy"
-                        className="h-12 w-20 object-cover"
-                      />
-                    </button>
-                  ))}
+                <div className="mt-3 flex justify-center">
+                  <div
+                    className="
+                      flex max-w-full justify-center gap-2 overflow-x-auto pb-1
+                      [-ms-overflow-style:none] [scrollbar-width:none]
+                      [&::-webkit-scrollbar]:hidden
+                    "
+                  >
+                    {visibleModalThumbnails.map((img) => (
+                      <button
+                        key={`thumb-${img.src}`}
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedIndex(img.originalIndex);
+                        }}
+                        className={`
+                          shrink-0 rounded-lg overflow-hidden border-2 transition
+                          ${
+                            img.originalIndex === selectedIndex
+                              ? "border-brand scale-105"
+                              : "border-transparent opacity-70 hover:opacity-100"
+                          }
+                        `}
+                        aria-label={`View ${img.title}`}
+                      >
+                        <img
+                          src={img.src}
+                          alt={img.title}
+                          loading="lazy"
+                          className="h-12 w-20 object-cover"
+                        />
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
