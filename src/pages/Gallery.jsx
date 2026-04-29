@@ -387,7 +387,7 @@ const Gallery = () => {
                   showPrevious();
                 }}
                 className="
-                  absolute left-4 top-1/2 -translate-y-1/2 z-20
+                  absolute left-4 top-1/2 z-20
                   h-11 w-11 rounded-full
                   border border-white/20
                   bg-white/10 text-white
@@ -418,7 +418,7 @@ const Gallery = () => {
                   showNext();
                 }}
                 className="
-                  absolute right-4 top-1/2 -translate-y-1/2 z-20
+                  absolute right-4 top-1/2 z-20
                   h-11 w-11 rounded-full
                   border border-white/20
                   bg-white/10 text-white
