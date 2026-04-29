@@ -322,7 +322,7 @@ const Gallery = () => {
               hover:bg-white/20 transition
             "
           >
-            <span className="block -translate-y-[2px]">×</span>
+            <span className="flex items-center justify-center leading-none">×</span>
           </button>
 
           {filteredImages.length > 1 && (
