@@ -511,6 +511,7 @@ const Gallery = () => {
           >
             {selectedMedia.type === "image" ? (
               <img
+                key={selectedItem.src}
                 src={selectedItem.src}
                 alt={selectedItem.title}
                 loading="eager"
@@ -524,6 +525,7 @@ const Gallery = () => {
               />
             ) : (
               <video
+                key={selectedItem.src}
                 controls
                 autoPlay
                 poster={selectedItem.poster}
