@@ -362,8 +362,18 @@ const Gallery = () => {
               hover:bg-white/20 transition
             "
           >
-            <span className="flex items-center justify-center leading-none">
-              ×
+            <span className="flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
             </span>
           </button>
 
@@ -386,8 +396,17 @@ const Gallery = () => {
                   hover:bg-white/20 transition
                 "
               >
-                <span className="flex items-center justify-center leading-none">
-                  ‹
+                <span className="flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
                 </span>
               </button>
 
@@ -408,8 +427,17 @@ const Gallery = () => {
                   hover:bg-white/20 transition
                 "
               >
-                <span className="flex items-center justify-center leading-none">
-                  ›
+                <span className="flex items-center justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
                 </span>
               </button>
             </>
