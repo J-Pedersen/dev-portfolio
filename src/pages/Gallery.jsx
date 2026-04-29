@@ -10,35 +10,41 @@ const Gallery = () => {
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
 
+  const hasActiveFilters = selectedProject !== "All" || searchTerm.trim() !== "";
+
   const projectFilters = useMemo(() => {
-    const projects = [...galleryImages, ...galleryVideos].map((item) => item.project);
+    const projects = [...galleryImages, ...galleryVideos].map(
+      (item) => item.project
+    );
+
     return ["All", ...new Set(projects)];
   }, []);
 
-  const filteredImages = galleryImages.filter((img) => {
+  const matchesGalleryFilter = (item) => {
+    const normalizedSearch = searchTerm.toLowerCase().trim();
+
     const matchesProject =
-      selectedProject === "All" || img.project === selectedProject;
+      selectedProject === "All" || item.project === selectedProject;
 
     const matchesSearch =
-      img.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      img.project.toLowerCase().includes(searchTerm.toLowerCase());
+      item.title.toLowerCase().includes(normalizedSearch) ||
+      item.project.toLowerCase().includes(normalizedSearch);
 
     return matchesProject && matchesSearch;
-  });
+  };
 
-  const filteredVideos = galleryVideos.filter((video) => {
-    const matchesProject =
-      selectedProject === "All" || video.project === selectedProject;
+  const filteredImages = galleryImages.filter(matchesGalleryFilter);
+  const filteredVideos = galleryVideos.filter(matchesGalleryFilter);
 
-    const matchesSearch =
-      video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      video.project.toLowerCase().includes(searchTerm.toLowerCase());
-
-    return matchesProject && matchesSearch;
-  });
+  const totalResults = filteredImages.length + filteredVideos.length;
 
   const selectedImage =
     selectedIndex !== null ? filteredImages[selectedIndex] : null;
+
+  const clearFilters = () => {
+    setSelectedProject("All");
+    setSearchTerm("");
+  };
 
   const visibleModalThumbnails = useMemo(() => {
     if (selectedIndex === null) return [];
@@ -132,7 +138,7 @@ const Gallery = () => {
   return (
     <div className="space-y-10">
       <PageHeader kicker="Gallery" title="Media Showcase">
-        A collection of screenshots and demo Videos from my projects.
+        A collection of screenshots and demo videos from my projects.
       </PageHeader>
 
       {/* FILTERS */}
@@ -142,6 +148,7 @@ const Gallery = () => {
             <button
               key={project}
               type="button"
+              aria-pressed={selectedProject === project}
               onClick={() => setSelectedProject(project)}
               className={`
                 rounded-full px-3 py-1.5 text-xs font-bold transition
@@ -158,32 +165,62 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* SEARCH */}
-        <div className="max-w-md">
-          <label className="sr-only" htmlFor="gallery-search">
-            Search gallery
-          </label>
+        {/* SEARCH + CLEAR */}
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="w-full max-w-md">
+            <label className="sr-only" htmlFor="gallery-search">
+              Search gallery
+            </label>
 
-          <input
-            id="gallery-search"
-            type="search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search screenshots or videos..."
-            className="
-              w-full rounded-full px-4 py-2 text-sm
-              border border-brand-soft
-              bg-slate-100 dark:bg-slate-900
-              text-slate-800 dark:text-slate-100
-              placeholder:text-slate-400
-              shadow-card dark:shadow-card-dark
-              focus:outline-none focus:ring-2 focus:ring-brand/40
-            "
-          />
+            <input
+              id="gallery-search"
+              type="search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              placeholder="Search screenshots or videos..."
+              className="
+                w-full rounded-full px-4 py-2 text-sm
+                border border-brand-soft
+                bg-slate-100 dark:bg-slate-900
+                text-slate-800 dark:text-slate-100
+                placeholder:text-slate-400
+                shadow-card dark:shadow-card-dark
+                focus:outline-none focus:ring-2 focus:ring-brand/40
+              "
+            />
+          </div>
+
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="
+                w-fit rounded-full px-4 py-2 text-xs font-bold transition
+                border border-brand-soft
+                bg-slate-100 text-slate-700
+                hover:bg-brand hover:text-white
+                dark:bg-slate-900 dark:text-slate-300
+              "
+            >
+              Clear filters
+            </button>
+          )}
         </div>
+
+        {/* RESULT COUNT */}
+        <p className="text-sm text-slate-600 dark:text-slate-400">
+          Showing{" "}
+          <span className="font-bold text-slate-800 dark:text-slate-200">
+            {totalResults}
+          </span>{" "}
+          result{totalResults === 1 ? "" : "s"} — {filteredImages.length}{" "}
+          screenshot{filteredImages.length === 1 ? "" : "s"} and{" "}
+          {filteredVideos.length} video
+          {filteredVideos.length === 1 ? "" : "s"}.
+        </p>
       </div>
 
-      {/* galleryImages */}
+      {/* IMAGES */}
       <section className="space-y-4">
         <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
           Screenshots
@@ -294,6 +331,9 @@ const Gallery = () => {
       {/* IMAGE MODAL */}
       {selectedImage && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${selectedImage.title} image preview`}
           className="
             fixed inset-0 z-[9999]
             bg-black/85 backdrop-blur-sm
@@ -322,7 +362,9 @@ const Gallery = () => {
               hover:bg-white/20 transition
             "
           >
-            <span className="block -translate-y-[2px]">×</span>
+            <span className="flex items-center justify-center leading-none">
+              ×
+            </span>
           </button>
 
           {filteredImages.length > 1 && (
@@ -340,11 +382,13 @@ const Gallery = () => {
                   border border-white/20
                   bg-white/10 text-white
                   flex items-center justify-center
-                  text-3xl leading-none pb-1
+                  text-3xl leading-none
                   hover:bg-white/20 transition
                 "
               >
-                <span className="block -translate-y-[1px]">‹</span>
+                <span className="flex items-center justify-center leading-none">
+                  ‹
+                </span>
               </button>
 
               <button
@@ -360,11 +404,13 @@ const Gallery = () => {
                   border border-white/20
                   bg-white/10 text-white
                   flex items-center justify-center
-                  text-3xl leading-none pb-1
+                  text-3xl leading-none
                   hover:bg-white/20 transition
                 "
               >
-                <span className="block -translate-y-[1px]">›</span>
+                <span className="flex items-center justify-center leading-none">
+                  ›
+                </span>
               </button>
             </>
           )}
@@ -429,6 +475,7 @@ const Gallery = () => {
                           }
                         `}
                         aria-label={`View ${img.title}`}
+                        aria-pressed={img.originalIndex === selectedIndex}
                       >
                         <img
                           src={img.src}
