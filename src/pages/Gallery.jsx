@@ -6,7 +6,7 @@ import { galleryImages, galleryVideos } from "../data/galleryMedia.js";
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedMedia, setSelectedMedia] = useState(null);
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
 
@@ -38,8 +38,11 @@ const Gallery = () => {
 
   const totalResults = filteredImages.length + filteredVideos.length;
 
-  const selectedImage =
-    selectedIndex !== null ? filteredImages[selectedIndex] : null;
+  const selectedList =
+    selectedMedia?.type === "image" ? filteredImages : filteredVideos;
+
+  const selectedItem =
+    selectedMedia !== null ? selectedList[selectedMedia.index] : null;
 
   const clearFilters = () => {
     setSelectedProject("All");
@@ -47,51 +50,72 @@ const Gallery = () => {
   };
 
   const visibleModalThumbnails = useMemo(() => {
-    if (selectedIndex === null) return [];
+    if (selectedMedia === null) return [];
+
+    const currentList =
+      selectedMedia.type === "image" ? filteredImages : filteredVideos;
 
     const maxVisible = 9;
     const half = 4;
 
-    if (filteredImages.length <= maxVisible) {
-      return filteredImages.map((img, index) => ({
-        ...img,
+    if (currentList.length <= maxVisible) {
+      return currentList.map((item, index) => ({
+        ...item,
         originalIndex: index,
       }));
     }
 
-    let start = selectedIndex - half;
-    let end = selectedIndex + half;
+    let start = selectedMedia.index - half;
+    let end = selectedMedia.index + half;
 
     if (start < 0) {
       end += Math.abs(start);
       start = 0;
     }
 
-    if (end > filteredImages.length - 1) {
-      start -= end - (filteredImages.length - 1);
-      end = filteredImages.length - 1;
+    if (end > currentList.length - 1) {
+      start -= end - (currentList.length - 1);
+      end = currentList.length - 1;
     }
 
     start = Math.max(0, start);
 
-    return filteredImages.slice(start, end + 1).map((img, index) => ({
-      ...img,
+    return currentList.slice(start, end + 1).map((item, index) => ({
+      ...item,
       originalIndex: start + index,
     }));
-  }, [filteredImages, selectedIndex]);
+  }, [filteredImages, filteredVideos, selectedMedia]);
 
-  const closeModal = () => setSelectedIndex(null);
+  const closeModal = () => setSelectedMedia(null);
 
   const showPrevious = () => {
-    setSelectedIndex((current) =>
-      current === 0 ? filteredImages.length - 1 : current - 1
-    );
+    setSelectedMedia((current) => {
+      if (!current) return null;
+
+      const currentList =
+        current.type === "image" ? filteredImages : filteredVideos;
+
+      return {
+        ...current,
+        index:
+          current.index === 0 ? currentList.length - 1 : current.index - 1,
+      };
+    });
   };
 
   const showNext = () => {
-    setSelectedIndex((current) =>
-      current === filteredImages.length - 1 ? 0 : current + 1
-    );
+    setSelectedMedia((current) => {
+      if (!current) return null;
+
+      const currentList =
+        current.type === "image" ? filteredImages : filteredVideos;
+
+      return {
+        ...current,
+        index:
+          current.index === currentList.length - 1 ? 0 : current.index + 1,
+      };
+    });
   };
 
   const handleTouchStart = (e) => {
@@ -114,11 +138,11 @@ const Gallery = () => {
   };
 
   useEffect(() => {
-    setSelectedIndex(null);
+    setSelectedMedia(null);
   }, [selectedProject, searchTerm]);
 
   useEffect(() => {
-    if (selectedIndex === null) return;
+    if (selectedMedia === null) return;
 
     const handleKeyDown = (e) => {
       if (e.key === "Escape") closeModal();
@@ -133,7 +157,7 @@ const Gallery = () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
     };
-  }, [selectedIndex, filteredImages.length]);
+  }, [selectedMedia, filteredImages.length, filteredVideos.length]);
 
   return (
     <div className="space-y-10">
@@ -232,7 +256,7 @@ const Gallery = () => {
               <button
                 key={img.src}
                 type="button"
-                onClick={() => setSelectedIndex(i)}
+                onClick={() => setSelectedMedia({ type: "image", index: i })}
                 className="
                   group rounded-2xl overflow-hidden text-left relative
                   bg-brand-soft/30
@@ -284,11 +308,13 @@ const Gallery = () => {
 
         {filteredVideos.length > 0 ? (
           <div className="grid gap-4 md:grid-cols-2">
-            {filteredVideos.map((video) => (
-              <div
+            {filteredVideos.map((video, i) => (
+              <button
                 key={video.src}
+                type="button"
+                onClick={() => setSelectedMedia({ type: "video", index: i })}
                 className="
-                  rounded-2xl overflow-hidden relative
+                  group rounded-2xl overflow-hidden relative text-left
                   bg-brand-soft/30
                   border-b border-brand-soft
                   transition
@@ -298,10 +324,40 @@ const Gallery = () => {
                 "
               >
                 <div className="relative">
-                  <video controls preload="none" className="w-full rounded-lg">
+                  <video
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    poster={video.poster}
+                    className="w-full h-64 object-cover"
+                    onMouseEnter={(e) => e.currentTarget.play()}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.pause();
+                      e.currentTarget.currentTime = 0;
+                    }}
+                  >
                     <source src={video.src} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
+
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div
+                      className="
+                        rounded-full bg-black/60 p-4 text-white
+                        backdrop-blur-sm transition group-hover:scale-110
+                      "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-8 w-8 translate-x-[1px]"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
 
                   <span
                     className="
@@ -315,10 +371,10 @@ const Gallery = () => {
                   </span>
                 </div>
 
-                <p className="p-3 text-sm font-bold bg-brand-soft/30 hover:bg-brand text-slate-700 hover:text-white dark:text-slate-300 text-center">
+                <p className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
                   {video.title}
                 </p>
-              </div>
+              </button>
             ))}
           </div>
         ) : (
@@ -328,12 +384,14 @@ const Gallery = () => {
         )}
       </section>
 
-      {/* IMAGE MODAL */}
-      {selectedImage && (
+      {/* MEDIA MODAL */}
+      {selectedItem && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`${selectedImage.title} image preview`}
+          aria-label={`${selectedItem.title} ${
+            selectedMedia.type === "image" ? "image" : "video"
+          } preview`}
           className="
             fixed inset-0 z-[9999]
             bg-black/85 backdrop-blur-sm
@@ -347,7 +405,7 @@ const Gallery = () => {
         >
           <button
             type="button"
-            aria-label="Close image preview"
+            aria-label="Close media preview"
             onClick={(e) => {
               e.stopPropagation();
               closeModal();
@@ -358,7 +416,6 @@ const Gallery = () => {
               border border-white/20
               bg-white/10 text-white
               flex items-center justify-center
-              text-2xl leading-none
               hover:bg-white/20 transition
             "
           >
@@ -377,22 +434,21 @@ const Gallery = () => {
             </span>
           </button>
 
-          {filteredImages.length > 1 && (
+          {selectedList.length > 1 && (
             <>
               <button
                 type="button"
-                aria-label="Previous image"
+                aria-label="Previous media item"
                 onClick={(e) => {
                   e.stopPropagation();
                   showPrevious();
                 }}
                 className="
-                  absolute left-4 top-1/2 z-20
+                  absolute left-4 top-1/2 -translate-y-1/2 z-20
                   h-11 w-11 rounded-full
                   border border-white/20
                   bg-white/10 text-white
                   flex items-center justify-center
-                  text-3xl leading-none
                   hover:bg-white/20 transition
                 "
               >
@@ -412,18 +468,17 @@ const Gallery = () => {
 
               <button
                 type="button"
-                aria-label="Next image"
+                aria-label="Next media item"
                 onClick={(e) => {
                   e.stopPropagation();
                   showNext();
                 }}
                 className="
-                  absolute right-4 top-1/2 z-20
+                  absolute right-4 top-1/2 -translate-y-1/2 z-20
                   h-11 w-11 rounded-full
                   border border-white/20
                   bg-white/10 text-white
                   flex items-center justify-center
-                  text-3xl leading-none
                   hover:bg-white/20 transition
                 "
               >
@@ -454,30 +509,46 @@ const Gallery = () => {
             "
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.title}
-              loading="eager"
-              onClick={closeModal}
-              className="
-                block mx-auto
-                max-w-[95vw] max-h-[72vh]
-                object-contain cursor-zoom-out
-                bg-slate-200 dark:bg-slate-950
-              "
-            />
+            {selectedMedia.type === "image" ? (
+              <img
+                src={selectedItem.src}
+                alt={selectedItem.title}
+                loading="eager"
+                onClick={closeModal}
+                className="
+                  block mx-auto
+                  max-w-[95vw] max-h-[72vh]
+                  object-contain cursor-zoom-out
+                  bg-slate-200 dark:bg-slate-950
+                "
+              />
+            ) : (
+              <video
+                controls
+                autoPlay
+                poster={selectedItem.poster}
+                className="
+                  block mx-auto
+                  max-w-[95vw] max-h-[72vh]
+                  bg-slate-950
+                "
+              >
+                <source src={selectedItem.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
 
             <div className="w-full p-3 text-center bg-brand-soft/30">
               <p className="text-sm font-bold text-slate-700 dark:text-slate-300">
-                {selectedImage.title}
+                {selectedItem.title}
               </p>
 
               <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                {selectedImage.project} · {selectedIndex + 1} /{" "}
-                {filteredImages.length}
+                {selectedItem.project} · {selectedMedia.index + 1} /{" "}
+                {selectedList.length}
               </p>
 
-              {filteredImages.length > 1 && (
+              {selectedList.length > 1 && (
                 <div className="mt-3 flex justify-center">
                   <div
                     className="
@@ -486,28 +557,35 @@ const Gallery = () => {
                       [&::-webkit-scrollbar]:hidden
                     "
                   >
-                    {visibleModalThumbnails.map((img) => (
+                    {visibleModalThumbnails.map((item) => (
                       <button
-                        key={`thumb-${img.src}`}
+                        key={`thumb-${item.src}`}
                         type="button"
                         onClick={(e) => {
                           e.stopPropagation();
-                          setSelectedIndex(img.originalIndex);
+                          setSelectedMedia({
+                            type: selectedMedia.type,
+                            index: item.originalIndex,
+                          });
                         }}
                         className={`
                           shrink-0 rounded-lg overflow-hidden border-2 transition
                           ${
-                            img.originalIndex === selectedIndex
+                            item.originalIndex === selectedMedia.index
                               ? "border-brand scale-105"
                               : "border-transparent opacity-70 hover:opacity-100"
                           }
                         `}
-                        aria-label={`View ${img.title}`}
-                        aria-pressed={img.originalIndex === selectedIndex}
+                        aria-label={`View ${item.title}`}
+                        aria-pressed={item.originalIndex === selectedMedia.index}
                       >
                         <img
-                          src={img.src}
-                          alt={img.title}
+                          src={
+                            selectedMedia.type === "image"
+                              ? item.src
+                              : item.poster
+                          }
+                          alt={item.title}
                           loading="lazy"
                           className="h-12 w-20 object-cover"
                         />
