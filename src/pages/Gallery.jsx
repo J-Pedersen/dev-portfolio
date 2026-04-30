@@ -5,12 +5,17 @@ import { galleryImages, galleryVideos } from "../data/galleryMedia.js";
 
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState("All");
+  const [mediaFilter, setMediaFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedMedia, setSelectedMedia] = useState(null);
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
-  const hasActiveFilters = selectedProject !== "All" || searchTerm.trim() !== "";
+  const hasActiveFilters =
+    selectedProject !== "All" ||
+    mediaFilter !== "All" ||
+    searchTerm.trim() !== "";
 
   const projectFilters = useMemo(() => {
     const projects = [...galleryImages, ...galleryVideos].map(
@@ -36,24 +41,40 @@ const Gallery = () => {
   const filteredImages = galleryImages.filter(matchesGalleryFilter);
   const filteredVideos = galleryVideos.filter(matchesGalleryFilter);
 
-  const totalResults = filteredImages.length + filteredVideos.length;
+  const displayedImages =
+    mediaFilter === "All" || mediaFilter === "Screenshots"
+      ? filteredImages
+      : [];
+
+  const displayedVideos =
+    mediaFilter === "All" || mediaFilter === "Videos" ? filteredVideos : [];
+
+  const totalResults = displayedImages.length + displayedVideos.length;
 
   const selectedList =
-    selectedMedia?.type === "image" ? filteredImages : filteredVideos;
+    selectedMedia?.type === "image" ? displayedImages : displayedVideos;
 
   const selectedItem =
     selectedMedia !== null ? selectedList[selectedMedia.index] : null;
 
   const clearFilters = () => {
     setSelectedProject("All");
+    setMediaFilter("All");
     setSearchTerm("");
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const visibleModalThumbnails = useMemo(() => {
     if (selectedMedia === null) return [];
 
     const currentList =
-      selectedMedia.type === "image" ? filteredImages : filteredVideos;
+      selectedMedia.type === "image" ? displayedImages : displayedVideos;
 
     const maxVisible = 9;
     const half = 4;
@@ -84,7 +105,7 @@ const Gallery = () => {
       ...item,
       originalIndex: start + index,
     }));
-  }, [filteredImages, filteredVideos, selectedMedia]);
+  }, [displayedImages, displayedVideos, selectedMedia]);
 
   const closeModal = () => setSelectedMedia(null);
 
@@ -93,7 +114,7 @@ const Gallery = () => {
       if (!current) return null;
 
       const currentList =
-        current.type === "image" ? filteredImages : filteredVideos;
+        current.type === "image" ? displayedImages : displayedVideos;
 
       return {
         ...current,
@@ -108,7 +129,7 @@ const Gallery = () => {
       if (!current) return null;
 
       const currentList =
-        current.type === "image" ? filteredImages : filteredVideos;
+        current.type === "image" ? displayedImages : displayedVideos;
 
       return {
         ...current,
@@ -139,7 +160,19 @@ const Gallery = () => {
 
   useEffect(() => {
     setSelectedMedia(null);
-  }, [selectedProject, searchTerm]);
+  }, [selectedProject, searchTerm, mediaFilter]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (selectedMedia === null) return;
@@ -157,7 +190,7 @@ const Gallery = () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "";
     };
-  }, [selectedMedia, filteredImages.length, filteredVideos.length]);
+  }, [selectedMedia, displayedImages.length, displayedVideos.length]);
 
   return (
     <div className="space-y-10">
@@ -167,6 +200,29 @@ const Gallery = () => {
 
       {/* FILTERS */}
       <div className="space-y-4">
+        {/* MEDIA TYPE FILTER */}
+        <div className="flex flex-wrap gap-2">
+          {["All", "Screenshots", "Videos"].map((type) => (
+            <button
+              key={type}
+              type="button"
+              aria-pressed={mediaFilter === type}
+              onClick={() => setMediaFilter(type)}
+              className={`
+                rounded-full px-4 py-2 text-xs font-bold transition
+                border border-brand-soft
+                ${
+                  mediaFilter === type
+                    ? "bg-brand text-white shadow-card dark:shadow-card-dark"
+                    : "bg-slate-100 text-slate-700 hover:bg-brand hover:text-white dark:bg-slate-900 dark:text-slate-300"
+                }
+              `}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
+
         <div className="flex flex-wrap gap-2">
           {projectFilters.map((project) => (
             <button
@@ -237,152 +293,156 @@ const Gallery = () => {
           <span className="font-bold text-slate-800 dark:text-slate-200">
             {totalResults}
           </span>{" "}
-          result{totalResults === 1 ? "" : "s"} — {filteredImages.length}{" "}
-          screenshot{filteredImages.length === 1 ? "" : "s"} and{" "}
-          {filteredVideos.length} video
-          {filteredVideos.length === 1 ? "" : "s"}.
+          result{totalResults === 1 ? "" : "s"} — {displayedImages.length}{" "}
+          screenshot{displayedImages.length === 1 ? "" : "s"} and{" "}
+          {displayedVideos.length} video
+          {displayedVideos.length === 1 ? "" : "s"}.
         </p>
       </div>
 
       {/* IMAGES */}
-      <section className="space-y-4">
-        <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
-          Screenshots
-        </h2>
+      {mediaFilter !== "Videos" && (
+        <section className="space-y-4">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
+            Screenshots
+          </h2>
 
-        {filteredImages.length > 0 ? (
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {filteredImages.map((img, i) => (
-              <button
-                key={img.src}
-                type="button"
-                onClick={() => setSelectedMedia({ type: "image", index: i })}
-                className="
-                  group rounded-2xl overflow-hidden text-left relative
-                  bg-brand-soft/30
-                  border-b border-brand-soft
-                  transition
-                  shadow-card dark:shadow-card-dark 
-                  hover:bg-brand hover:border-brand hover:shadow-card-hover
-                  dark:border-brand-soft
-                "
-              >
-                <div className="relative">
-                  <img
-                    src={img.src}
-                    alt={img.title}
-                    loading="lazy"
-                    className="w-full h-48 object-cover"
-                  />
+          {displayedImages.length > 0 ? (
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {displayedImages.map((img, i) => (
+                <button
+                  key={img.src}
+                  type="button"
+                  onClick={() => setSelectedMedia({ type: "image", index: i })}
+                  className="
+                    group rounded-2xl overflow-hidden text-left relative
+                    bg-brand-soft/30
+                    border-b border-brand-soft
+                    transition
+                    shadow-card dark:shadow-card-dark 
+                    hover:bg-brand hover:border-brand hover:shadow-card-hover
+                    dark:border-brand-soft
+                  "
+                >
+                  <div className="relative">
+                    <img
+                      src={img.src}
+                      alt={img.title}
+                      loading="lazy"
+                      className="w-full h-48 object-cover"
+                    />
 
-                  <span
-                    className="
-                      absolute top-2 left-2 rounded-full px-2 py-1
-                      text-[10px] font-bold
-                      bg-slate-950/70 text-white
-                      backdrop-blur-sm
-                    "
-                  >
-                    {img.project}
-                  </span>
-                </div>
-
-                <div className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
-                  {img.title}
-                </div>
-              </button>
-            ))}
-          </div>
-        ) : (
-          <p className="text-sm text-slate-600 dark:text-slate-400">
-            No screenshots found for this filter or search.
-          </p>
-        )}
-      </section>
-
-      {/* VIDEOS */}
-      <section className="space-y-4">
-        <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
-          Videos
-        </h2>
-
-        {filteredVideos.length > 0 ? (
-          <div className="grid gap-4 md:grid-cols-2">
-            {filteredVideos.map((video, i) => (
-              <button
-                key={video.src}
-                type="button"
-                onClick={() => setSelectedMedia({ type: "video", index: i })}
-                className="
-                  group rounded-2xl overflow-hidden relative text-left
-                  bg-brand-soft/30
-                  border-b border-brand-soft
-                  transition
-                  shadow-card dark:shadow-card-dark hover:shadow-card-hover
-                  hover:bg-brand hover:border-brand 
-                  dark:border-brand-soft
-                "
-              >
-                <div className="relative">
-                  <video
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    poster={video.poster}
-                    className="w-full h-64 object-cover"
-                    onMouseEnter={(e) => e.currentTarget.play()}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.pause();
-                      e.currentTarget.currentTime = 0;
-                    }}
-                  >
-                    <source src={video.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <div
+                    <span
                       className="
-                        rounded-full bg-black/60 p-4 text-white
-                        backdrop-blur-sm transition group-hover:scale-110
+                        absolute top-2 left-2 rounded-full px-2 py-1
+                        text-[10px] font-bold
+                        bg-slate-950/70 text-white
+                        backdrop-blur-sm
                       "
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-8 w-8 translate-x-[1px]"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
+                      {img.project}
+                    </span>
                   </div>
 
-                  <span
-                    className="
-                      absolute top-2 left-2 rounded-full px-2 py-1
-                      text-[10px] font-bold
-                      bg-slate-950/70 text-white
-                      backdrop-blur-sm
-                    "
-                  >
-                    {video.project}
-                  </span>
-                </div>
+                  <div className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
+                    {img.title}
+                  </div>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              No screenshots found for this filter or search.
+            </p>
+          )}
+        </section>
+      )}
 
-                <p className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
-                  {video.title}
-                </p>
-              </button>
-            ))}
-          </div>
-        ) : (
-          <p className="text-sm text-slate-600 dark:text-slate-400">
-            No videos found for this filter or search.
-          </p>
-        )}
-      </section>
+      {/* VIDEOS */}
+      {mediaFilter !== "Screenshots" && (
+        <section className="space-y-4">
+          <h2 className="text-lg font-extrabold text-slate-900 dark:text-slate-100">
+            Videos
+          </h2>
+
+          {displayedVideos.length > 0 ? (
+            <div className="grid gap-4 md:grid-cols-2">
+              {displayedVideos.map((video, i) => (
+                <button
+                  key={video.src}
+                  type="button"
+                  onClick={() => setSelectedMedia({ type: "video", index: i })}
+                  className="
+                    group rounded-2xl overflow-hidden relative text-left
+                    bg-brand-soft/30
+                    border-b border-brand-soft
+                    transition
+                    shadow-card dark:shadow-card-dark hover:shadow-card-hover
+                    hover:bg-brand hover:border-brand 
+                    dark:border-brand-soft
+                  "
+                >
+                  <div className="relative">
+                    <video
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      poster={video.poster}
+                      className="w-full h-64 object-cover"
+                      onMouseEnter={(e) => e.currentTarget.play()}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.pause();
+                        e.currentTarget.currentTime = 0;
+                      }}
+                    >
+                      <source src={video.src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div
+                        className="
+                          rounded-full bg-black/60 p-4 text-white
+                          backdrop-blur-sm transition group-hover:scale-110
+                        "
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-8 w-8 translate-x-[1px]"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <span
+                      className="
+                        absolute top-2 left-2 rounded-full px-2 py-1
+                        text-[10px] font-bold
+                        bg-slate-950/70 text-white
+                        backdrop-blur-sm
+                      "
+                    >
+                      {video.project}
+                    </span>
+                  </div>
+
+                  <p className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
+                    {video.title}
+                  </p>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              No videos found for this filter or search.
+            </p>
+          )}
+        </section>
+      )}
 
       {/* MEDIA MODAL */}
       {selectedItem && (
@@ -599,6 +659,37 @@ const Gallery = () => {
             </div>
           </div>
         </div>
+      )}
+
+      {/* BACK TO TOP */}
+      {showBackToTop && !selectedItem && (
+        <button
+          type="button"
+          aria-label="Back to top"
+          onClick={scrollToTop}
+          className="
+            fixed bottom-6 right-6 z-50
+            h-12 w-12 rounded-full
+            border border-brand-soft
+            bg-brand text-white
+            shadow-card dark:shadow-card-dark
+            flex items-center justify-center
+            transition
+            hover:scale-110 hover:shadow-card-hover
+            focus:outline-none focus:ring-2 focus:ring-brand/40
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <polyline points="18 15 12 9 6 15" />
+          </svg>
+        </button>
       )}
     </div>
   );
