@@ -11,6 +11,7 @@ const Gallery = () => {
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [openImageProjects, setOpenImageProjects] = useState([]);
 
   const hasActiveFilters =
     selectedProject !== "All" ||
@@ -49,6 +50,21 @@ const Gallery = () => {
   const displayedVideos =
     mediaFilter === "All" || mediaFilter === "Videos" ? filteredVideos : [];
 
+  const groupedImages = useMemo(() => {
+    return displayedImages.reduce((groups, image, index) => {
+      if (!groups[image.project]) {
+        groups[image.project] = [];
+      }
+
+      groups[image.project].push({
+        ...image,
+        originalIndex: index,
+      });
+
+      return groups;
+    }, {});
+  }, [displayedImages]);
+
   const totalResults = displayedImages.length + displayedVideos.length;
 
   const selectedList =
@@ -61,6 +77,7 @@ const Gallery = () => {
     setSelectedProject("All");
     setMediaFilter("All");
     setSearchTerm("");
+    setOpenImageProjects([]);
   };
 
   const scrollToTop = () => {
@@ -68,6 +85,14 @@ const Gallery = () => {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const toggleImageProject = (project) => {
+    setOpenImageProjects((current) =>
+      current.includes(project)
+        ? current.filter((item) => item !== project)
+        : [...current, project]
+    );
   };
 
   const visibleModalThumbnails = useMemo(() => {
@@ -160,6 +185,7 @@ const Gallery = () => {
 
   useEffect(() => {
     setSelectedMedia(null);
+    setOpenImageProjects([]);
   }, [selectedProject, searchTerm, mediaFilter]);
 
   useEffect(() => {
@@ -223,6 +249,7 @@ const Gallery = () => {
           ))}
         </div>
 
+        {/* PROJECT FILTER */}
         <div className="flex flex-wrap gap-2">
           {projectFilters.map((project) => (
             <button
@@ -308,47 +335,155 @@ const Gallery = () => {
           </h2>
 
           {displayedImages.length > 0 ? (
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {displayedImages.map((img, i) => (
-                <button
-                  key={img.src}
-                  type="button"
-                  onClick={() => setSelectedMedia({ type: "image", index: i })}
-                  className="
-                    group rounded-2xl overflow-hidden text-left relative
-                    bg-brand-soft/30
-                    border-b border-brand-soft
-                    transition
-                    shadow-card dark:shadow-card-dark 
-                    hover:bg-brand hover:border-brand hover:shadow-card-hover
-                    dark:border-brand-soft
-                  "
-                >
-                  <div className="relative">
-                    <img
-                      src={img.src}
-                      alt={img.title}
-                      loading="lazy"
-                      className="w-full h-48 object-cover"
-                    />
+            <div className="space-y-4">
+              {Object.entries(groupedImages).map(([project, images]) => {
+                const isOpen = openImageProjects.includes(project);
 
-                    <span
+                return (
+                  <div
+                    key={project}
+                    className="
+                      rounded-2xl overflow-hidden
+                      bg-brand-soft/30
+                      border border-brand-soft
+                      shadow-card dark:shadow-card-dark
+                      dark:border-brand-soft
+                    "
+                  >
+                    <button
+                      type="button"
+                      aria-expanded={isOpen}
+                      onClick={() => toggleImageProject(project)}
                       className="
-                        absolute top-2 left-2 rounded-full px-2 py-1
-                        text-[10px] font-bold
-                        bg-slate-950/70 text-white
-                        backdrop-blur-sm
+                        w-full p-4 text-left
+                        flex flex-col gap-3
+                        hover:bg-brand/10 transition
                       "
                     >
-                      {img.project}
-                    </span>
-                  </div>
+                      <div className="flex items-center justify-between gap-4">
+                        <div>
+                          <h3 className="text-base font-extrabold text-slate-900 dark:text-slate-100">
+                            {project}
+                          </h3>
 
-                  <div className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
-                    {img.title}
+                          <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                            {images.length} screenshot
+                            {images.length === 1 ? "" : "s"}
+                          </p>
+                        </div>
+
+                        <span
+                          className={`
+                            flex h-9 w-9 shrink-0 items-center justify-center
+                            rounded-full border border-brand-soft
+                            bg-slate-100 text-slate-700
+                            transition
+                            dark:bg-slate-900 dark:text-slate-300
+                            ${isOpen ? "rotate-180" : ""}
+                          `}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                          >
+                            <polyline points="6 9 12 15 18 9" />
+                          </svg>
+                        </span>
+                      </div>
+
+                      {!isOpen && (
+                        <div
+                          className="
+                            flex max-w-full gap-2 overflow-hidden
+                            pt-1
+                          "
+                        >
+                          {images.slice(0, 8).map((img) => (
+                            <img
+                              key={`preview-${img.src}`}
+                              src={img.src}
+                              alt={img.title}
+                              loading="lazy"
+                              className="
+                                h-14 w-24 shrink-0 rounded-lg object-cover
+                                border border-brand-soft
+                              "
+                            />
+                          ))}
+
+                          {images.length > 8 && (
+                            <div
+                              className="
+                                flex h-14 w-24 shrink-0 items-center justify-center
+                                rounded-lg border border-brand-soft
+                                bg-slate-950/70 text-xs font-bold text-white
+                              "
+                            >
+                              +{images.length - 8}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </button>
+
+                    {isOpen && (
+                      <div className="border-t border-brand-soft p-4">
+                        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                          {images.map((img) => (
+                            <button
+                              key={img.src}
+                              type="button"
+                              onClick={() =>
+                                setSelectedMedia({
+                                  type: "image",
+                                  index: img.originalIndex,
+                                })
+                              }
+                              className="
+                                group rounded-2xl overflow-hidden text-left relative
+                                bg-brand-soft/30
+                                border-b border-brand-soft
+                                transition
+                                shadow-card dark:shadow-card-dark 
+                                hover:bg-brand hover:border-brand hover:shadow-card-hover
+                                dark:border-brand-soft
+                              "
+                            >
+                              <div className="relative">
+                                <img
+                                  src={img.src}
+                                  alt={img.title}
+                                  loading="lazy"
+                                  className="w-full h-48 object-cover"
+                                />
+
+                                <span
+                                  className="
+                                    absolute top-2 left-2 rounded-full px-2 py-1
+                                    text-[10px] font-bold
+                                    bg-slate-950/70 text-white
+                                    backdrop-blur-sm
+                                  "
+                                >
+                                  {img.project}
+                                </span>
+                              </div>
+
+                              <div className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
+                                {img.title}
+                              </div>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </button>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <p className="text-sm text-slate-600 dark:text-slate-400">
