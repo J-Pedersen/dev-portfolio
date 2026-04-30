@@ -231,13 +231,13 @@ export const galleryVideos = [
   {
     project: "My Bio",
     src: `${base}videos/my-bio-responsive-demo.mp4`,
-    poster: `${base}screenshots/video-posters/my-bio.jpg`,
+    poster: `${base}screenshots/my-bio/my-bio 1.png`,
     title: "My Bio Demo",
   },
   {
     project: "Terri Bio",
     src: `${base}videos/terri-bio-responsive-demo.mp4`,
-    poster: `${base}screenshots/video-posters/terri-bio.jpg`,
+    poster: `${base}screenshots/terri-bio/terri_bio 1.png`,
     title: "Terri's Bio Demo",
   },
   {
