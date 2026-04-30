@@ -201,7 +201,7 @@ export const galleryVideos = [
   {
     project: "Image Carousel",
     src: `${base}videos/image-carousel-demo.mp4`,
-    poster: `${base}screenshots/video-posters/image-carousel.jpg`,
+    poster: `${base}screenshots/image-carousel/image_carousel 1.png`,
     title: "Image Carousel Demo",
   },
   {
