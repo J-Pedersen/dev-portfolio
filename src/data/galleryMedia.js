@@ -207,7 +207,7 @@ export const galleryVideos = [
   {
     project: "Lightbox",
     src: `${base}videos/lightbox-demo.mp4`,
-    poster: `${base}screenshots/video-posters/lightbox.jpg`,
+    poster: `${base}screenshots/lightbox/lightbox 1.png`,
     title: "Lightbox Demo",
   },
   {
