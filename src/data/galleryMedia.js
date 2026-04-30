@@ -189,7 +189,7 @@ export const galleryVideos = [
   {
     project: "DIY PC Building",
     src: `${base}videos/diy-pc-building-demo.mp4`,
-    poster: `${base}screenshots/diy_pc_building/diy_pc_building-home 1.png`,
+    poster: `${base}screenshots/diy-pc-building/diy_pc_building-home 1.png`,
     title: "DIY PC Building Demo",
   },
   {
