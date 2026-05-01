@@ -11,7 +11,7 @@ const Gallery = () => {
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [openImageProjects, setOpenImageProjects] = useState(null);
+  const [openImageProject, setOpenImageProject] = useState(null);
 
   const hasActiveFilters =
     selectedProject !== "All" ||
@@ -77,7 +77,7 @@ const Gallery = () => {
     setSelectedProject("All");
     setMediaFilter("All");
     setSearchTerm("");
-    setOpenImageProjects(null);
+    setOpenImageProject(null); 
   };
 
   const scrollToTop = () => {
@@ -183,7 +183,7 @@ const Gallery = () => {
 
   useEffect(() => {
     setSelectedMedia(null);
-    setOpenImageProjects(null);
+    setOpenImageProject(null);
   }, [selectedProject, searchTerm, mediaFilter]);
 
   useEffect(() => {
