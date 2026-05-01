@@ -154,7 +154,7 @@ export const galleryImages = [
   {
     project: "Little Lemon HTML",
     src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`,
-    title: "Site Header and Home PageHero Section",
+    title: "Navigation and Home Page Hero",
   },
   {
     project: "Little Lemon HTML",
@@ -164,7 +164,7 @@ export const galleryImages = [
   {
     project: "Little Lemon HTML",
     src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Home3.jpg`,
-    title: "Site Footer",
+    title: "Footer",
   },
   {
     project: "Little Lemon HTML",
