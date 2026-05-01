@@ -11,7 +11,7 @@ const Gallery = () => {
   const [touchStartX, setTouchStartX] = useState(null);
   const [touchEndX, setTouchEndX] = useState(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [openImageProjects, setOpenImageProjects] = useState([]);
+  const [openImageProjects, setOpenImageProjects] = useState(null);
 
   const hasActiveFilters =
     selectedProject !== "All" ||
@@ -77,7 +77,7 @@ const Gallery = () => {
     setSelectedProject("All");
     setMediaFilter("All");
     setSearchTerm("");
-    setOpenImageProjects([]);
+    setOpenImageProjects(null);
   };
 
   const scrollToTop = () => {
@@ -88,10 +88,8 @@ const Gallery = () => {
   };
 
   const toggleImageProject = (project) => {
-    setOpenImageProjects((current) =>
-      current.includes(project)
-        ? current.filter((item) => item !== project)
-        : [...current, project]
+    setOpenImageProject((current) =>
+      current === project ? null : project
     );
   };
 
@@ -185,7 +183,7 @@ const Gallery = () => {
 
   useEffect(() => {
     setSelectedMedia(null);
-    setOpenImageProjects([]);
+    setOpenImageProjects(null);
   }, [selectedProject, searchTerm, mediaFilter]);
 
   useEffect(() => {
@@ -337,7 +335,7 @@ const Gallery = () => {
           {displayedImages.length > 0 ? (
             <div className="space-y-4">
               {Object.entries(groupedImages).map(([project, images]) => {
-                const isOpen = openImageProjects.includes(project);
+                const isOpen = openImageProject === project;
 
                 return (
                   <div
