@@ -290,103 +290,117 @@ export const galleryImages = [
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`,
-    title: "Zelda Fansite Home",
+    title: "Home Page",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games1.jpg`,
-    title: "Games Page",
+    title: "Games Page - The Legend of Zelda (NES)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games2.jpg`,
-    title: "Games Page2",
+    title: "Games Page - The Adventures of Link (NES)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games3.jpg`,
-    title: "Games Page3",
+    title: "Games Page - A Link to the Past (Super Nintendo)",
   },
-    {
+  {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games4.jpg`,
-    title: "Games Page4",
+    title: "Games Page - Ocarina of Time (N64)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games5.jpg`,
-    title: "Games Page5",
+    title: "Games Page - Majora's Mask (N64) and Oracle of Seasons (GameBoy Color)",
   },
-    {
+  {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games6.jpg`,
-    title: "Games Page6",
+    title: "Games Page - Oracle of Ages (GameBoy Color)",
   },
-    {
+  {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games7.jpg`,
-    title: "Games Page7",
+    title: "Games Page - The Windwaker and Four Swords Adventures (GameCube)",
   },
-    {
+  {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games8.jpg`,
-    title: "Games Page8",
+    title: "Games Page - The Minish Cap (GameBoy Advance)",
   },
-    {
+  {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games9.jpg`,
-    title: "Games Page9",
+    title: "Games Page - Twilight Princess and Skyward Sword (Wii)",
   },
-
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games10.jpg`,
+    title: "Games Page - Phantom Hourglass and Spirit Tracks (DS)",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games11.jpg`,
+    title: "Games Page - A Link Between Worlds (3DS)",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games12.jpg`,
+    title: "Games Page - Windwaker (Wii U)",
+  },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items1.jpg`,
-    title: "Items Page",
+    title: "Items Page (1)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items2.jpg`,
-    title: "Items Page2",
+    title: "Items Page (2)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items3.jpg`,
-    title: "Items Page3",
+    title: "Items Page (3)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items4.jpg`,
-    title: "Items Page4",
+    title: "Items Page (4)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items5.jpg`,
-    title: "Items Page5",
+    title: "Items Page (5)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items6.jpg`,
-    title: "Items Page6",
+    title: "Items Page (6)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items7.jpg`,
-    title: "Items Page7",
+    title: "Items Page (7)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items8.jpg`,
-    title: "Items Page8",
+    title: "Items Page (8)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps1.jpg`,
-    title: "Maps Page",
+    title: "Maps Page (1)",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps2.jpg`,
-    title: "Maps Page2",
+    title: "Maps Page (2)",
   },
   {
     project: "Zelda Fansite",
