@@ -390,7 +390,7 @@ export const galleryImages = [
   },
   {
     project: "Zelda Fansite",
-    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)Resources1.jpg`,
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Resources1.jpg`,
     title: "Resources Page",
   },
 
