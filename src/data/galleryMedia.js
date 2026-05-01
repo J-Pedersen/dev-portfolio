@@ -41,13 +41,28 @@ export const galleryImages = [
   },
   {
     project: "BookClub",
+    src: `${base}screenshots/bookclub/bookclub-Contact1.jpg`,
+    title: "Contact Page",
+  },
+  {
+    project: "BookClub",
     src: `${base}screenshots/bookclub/bookclub-monthly-books1.jpg`,
     title: "Monthly Books",
   },
   {
     project: "BookClub",
+    src: `${base}screenshots/bookclub/bookclub-book-of-the-month-details1.jpg`,
+    title: "Book of the Month Details",
+  },
+  {
+    project: "BookClub",
     src: `${base}screenshots/bookclub/bookclub-wishlist1.jpg`,
-    title: "Wishlist",
+    title: "Wishlist 1",
+  },
+  {
+    project: "BookClub",
+    src: `${base}screenshots/bookclub/bookclub-wishlist2.jpg`,
+    title: "Wishlist 2",
   },
   {
     project: "BookClub",
