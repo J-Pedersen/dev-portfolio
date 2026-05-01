@@ -299,14 +299,101 @@ export const galleryImages = [
   },
   {
     project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games2.jpg`,
+    title: "Games Page2",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games3.jpg`,
+    title: "Games Page3",
+  },
+    {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games4.jpg`,
+    title: "Games Page4",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games5.jpg`,
+    title: "Games Page5",
+  },
+    {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games6.jpg`,
+    title: "Games Page6",
+  },
+    {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games7.jpg`,
+    title: "Games Page7",
+  },
+    {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games8.jpg`,
+    title: "Games Page8",
+  },
+    {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Games9.jpg`,
+    title: "Games Page9",
+  },
+
+  {
+    project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items1.jpg`,
     title: "Items Page",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items2.jpg`,
+    title: "Items Page2",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items3.jpg`,
+    title: "Items Page3",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items4.jpg`,
+    title: "Items Page4",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items5.jpg`,
+    title: "Items Page5",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items6.jpg`,
+    title: "Items Page6",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items7.jpg`,
+    title: "Items Page7",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Items8.jpg`,
+    title: "Items Page8",
   },
   {
     project: "Zelda Fansite",
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps1.jpg`,
     title: "Maps Page",
   },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Maps2.jpg`,
+    title: "Maps Page2",
+  },
+  {
+    project: "Zelda Fansite",
+    src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Resources1.jpg`,
+    title: "Resources Page",
+  },
+
 ];
 
 export const galleryVideos = [
