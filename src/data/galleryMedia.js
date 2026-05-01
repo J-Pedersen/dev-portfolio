@@ -81,18 +81,59 @@ export const galleryImages = [
   {
     project: "Little Lemon React",
     src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Home1.jpg`,
-    title: "Little Lemon React Home",
+    title: "Little Lemon React Home 1",
   },
-  {
+    {
     project: "Little Lemon React",
-    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Menu1.jpg`,
-    title: "React Menu",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Home2.jpg`,
+    title: "Little Lemon React Home 2",
+  },
+    {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Home3.jpg`,
+    title: "Little Lemon React Home 3",
+  },
+    {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Home4.jpg`,
+    title: "Little Lemon React Home 4",
+  },
+    {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Home5.jpg`,
+    title: "Little Lemon React Home 5",
   },
   {
     project: "Little Lemon React",
     src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Login1.jpg`,
     title: "Login Page",
   },
+  {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Menu1.jpg`,
+    title: "React Menu 1",
+  },
+    {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Menu2.jpg`,
+    title: "React Menu 2",
+  },
+    {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Menu3.jpg`,
+    title: "React Menu 3",
+  },
+    {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Menu4.jpg`,
+    title: "React Menu 4",
+  },
+    {
+    project: "Little Lemon React",
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-reservation1.jpg`,
+    title: "React Reservation",
+  },
+
 
   // -------- Little Lemon HTML --------
   {
