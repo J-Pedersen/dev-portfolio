@@ -96,13 +96,6 @@ const Gallery = () => {
 
       if (nextProject) {
         localStorage.setItem("galleryOpenImageProject", nextProject);
-
-        setTimeout(() => {
-          accordionRefs.current[nextProject]?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 150);
       } else {
         localStorage.removeItem("galleryOpenImageProject");
       }
@@ -236,6 +229,27 @@ const Gallery = () => {
       setOpenImageProject(savedProject);
     }
   }, [groupedImages]);
+
+  useEffect(() => {
+    if (!openImageProject) return;
+
+    const scrollTimer = setTimeout(() => {
+      const accordion = accordionRefs.current[openImageProject];
+
+      if (!accordion) return;
+
+      const headerOffset = 120;
+      const accordionTop =
+        accordion.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: accordionTop,
+        behavior: "smooth",
+      });
+    }, 350);
+
+    return () => clearTimeout(scrollTimer);
+  }, [openImageProject]);
 
   useEffect(() => {
     if (selectedMedia === null) return;
@@ -474,7 +488,11 @@ const Gallery = () => {
                       className={`
                         overflow-hidden border-t border-brand-soft
                         transition-all duration-300 ease-in-out
-                        ${isOpen ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"}
+                        ${
+                          isOpen
+                            ? "max-h-[5000px] opacity-100"
+                            : "max-h-0 opacity-0"
+                        }
                       `}
                     >
                       <div className="p-4">
