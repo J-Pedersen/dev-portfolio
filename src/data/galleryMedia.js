@@ -200,8 +200,8 @@ export const galleryImages = [
   },
   {
     project: "Moffat Bay Marina",
-    src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Upcoming Reservation1.jpg`,
-    title: "Upcoming Reservation",
+    src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Upcoming Reservations1.jpg`,
+    title: "Upcoming Reservations",
   },
   {
     project: "Moffat Bay Marina",
