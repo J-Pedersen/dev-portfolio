@@ -393,7 +393,6 @@ export const galleryImages = [
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Resources1.jpg`,
     title: "Resources Page",
   },
-
 ];
 
 export const galleryVideos = [
