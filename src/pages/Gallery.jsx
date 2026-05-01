@@ -1,5 +1,5 @@
 // src/pages/Gallery.jsx
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import PageHeader from "../components/PageHeader.jsx";
 import { galleryImages, galleryVideos } from "../data/galleryMedia.js";
 
@@ -12,6 +12,8 @@ const Gallery = () => {
   const [touchEndX, setTouchEndX] = useState(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [openImageProject, setOpenImageProject] = useState(null);
+
+  const accordionRefs = useRef({});
 
   const hasActiveFilters =
     selectedProject !== "All" ||
@@ -77,7 +79,8 @@ const Gallery = () => {
     setSelectedProject("All");
     setMediaFilter("All");
     setSearchTerm("");
-    setOpenImageProject(null); 
+    setOpenImageProject(null);
+    localStorage.removeItem("galleryOpenImageProject");
   };
 
   const scrollToTop = () => {
@@ -88,9 +91,24 @@ const Gallery = () => {
   };
 
   const toggleImageProject = (project) => {
-    setOpenImageProject((current) =>
-      current === project ? null : project
-    );
+    setOpenImageProject((current) => {
+      const nextProject = current === project ? null : project;
+
+      if (nextProject) {
+        localStorage.setItem("galleryOpenImageProject", nextProject);
+
+        setTimeout(() => {
+          accordionRefs.current[nextProject]?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 150);
+      } else {
+        localStorage.removeItem("galleryOpenImageProject");
+      }
+
+      return nextProject;
+    });
   };
 
   const visibleModalThumbnails = useMemo(() => {
@@ -183,8 +201,18 @@ const Gallery = () => {
 
   useEffect(() => {
     setSelectedMedia(null);
-    setOpenImageProject(null);
-  }, [selectedProject, searchTerm, mediaFilter]);
+
+    const savedProject = localStorage.getItem("galleryOpenImageProject");
+
+    if (
+      savedProject &&
+      Object.prototype.hasOwnProperty.call(groupedImages, savedProject)
+    ) {
+      setOpenImageProject(savedProject);
+    } else {
+      setOpenImageProject(null);
+    }
+  }, [selectedProject, searchTerm, mediaFilter, groupedImages]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -197,6 +225,17 @@ const Gallery = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const savedProject = localStorage.getItem("galleryOpenImageProject");
+
+    if (
+      savedProject &&
+      Object.prototype.hasOwnProperty.call(groupedImages, savedProject)
+    ) {
+      setOpenImageProject(savedProject);
+    }
+  }, [groupedImages]);
 
   useEffect(() => {
     if (selectedMedia === null) return;
@@ -340,6 +379,9 @@ const Gallery = () => {
                 return (
                   <div
                     key={project}
+                    ref={(element) => {
+                      accordionRefs.current[project] = element;
+                    }}
                     className="
                       rounded-2xl overflow-hidden
                       bg-brand-soft/30
@@ -428,8 +470,14 @@ const Gallery = () => {
                       )}
                     </button>
 
-                    {isOpen && (
-                      <div className="border-t border-brand-soft p-4">
+                    <div
+                      className={`
+                        overflow-hidden border-t border-brand-soft
+                        transition-all duration-300 ease-in-out
+                        ${isOpen ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0"}
+                      `}
+                    >
+                      <div className="p-4">
                         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
                           {images.map((img) => (
                             <button
@@ -478,7 +526,7 @@ const Gallery = () => {
                           ))}
                         </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}
