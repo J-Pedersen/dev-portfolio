@@ -4,6 +4,56 @@ export const galleryImages = [
   // -------- WeightMate --------
   {
     project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-Welcome.jpg`,
+    title: "Welcome Screen",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Name.jpg`,
+    title: "Profile Name",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Height.jpg`,
+    title: "Profile Height",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Age.jpg`,
+    title: "Profile Age",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Weight.jpg`,
+    title: "Profile Weight",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Gender.jpg`,
+    title: "Profile Gender",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Image.jpg`,
+    title: "Profile Image",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Target-Date.jpg`,
+    title: "Target Date",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Target-Weight.jpg`,
+    title: "Target Weight",
+  },
+  {
+    project: "WeightMate",
+    src: `${base}screenshots/weightmate/WeightMate-CP-Confirmation.jpg`,
+    title: "Confirmation",
+  },
+  {
+    project: "WeightMate",
     src: `${base}screenshots/weightmate/WeightMate-Main.jpg`,
     title: "WeightMate Main Screen",
   },
@@ -21,11 +71,6 @@ export const galleryImages = [
     project: "WeightMate",
     src: `${base}screenshots/weightmate/WeightMate-Weight-Entry.jpg`,
     title: "Weight Entry",
-  },
-  {
-    project: "WeightMate",
-    src: `${base}screenshots/weightmate/WeightMate-Welcome.jpg`,
-    title: "Welcome Screen",
   },
 
   // -------- BookClub --------
