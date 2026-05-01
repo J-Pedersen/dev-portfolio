@@ -198,6 +198,26 @@ export const galleryImages = [
     src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Reservation Lookup1.jpg`,
     title: "Reservation Lookup",
   },
+  {
+    project: "Moffat Bay Marina",
+    src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Upcoming Reservation1.jpg`,
+    title: "Upcoming Reservation",
+  },
+  {
+    project: "Moffat Bay Marina",
+    src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Add1.jpg`,
+    title: "Waitlist Add",
+  },
+  {
+    project: "Moffat Bay Marina",
+    src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Lookup1.jpg`,
+    title: "Waitlist Lookup",
+  },
+    {
+    project: "Moffat Bay Marina",
+    src: `${base}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Mobile - Waitlist Add1.jpg`,
+    title: "Mobile Waitlist Add",
+  },
 
   // -------- CAREWare --------
   {
