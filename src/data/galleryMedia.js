@@ -154,27 +154,27 @@ export const galleryImages = [
   {
     project: "Little Lemon HTML",
     src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Home1.jpg`,
-    title: "Little Lemon HTML Home 1",
+    title: "Site Header and Home PageHero Section",
   },
   {
     project: "Little Lemon HTML",
     src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Home2.jpg`,
-    title: "Little Lemon HTML Home 2",
+    title: "Feature Cards",
   },
   {
     project: "Little Lemon HTML",
     src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Home3.jpg`,
-    title: "Little Lemon HTML Home 3",
+    title: "Site Footer",
   },
   {
     project: "Little Lemon HTML",
     src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-About1.jpg`,
-    title: "Little Lemon HTML About",
+    title: "About Page",
   },
   {
     project: "Little Lemon HTML",
     src: `${base}screenshots/little-lemon-html/Little-Lemon-HTML-Menu1.jpg`,
-    title: "HTML Menu",
+    title: "Menu Page",
   },
   {
     project: "Little Lemon HTML",
