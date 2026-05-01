@@ -501,12 +501,14 @@ const Gallery = () => {
                             <button
                               key={img.src}
                               type="button"
-                              onClick={() =>
+                              onClick={(e) => {
+                                e.stopPropagation();
+
                                 setSelectedMedia({
                                   type: "image",
                                   index: img.originalIndex,
-                                })
-                              }
+                                });
+                              }}
                               className="
                                 group rounded-2xl overflow-hidden text-left relative
                                 bg-brand-soft/30
@@ -570,7 +572,14 @@ const Gallery = () => {
                 <button
                   key={video.src}
                   type="button"
-                  onClick={() => setSelectedMedia({ type: "video", index: i })}
+                  onClick={(e) => {
+                    e.stopPropagation();
+
+                    setSelectedMedia({
+                      type: "video",
+                      index: i,
+                    });
+                  }}
                   className="
                     group rounded-2xl overflow-hidden relative text-left
                     bg-brand-soft/30
