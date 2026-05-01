@@ -265,25 +265,178 @@ export const galleryImages = [
   },
 
   // -------- CAREWare --------
-  {
-    project: "CAREWare",
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Identified-risks1.jpg`,
+    title: "Identified Risks 1"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Identified-risks2.jpg`,
+    title: "Identified Risks 2"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Identified-risks3.jpg`,
+    title: "Identified Risks 3"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Identified-risks4.jpg`,
+    title: "Identified Risks 4"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Identified-risks5.jpg`,
+    title: "Identified Risks 5"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Precedence-Diagramming_Method1.jpg`,
+    title: "Precedence Diagramming Method"
+  },
+  { project: "CAREWare",
     src: `${base}screenshots/careware/Careware-project-charter1.jpg`,
-    title: "Project Charter",
+    title: "Project Charter 1"
   },
-  {
-    project: "CAREWare",
-    src: `${base}screenshots/careware/Careware-RFP1.jpg`,
-    title: "RFP Document",
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter2.jpg`,
+    title: "Project Charter 2"
   },
-  {
-    project: "CAREWare",
-    src: `${base}screenshots/careware/Careware-WBS1.jpg`,
-    title: "Work Breakdown Structure",
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter3.jpg`,
+    title: "Project Charter 3"
   },
-  {
-    project: "CAREWare",
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter4.jpg`,
+    title: "Project Charter 4"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter5.jpg`,
+    title: "Project Charter 5"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter6.jpg`,
+    title: "Project Charter 6"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter7.jpg`,
+    title: "Project Charter 7"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter8.jpg`,
+    title: "Project Charter 8"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-project-charter9.jpg`,
+    title: "Project Charter 9"
+  },
+  { project: "CAREWare",
     src: `${base}screenshots/careware/Careware-Quality-Management-Plan1.jpg`,
-    title: "Quality Management Plan",
+    title: "Quality Management Plan 1"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Quality-Management-Plan2.jpg`,
+    title: "Quality Management Plan 2"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Quality-Management-Plan3.jpg`,
+    title: "Quality Management Plan 3"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Quality-Management-Plan4.jpg`,
+    title: "Quality Management Plan 4"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Quality-Management-Plan5.jpg`,
+    title: "Quality Management Plan 5"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Quality-Management-Plan6.jpg`,
+    title: "Quality Management Plan 6"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Quality-Management-Plan7.jpg`,
+    title: "Quality Management Plan 7"
+  },
+
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-RFP1.jpg`,
+    title: "RFP 1"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-RFP2.jpg`,
+    title: "RFP 2"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-RFP3.jpg`,
+    title: "RFP 3"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-RFP4.jpg`,
+    title: "RFP 4"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-RFP5.jpg`,
+    title: "RFP 5"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-RFP6.jpg`,
+    title: "RFP 6"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Risk-Gathering1.jpg`,
+    title: "Risk Gathering 1"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Risk-Gathering2.jpg`,
+    title: "Risk Gathering 2"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Risk-Gathering3.jpg`,
+    title: "Risk Gathering 3"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Risk-Gathering4.jpg`,
+    title: "Risk Gathering 4"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-Risk-Gathering5.jpg`,
+    title: "Risk Gathering 5"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-scope-statement1.jpg`,
+    title: "Scope Statement 1"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-scope-statement2.jpg`,
+    title: "Scope Statement 2"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-scope-statement3.jpg`,
+    title: "Scope Statement 3"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-WBS-dictionary1.jpg`,
+    title: "WBS Dictionary 1"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-WBS-dictionary2.jpg`,
+    title: "WBS Dictionary 2"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-WBS-dictionary3.jpg`,
+    title: "WBS Dictionary 3"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-WBS-dictionary4.jpg`,
+    title: "WBS Dictionary 4"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-WBS1.jpg`,
+    title: "WBS 1"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-WBS2.jpg`,
+    title: "WBS 2"
+  },
+  { project: "CAREWare",
+    src: `${base}screenshots/careware/Careware-WBS3.jpg`,
+    title: "WBS 3"
   },
 
   // -------- Zelda ASP.NET --------
