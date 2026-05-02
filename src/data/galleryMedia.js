@@ -190,7 +190,7 @@ export const galleryImages = [
   },
   {
     project: "Little Lemon React",
-    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-reservation1.jpg`,
+    src: `${base}screenshots/little-lemon-react/Little-Lemon-React-Reservation1.jpg`,
     title: "React Reservation",
   },
 
