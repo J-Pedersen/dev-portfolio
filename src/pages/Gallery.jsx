@@ -27,14 +27,16 @@ const Gallery = () => {
       counts[item.project] = (counts[item.project] || 0) + 1;
     });
 
-    const projects = Object.keys(counts);
+    const sortedProjects = Object.keys(counts)
+      .map((project) => ({
+        name: project,
+        count: counts[project],
+      }))
+      .sort((a, b) => b.count - a.count); // 👈 largest first
 
     return [
       { name: "All", count: galleryImages.length + galleryVideos.length },
-      ...projects.map((project) => ({
-        name: project,
-        count: counts[project],
-      })),
+      ...sortedProjects,
     ];
   }, []);
 
