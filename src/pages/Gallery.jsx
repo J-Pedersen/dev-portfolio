@@ -205,7 +205,8 @@ const Gallery = () => {
     } else {
       setOpenImageProject(null);
     }
-  }, [selectedProject, searchTerm, mediaFilter, groupedImages]);
+
+  }, [selectedProject, searchTerm, mediaFilter]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -228,7 +229,7 @@ const Gallery = () => {
     ) {
       setOpenImageProject(savedProject);
     }
-  }, [groupedImages]);
+  }, []);
 
   useEffect(() => {
     if (!openImageProject) return;
