@@ -80,7 +80,6 @@ const Gallery = () => {
     setMediaFilter("All");
     setSearchTerm("");
     setOpenImageProject(null);
-    localStorage.removeItem("galleryOpenImageProject");
   };
 
   const scrollToTop = () => {
@@ -91,17 +90,7 @@ const Gallery = () => {
   };
 
   const toggleImageProject = (project) => {
-    setOpenImageProject((current) => {
-      const nextProject = current === project ? null : project;
-
-      if (nextProject) {
-        localStorage.setItem("galleryOpenImageProject", nextProject);
-      } else {
-        localStorage.removeItem("galleryOpenImageProject");
-      }
-
-      return nextProject;
-    });
+    setOpenImageProject((current) => (current === project ? null : project));
   };
 
   const visibleModalThumbnails = useMemo(() => {
@@ -194,18 +183,7 @@ const Gallery = () => {
 
   useEffect(() => {
     setSelectedMedia(null);
-
-    const savedProject = localStorage.getItem("galleryOpenImageProject");
-
-    if (
-      savedProject &&
-      Object.prototype.hasOwnProperty.call(groupedImages, savedProject)
-    ) {
-      setOpenImageProject(savedProject);
-    } else {
-      setOpenImageProject(null);
-    }
-
+    setOpenImageProject(null);
   }, [selectedProject, searchTerm, mediaFilter]);
 
   useEffect(() => {
@@ -221,15 +199,26 @@ const Gallery = () => {
   }, []);
 
   useEffect(() => {
-    const savedProject = localStorage.getItem("galleryOpenImageProject");
+    if (!openImageProject) return;
 
-    if (
-      savedProject &&
-      Object.prototype.hasOwnProperty.call(groupedImages, savedProject)
-    ) {
-      setOpenImageProject(savedProject);
-    }
-  }, []);
+    const handleClickAway = (e) => {
+      const openAccordion = accordionRefs.current[openImageProject];
+
+      if (!openAccordion) return;
+
+      if (!openAccordion.contains(e.target)) {
+        setOpenImageProject(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickAway);
+    document.addEventListener("touchstart", handleClickAway);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickAway);
+      document.removeEventListener("touchstart", handleClickAway);
+    };
+  }, [openImageProject]);
 
   useEffect(() => {
     if (!openImageProject) return;
