@@ -21,11 +21,21 @@ const Gallery = () => {
     searchTerm.trim() !== "";
 
   const projectFilters = useMemo(() => {
-    const projects = [...galleryImages, ...galleryVideos].map(
-      (item) => item.project
-    );
+    const counts = {};
 
-    return ["All", ...new Set(projects)];
+    [...galleryImages, ...galleryVideos].forEach((item) => {
+      counts[item.project] = (counts[item.project] || 0) + 1;
+    });
+
+    const projects = Object.keys(counts);
+
+    return [
+      { name: "All", count: galleryImages.length + galleryVideos.length },
+      ...projects.map((project) => ({
+        name: project,
+        count: counts[project],
+      })),
+    ];
   }, []);
 
   const matchesGalleryFilter = (item) => {
@@ -292,12 +302,12 @@ const Gallery = () => {
 
         {/* PROJECT FILTER */}
         <div className="flex flex-wrap gap-2">
-          {projectFilters.map((project) => (
+          {projectFilters.map(({ name, count }) => (
             <button
-              key={project}
+              key={name}
               type="button"
-              aria-pressed={selectedProject === project}
-              onClick={() => setSelectedProject(project)}
+              aria-pressed={selectedProject === name}
+              onClick={() => setSelectedProject(name)}
               className={`
                 rounded-full px-3 py-1.5 text-xs font-bold transition
                 border border-brand-soft
@@ -308,7 +318,18 @@ const Gallery = () => {
                 }
               `}
             >
-              {project}
+              <span className="flex items-center gap-2">
+                {name}
+                <span
+                  className="
+                    rounded-full px-2 py-0.5 text-[10px] font-bold
+                    bg-slate-300 text-slate-800
+                    dark:bg-slate-700 dark:text-slate-200
+                  "
+                >
+                  {count}
+                </span>
+              </span>
             </button>
           ))}
         </div>
