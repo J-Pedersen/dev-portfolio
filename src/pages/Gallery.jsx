@@ -443,7 +443,7 @@ const Gallery = () => {
                         <div
                           className="
                             flex max-w-full gap-2 overflow-hidden
-                            pt-1
+                            pt-1 justify-center
                           "
                         >
                           {images.slice(0, 8).map((img) => (
