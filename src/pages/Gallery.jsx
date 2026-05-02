@@ -312,7 +312,7 @@ const Gallery = () => {
                 rounded-full px-3 py-1.5 text-xs font-bold transition
                 border border-brand-soft
                 ${
-                  selectedProject === project
+                  selectedProject === name
                     ? "bg-brand text-white shadow-card dark:shadow-card-dark"
                     : "bg-slate-100 text-slate-700 hover:bg-brand hover:text-white dark:bg-slate-900 dark:text-slate-300"
                 }
