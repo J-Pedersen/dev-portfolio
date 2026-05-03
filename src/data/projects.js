@@ -784,5 +784,111 @@ export const projects = [
     ],
     outcome:
       'bioSite is a good example of early multi-page site work and shows how I structure content-driven pages with plain HTML and CSS.'
-  }
+  },
+  {
+    slug: "outsidedown-productions",
+    title: "Outsidedown Productions",
+    shortDescription:
+      "A WordPress website for a creative production brand featuring audio, video, photography, graphic arts, rates, FAQs, and contact content.",
+    role: "WordPress Developer",
+    type: "featured",
+    githubUrl: "",
+    demoUrl: 'https://www.outsidedownproductions.com/',
+    icon: "wordpress",
+    tags: ["WordPress", "PHP", "HTML", "CSS"],
+    techStack: ["WordPress", "PHP", "HTML", "CSS"],
+    cardTech: ["WordPress", "PHP", "HTML", "CSS"],
+    media: [
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Home1.png`, title: "Home Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Home2.png`, title: "Home Page 2" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-About1.png`, title: "About Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-About2.png`, title: "About Page 2" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Audio1.png`, title: "Audio Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Audio2.png`, title: "Audio Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Audio3.png`, title: "Audio Page 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Audio4.png`, title: "Audio Page 4" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Audio5.png`, title: "Audio Page 5" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video1.png`, title: "Video Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video2.png`, title: "Video Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video3.png`, title: "Video Page 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video4.png`, title: "Video Page 4" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video5.png`, title: "Video Page 5" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video6.png`, title: "Video Page 6" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video7.png`, title: "Video Page 7" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Video8.png`, title: "Video Page 8" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo1.png`, title: "Photography Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo2.png`, title: "Photography Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo3.png`, title: "Photography Page 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo4.png`, title: "Photography Page 4" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo5.png`, title: "Photography Page 5" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo6.png`, title: "Photography Page 6" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo7.png`, title: "Photography Page 7" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Photo8.png`, title: "Photography Page 8" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-GraphicArts1.png`, title: "Graphic Arts Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-GraphicArts2.png`, title: "Graphic Arts Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-GraphicArts3.png`, title: "Graphic Arts Page 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-GraphicArts4.png`, title: "Graphic Arts Page 4" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-GraphicArts5.png`, title: "Graphic Arts Page 5" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-GraphicArts6.png`, title: "Graphic Arts Page 6" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Rates1.png`, title: "Rates Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Rates2.png`, title: "Rates Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Rates3.png`, title: "Rates Page 3" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-FAQ1.png`, title: "FAQ Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-FAQ2.png`, title: "FAQ Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-FAQ3.png`, title: "FAQ Page 3" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-FYI1.png`, title: "FYI Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-FYI2.png`, title: "FYI Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-FYI3.png`, title: "FYI Page 3" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-FYI4.png`, title: "FYI Page 4" },
+
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Contact1.png`, title: "Contact Page 1" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Contact2.png`, title: "Contact Page 2" },
+      { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Contact3.png`, title: "Contact Page 3" },
+
+      {
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/outsidedown-productions-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Home1.png`,
+      },
+    ],
+    longDescription:
+      "Outsidedown Productions is a WordPress-based website for a local business that deals in audio video and graphic design which I and a handful of other developers worked on as a group project. The site organizes service-focused content across audio, video, photography, graphic arts, rates, FAQs, FYI information, and contact pages.",
+    problem:
+      "The project needed a clear, multi-page website that could present creative services, media-focused content, pricing information, and contact details in a way that was easy for visitors to navigate.",
+    solution:
+      "We built this website using WordPress with PHP-driven page templates and customized frontend styling using HTML and CSS. The structure separates content into service-specific pages while maintaining consistent branding, navigation, and layout across the site.",
+    architecture:
+      ` WordPress Website
+        ↓
+        PHP Theme / Template Structure
+        ↓
+        HTML + CSS Presentation
+        ↓
+        Multi-Page Service Navigation
+        ↓
+        Media, Rates, FAQ, and Contact Content `,
+    decisions: [
+      "Use WordPress to manage a multi-page content-driven website.",
+      "Organize the site around service categories such as audio, video, photography, and graphic arts.",
+      "Use consistent page styling and navigation so visitors can move through the site easily.",
+      "Include screenshots and a demo video to document the full site experience in the portfolio."
+    ],
+    challenges: [
+      "Structuring a large amount of service content across multiple pages.",
+      "Maintaining consistent design across WordPress-driven pages.",
+      "Balancing visual media presentation with clear informational content.",
+      "Preparing screenshots and demo media for portfolio presentation."
+    ],
+    outcome:
+      "This project demonstrates my ability to build and organize a WordPress website using PHP, HTML, and CSS. It highlights content organization, service-based navigation, media presentation, and practical website implementation for a creative production brand."
+  },
 ];
