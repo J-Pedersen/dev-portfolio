@@ -1,5 +1,6 @@
 // src/pages/Gallery.jsx
 import { useEffect, useMemo, useRef, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import PageHeader from "../components/PageHeader.jsx";
 import { galleryImages, galleryVideos } from "../data/galleryMedia.js";
 
@@ -32,7 +33,7 @@ const Gallery = () => {
         name: project,
         count: counts[project],
       }))
-      .sort((a, b) => b.count - a.count); // 👈 largest first
+      .sort((a, b) => b.count - a.count);
 
     return [
       { name: "All", count: galleryImages.length + galleryVideos.length },
@@ -497,69 +498,74 @@ const Gallery = () => {
                       )}
                     </button>
 
-                    <div
-                      className={`
-                        overflow-hidden border-t border-brand-soft
-                        transition-all duration-300 ease-in-out
-                        ${
-                          isOpen
-                            ? "max-h-[5000px] opacity-100"
-                            : "max-h-0 opacity-0"
-                        }
-                      `}
-                    >
-                      <div className="p-4">
-                        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-                          {images.map((img) => (
-                            <button
-                              key={img.src}
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          key={`${project}-accordion-content`}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 220,
+                            damping: 28,
+                          }}
+                          className="overflow-hidden border-t border-brand-soft"
+                        >
+                          <div className="p-4">
+                            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                              {images.map((img) => (
+                                <button
+                                  key={img.src}
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
 
-                                setSelectedMedia({
-                                  type: "image",
-                                  index: img.originalIndex,
-                                });
-                              }}
-                              className="
-                                group rounded-2xl overflow-hidden text-left relative
-                                bg-brand-soft/30
-                                border-b border-brand-soft
-                                transition
-                                shadow-card dark:shadow-card-dark 
-                                hover:bg-brand hover:border-brand hover:shadow-card-hover
-                                dark:border-brand-soft
-                              "
-                            >
-                              <div className="relative">
-                                <img
-                                  src={img.src}
-                                  alt={img.title}
-                                  loading="lazy"
-                                  className="w-full h-48 object-cover"
-                                />
-
-                                <span
+                                    setSelectedMedia({
+                                      type: "image",
+                                      index: img.originalIndex,
+                                    });
+                                  }}
                                   className="
-                                    absolute top-2 left-2 rounded-full px-2 py-1
-                                    text-[10px] font-bold
-                                    bg-slate-950/70 text-white
-                                    backdrop-blur-sm
+                                    group rounded-2xl overflow-hidden text-left relative
+                                    bg-brand-soft/30
+                                    border-b border-brand-soft
+                                    transition
+                                    shadow-card dark:shadow-card-dark 
+                                    hover:bg-brand hover:border-brand hover:shadow-card-hover
+                                    dark:border-brand-soft
                                   "
                                 >
-                                  {img.project}
-                                </span>
-                              </div>
+                                  <div className="relative">
+                                    <img
+                                      src={img.src}
+                                      alt={img.title}
+                                      loading="lazy"
+                                      className="w-full h-48 object-cover"
+                                    />
 
-                              <div className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
-                                {img.title}
-                              </div>
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                                    <span
+                                      className="
+                                        absolute top-2 left-2 rounded-full px-2 py-1
+                                        text-[10px] font-bold
+                                        bg-slate-950/70 text-white
+                                        backdrop-blur-sm
+                                      "
+                                    >
+                                      {img.project}
+                                    </span>
+                                  </div>
+
+                                  <div className="p-3 text-sm font-bold bg-brand-soft/30 group-hover:bg-brand text-slate-700 group-hover:text-white dark:text-slate-300 text-center">
+                                    {img.title}
+                                  </div>
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 );
               })}
