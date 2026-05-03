@@ -68,7 +68,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
         <div
           className="
             px-4 py-3
-            bg-brand/80
+            bg-brand-soft/30
             border-b border-brand-soft
             flex items-start justify-between gap-4
           "
