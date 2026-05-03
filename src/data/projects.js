@@ -794,7 +794,7 @@ export const projects = [
     type: "featured",
     githubUrl: "",
     demoUrl: 'https://www.outsidedownproductions.com/',
-    icon: "wordpress",
+    icon: 'outsidedown-icon',
     tags: ["WordPress", "PHP", "HTML", "CSS"],
     techStack: ["WordPress", "PHP", "HTML", "CSS"],
     cardTech: ["WordPress", "PHP", "HTML", "CSS"],
