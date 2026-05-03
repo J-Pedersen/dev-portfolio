@@ -168,11 +168,8 @@ const Home = () => {
 
                 <CardFooter>
                   <div className="flex flex-wrap gap-2 justify-center">
-                    {(project.cardTech ?? project.tags)?.map((tech) => (
-                      <TechIcon
-                        key={tech}
-                        tech={tech}
-                      />
+                    {p.techStack.map((tech) => (
+                      <TechIcon key={tech} tech={tech} />
                     ))}
                   </div>
                 </CardFooter>
