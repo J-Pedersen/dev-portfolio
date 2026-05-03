@@ -796,7 +796,7 @@ export const projects = [
     demoUrl: 'https://www.outsidedownproductions.com/',
     icon: 'outsidedown-icon',
     tags: ["WordPress", "PHP", "HTML", "CSS", "XML", "Inkscape", "Photoshop", "Microsoft Office"],
-    techStack: ["WordPress", "PHP", "HTML", "CSS", "XML", "Inkscape", "Photoshop"], "Microsoft Office",
+    techStack: ["WordPress", "PHP", "HTML", "CSS", "XML", "Inkscape", "Photoshop", "Microsoft Office"], 
     cardTech: ["WordPress", "PHP", "HTML", "CSS"],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Home1.png`, title: "Home Page 1" },
