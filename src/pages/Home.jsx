@@ -172,7 +172,6 @@ const Home = () => {
                       <TechIcon
                         key={tech}
                         tech={tech}
-                        className="group-hover:scale-110 transition-transform"
                       />
                     ))}
                   </div>
