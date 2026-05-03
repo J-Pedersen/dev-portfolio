@@ -12,8 +12,8 @@ export const projects = [
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/weight-tracker-android',
     icon: 'weightmate-icon',
-    tags: ['Java', 'Android', 'SQLite', 'XML', 'Inkscape', 'Photoshop'],
-    techStack: ['Java', 'Android', 'SQLite', 'XML', 'Inkscape', 'Photoshop'],
+    tags: ['Java', 'Android', 'SQLite', 'XML', 'Inkscape', 'Photoshop', "Microsoft Office"],
+    techStack: ['Java', 'Android', 'SQLite', 'XML', 'Inkscape', 'Photoshop', "Microsoft Office"],
     cardTech: ['Java', 'Android', 'SQLite', 'XML'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/weightmate/WeightMate-Welcome.jpg`, title: "Welcome Screen" },
@@ -138,8 +138,8 @@ export const projects = [
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/bookclub',
     icon: 'bookclub-icon',
-    tags: ['Java', 'Spring Boot', 'Server-Side', 'ThymeLeaf', 'MongoDB', 'Inkscape', 'Photoshop'],
-    techStack: ['Java', 'Spring Boot', 'Server-Side', 'ThymeLeaf', 'MongoDB', 'Inkscape', 'Photoshop'],
+    tags: ['Java', 'Spring Boot', 'Server-Side', 'ThymeLeaf', 'MongoDB', 'Inkscape', 'Photoshop', "Microsoft Office"],
+    techStack: ['Java', 'Spring Boot', 'Server-Side', 'ThymeLeaf', 'MongoDB', 'Inkscape', 'Photoshop', "Microsoft Office"],
     cardTech: ['Java', 'Spring Boot', 'ThymeLeaf', 'MongoDB'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bookclub/bookclub-Home1.jpg`, title: "Home" },
@@ -196,8 +196,8 @@ export const projects = [
     githubUrl:
       'https://github.com/J-Pedersen/cis-505/tree/main/Module_12/GradeBookApp',
     icon: 'gradebook-icon',
-    tags: ['Java', 'JavaFX', 'CSS', 'CSV'],
-    techStack: ['Java', 'CSS', 'JavaFX' , 'CSV'],
+    tags: ['Java', 'JavaFX', 'CSS', 'CSV', "Microsoft Office"],
+    techStack: ['Java', 'CSS', 'JavaFX' , 'CSV', "Microsoft Office"],
     cardTech: ['Java', 'CSS', 'JavaFX' , 'CSV'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/gradebook/gradebook1.jpg`, title: "Main Screen" },
@@ -249,8 +249,8 @@ export const projects = [
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/moffat-bay-marina-java',
     icon: 'moffat_bay_marina-icon',
-    tags: ['Java', 'Jakarta EE', 'CSS', 'HTML','Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
-    techStack: ['Java', 'Jakarta EE', 'CSS', 'HTML', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
+    tags: ['Java', 'Jakarta EE', 'CSS', 'HTML','Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
+    techStack: ['Java', 'Jakarta EE', 'CSS', 'HTML', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
     cardTech: ['Java', 'CSS', 'HTML', 'Server-Side'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`, title: "Create Account" },
@@ -356,8 +356,8 @@ export const projects = [
     githubUrl: "https://github.com/J-Pedersen/zelda-fansite-aspnet",
     demoUrl: 'https://j-pedersen.github.io/zelda-fansite-aspnet/',
     icon: "zelda-icon",
-    tags: [ '.NET', 'Visual Basic', 'HTML', 'CSS', , 'Server-Side', 'Photoshop' ],
-    techStack: [ '.NET', 'Visual Basic', 'HTML', 'CSS', , 'Server-Side', 'Photoshop' ],
+    tags: [ '.NET', 'Visual Basic', 'HTML', 'CSS', , 'Server-Side', 'Photoshop', "Microsoft Office" ],
+    techStack: [ '.NET', 'Visual Basic', 'HTML', 'CSS', , 'Server-Side', 'Photoshop', "Microsoft Office" ],
     cardTech: [ '.NET', 'Visual Basic', 'Server-Side', 'Photoshop' ],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-home1.jpg`, title: "Home Page" },
@@ -415,8 +415,8 @@ export const projects = [
     githubUrl:
       'https://github.com/J-Pedersen/csd-310/tree/main/module_12',
     icon: 'bacchus_winery-icon',
-    tags: ['Python', 'SQL', 'Git', 'GitHub'],
-    techStack: ['Python', 'SQL', 'Git', 'GitHub'],
+    tags: ['Python', 'SQL', 'Git', 'GitHub', "Microsoft Office"],
+    techStack: ['Python', 'SQL', 'Git', 'GitHub', "Microsoft Office"],
     cardTech: ['Python', 'SQL', 'Git', 'GitHub'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Arrival Dates.jpg`, title: "Arrival Dates Report Output" },
@@ -475,8 +475,8 @@ export const projects = [
     type: 'course',
     githubUrl: 'https://github.com/J-Pedersen/cis-505',
     icon: 'java-icon',
-    tags: ['Java', 'JavaFX', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
-    techStack: ['Java', 'JavaFX', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
+    tags: ['Java', 'JavaFX', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
+    techStack: ['Java', 'JavaFX', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
     cardTech: ['Java', 'JavaFX', 'CSS', 'Inkscape'],
     videoUrl: '',
     longDescription:
@@ -514,8 +514,8 @@ export const projects = [
     type: 'course',
     githubUrl: 'https://github.com/J-Pedersen/csd-340',
     icon: 'html-icon',
-    tags: ['HTML', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
-    techStack: ['HTML', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
+    tags: ['HTML', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
+    techStack: ['HTML', 'CSS', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
     cardTech: ['HTML', 'CSS', 'Photoshop', 'Inkscape'],
     videoUrl: '',
     longDescription:
@@ -553,8 +553,8 @@ export const projects = [
     type: 'course',
     githubUrl: 'https://github.com/J-Pedersen/csd-310',
     icon: 'python-icon',
-    tags: ['Python', 'SQL', 'Git', 'GitHub'],
-    techStack: ['Python', 'SQL', 'Git', 'GitHub'],
+    tags: ['Python', 'SQL', 'Git', 'GitHub', "Microsoft Office"],
+    techStack: ['Python', 'SQL', 'Git', 'GitHub', "Microsoft Office"],
     cardTech: ['Python', 'SQL', 'Git', 'GitHub'],
     videoUrl: '',
     longDescription:
@@ -595,8 +595,8 @@ export const projects = [
     type: 'android',
     githubUrl: 'https://github.com/J-Pedersen/Meta_Android_Developer',
     icon: 'meta-icon',
-    tags: ['Android', 'Java', 'Coursera', 'Inkscape', 'Photoshop'],
-    techStack: ['Java', 'Android',  'Coursera', 'Inkscape', 'Photoshop'],
+    tags: ['Android', 'Java', 'Coursera', 'Inkscape', 'Photoshop', "Microsoft Office"],
+    techStack: ['Java', 'Android',  'Coursera', 'Inkscape', 'Photoshop', "Microsoft Office"],
     cardTech: ['Java', 'Android',  'Coursera', 'Photoshop'],
     videoUrl: '',
     longDescription:
@@ -678,8 +678,8 @@ export const projects = [
     type: 'php',
     githubUrl: 'https://github.com/J-Pedersen/moffat-bay-marina-php',
     icon: 'moffat_bay_marina-icon',
-    tags: ['PHP', 'HTML', 'CSS', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
-    techStack: ['PHP', 'HTML', 'CSS', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub'],
+    tags: ['PHP', 'HTML', 'CSS', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
+    techStack: ['PHP', 'HTML', 'CSS', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
     cardTech: ['PHP', 'HTML', 'CSS', 'Server-Side'],
     videoUrl: '',
     longDescription:
@@ -717,8 +717,8 @@ export const projects = [
     type: 'web',
     githubUrl: 'https://github.com/J-Pedersen/my-bio-html-responsive',
     icon: 'biography-icon',
-    tags: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop'],
-    techStack: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop'],
+    tags: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop', "Microsoft Office"],
+    techStack: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop', "Microsoft Office"],
     cardTech: ['HTML', 'CSS', 'Git', 'GitHub'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/my-bio-responsive-demo.mp4`,
     longDescription:
@@ -756,8 +756,8 @@ export const projects = [
     type: 'web',
     githubUrl: 'https://github.com/J-Pedersen/bioSite',
     icon: 'biography-icon',
-    tags: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop'],
-    techStack: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop'],
+    tags: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop', "Microsoft Office"],
+    techStack: ['HTML', 'CSS', 'Git', 'GitHub', 'Inkscape', 'Photoshop', "Microsoft Office"],
     cardTech: ['HTML', 'CSS', 'Git', 'GitHub'],
     videoUrl: `${import.meta.env.BASE_URL}/videos/terri-bio-responsive-demo.mp4`,
     longDescription:
@@ -795,8 +795,8 @@ export const projects = [
     githubUrl: "",
     demoUrl: 'https://www.outsidedownproductions.com/',
     icon: 'outsidedown-icon',
-    tags: ["WordPress", "PHP", "HTML", "CSS"],
-    techStack: ["WordPress", "PHP", "HTML", "CSS"],
+    tags: ["WordPress", "PHP", "HTML", "CSS", "XML", "Inkscape", "Photoshop", "Microsoft Office"],
+    techStack: ["WordPress", "PHP", "HTML", "CSS", "XML", "Inkscape", "Photoshop"], "Microsoft Office",
     cardTech: ["WordPress", "PHP", "HTML", "CSS"],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Home1.png`, title: "Home Page 1" },
