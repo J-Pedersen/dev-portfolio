@@ -167,9 +167,12 @@ const Home = () => {
                 </CardBody>
 
                 <CardFooter>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {p.techStack.map((tech) => (
-                      <TechIcon key={tech} tech={tech} />
+                  <div className="flex flex-wrap gap-3 justify-center">
+                    {(p.cardTech ?? p.tags ?? p.techStack)?.map((tech) => (
+                      <TechIcon
+                        key={tech}
+                        tech={tech}
+                      />
                     ))}
                   </div>
                 </CardFooter>
