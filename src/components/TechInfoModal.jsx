@@ -164,7 +164,11 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                                 hideLabel
                                 showBg={false}
                                 interactive={false}
-                                className="scale-90 transition"
+                                className="
+                                  !w-auto !h-auto !mx-0 !my-0
+                                  !bg-transparent !border-0 !shadow-none
+                                  scale-90
+                                "
                               />
                             ) : (
                               <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
