@@ -151,7 +151,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                           border border-brand-soft
                           bg-brand-soft/20
                           transition
-                          hover:border-brand hover:shadow-sm
+                          hover:border-brand hover:shadow-sm hover:-translate-y-0.5
                           group
                         "
                       >
