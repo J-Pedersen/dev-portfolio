@@ -148,7 +148,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                         onMouseDown={(e) => e.stopPropagation()}
                         className="
                           block rounded-xl p-3
-                          border border-brand-soft
+                          border-2 border-brand-soft
                           bg-brand-soft/20
                           transition-all duration-200
                           hover:border-2 hover:border-brand
