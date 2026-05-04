@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
+import { X } from "lucide-react";
 
 const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
   useEffect(() => {
@@ -81,20 +82,17 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
 
           <button
             type="button"
-            onClick={handleClose}
-            onMouseDown={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-            }}
             className="
-              inline-flex h-8 w-8 items-center justify-center rounded-full
-              border border-slate-300 dark:border-slate-700
-              text-slate-100
-              hover:border-slate-600 hover:text-slate-600
-              transition
+              absolute top-4 right-4 text-white
+              h-10 w-10 rounded-full
+              border border-white/20
+              bg-white/10
+              flex items-center justify-center
+              hover:bg-white/20 transition
             "
+            aria-label="Close fullscreen"
           >
-            ×
+            <X size={20} />
           </button>
         </div>
 
