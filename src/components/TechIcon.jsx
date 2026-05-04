@@ -248,7 +248,7 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
           border-b border-brand-soft
         "
       >
-        <p className="text-xs font-semibold text-slate-100 dark:text-slate-100 text-center">
+        <p className="text-xs font-semibold text-slate-100 text-center">
           {label}
         </p>
       </div>

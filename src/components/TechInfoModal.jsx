@@ -90,7 +90,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
               inline-flex h-8 w-8 items-center justify-center rounded-full
               border border-slate-300 dark:border-slate-700
               text-slate-100
-              hover:border-brand hover:text-brand
+              hover:border-slate-600 hover:text-slate-600
               transition
             "
           >
