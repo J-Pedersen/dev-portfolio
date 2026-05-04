@@ -82,6 +82,11 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
 
           <button
             type="button"
+            onClick={handleClose}
+            onMouseDown={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
             className="
               absolute top-3 right-3 text-white
               h-8 w-8 rounded-full
@@ -90,7 +95,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
               flex items-center justify-center
               hover:bg-white/20 transition
             "
-            aria-label="Close fullscreen"
+            aria-label="Close tech details"
           >
             <X size={20} />
           </button>
