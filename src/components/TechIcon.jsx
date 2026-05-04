@@ -244,7 +244,7 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
       <div
         className="
           px-3 py-2
-          bg-brand
+          bg-brand/90 dark:bg-brand-soft/90
           border-b border-brand-soft
         "
       >
@@ -253,7 +253,7 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
         </p>
       </div>
 
-      <div className="px-3 py-2">
+      <div className="px-3 py-2 bg-white/60 dark:bg-slate-800/90">
         <p className="text-[11px] text-slate-700 dark:text-slate-300">
           {description || "Click for details."}
         </p>
