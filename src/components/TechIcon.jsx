@@ -96,7 +96,7 @@ const NAME_TO_ICON = {
 };
 
 const NAME_TO_BG = {
-  Java: "bg-stone-900 border border-brand dark:border-brand-soft",
+  Java: "bg-slate-900 border border-brand dark:border-brand-soft",
   "Spring Boot": "bg-orange-600 border border-brand dark:border-brand-soft",
   "Jakarta EE": "bg-red-300 border border-brand dark:border-brand-soft",
   HTML: "bg-sky-600 border border-brand dark:border-brand-soft",
