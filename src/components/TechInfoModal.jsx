@@ -192,8 +192,8 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                                         tech={tech}
                                         hideLabel={true}
                                         showBg={false}
-                                        interactive={true}
-                                        className="h-6 w-6 opacity-80 group-hover:opacity-100 transition"
+                                        interactive={false}
+                                        className="h-8 w-8 opacity-80 group-hover:opacity-100 transition"
                                       />
                                     </span>
                                   ));
