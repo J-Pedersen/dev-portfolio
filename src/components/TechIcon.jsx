@@ -244,7 +244,7 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
       <div
         className="
           px-3 py-2
-          bg-brand hover:text-slate-100
+          bg-brand text-slate-100
           border-b border-brand-soft
         "
       >
