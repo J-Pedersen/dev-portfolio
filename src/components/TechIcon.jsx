@@ -244,11 +244,11 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
       <div
         className="
           px-3 py-2
-          bg-brand text-slate-100
+          bg-brand
           border-b border-brand-soft
         "
       >
-        <p className="text-xs font-semibold text-slate-900 dark:text-slate-100 text-center">
+        <p className="text-xs font-semibold text-slate-100 dark:text-slate-100 text-center">
           {label}
         </p>
       </div>
