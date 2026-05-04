@@ -106,7 +106,7 @@ const NAME_TO_BG = {
   Android: "bg-slate-900 border border-brand dark:border-brand-soft",
   JavaFX: "bg-slate-900 border border-brand dark:border-brand-soft",
   CSS: "bg-slate-900 border border-brand dark:border-brand-soft",
-  SQL: "bg-slate-500 border border-brand dark:border-brand-soft",
+  SQL: "bg-slate-900 border border-brand dark:border-brand-soft",
   JavaScript: "bg-slate-900 border border-brand dark:border-brand-soft",
   TypeScript: "bg-slate-900 border border-brand dark:border-brand-soft",
   Ruby: "bg-slate-900 border border-brand dark:border-brand-soft",
