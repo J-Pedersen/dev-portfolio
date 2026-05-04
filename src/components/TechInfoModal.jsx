@@ -157,22 +157,14 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                       >
                         <div className="flex items-center gap-3">
                           {/* LEFT ICON */}
-                          <div
-                            className="
-                              h-10 w-10 shrink-0 flex items-center justify-center
-                              rounded-full
-                              border border-brand-soft
-                              bg-slate-100 dark:bg-slate-900
-                              group-hover:bg-white/15
-                            "
-                          >
+                          <div className="shrink-0 flex items-center justify-center">
                             {icon ? (
                               <TechIcon
                                 name={icon}
                                 hideLabel
-                                showBg={false}
+                                showBg={true}
                                 interactive={false}
-                                className="h-5 w-5 group-hover:scale-110 transition"
+                                className="scale-90 group-hover:scale-105 transition"
                               />
                             ) : (
                               <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
