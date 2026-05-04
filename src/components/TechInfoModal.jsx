@@ -155,20 +155,15 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                           group
                         "
                       >
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-2">
                           {/* LEFT ICON */}
-                          <div className="shrink-0 flex items-center justify-center -ml-3">
+                          <div className="shrink-0 flex items-center justify-center -ml-1">
                             {icon ? (
-                              <TechIcon
-                                name={icon}
-                                hideLabel
-                                showBg={false}
-                                interactive={false}
-                                className="
-                                  !w-auto !h-auto !mx-0 !my-0
-                                  !bg-transparent !border-0 !shadow-none
-                                  scale-90
-                                "
+                              <img
+                                src={`${import.meta.env.BASE_URL}icons/${icon}.svg`}
+                                alt={`${item.title} icon`}
+                                draggable="false"
+                                className="h-8 w-8 object-contain"
                               />
                             ) : (
                               <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
