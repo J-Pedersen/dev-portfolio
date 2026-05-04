@@ -232,7 +232,7 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
         pointer-events-none fixed z-[9998]
         w-[220px] rounded-2xl overflow-hidden
         border border-brand-soft
-        bg-white/60 dark:bg-slate-800/90
+        bg-slate-300 dark:bg-slate-700
         shadow-lg
       "
       style={{
