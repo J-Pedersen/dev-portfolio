@@ -137,19 +137,42 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                       "
                     >
                       <div className="flex items-center justify-between gap-3">
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
-                            {item.title}
-                          </p>
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div
+                            className="
+                              h-12 w-16 shrink-0 overflow-hidden rounded-lg
+                              border border-brand-soft
+                              bg-slate-200 dark:bg-slate-800
+                            "
+                          >
+                            {item.thumbnail ? (
+                              <img
+                                src={item.thumbnail}
+                                alt={`${item.title} thumbnail`}
+                                loading="lazy"
+                                className="h-full w-full object-cover"
+                              />
+                            ) : (
+                              <div className="flex h-full w-full items-center justify-center text-xs font-bold text-slate-500 dark:text-slate-400">
+                                {item.type?.slice(0, 2).toUpperCase()}
+                              </div>
+                            )}
+                          </div>
 
-                          <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
-                            {item.type}
-                          </p>
+                          <div className="min-w-0">
+                            <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
+                              {item.title}
+                            </p>
+
+                            <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
+                              {item.type}
+                            </p>
+                          </div>
                         </div>
 
                         <span
                           className="
-                            text-xs font-bold px-2 py-1 rounded-full
+                            shrink-0 text-xs font-bold px-2 py-1 rounded-full
                             bg-slate-200 text-slate-700
                             dark:bg-slate-700 dark:text-slate-200
                             group-hover:bg-white group-hover:text-brand
