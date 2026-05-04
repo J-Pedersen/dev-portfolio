@@ -162,7 +162,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                               <TechIcon
                                 name={icon}
                                 hideLabel
-                                showBg={false}
+                                showBg={true}
                                 interactive={false}
                                 className="scale-90 group-hover:scale-105 transition"
                               />
