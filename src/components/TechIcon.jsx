@@ -153,7 +153,7 @@ const NAME_TO_BG = {
   Teams: "bg-slate-900 border border-brand dark:border-brand-soft",
   NPM: "bg-slate-900 border border-brand dark:border-brand-soft",
   Yarn: "bg-slate-900 border border-brand dark:border-brand-soft",
-  AWS: "bg-stone-900 border border-brand dark:border-brand-soft",
+  AWS: "bg-stone-700 border border-brand dark:border-brand-soft",
   Netlify: "bg-slate-900 border border-brand dark:border-brand-soft",
   "GitHub Pages": "bg-slate-900 border border-brand dark:border-brand-soft",
   Azure: "bg-slate-900 border border-brand dark:border-brand-soft",
