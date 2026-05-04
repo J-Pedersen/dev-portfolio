@@ -87,7 +87,6 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
               e.stopPropagation();
             }}
             className="
-              absolute left-3 top-1/2 -translate-y-1/2
               inline-flex h-8 w-8 items-center justify-center rounded-full
               border border-slate-300 dark:border-slate-700
               text-slate-100
