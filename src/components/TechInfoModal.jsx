@@ -186,7 +186,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                                   return techs.slice(0, 4).map((tech) => (
                                     <span
                                       key={tech}
-                                      className="inline-flex h-5 w-5 items-center justify-center"
+                                      className="inline-flex h-8 w-8 items-center justify-center"
                                     >
                                       <TechIcon
                                         tech={tech}
