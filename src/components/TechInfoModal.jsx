@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
+import TechIcon from "./TechIcon.jsx";
+import { projects } from "../data/projects.js";
 
 const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
   useEffect(() => {
@@ -25,6 +27,11 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
     e.preventDefault();
     e.stopPropagation();
     onClose();
+  };
+
+  const getProjectIcon = (item) => {
+    const matchingProject = projects.find((project) => project.slug === item.slug);
+    return item.icon || item.projectIcon || matchingProject?.icon || null;
   };
 
   const modalContent = (
@@ -121,68 +128,75 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                     scrollbar-thin scrollbar-thumb-brand-soft scrollbar-track-transparent
                   "
                 >
-                  {usedIn.slice(0, 12).map((item) => (
-                    <a
-                      key={`${item.type}-${item.slug}`}
-                      href={item.href}
-                      onClick={(e) => e.stopPropagation()}
-                      onMouseDown={(e) => e.stopPropagation()}
-                      className="
-                        block rounded-xl p-3
-                        border border-brand-soft
-                        bg-brand-soft/20
-                        transition
-                        hover:bg-brand hover:border-brand hover:shadow-card-hover
-                        group
-                      "
-                    >
-                      <div className="flex items-center justify-between gap-3">
-                        <div className="flex items-center gap-3 min-w-0">
-                          <div
+                  {usedIn.slice(0, 12).map((item) => {
+                    const icon = getProjectIcon(item);
+
+                    return (
+                      <a
+                        key={`${item.type}-${item.slug}`}
+                        href={item.href}
+                        onClick={(e) => e.stopPropagation()}
+                        onMouseDown={(e) => e.stopPropagation()}
+                        className="
+                          block rounded-xl p-3
+                          border border-brand-soft
+                          bg-brand-soft/20
+                          transition
+                          hover:bg-brand hover:border-brand hover:shadow-card-hover
+                          group
+                        "
+                      >
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div
+                              className="
+                                h-10 w-10 shrink-0 flex items-center justify-center
+                                rounded-full
+                                border border-brand-soft
+                                bg-slate-100 dark:bg-slate-900
+                                group-hover:bg-white/15
+                              "
+                            >
+                              {icon ? (
+                                <TechIcon
+                                  name={icon}
+                                  hideLabel={true}
+                                  showBg={false}
+                                  interactive={false}
+                                  className="h-5 w-5 group-hover:scale-110 transition-transform"
+                                />
+                              ) : (
+                                <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
+                                  {item.type?.slice(0, 2).toUpperCase()}
+                                </span>
+                              )}
+                            </div>
+
+                            <div className="min-w-0">
+                              <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
+                                {item.title}
+                              </p>
+
+                              <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
+                                {item.type}
+                              </p>
+                            </div>
+                          </div>
+
+                          <span
                             className="
-                              h-12 w-16 shrink-0 overflow-hidden rounded-lg
-                              border border-brand-soft
-                              bg-slate-200 dark:bg-slate-800
+                              shrink-0 text-xs font-bold px-2 py-1 rounded-full
+                              bg-slate-200 text-slate-700
+                              dark:bg-slate-700 dark:text-slate-200
+                              group-hover:bg-white group-hover:text-brand
                             "
                           >
-                            {item.thumbnail ? (
-                              <img
-                                src={item.thumbnail}
-                                alt={`${item.title} thumbnail`}
-                                loading="lazy"
-                                className="h-full w-full object-cover"
-                              />
-                            ) : (
-                              <div className="flex h-full w-full items-center justify-center text-xs font-bold text-slate-500 dark:text-slate-400">
-                                {item.type?.slice(0, 2).toUpperCase()}
-                              </div>
-                            )}
-                          </div>
-
-                          <div className="min-w-0">
-                            <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
-                              {item.title}
-                            </p>
-
-                            <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
-                              {item.type}
-                            </p>
-                          </div>
+                            View
+                          </span>
                         </div>
-
-                        <span
-                          className="
-                            shrink-0 text-xs font-bold px-2 py-1 rounded-full
-                            bg-slate-200 text-slate-700
-                            dark:bg-slate-700 dark:text-slate-200
-                            group-hover:bg-white group-hover:text-brand
-                          "
-                        >
-                          View
-                        </span>
-                      </div>
-                    </a>
-                  ))}
+                      </a>
+                    );
+                  })}
                 </div>
 
                 {usedIn.length > 12 && (
