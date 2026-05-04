@@ -83,8 +83,8 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           <button
             type="button"
             className="
-              absolute top-3 right-3 text-white
-              h-10 w-10 rounded-full
+              absolute top-2 right-3 text-white
+              h-8 w-8 rounded-full
               border border-white/20
               bg-white/10
               flex items-center justify-center
