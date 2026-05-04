@@ -30,7 +30,9 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
   };
 
   const getProjectIcon = (item) => {
-    const matchingProject = projects.find((project) => project.slug === item.slug);
+    const matchingProject = projects.find(
+      (project) => project.slug === item.slug
+    );
     return item.icon || item.projectIcon || matchingProject?.icon || null;
   };
 
@@ -133,7 +135,9 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                 >
                   {usedIn.slice(0, 12).map((item) => {
                     const icon = getProjectIcon(item);
-                    const project = projects.find((p) => p.slug === item.slug);
+                    const project = projects.find(
+                      (p) => p.slug === item.slug
+                    );
                     const techs = project?.cardTech ?? [];
 
                     return (
@@ -192,19 +196,24 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                             {/* TECH ICONS */}
                             <div className="flex items-center gap-1 shrink-0">
                               {techs.slice(0, 4).map((tech) => (
-                              <span
-                                key={tech}
-                                title={tech}
-                                className="inline-flex items-center justify-center"
-                              >
-                                <TechIcon
-                                  tech={tech}
-                                  hideLabel
-                                  showBg={true}
-                                  interactive={false}
-                                  className="scale-75 opacity-90 group-hover:opacity-100 transition"
-                                />
-                              </span>
+                                <span
+                                  key={tech}
+                                  title={tech}
+                                  className="inline-flex items-center justify-center"
+                                >
+                                  <TechIcon
+                                    tech={tech}
+                                    hideLabel
+                                    showBg={true}
+                                    interactive={false}
+                                    className="
+                                      !w-10 !mx-0 !my-0
+                                      scale-75
+                                      opacity-90 group-hover:opacity-100
+                                      transition
+                                    "
+                                  />
+                                </span>
                               ))}
                             </div>
                           </div>
