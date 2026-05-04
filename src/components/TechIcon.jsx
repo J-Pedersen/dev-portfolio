@@ -167,7 +167,7 @@ const NAME_TO_BG = {
   "Risk Analysis": "bg-slate-900 border border-brand dark:border-brand-soft",
   "Requirements Gathering": "bg-slate-900 border border-brand dark:border-brand-soft",
   "Project Scheduling": "bg-slate-900 border border-brand dark:border-brand-soft",
-  "Resource Allocation": "bg-slate-900 border border-brand dark:border-brand-soft",
+  "Resource Allocation": "bg-slate-500 border border-brand dark:border-brand-soft",
   "Cost Estimation": "bg-slate-900 border border-brand dark:border-brand-soft",
   "Project Charters": "bg-slate-900 border border-brand dark:border-brand-soft",
   "Status Reporting": "bg-slate-900 border border-brand dark:border-brand-soft",
