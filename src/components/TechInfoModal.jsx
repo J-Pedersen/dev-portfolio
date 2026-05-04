@@ -74,7 +74,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           "
         >
           <div>
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+            <h3 className="text-lg font-semibold text-slate-100 text-center">
               {tech}
             </h3>
           </div>
