@@ -114,47 +114,60 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
             </h4>
 
             {usedIn.length > 0 ? (
-              <div className="space-y-2">
-                {usedIn.map((item) => (
-                  <a
-                    key={`${item.type}-${item.slug}`}
-                    href={item.href}
-                    onClick={(e) => e.stopPropagation()}
-                    onMouseDown={(e) => e.stopPropagation()}
-                    className="
-                      block rounded-xl p-3
-                      border border-brand-soft
-                      bg-brand-soft/20
-                      transition
-                      hover:bg-brand hover:border-brand hover:shadow-card-hover
-                      group
-                    "
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <div>
-                        <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
-                          {item.title}
-                        </p>
+              <>
+                <div
+                  className="
+                    max-h-64 overflow-y-auto pr-1 space-y-2
+                    scrollbar-thin scrollbar-thumb-brand-soft scrollbar-track-transparent
+                  "
+                >
+                  {usedIn.slice(0, 12).map((item) => (
+                    <a
+                      key={`${item.type}-${item.slug}`}
+                      href={item.href}
+                      onClick={(e) => e.stopPropagation()}
+                      onMouseDown={(e) => e.stopPropagation()}
+                      className="
+                        block rounded-xl p-3
+                        border border-brand-soft
+                        bg-brand-soft/20
+                        transition
+                        hover:bg-brand hover:border-brand hover:shadow-card-hover
+                        group
+                      "
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <div>
+                          <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
+                            {item.title}
+                          </p>
 
-                        <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
-                          {item.type}
-                        </p>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
+                            {item.type}
+                          </p>
+                        </div>
+
+                        <span
+                          className="
+                            text-xs font-bold px-2 py-1 rounded-full
+                            bg-slate-200 text-slate-700
+                            dark:bg-slate-700 dark:text-slate-200
+                            group-hover:bg-white group-hover:text-brand
+                          "
+                        >
+                          View
+                        </span>
                       </div>
+                    </a>
+                  ))}
+                </div>
 
-                      <span
-                        className="
-                          text-xs font-bold px-2 py-1 rounded-full
-                          bg-slate-200 text-slate-700
-                          dark:bg-slate-700 dark:text-slate-200
-                          group-hover:bg-white group-hover:text-brand
-                        "
-                      >
-                        View
-                      </span>
-                    </div>
-                  </a>
-                ))}
-              </div>
+                {usedIn.length > 12 && (
+                  <p className="mt-2 text-xs text-center text-slate-500 dark:text-slate-400">
+                    Showing 12 of {usedIn.length} linked projects.
+                  </p>
+                )}
+              </>
             ) : (
               <p className="text-sm text-slate-600 dark:text-slate-400">
                 No linked projects found yet.
