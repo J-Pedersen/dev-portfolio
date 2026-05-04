@@ -192,26 +192,19 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                             {/* TECH ICONS */}
                             <div className="flex items-center gap-2 shrink-0">
                               {techs.slice(0, 4).map((tech) => (
-                                <span
-                                  key={tech}
-                                  title={tech}
-                                  className="
-                                    inline-flex h-8 w-8 items-center justify-center
-                                    rounded-full
-                                    border border-brand-soft
-                                    bg-slate-100 dark:bg-slate-900
-                                    transition
-                                    group-hover:bg-white/15
-                                  "
-                                >
-                                  <TechIcon
-                                    tech={tech}
-                                    hideLabel
-                                    showBg={false}
-                                    interactive={false}
-                                    className="h-5 w-5 opacity-90 group-hover:opacity-100 transition"
-                                  />
-                                </span>
+                              <span
+                                key={tech}
+                                title={tech}
+                                className="inline-flex items-center justify-center"
+                              >
+                                <TechIcon
+                                  tech={tech}
+                                  hideLabel
+                                  showBg={true}
+                                  interactive={false}
+                                  className="scale-75 opacity-90 group-hover:opacity-100 transition"
+                                />
+                              </span>
                               ))}
                             </div>
                           </div>
