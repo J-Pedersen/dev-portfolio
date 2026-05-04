@@ -173,9 +173,32 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                             </div>
 
                             <div className="min-w-0">
-                              <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
-                                {item.title}
-                              </p>
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
+                                  {item.title}
+                                </p>
+
+                                {/* cardTech icons */}
+                                {(() => {
+                                  const project = projects.find((p) => p.slug === item.slug);
+                                  const techs = project?.cardTech ?? [];
+
+                                  return techs.slice(0, 4).map((tech) => (
+                                    <span
+                                      key={tech}
+                                      className="inline-flex h-5 w-5 items-center justify-center"
+                                    >
+                                      <TechIcon
+                                        name={tech}
+                                        hideLabel={true}
+                                        showBg={false}
+                                        interactive={false}
+                                        className="h-4 w-4 opacity-80 group-hover:opacity-100 transition"
+                                      />
+                                    </span>
+                                  ));
+                                })()}
+                              </div>
 
                               <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
                                 {item.type}
