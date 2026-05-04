@@ -46,6 +46,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
         e.stopPropagation();
       }}
     >
+      {/* BACKDROP */}
       <button
         type="button"
         aria-label="Close tech details"
@@ -57,6 +58,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
         className="absolute inset-0 w-full h-full bg-slate-950/50 backdrop-blur-sm"
       />
 
+      {/* MODAL */}
       <div
         className="
           relative z-10 w-full max-w-lg rounded-2xl overflow-hidden
@@ -73,6 +75,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           e.stopPropagation();
         }}
       >
+        {/* HEADER */}
         <div
           className="
             px-4 py-3
@@ -108,13 +111,13 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
           </button>
         </div>
 
+        {/* CONTENT */}
         <div className="p-4 space-y-4">
-          <div>
-            <p className="text-sm text-slate-700 dark:text-slate-300">
-              {description || "No description added yet."}
-            </p>
-          </div>
+          <p className="text-sm text-slate-700 dark:text-slate-300">
+            {description || "No description added yet."}
+          </p>
 
+          {/* USED IN */}
           <div className="border-t border-brand-soft/40 pt-4">
             <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 mb-2">
               Used In
@@ -130,6 +133,8 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                 >
                   {usedIn.slice(0, 12).map((item) => {
                     const icon = getProjectIcon(item);
+                    const project = projects.find((p) => p.slug === item.slug);
+                    const techs = project?.cardTech ?? [];
 
                     return (
                       <a
@@ -146,66 +151,64 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                           group
                         "
                       >
-                        <div className="flex items-center justify-between gap-3">
-                          <div className="flex items-center gap-3 min-w-0">
-                            <div
-                              className="
-                                h-10 w-10 shrink-0 flex items-center justify-center
-                                rounded-full
-                                border border-brand-soft
-                                bg-slate-100 dark:bg-slate-900
-                                group-hover:bg-white/15
-                              "
-                            >
-                              {icon ? (
-                                <TechIcon
-                                  name={icon}
-                                  hideLabel={true}
-                                  showBg={false}
-                                  interactive={false}
-                                  className="h-5 w-5 group-hover:scale-110 transition-transform"
-                                />
-                              ) : (
-                                <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
-                                  {item.type?.slice(0, 2).toUpperCase()}
-                                </span>
-                              )}
-                            </div>
+                        <div className="flex items-center gap-3">
+                          {/* LEFT ICON */}
+                          <div
+                            className="
+                              h-10 w-10 shrink-0 flex items-center justify-center
+                              rounded-full
+                              border border-brand-soft
+                              bg-slate-100 dark:bg-slate-900
+                              group-hover:bg-white/15
+                            "
+                          >
+                            {icon ? (
+                              <TechIcon
+                                name={icon}
+                                hideLabel
+                                showBg={false}
+                                interactive={false}
+                                className="h-5 w-5 group-hover:scale-110 transition"
+                              />
+                            ) : (
+                              <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
+                                {item.type?.slice(0, 2).toUpperCase()}
+                              </span>
+                            )}
+                          </div>
 
+                          {/* MIDDLE (TITLE + TECH) */}
+                          <div className="flex flex-1 items-center justify-between gap-3 min-w-0">
                             <div className="min-w-0">
-                              <div className="flex items-center gap-2 flex-wrap">
-                                <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
-                                  {item.title}
-                                </p>
-
-                                {/* cardTech icons */}
-                                {(() => {
-                                  const project = projects.find((p) => p.slug === item.slug);
-                                  const techs = project?.cardTech ?? [];
-
-                                  return techs.slice(0, 4).map((tech) => (
-                                    <span
-                                      key={tech}
-                                      className="inline-flex h-8 w-8 items-center justify-center"
-                                    >
-                                      <TechIcon
-                                        tech={tech}
-                                        hideLabel={true}
-                                        showBg={false}
-                                        interactive={false}
-                                        className="h-8 w-8 opacity-80 group-hover:opacity-100 transition"
-                                      />
-                                    </span>
-                                  ));
-                                })()}
-                              </div>
+                              <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
+                                {item.title}
+                              </p>
 
                               <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
                                 {item.type}
                               </p>
                             </div>
+
+                            {/* TECH ICONS */}
+                            <div className="flex items-center gap-2 shrink-0">
+                              {techs.slice(0, 4).map((tech) => (
+                                <span
+                                  key={tech}
+                                  className="inline-flex h-8 w-8 items-center justify-center"
+                                >
+                                  <TechIcon
+                                    tech={tech}
+                                    hideLabel
+                                    showBg={false}
+                                    interactive={false}
+                                    className="h-6 w-6 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition"
+                                  />
+                                </span>
+                              ))}
+                            </div>
                           </div>
 
+                          {/* VIEW BUTTON */}
                           <span
                             className="
                               shrink-0 text-xs font-bold px-2 py-1 rounded-full
