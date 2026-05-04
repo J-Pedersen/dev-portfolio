@@ -232,7 +232,7 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
         pointer-events-none fixed z-[9998]
         w-[220px] rounded-2xl overflow-hidden
         border border-brand-soft
-        bg-slate-300 dark:bg-slate-700
+        bg-slate-200 dark:bg-slate-800
         shadow-lg
       "
       style={{
@@ -244,7 +244,7 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
       <div
         className="
           px-3 py-2
-          bg-brand/90 dark:bg-brand-soft/90
+          bg-brand dark:bg-brand-soft
           border-b border-brand-soft
         "
       >
