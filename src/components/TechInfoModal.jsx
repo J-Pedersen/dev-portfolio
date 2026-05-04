@@ -155,9 +155,9 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                           group
                         "
                       >
-                        <div className="flex items-left gap-1">
+                        <div className="flex items-center gap-1">
                           {/* LEFT ICON */}
-                          <div className="shrink-0 flex items-center justify-center">
+                          <div className="shrink-0 flex items-center justify-center -ml-1">
                             {icon ? (
                               <TechIcon
                                 name={icon}
