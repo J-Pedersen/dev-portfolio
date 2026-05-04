@@ -177,7 +177,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                             )}
                           </div>
 
-                          {/* MIDDLE (TITLE + TECH) */}
+                          {/* MIDDLE */}
                           <div className="flex flex-1 items-center justify-between gap-3 min-w-0">
                             <div className="min-w-0">
                               <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
@@ -194,19 +194,36 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                               {techs.slice(0, 4).map((tech) => (
                                 <span
                                   key={tech}
-                                  className="inline-flex h-8 w-8 items-center justify-center"
+                                  title={tech}
+                                  className="
+                                    inline-flex h-8 w-8 items-center justify-center
+                                    rounded-full
+                                    border border-brand-soft
+                                    bg-slate-100 dark:bg-slate-900
+                                    transition
+                                    group-hover:bg-white/15
+                                  "
                                 >
                                   <TechIcon
                                     tech={tech}
                                     hideLabel
                                     showBg={false}
                                     interactive={false}
-                                    className="h-6 w-6 opacity-90 group-hover:opacity-100 group-hover:scale-110 transition"
+                                    className="h-5 w-5 opacity-90 group-hover:opacity-100 transition"
                                   />
                                 </span>
                               ))}
                             </div>
                           </div>
+
+                          {/* DIVIDER */}
+                          <span
+                            className="
+                              hidden sm:block h-8 w-px shrink-0
+                              bg-brand-soft/60
+                              group-hover:bg-white/30
+                            "
+                          />
 
                           {/* VIEW BUTTON */}
                           <span
