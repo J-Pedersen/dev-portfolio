@@ -189,7 +189,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                                       className="inline-flex h-5 w-5 items-center justify-center"
                                     >
                                       <TechIcon
-                                        name={tech}
+                                        tech={tech}
                                         hideLabel={true}
                                         showBg={false}
                                         interactive={false}
