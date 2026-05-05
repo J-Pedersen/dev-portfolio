@@ -164,7 +164,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                                 src={`${import.meta.env.BASE_URL}icons/${icon}.svg`}
                                 alt={`${item.title} icon`}
                                 draggable="false"
-                                className="h-8 w-8 object-contain"
+                                className="h-7 w-7 object-contain"
                               />
                             ) : (
                               <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
