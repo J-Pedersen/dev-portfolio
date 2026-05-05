@@ -158,7 +158,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                       >
                         <div className="flex items-center gap-3 pl-1">
                           {/* LEFT ICON */}
-                          <div className="shrink-0 flex items-center justify-center rounded-full h-10 w-10 bg-slate-900">
+                          <div className="shrink-0 flex items-center justify-center rounded-full h-10 w-10 bg-slate-900 border border-brand">
                             {icon ? (
                               <img
                                 src={`${import.meta.env.BASE_URL}icons/${icon}.svg`}
