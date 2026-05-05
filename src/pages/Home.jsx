@@ -151,7 +151,7 @@ const Home = () => {
                           hideLabel
                           showBg={false}
                           interactive={false}
-                          className="h-4 w-4"
+                          className="h-6 w-6"
                         />
                       </span>
                     )}
