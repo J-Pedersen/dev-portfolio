@@ -138,13 +138,22 @@ const Home = () => {
                 <CardHeader>
                   <div className="flex items-center gap-2 text-center justify-center">
                     {p.icon && (
-                      <TechIcon
-                        name={p.icon}
-                        hideLabel={true}
-                        showBg={false}
-                        interactive={false}
-                        className="rounded-full h-8 w-8 bg-slate-900 border border-brand"
-                      />
+                      <span
+                        className="
+                          inline-flex h-9 w-9 items-center justify-center
+                          rounded-full
+                          bg-slate-900
+                          border border-brand
+                        "
+                      >
+                        <TechIcon
+                          name={p.icon}
+                          hideLabel
+                          showBg={false}
+                          interactive={false}
+                          className="h-4 w-4"
+                        />
+                      </span>
                     )}
 
                     <h3
