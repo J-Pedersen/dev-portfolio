@@ -167,7 +167,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                                 className="h-7 w-7 object-contain"
                               />
                             ) : (
-                              <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-white">
+                              <span className="text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-brand">
                                 {item.type?.slice(0, 2).toUpperCase()}
                               </span>
                             )}
