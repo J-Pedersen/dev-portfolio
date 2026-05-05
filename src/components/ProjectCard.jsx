@@ -34,7 +34,7 @@ const ProjectCard = ({ project }) => (
         <div className="flex items-center justify-center gap-2">
 
           {project.icon && (
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 border border-brand hover:border-brand-soft">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-900 border border-brand">
               <TechIcon
                 name={project.icon}
                 hideLabel={true}
