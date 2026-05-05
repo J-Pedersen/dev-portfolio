@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { projects } from '../data/projects.js';
 import TechIcon from '../components/TechIcon.jsx';
@@ -29,31 +28,21 @@ const Home = () => {
     <div className="space-y-10">
       <section className="grid gap-8 md:grid-cols-[2fr,1.2fr] items-center">
         <div>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="text-xs font-extrabold uppercase tracking-[0.3em] text-brand mb-2"
-          >
-            Software Developer · Web Designer · Database Engineer
-          </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
+          <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-brand mb-2">
+            Software Developer · Web Designer · Database Engineer
+          </p>
+
+          <h1
             className="
               text-3xl sm:text-4xl md:text-5xl font-extrabold 
               text-slate-900 dark:text-slate-50 mb-4
             "
           >
             I build software and systems.
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <p
             className="
               text-sm sm:text-base 
               text-slate-700 dark:text-slate-300 
@@ -63,7 +52,7 @@ const Home = () => {
             I’m Jeff Pedersen, a full-stack developer and database engineer. I work across HTML, CSS, JavaScript, Java, Spring Boot, React,
             cloud technologies, and databases, and I also can build the PM artifacts which keep projects
             on track such as WBS, risk registers, and network diagrams.
-          </motion.p>
+          </p>
 
           <div className="flex flex-wrap gap-3">
             <Link to="/projects" className="btn-primary shadow-card dark:shadow-card-dark hover:shadow-card-hover">
@@ -77,10 +66,7 @@ const Home = () => {
         </div>
 
         {/* Tech Snapshot Grid */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
+        <div
           className="
             relative h-106 sm:h-64 md:h-72 rounded-3xl overflow-hidden
             bg-slate-100
@@ -109,7 +95,7 @@ const Home = () => {
               <TechIcon key={tech} tech={tech} />
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Featured row */}
@@ -178,10 +164,7 @@ const Home = () => {
                 <CardFooter>
                   <div className="flex flex-wrap gap-3 justify-center">
                     {(p.cardTech ?? p.tags ?? p.techStack)?.map((tech) => (
-                      <TechIcon
-                        key={tech}
-                        tech={tech}
-                      />
+                      <TechIcon key={tech} tech={tech} />
                     ))}
                   </div>
                 </CardFooter>
