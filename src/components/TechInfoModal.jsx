@@ -225,7 +225,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                               shrink-0 text-xs font-bold px-2 py-1 rounded-full
                               bg-slate-200 text-slate-700
                               dark:bg-slate-700 dark:text-slate-200
-                              group-hover:bg-white group-hover:text-brand
+                              group-hover:bg-brand-soft group-hover:text-brand
                             "
                           >
                             View
