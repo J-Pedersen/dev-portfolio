@@ -176,11 +176,11 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                           {/* MIDDLE */}
                           <div className="flex flex-1 items-center justify-between gap-3 min-w-0">
                             <div className="min-w-0">
-                              <p className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-white">
+                              <p className="truncate text-sm font-semibold  text-slate-900 group-hover:text-brand">
                                 {item.title}
                               </p>
 
-                              <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-white/80">
+                              <p className="text-xs text-slate-900 group-hover:text-brand">
                                 {item.type}
                               </p>
                             </div>
@@ -225,7 +225,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                               shrink-0 text-xs font-bold px-2 py-1 rounded-full
                               bg-slate-200 text-slate-700
                               dark:bg-slate-700 dark:text-slate-200
-                              group-hover:bg-brand-soft group-hover:text-brand
+                              group-hover:bg-brand group-hover:text-white
                             "
                           >
                             View
