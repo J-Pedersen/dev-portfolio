@@ -176,11 +176,11 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                           {/* MIDDLE */}
                           <div className="flex flex-1 items-center justify-between gap-3 min-w-0">
                             <div className="min-w-0">
-                              <p className="truncate text-sm font-semibold  text-slate-900 group-hover:text-brand">
+                              <p className="truncate text-sm font-semibold  text-slate-900 dark:text-slate-200 group-hover:text-brand">
                                 {item.title}
                               </p>
 
-                              <p className="text-xs text-slate-900 group-hover:text-brand">
+                              <p className="text-xs text-slate-900 dark:text-slate-200 group-hover:text-brand">
                                 {item.type}
                               </p>
                             </div>
