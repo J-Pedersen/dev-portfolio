@@ -143,7 +143,7 @@ const Home = () => {
                         hideLabel={true}
                         showBg={false}
                         interactive={false}
-                        className="rounded-full h-10 w-10 bg-slate-900 border border-brand"
+                        className="rounded-full h-8 w-8 bg-slate-900 border border-brand"
                       />
                     )}
 
