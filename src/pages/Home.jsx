@@ -136,7 +136,7 @@ const Home = () => {
             >
               <Card className="h-full">
                 <CardHeader>
-                  <div className="flex items-center gap-2 text-center shrink-0 justify-center rounded-full h-10 w-10 bg-slate-900 border border-brand">
+                  <div className="flex items-center gap-2 text-center justify-center rounded-full h-10 w-10 bg-slate-900 border border-brand">
                     {p.icon && (
                       <TechIcon
                         name={p.icon}
