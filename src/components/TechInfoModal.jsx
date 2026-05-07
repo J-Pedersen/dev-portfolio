@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import TechIcon from "./TechIcon.jsx";
 import { projects } from "../data/projects.js";
+import { caseStudies } from "../data/caseStudies.js";
 
 const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
   useEffect(() => {
@@ -33,7 +34,18 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
     const matchingProject = projects.find(
       (project) => project.slug === item.slug
     );
-    return item.icon || item.projectIcon || matchingProject?.icon || null;
+
+    const matchingCaseStudy = caseStudies.find(
+      (caseStudy) => caseStudy.slug === item.slug
+    );
+
+    return (
+      item.icon ||
+      item.projectIcon ||
+      matchingProject?.icon ||
+      matchingCaseStudy?.icon ||
+      null
+    );
   };
 
   const modalContent = (
