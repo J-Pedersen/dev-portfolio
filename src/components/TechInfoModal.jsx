@@ -48,6 +48,18 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
     );
   };
 
+  const getItemCardTech = (item) => {
+    const matchingProject = projects.find(
+      (project) => project.slug === item.slug
+    );
+
+    const matchingCaseStudy = caseStudies.find(
+      (caseStudy) => caseStudy.slug === item.slug
+    );
+
+    return matchingProject?.cardTech || matchingCaseStudy?.cardTech || [];
+  };
+
   const modalContent = (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center px-4"
@@ -147,10 +159,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                 >
                   {usedIn.slice(0, 12).map((item) => {
                     const icon = getProjectIcon(item);
-                    const project = projects.find(
-                      (p) => p.slug === item.slug
-                    );
-                    const techs = project?.cardTech ?? [];
+                    const techs = getItemCardTech(item);
 
                     return (
                       <a
