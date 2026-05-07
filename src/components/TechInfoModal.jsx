@@ -178,7 +178,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                             <div className="min-w-0">
                               <p className="truncate text-sm font-semibold  text-slate-900 dark:text-slate-200 group-hover:text-brand">
                                 {item.title}
-                              </p>
+                              </p> 
 
                               <p className="text-xs text-slate-900 dark:text-slate-200 group-hover:text-brand">
                                 {item.type}
