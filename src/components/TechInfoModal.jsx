@@ -207,7 +207,7 @@ const TechInfoModal = ({ open, onClose, tech, description, usedIn = [] }) => {
                             </div>
 
                             {/* TECH ICONS */}
-                            <div className="flex items-center gap-.5 shrink-0">
+                            <div className="hidden sm:flex items-center gap-.5 shrink-0">
                               {techs.slice(0, 3).map((tech) => (
                                 <span
                                   key={tech}
