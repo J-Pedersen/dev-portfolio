@@ -403,7 +403,7 @@ const TechIcon = ({
         <span
           className="
             absolute left-1/2 bottom-0 z-10
-            max-w-[4rem]
+            max-w-[4.2rem]
             -translate-x-1/2 translate-y-1
 
             rounded-md px-1 py-[1px]
