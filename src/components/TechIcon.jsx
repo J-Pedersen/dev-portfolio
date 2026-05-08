@@ -90,7 +90,7 @@ const NAME_TO_ICON = {
   RFPs: "rfp-icon",
   "Communication Plans": "communication_plan-icon",
   "Network Diagrams": "network_diagram-icon",
-  "WBS": "wbs-icon",
+  WBS: "wbs-icon",
   "WBS Dictionaries": "wbs_dictionary-icon",
   "UI/UX Design": "ui_ux_design-icon",
 };
@@ -126,7 +126,7 @@ const NAME_TO_BG = {
   Docker: "bg-slate-900 border border-brand dark:border-brand-soft",
   ".NET": "bg-slate-900 border border-brand dark:border-brand-soft",
   Drupal: "bg-slate-900 border border-brand dark:border-brand-soft",
-  WordPress: "bg-slate-900-300 border border-brand dark:border-brand-soft",
+  WordPress: "bg-slate-900 border border-brand dark:border-brand-soft",
   jQuery: "bg-slate-900 border border-brand dark:border-brand-soft",
   AJAX: "bg-slate-900 border border-brand dark:border-brand-soft",
   MongoDB: "bg-slate-900 border border-brand dark:border-brand-soft",
@@ -179,7 +179,7 @@ const NAME_TO_BG = {
   RFPs: "bg-stone-700 border border-brand dark:border-brand-soft",
   "Communication Plans": "bg-stone-700 border border-brand dark:border-brand-soft",
   "Network Diagrams": "bg-stone-700 border border-brand dark:border-brand-soft",
-  "WBS": "bg-stone-700 border border-brand dark:border-brand-soft",
+  WBS: "bg-stone-700 border border-brand dark:border-brand-soft",
   "WBS Dictionaries": "bg-stone-700 border border-brand dark:border-brand-soft",
   "UI/UX Design": "bg-slate-900 border border-brand dark:border-brand-soft",
 };
@@ -351,7 +351,7 @@ const TechIcon = ({
     showBg ? (
       <div
         className={`
-          h-10 w-10 mb-0.5 rounded-full
+          h-10 w-10 rounded-full
           flex items-center justify-center
           ${bgColor}
           shadow-[0_0_10px_rgba(0,0,0,0.12)]
@@ -369,14 +369,14 @@ const TechIcon = ({
       <img
         src={src}
         alt={label}
-        className="h-7 w-7 object-contain mb-0.5"
+        className="h-7 w-7 object-contain"
         draggable="false"
       />
     )
   ) : (
     <div
       className={`
-        h-8 w-8 mb-0.5 rounded-full
+        h-8 w-8 rounded-full
         flex items-center justify-center
         text-[10px] font-semibold text-black
         dark:text-white
@@ -392,15 +392,25 @@ const TechIcon = ({
   const content = (
     <div
       className={`
-        relative flex flex-col items-center justify-start
-        w-14 mx-1 my-1
+        relative flex items-center justify-center
+        w-14 h-12 mx-1 my-1
         ${className}
       `}
     >
       {iconNode}
 
       {!hideLabel && (
-        <span className="text-[10px] text-slate-700 dark:text-slate-300 text-center leading-tight">
+        <span
+          className="
+            absolute left-1/2 bottom-0 z-10
+            max-w-[4.75rem] -translate-x-1/2
+            truncate rounded-full px-1.5 py-[1px]
+            bg-slate-950/75 text-[9px] font-semibold leading-tight text-white
+            shadow-sm backdrop-blur-sm
+            pointer-events-none
+          "
+          title={label}
+        >
           {label}
         </span>
       )}
