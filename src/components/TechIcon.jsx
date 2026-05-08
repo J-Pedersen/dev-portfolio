@@ -393,7 +393,7 @@ const TechIcon = ({
     <div
       className={`
         relative flex items-center justify-center
-        w-16 h-12 mx-1 my-1
+        w-14 h-12 mx-1 my-1
         ${className}
       `}
     >
