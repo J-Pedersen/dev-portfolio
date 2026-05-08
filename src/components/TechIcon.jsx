@@ -393,28 +393,35 @@ const TechIcon = ({
     <div
       className={`
         relative flex items-center justify-center
-w-16 h-12 mx-1 my-1
+        w-16 h-12 mx-1 my-1
         ${className}
       `}
     >
       {iconNode}
 
       {!hideLabel && (
-  <span
-    className="
-      absolute left-1/2 bottom-0 z-10
-      w-20 -translate-x-1/2 translate-y-1
-      rounded-md px-1.5 py-[1px]
-      bg-slate-950/75 text-[9px] font-semibold leading-[1.05] text-white
-      text-center shadow-sm backdrop-blur-sm
-      pointer-events-none
-      whitespace-normal break-words
-    "
-    title={label}
-  >
-    {label}
-  </span>
-)}
+        <span
+          className="
+            absolute left-1/2 bottom-0 z-10
+            max-w-[3.6rem]
+            -translate-x-1/2 translate-y-1
+
+            rounded-md px-1 py-[1px]
+
+            bg-slate-950/45
+            text-[9px] font-semibold leading-[1.05] text-white
+            text-center
+
+            shadow-sm backdrop-blur-[1px]
+
+            pointer-events-none
+            whitespace-normal break-words
+          "
+          title={label}
+        >
+          {label}
+        </span>
+      )}
     </div>
   );
 
