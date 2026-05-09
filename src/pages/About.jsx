@@ -61,7 +61,7 @@ const About = () => {
                 fixed top-3 bottom-3 right-0 w-80 max-w-[calc(100%-0.75rem)] z-50 md:hidden
                 bg-white dark:bg-slate-900
                 rounded-l-2xl
-                border-l border-slate-300 dark:border-slate-700
+                border-l border-brand
                 shadow-[0_10px_40px_rgba(0,0,0,0.25)] flex flex-col
                 overflow-hidden
               "
