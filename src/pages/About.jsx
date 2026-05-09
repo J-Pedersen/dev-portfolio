@@ -88,21 +88,14 @@ const About = () => {
                 onClick={() => setOpenTimeline(false)}
                 className="
                   shrink-0 relative overflow-hidden
-
                   bg-brand dark:bg-brand-soft
-                  text-white dark:text-slate-950
-
+                  text-white
                   border-b border-brand-soft
-
                   px-4 py-4
-
                   flex items-center justify-center
-
                   font-semibold tracking-wide text-sm
-
                   cursor-grab active:cursor-grabbing
                   touch-pan-x
-
                   transition
                   hover:brightness-110
                   active:scale-[0.98]
