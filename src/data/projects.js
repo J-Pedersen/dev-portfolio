@@ -4,7 +4,7 @@ export const projects = [
   // -----------------------------------------
     {
     slug: 'weightmate-android',
-    title: 'WeightMate',
+    title: 'WeightMate (Android)',
     shortDescription:
       'A full-featured Android application for tracking weight progress, managing user profiles, and visualizing goal completion with dynamic UI elements and local data persistence.',
     role: 'Android Developer',
@@ -71,7 +71,7 @@ export const projects = [
 
   {
     slug: 'little-lemon-react',
-    title: 'Little Lemon Restaurant',
+    title: 'Little Lemon (React)',
     shortDescription:
       'React-based version of the Little Lemon website with reusable components and routing.',
     role: 'React Developer',  
@@ -131,7 +131,7 @@ export const projects = [
 
   {
     slug: 'book-club-springboot',
-    title: 'Bookclub Application',
+    title: 'Bookclub (Spring Boot)',
     shortDescription:
       'A Spring Boot application modeling a book club with server-side Java, templated views, and persistent data.',
     role: 'Full-Stack Developer',
@@ -188,7 +188,7 @@ export const projects = [
 
   {
     slug: 'gradebook-javafx',
-    title: 'Grade Book Application',
+    title: 'Grade Book (JavaFX)',
     shortDescription:
       'A JavaFX desktop application for managing student grades, featuring modular design and CSV persistence.',
     role: 'Java Developer',
@@ -242,7 +242,7 @@ export const projects = [
 
   {
     slug: 'moffat-bay-marina-java',
-    title: 'Moffat Bay Marina',
+    title: 'Moffat Bay Marina (Jakarta EE)',
     shortDescription:
       'This was a group capstone project which used marina management logic built in Java to simulate boat rentals, scheduling, and customer workflows.',
     role: 'Java Developer',
@@ -293,7 +293,7 @@ export const projects = [
 
   {
     slug: 'little-lemon-html',
-    title: 'Little Lemon',
+    title: 'Little Lemon (HTML)',
     shortDescription:
       'A responsive restaurant site created using semantic HTML, modern CSS, and JavaScript.',
     role: 'Front-End Developer',
@@ -348,7 +348,7 @@ export const projects = [
 
   {
     slug: "zelda-fansite",
-    title: "Zelda Fansite",
+    title: "Zelda Fansite (ASP.NET)",
     shortDescription:
       "A dynamic ASP.NET web application built with Visual Basic that showcases game data, maps, and items using server-side rendering and structured navigation.",
     role: "Full Stack Developer",  
@@ -407,7 +407,7 @@ export const projects = [
 
   {
     slug: 'bacchus-winery-python',
-    title: 'Bacchus Winery',
+    title: 'Bacchus Winery (Python)',
     shortDescription:
       'This introductory Python course group project focused on managing inventory and winery operations.',
     role: 'Python Developer',
@@ -630,7 +630,7 @@ export const projects = [
   // -----------------------------------------
   {
     slug: 'diy-computer-assembly',
-    title: 'DIY Computer Assembly',
+    title: 'DIY Computer Assembly (HTML)',
     shortDescription:
       'A static multi-page HTML site explaining DIY PC assembly steps.',
     role: 'Front-End Developer',   
@@ -671,7 +671,7 @@ export const projects = [
   // Moffat Bay Marina (PHP)
   {
     slug: 'moffat-bay-marina-php',
-    title: 'Moffat Bay Marina',
+    title: 'Moffat Bay Marina (PHP)',
     shortDescription:
       'PHP implementation of the Moffat Bay Marina project with server-side rendering.',
     role: 'Full-Stack Developer',    
@@ -710,7 +710,7 @@ export const projects = [
 
   {
     slug: 'my-bio-html-responsive',
-    title: 'Single Page Bio Website',
+    title: 'Single Page Bio (HTML)',
     shortDescription:
       'A responsive personal bio page with basic layout and CSS styling.',
     role: 'Front-End Developer',
@@ -749,7 +749,7 @@ export const projects = [
 
   {
     slug: 'biosite-csd340',
-    title: "Terri's Bio Website",
+    title: "Terri's Bio (HTML)",
     shortDescription:
       'Multi-page biography site created for web development coursework.',
     role: 'Front-End Developer',   
@@ -787,7 +787,7 @@ export const projects = [
   },
   {
     slug: "outsidedown-productions",
-    title: "Outsidedown Productions",
+    title: "Outsidedown (WordPress)",
     shortDescription:
       "A WordPress website for a creative production brand featuring audio, video, photography, graphic arts, rates, FAQs, and contact content.",
     role: "WordPress Developer",
