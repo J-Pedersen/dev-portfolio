@@ -92,6 +92,7 @@ const About = () => {
                   bg-brand dark:bg-brand-soft
                   text-white
                   border-b border-brand-soft
+                  shadow-[0_10px_40px_rgba(0,0,0,0.25)]
                   px-4 py-4
                   flex items-center justify-center
                   font-semibold tracking-wide text-sm
