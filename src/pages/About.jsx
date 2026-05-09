@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { History } from "lucide-react";
 import { motion, AnimatePresence, useDragControls } from "framer-motion";
-
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
 import PageHeader from "../components/PageHeader.jsx";
 import Timeline from "../components/Timeline.jsx";
 import { timelineItems } from "../data/timeline.js";
@@ -12,6 +12,7 @@ const About = () => {
 
   return (
     <div className="space-y-8 relative">
+      <Breadcrumbs current="About" />
       <PageHeader
         kicker="About"
         title="Hello, I'm Jeff. I like to write code and create structure where there is none."
