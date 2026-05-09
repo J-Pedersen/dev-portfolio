@@ -67,10 +67,11 @@ const About = () => {
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 26 }}
               drag="x"
-              dragElastic={0.2}
-              dragMomentum
+              dragDirectionLock
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={{ left: 0, right: 0.2 }}
+              dragMomentum={false}
               onDragEnd={(_, info) => {
-                // If user swipes / drags to the right far or fast enough, close
                 if (info.offset.x > 80 || info.velocity.x > 500) {
                   setOpenTimeline(false);
                 }
@@ -90,7 +91,7 @@ const About = () => {
               </button>
 
               {/* Content */}
-              <div className="overflow-y-auto p-4">
+              <div className="flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y p-4">
                 <Timeline items={timelineItems} mobile />
               </div>
             </motion.div>
