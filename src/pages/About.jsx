@@ -89,7 +89,7 @@ const About = () => {
                 onClick={() => setOpenTimeline(false)}
                 className="
                   shrink-0 relative overflow-hidden
-                  bg-brand dark:bg-brand-soft
+                  bg-brand
                   text-white
                   border-b border-brand-soft
                   shadow-[0_10px_40px_rgba(0,0,0,0.25)]
