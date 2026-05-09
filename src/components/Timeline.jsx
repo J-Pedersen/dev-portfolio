@@ -26,7 +26,6 @@ const linkify = (text) => {
   });
 };
 
-// ✅ FIXED: returns ARRAY instead of object (preserves sort order)
 const groupByYear = (items) => {
   const groups = {};
 
@@ -74,7 +73,11 @@ const Timeline = ({ items, mobile = false }) => {
   return (
     <aside
       className={`
-        ${mobile ? "" : "hidden md:block sticky top-24 h-[80vh] overflow-y-auto pr-4"}
+        ${
+          mobile
+            ? "max-w-full overflow-x-hidden overflow-y-auto overscroll-contain touch-pan-y"
+            : "hidden md:block sticky top-24 h-[80vh] overflow-y-auto overflow-x-hidden pr-4"
+        }
         group rounded-2xl p-4 flex flex-col gap-3 transition
         border border-brand-soft 
         bg-slate-100 hover:bg-slate-50 hover:border-brand 
@@ -92,7 +95,6 @@ const Timeline = ({ items, mobile = false }) => {
             : "border-r border-slate-300/60 dark:border-slate-700/60 mr-4 pr-6 space-y-10"}
         `}
       >
-        {/* ✅ FIXED: using grouped.map (NOT Object.entries) */}
         {grouped.map(([year, entries]) => (
           <div key={year} className="space-y-8">
             {/* YEAR HEADER */}
@@ -118,11 +120,11 @@ const Timeline = ({ items, mobile = false }) => {
                 <motion.div
                   ref={ref}
                   key={index}
-                  initial={{ opacity: 0, x: 40 }}
+                  initial={{ opacity: 0, y: mobile ? 12 : 0, x: mobile ? 0 : 40 }}
                   whileInView={{
                     opacity: 1,
                     x: 0,
-                    y: smoothVelocity.get() * 0.1,
+                    y: mobile ? 0 : smoothVelocity.get() * 0.1,
                   }}
                   viewport={{ once: false, margin: "-20% 0px -20% 0px" }}
                   transition={{ duration: 0.45, ease: "easeOut" }}
