@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import PageHeader from "../components/PageHeader.jsx";
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
 import { galleryImages, galleryVideos } from "../data/galleryMedia.js";
 
 const Gallery = () => {
@@ -274,6 +275,7 @@ const Gallery = () => {
 
   return (
     <div className="space-y-10">
+      <Breadcrumbs current="Gallery" />
       <PageHeader kicker="Gallery" title="Media Showcase">
         A collection of screenshots and demo videos from my projects.
       </PageHeader>

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
 
 const Resume = () => {
   const base = import.meta.env.BASE_URL;
@@ -28,6 +29,7 @@ const Resume = () => {
 
   return (
     <div className="space-y-6">
+      <Breadcrumbs current="Resume" />
       <PageHeader
         kicker="Resume"
         title="A One-Page Snapshot of The Things I Have Done and Can Do"

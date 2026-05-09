@@ -1,6 +1,7 @@
 import PageHeader from "../components/PageHeader.jsx";
 import { caseStudies } from "../data/caseStudies.js";
 import CaseStudyCard from "../components/CaseStudyCard.jsx";
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
 
 const CaseStudies = () => {
   const technical = caseStudies.filter((c) => c.category === "technical");
@@ -8,6 +9,7 @@ const CaseStudies = () => {
 
   return (
     <div className="space-y-12">
+      <Breadcrumbs current="Case Studies" />
       <PageHeader
         kicker="Case Studies"
         title="How I build, structure, and think through real projects."

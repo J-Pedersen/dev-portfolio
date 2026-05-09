@@ -1,6 +1,7 @@
 import PageHeader from '../components/PageHeader.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import { projects } from '../data/projects.js';
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
 
 const Projects = () => {
   const featured = projects.filter((p) => p.type === 'featured');
@@ -8,6 +9,7 @@ const Projects = () => {
 
   return (
     <div className="space-y-10">
+      <Breadcrumbs current="Projects" />
       <PageHeader
         kicker="Projects"
         title="The code I’m willing to show other people."

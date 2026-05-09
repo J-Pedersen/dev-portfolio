@@ -1,7 +1,7 @@
 // src/pages/Skills.jsx
 import PageHeader from '../components/PageHeader.jsx';
 import TechIcon from '../components/TechIcon.jsx';
-
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
 import Card from '../components/ui/Card.jsx';
 import CardHeader from '../components/ui/CardHeader.jsx';
 import CardBody from '../components/ui/CardBody.jsx';
@@ -109,6 +109,7 @@ const skills = {
 const Skills = () => {
   return (
     <div className="space-y-8">
+      <Breadcrumbs current="Skills" />
       <PageHeader
         kicker="Skills"
         title="My Current Toolbelt"

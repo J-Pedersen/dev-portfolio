@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
+import Breadcrumbs from "../components/Breadcrumbs.jsx";
 
 const Contact = () => {
   const email = 'obsidiancodedesigns@gmail.com';
@@ -90,6 +91,7 @@ const Contact = () => {
 
   return (
     <div className="space-y-8">
+      <Breadcrumbs current="Contact" />
       <PageHeader
         kicker="Contact"
         title="Let’s talk about code, projects, or both."
