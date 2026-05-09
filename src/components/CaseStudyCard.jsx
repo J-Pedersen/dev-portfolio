@@ -49,7 +49,20 @@ const CaseStudyCard = ({ caseStudy }) => (
       </CardBody>
 
       <CardFooter>
-        <div className="flex flex-wrap gap-2 justify-center">
+        
+        <div className="flex sm:hidden flex-wrap gap-3 justify-center">
+          {(caseStudy.cardTech ?? caseStudy.techStack)
+            ?.slice(0, 4)
+            .map((tech) => (
+              <TechIcon
+                key={tech}
+                tech={tech}
+              />
+            ))}
+        </div>
+
+        {/* Tablet/Desktop: show all */}
+        <div className="hidden sm:flex flex-wrap gap-3 justify-center">
           {(caseStudy.cardTech ?? caseStudy.techStack)?.map((tech) => (
             <TechIcon
               key={tech}

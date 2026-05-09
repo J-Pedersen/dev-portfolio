@@ -72,18 +72,27 @@ const ProjectCard = ({ project }) => (
 
       {/* FOOTER (Tech Icons) */}
       <CardFooter>
-
-        <div className="flex flex-wrap gap-3 justify-center">
-
-        {(project.cardTech ?? project.tags)?.map((tech) => (
-          <TechIcon
-            key={tech}
-            tech={tech}
-          />
-        ))}
-
+        {/* Mobile: show up to 4 */}
+        <div className="flex sm:hidden flex-wrap gap-3 justify-center">
+          {(project.cardTech ?? project.tags)
+            ?.slice(0, 4)
+            .map((tech) => (
+              <TechIcon
+                key={tech}
+                tech={tech}
+              />
+            ))}
         </div>
 
+        {/* Tablet/Desktop: show all */}
+        <div className="hidden sm:flex flex-wrap gap-3 justify-center">
+          {(project.cardTech ?? project.tags)?.map((tech) => (
+            <TechIcon
+              key={tech}
+              tech={tech}
+            />
+          ))}
+        </div>
       </CardFooter>
 
     </Card>

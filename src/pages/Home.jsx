@@ -28,7 +28,6 @@ const Home = () => {
     <div className="space-y-10">
       <section className="grid gap-8 md:grid-cols-[2fr,1.2fr] items-center">
         <div>
-
           <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-brand mb-2">
             Software Developer · Web Designer · Database Engineer
           </p>
@@ -114,63 +113,75 @@ const Home = () => {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3 items-stretch">
-          {featured.map((p) => (
-            <Link
-              key={p.slug}
-              to={`/projects/${p.slug}`}
-              className="block group h-full"
-            >
-              <Card className="h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-center justify-center">
-                    {p.icon && (
-                      <span
+          {featured.map((p) => {
+            const cardTech = p.cardTech ?? p.tags ?? p.techStack ?? [];
+
+            return (
+              <Link
+                key={p.slug}
+                to={`/projects/${p.slug}`}
+                className="block group h-full"
+              >
+                <Card className="h-full">
+                  <CardHeader>
+                    <div className="flex items-center gap-2 text-center justify-center">
+                      {p.icon && (
+                        <span
+                          className="
+                            inline-flex h-9 w-9 items-center justify-center
+                            rounded-full
+                            bg-slate-900
+                            border border-brand
+                          "
+                        >
+                          <TechIcon
+                            name={p.icon}
+                            hideLabel
+                            showBg={false}
+                            interactive={false}
+                            className="h-6 w-6"
+                          />
+                        </span>
+                      )}
+
+                      <h3
                         className="
-                          inline-flex h-9 w-9 items-center justify-center
-                          rounded-full
-                          bg-slate-900
-                          border border-brand
+                          text-sm font-semibold 
+                          text-slate-900 dark:text-slate-50 
+                          group-hover:text-brand-soft
+                          transition-colors
                         "
                       >
-                        <TechIcon
-                          name={p.icon}
-                          hideLabel
-                          showBg={false}
-                          interactive={false}
-                          className="h-6 w-6"
-                        />
-                      </span>
-                    )}
+                        {p.title}
+                      </h3>
+                    </div>
+                  </CardHeader>
 
-                    <h3
-                      className="
-                        text-sm font-semibold 
-                        text-slate-900 dark:text-slate-50 
-                        group-hover:text-brand-soft
-                        transition-colors
-                      "
-                    >
-                      {p.title}
-                    </h3>
-                  </div>
-                </CardHeader>
+                  <CardBody>
+                    <p className="text-xs text-slate-700 dark:text-slate-300">
+                      {p.shortDescription}
+                    </p>
+                  </CardBody>
 
-                <CardBody>
-                  <p className="text-xs text-slate-700 dark:text-slate-300">
-                    {p.shortDescription}
-                  </p>
-                </CardBody>
+                  <CardFooter>
+                    {/* Mobile: max 4 icons */}
+                    <div className="flex sm:hidden flex-wrap gap-3 justify-center">
+                      {cardTech.slice(0, 4).map((tech) => (
+                        <TechIcon key={tech} tech={tech} />
+                      ))}
+                    </div>
 
-                <CardFooter>
-                  <div className="flex flex-wrap gap-3 justify-center">
-                    {(p.cardTech ?? p.tags ?? p.techStack)?.map((tech) => (
-                      <TechIcon key={tech} tech={tech} />
-                    ))}
-                  </div>
-                </CardFooter>
-              </Card>
-            </Link>
-          ))}
+                    {/* Tablet/Desktop: show all icons */}
+                    <div className="hidden sm:flex flex-wrap gap-3 justify-center">
+                      {cardTech.map((tech) => (
+                        <TechIcon key={tech} tech={tech} />
+                      ))}
+                    </div>
+                  </CardFooter>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
       </section>
     </div>
