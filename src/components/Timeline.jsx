@@ -1,7 +1,6 @@
 import { motion, useScroll, useVelocity, useSpring, useInView } from "framer-motion";
 import { useEffect, useMemo, useState, useRef } from "react";
 
-// --- URL auto-link helper ---
 const linkify = (text) => {
   if (!text) return text;
 
@@ -39,12 +38,69 @@ const groupByYear = (items) => {
     .sort(([a], [b]) => {
       if (a === "Other") return 1;
       if (b === "Other") return -1;
-      return Number(b) - Number(a); // newest year first
+      return Number(b) - Number(a);
     })
-    .map(([year, entries]) => [
-      year,
-      [...entries].reverse(), // newest items first
-    ]);
+    .map(([year, entries]) => [year, [...entries].reverse()]);
+};
+
+const TimelineEntry = ({ item, index, mobile, smoothVelocity }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.45 });
+
+  return (
+    <motion.div
+      ref={ref}
+      key={index}
+      initial={{ opacity: 0, y: mobile ? 12 : 0, x: mobile ? 0 : 40 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        y: mobile ? 0 : smoothVelocity.get() * 0.1,
+      }}
+      viewport={{ once: false, margin: "-20% 0px -20% 0px" }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
+      className={`relative space-y-2 z-5 transition-opacity duration-300 ${
+        isInView ? "opacity-100" : "opacity-70"
+      }`}
+    >
+      <div className="w-full flex justify-center z-10">
+        <span
+          className="
+            inline-block px-3 py-1 text-xs font-semibold
+            border border-brand-soft 
+            bg-slate-100 dark:bg-slate-900/60 
+            text-center
+          "
+        >
+          {item.title}
+        </span>
+      </div>
+
+      {item.period && (
+        <p
+          className={`text-sm font-medium transition-colors duration-300 ${
+            isInView
+              ? "text-brand dark:text-brand-soft"
+              : "text-slate-500 dark:text-slate-400"
+          }`}
+        >
+          {item.period}
+        </p>
+      )}
+
+      {item.description && (
+        <p
+          className={`text-sm leading-relaxed transition-colors duration-300 ${
+            isInView
+              ? "text-slate-700 dark:text-slate-300"
+              : "text-slate-500 dark:text-slate-400"
+          }`}
+        >
+          {linkify(item.description)}
+        </p>
+      )}
+    </motion.div>
+  );
 };
 
 const Timeline = ({ items, mobile = false }) => {
@@ -75,7 +131,7 @@ const Timeline = ({ items, mobile = false }) => {
       className={`
         ${
           mobile
-            ? "max-w-full overflow-x-hidden overflow-y-auto overscroll-contain touch-pan-y"
+            ? "w-full max-w-full overflow-x-hidden"
             : "hidden md:block sticky top-24 h-[80vh] overflow-y-auto overflow-x-hidden pr-4"
         }
         group rounded-2xl p-4 flex flex-col gap-3 transition
@@ -90,14 +146,15 @@ const Timeline = ({ items, mobile = false }) => {
       <div
         className={`
           relative 
-          ${mobile
-            ? "space-y-10"
-            : "border-r border-slate-300/60 dark:border-slate-700/60 mr-4 pr-6 space-y-10"}
+          ${
+            mobile
+              ? "space-y-10"
+              : "border-r border-slate-300/60 dark:border-slate-700/60 mr-4 pr-6 space-y-10"
+          }
         `}
       >
         {grouped.map(([year, entries]) => (
           <div key={year} className="space-y-8">
-            {/* YEAR HEADER */}
             <div
               className={`
                 px-3 py-2 font-semibold text-slate-900 dark:text-slate-100 z-20 text-center
@@ -111,69 +168,15 @@ const Timeline = ({ items, mobile = false }) => {
               {year}
             </div>
 
-            {/* ENTRIES */}
-            {entries.map((item, index) => {
-              const ref = useRef(null);
-              const isInView = useInView(ref, { amount: 0.45 });
-
-              return (
-                <motion.div
-                  ref={ref}
-                  key={index}
-                  initial={{ opacity: 0, y: mobile ? 12 : 0, x: mobile ? 0 : 40 }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                    y: mobile ? 0 : smoothVelocity.get() * 0.1,
-                  }}
-                  viewport={{ once: false, margin: "-20% 0px -20% 0px" }}
-                  transition={{ duration: 0.45, ease: "easeOut" }}
-                  className={`relative space-y-2 z-5 transition-opacity duration-300 ${
-                    isInView ? "opacity-100" : "opacity-70"
-                  }`}
-                >
-                  {/* TITLE */}
-                  <motion.div className="w-full flex justify-center z-10">
-                    <motion.span
-                      className="
-                        inline-block px-3 py-1 text-xs font-semibold
-                        border border-brand-soft 
-                        bg-slate-100 dark:bg-slate-900/60 
-                        text-center
-                      "
-                    >
-                      {item.title}
-                    </motion.span>
-                  </motion.div>
-
-                  {/* DATE */}
-                  {item.period && (
-                    <p
-                      className={`text-sm font-medium transition-colors duration-300 ${
-                        isInView
-                          ? "text-brand dark:text-brand-soft"
-                          : "text-slate-500 dark:text-slate-400"
-                      }`}
-                    >
-                      {item.period}
-                    </p>
-                  )}
-
-                  {/* DESCRIPTION */}
-                  {item.description && (
-                    <p
-                      className={`text-sm leading-relaxed transition-colors duration-300 ${
-                        isInView
-                          ? "text-slate-700 dark:text-slate-300"
-                          : "text-slate-500 dark:text-slate-400"
-                      }`}
-                    >
-                      {linkify(item.description)}
-                    </p>
-                  )}
-                </motion.div>
-              );
-            })}
+            {entries.map((item, index) => (
+              <TimelineEntry
+                key={`${item.title}-${index}`}
+                item={item}
+                index={index}
+                mobile={mobile}
+                smoothVelocity={smoothVelocity}
+              />
+            ))}
           </div>
         ))}
       </div>

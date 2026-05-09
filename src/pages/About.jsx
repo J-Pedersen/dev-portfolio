@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { History } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useDragControls } from "framer-motion";
 
 import PageHeader from "../components/PageHeader.jsx";
 import Timeline from "../components/Timeline.jsx";
@@ -8,6 +8,7 @@ import { timelineItems } from "../data/timeline.js";
 
 const About = () => {
   const [openTimeline, setOpenTimeline] = useState(false);
+  const dragControls = useDragControls();
 
   return (
     <div className="space-y-8 relative">
@@ -36,7 +37,7 @@ const About = () => {
         Timeline
       </button>
 
-      {/* MOBILE SLIDE-OUT TIMELINE WITH SWIPE / DRAG-TO-CLOSE */}
+      {/* MOBILE SLIDE-OUT TIMELINE */}
       <AnimatePresence>
         {openTimeline && (
           <>
@@ -61,12 +62,15 @@ const About = () => {
                 bg-white dark:bg-slate-900
                 border-l border-slate-300 dark:border-slate-700
                 shadow-2xl flex flex-col
+                overflow-hidden
               "
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 26 }}
               drag="x"
+              dragControls={dragControls}
+              dragListener={false}
               dragDirectionLock
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={{ left: 0, right: 0.2 }}
@@ -77,21 +81,30 @@ const About = () => {
                 }
               }}
             >
-              {/* Close Button */}
+              {/* Drag / Close Header */}
               <button
+                type="button"
+                onPointerDown={(e) => dragControls.start(e)}
                 onClick={() => setOpenTimeline(false)}
                 className="
-                  p-3 text-sm text-slate-700 dark:text-slate-300
+                  shrink-0 p-3 text-sm text-slate-700 dark:text-slate-300
                   border-b border-slate-300 dark:border-slate-700
                   flex justify-between items-center
+                  cursor-grab active:cursor-grabbing
+                  touch-pan-x
                 "
               >
                 <span>Close Timeline</span>
                 <span className="text-lg leading-none">✕</span>
               </button>
 
-              {/* Content */}
-              <div className="flex-1 overflow-y-auto overflow-x-hidden overscroll-contain touch-pan-y p-4">
+              {/* Vertical Scroll Content */}
+              <div
+                className="
+                  flex-1 min-h-0 overflow-y-auto overflow-x-hidden
+                  overscroll-contain touch-pan-y p-4
+                "
+              >
                 <Timeline items={timelineItems} mobile />
               </div>
             </motion.div>
@@ -101,7 +114,6 @@ const About = () => {
 
       {/* DESKTOP LAYOUT */}
       <div className="grid md:grid-cols-[2fr,1fr] gap-10">
-        {/* LEFT COLUMN */}
         <section className="space-y-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
           <p>
             I started out in my development journey really having no idea just how much I would 
@@ -156,7 +168,6 @@ const About = () => {
           </section>
         </section>
 
-        {/* RIGHT COLUMN — Desktop Timeline */}
         <div className="hidden md:block">
           <Timeline items={timelineItems} />
         </div>
