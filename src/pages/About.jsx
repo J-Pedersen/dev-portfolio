@@ -87,15 +87,48 @@ const About = () => {
                 onPointerDown={(e) => dragControls.start(e)}
                 onClick={() => setOpenTimeline(false)}
                 className="
-                  shrink-0 p-3 text-sm text-slate-700 dark:text-slate-300
-                  border-b border-slate-300 dark:border-slate-700
-                  flex justify-between items-center
+                  shrink-0 relative overflow-hidden
+
+                  bg-brand dark:bg-brand-soft
+                  text-white dark:text-slate-950
+
+                  border-b border-brand-soft
+
+                  px-4 py-4
+
+                  flex items-center justify-center
+
+                  font-semibold tracking-wide text-sm
+
                   cursor-grab active:cursor-grabbing
                   touch-pan-x
+
+                  transition
+                  hover:brightness-110
+                  active:scale-[0.98]
                 "
               >
-                <span>Close Timeline</span>
-                <span className="text-lg leading-none">✕</span>
+                {/* Optional drag handle */}
+                <span
+                  className="
+                    absolute top-2 left-1/2 -translate-x-1/2
+                    h-1 w-12 rounded-full
+                    bg-white/40 dark:bg-slate-950/20
+                  "
+                />
+
+                <span className="pointer-events-none">
+                  Close Timeline
+                </span>
+
+                <span
+                  className="
+                    absolute right-4 text-lg leading-none
+                    opacity-80
+                  "
+                >
+                  ✕
+                </span>
               </button>
 
               {/* Vertical Scroll Content */}
