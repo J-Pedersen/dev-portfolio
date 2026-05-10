@@ -214,7 +214,7 @@ const getRandomColorFromString = (str) => {
 const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
   if (!visible || !anchorRect) return null;
 
-  const tooltipWidth = 220;
+  const tooltipWidth = 260;
   const spacing = 10;
 
   let left = anchorRect.left + anchorRect.width / 2;
@@ -230,11 +230,6 @@ const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
     <div
       className="
         pointer-events-none fixed z-[9998]
-        w-[260px] rounded-2xl
-        border border-brand-soft
-        bg-slate-200/95 dark:bg-slate-800/95
-        shadow-lg
-        relative overflow-visible
       "
       style={{
         left,
@@ -242,41 +237,53 @@ const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
         transform: "translate(-50%, -100%)",
       }}
     >
-      {iconSrc && (
-        <div
-          className="
-            absolute -top-10 -right-10 z-20
-            h-28 w-28 rounded-full
-            border-2 border-brand
-            bg-slate-950/30 backdrop-blur-sm
-            flex items-center justify-center
-            shadow-[0_0_18px_rgba(99,102,241,0.35)]
-          "
-        >
-          <img
-            src={iconSrc}
-            alt=""
-            draggable="false"
-            className="h-16 w-16 object-contain"
-          />
-        </div>
-      )}
       <div
         className="
-          px-3 py-2
-          bg-brand dark:bg-brand-soft
-          border-b border-brand-soft
+          relative w-[260px] rounded-2xl
+          border border-brand-soft
+          bg-slate-200/95 dark:bg-slate-800/95
+          shadow-lg
+          overflow-visible
         "
       >
-        <p className="text-xs font-semibold text-slate-100 text-center">
-          {label}
-        </p>
-      </div>
+        {iconSrc && (
+          <div
+            className="
+              absolute -top-10 -right-10 z-20
+              h-28 w-28 rounded-full
+              border-2 border-brand
+              bg-slate-950/30 backdrop-blur-sm
+              flex items-center justify-center
+              shadow-[0_0_18px_rgba(99,102,241,0.35)]
+            "
+          >
+            <img
+              src={iconSrc}
+              alt=""
+              draggable="false"
+              className="h-16 w-16 object-contain"
+            />
+          </div>
+        )}
 
-      <div className="px-3 py-2">
-        <p className="text-[11px] text-slate-700 dark:text-slate-300">
-          {description || "Click for details."}
-        </p>
+        <div
+          className="
+            px-3 py-2
+            bg-brand dark:bg-brand-soft
+            border-b border-brand-soft
+            rounded-t-2xl
+          "
+        >
+          <p className="text-xs font-semibold text-slate-100 text-center">
+            {label}
+          </p>
+        </div>
+
+        <div className="px-3 py-2 pr-16">
+          <p className="text-[11px] text-slate-700 dark:text-slate-300">
+            {description || "Click for details."}
+          </p>
+        </div>
       </div>
     </div>
   );
