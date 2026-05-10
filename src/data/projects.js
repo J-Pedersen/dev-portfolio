@@ -249,8 +249,8 @@ export const projects = [
     type: 'featured',
     githubUrl: 'https://github.com/J-Pedersen/moffat-bay-marina-java',
     icon: 'moffat_bay_marina-icon',
-    tags: ['Java', 'Jakarta EE', 'CSS', 'HTML','Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
-    techStack: ['Java', 'Jakarta EE', 'CSS', 'HTML', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
+    tags: ['Java', 'Jakarta EE', 'CSS', 'HTML', 'MySQL', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
+    techStack: ['Java', 'Jakarta EE', 'CSS', 'HTML', "MySQL", 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
     cardTech: ['Java', 'CSS', 'HTML', 'Server-Side'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`, title: "Create Account" },
@@ -415,8 +415,8 @@ export const projects = [
     githubUrl:
       'https://github.com/J-Pedersen/csd-310/tree/main/module_12',
     icon: 'bacchus_winery-icon',
-    tags: ['Python', 'SQL', 'Git', 'GitHub', "Microsoft Office"],
-    techStack: ['Python', 'SQL', 'Git', 'GitHub', "Microsoft Office"],
+    tags: ['Python', 'SQL', 'MySQL', 'Git', 'GitHub', 'Microsoft Office'],
+    techStack: ['Python', 'SQL', 'MySQL', 'Git', 'GitHub', 'Microsoft Office'],
     cardTech: ['Python', 'SQL', 'Git', 'GitHub'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/bacchus-winery-python/Bacchus Winery - Arrival Dates.jpg`, title: "Arrival Dates Report Output" },
