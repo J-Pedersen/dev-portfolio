@@ -279,8 +279,8 @@ const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
           </p>
         </div>
 
-        <div className="px-3 py-2 pr-16">
-          <p className="text-[11px] text-center text-slate-700 dark:text-slate-300">
+        <div className="px-6 py-3">
+          <p className="text-[11px] leading-relaxed text-center text-slate-700 dark:text-slate-300">
             {description || "Click for details."}
           </p>
         </div>
