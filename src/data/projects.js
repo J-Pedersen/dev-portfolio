@@ -251,7 +251,7 @@ export const projects = [
     icon: 'moffat_bay_marina-icon',
     tags: ['Java', 'Jakarta EE', 'CSS', 'HTML', 'MySQL', 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
     techStack: ['Java', 'Jakarta EE', 'CSS', 'HTML', "MySQL", 'Server-Side', 'Inkscape', 'Photoshop', 'Git', 'GitHub', "Microsoft Office"],
-    cardTech: ['Java', 'CSS', 'HTML', 'Server-Side'],
+    cardTech: ['Jakarta EE', 'CSS', 'HTML', 'Server-Side'],
     media: [
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`, title: "Create Account" },
       { type: "image", src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`, title: "Create Reservation" },
