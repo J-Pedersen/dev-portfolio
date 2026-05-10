@@ -250,7 +250,7 @@ const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
           <div
             className="
               absolute -top-10 -right-10 z-20
-              h-16 w-16 rounded-full
+              h-20 w-20 rounded-full
               border-2 border-brand
               bg-slate-950/30 backdrop-blur-sm
               flex items-center justify-center
