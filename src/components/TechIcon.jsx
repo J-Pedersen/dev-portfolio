@@ -211,7 +211,7 @@ const getRandomColorFromString = (str) => {
   return RANDOM_BG_COLORS[Math.abs(hash) % RANDOM_BG_COLORS.length];
 };
 
-const TechTooltip = ({ visible, anchorRect, label, description }) => {
+const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
   if (!visible || !anchorRect) return null;
 
   const tooltipWidth = 220;
@@ -230,10 +230,11 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
     <div
       className="
         pointer-events-none fixed z-[9998]
-        w-[220px] rounded-2xl overflow-hidden
+        w-[260px] rounded-2xl
         border border-brand-soft
-        bg-slate-200 dark:bg-slate-800
+        bg-slate-200/95 dark:bg-slate-800/95
         shadow-lg
+        relative overflow-visible
       "
       style={{
         left,
@@ -241,6 +242,25 @@ const TechTooltip = ({ visible, anchorRect, label, description }) => {
         transform: "translate(-50%, -100%)",
       }}
     >
+      {iconSrc && (
+        <div
+          className="
+            absolute -top-10 -right-10 z-20
+            h-28 w-28 rounded-full
+            border-2 border-brand
+            bg-slate-950/30 backdrop-blur-sm
+            flex items-center justify-center
+            shadow-[0_0_18px_rgba(99,102,241,0.35)]
+          "
+        >
+          <img
+            src={iconSrc}
+            alt=""
+            draggable="false"
+            className="h-16 w-16 object-contain"
+          />
+        </div>
+      )}
       <div
         className="
           px-3 py-2
@@ -460,6 +480,7 @@ const TechIcon = ({
           anchorRect={anchorRect}
           label={label}
           description={description}
+          iconSrc={src}
         />
       )}
 
