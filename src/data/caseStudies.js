@@ -103,7 +103,7 @@ Local Image Storage`,
   },
 
   {
-    slug: "moffat-bay-marina-java",
+    slug: "moffat-bay-marina",
     category: "technical",
     categoryLabel: "Technical",
 

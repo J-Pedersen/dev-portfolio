@@ -4,9 +4,9 @@ import MediaCarousel from "../../components/MediaCarousel.jsx";
 import CaseStudyAside from "../../components/CaseStudyAside.jsx";
 import { caseStudies } from "../../data/caseStudies.js";
 
-const CaseStudyMoffatBayMarinaJava = () => {
+const CaseStudyMoffatBayMarina = () => {
   const caseStudy = caseStudies.find(
-    (c) => c.slug === "moffat-bay-marina-java"
+    (c) => c.slug === "moffat-bay-marina"
   );
 
   if (!caseStudy) {
@@ -213,4 +213,4 @@ const CaseStudyMoffatBayMarinaJava = () => {
   );
 };
 
-export default CaseStudyMoffatBayMarinaJava;
+export default CaseStudyMoffatBayMarina;
