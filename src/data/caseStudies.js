@@ -103,6 +103,101 @@ Local Image Storage`,
   },
 
   {
+    slug: "moffat-bay-marina-java",
+    category: "technical",
+    categoryLabel: "Technical",
+
+    title: "Moffat Bay Marina",
+    icon: "moffat_bay_marina-icon",
+
+    summary:
+      "A collaborative Java capstone project focused on modeling marina reservation workflows, customer management, scheduling, and business logic using object-oriented design principles.",
+
+    role: "Java Developer",
+
+    techStack: [
+      "Java",
+      "Jakarta EE",
+      "HTML",
+      "CSS",
+      "Server-Side",
+      "Git",
+      "GitHub",
+      "Photoshop",
+      "Inkscape",
+      "Microsoft Office",
+    ],
+
+    tags: [
+      "Java",
+      "Jakarta EE",
+      "HTML",
+      "CSS",
+      "Server-Side",
+      "Git",
+      "GitHub",
+      "Photoshop",
+      "Inkscape",
+      "Microsoft Office",
+    ],
+
+    cardTech: [
+      "Java",
+      "HTML",
+      "CSS",
+      "Server-Side",
+    ],
+
+    githubUrl:
+      "https://github.com/J-Pedersen/moffat-bay-marina-java",
+
+    demoUrl: "",
+
+    media: [
+      {
+        type: "image",
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Account1.jpg`,
+        title: "Create Account",
+      },
+      {
+        type: "image",
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`,
+        title: "Create Reservation",
+      },
+      {
+        type: "image",
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Reservation Lookup1.jpg`,
+        title: "Reservation Lookup",
+      },
+      {
+        type: "image",
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Upcoming Reservations1.jpg`,
+        title: "Upcoming Reservations",
+      },
+      {
+        type: "image",
+        src: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Waitlist Add1.jpg`,
+        title: "Waitlist Add",
+      },
+      {
+        type: "video",
+        src: `${import.meta.env.BASE_URL}videos/moffat-bay-marina-java-demo.mp4`,
+        title: "Demo Video",
+        poster: `${import.meta.env.BASE_URL}screenshots/moffat-bay-marina-java/Moffat-Bay-Marina - Java - Create Reservation1.jpg`,
+      },
+    ],
+
+    architecture: `Console / Server-Side Workflow
+  ↓
+  Java Domain Models
+  (Customers, Boats, Reservations)
+  ↓
+  Business Logic Services
+  ↓
+  In-Memory Collections & Scheduling`,
+  },
+
+  {
     slug: "bookclub",
     category: "technical",
     categoryLabel: "Technical",
