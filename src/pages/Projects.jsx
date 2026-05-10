@@ -2,14 +2,12 @@ import PageHeader from '../components/PageHeader.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import { projects } from '../data/projects.js';
 import Breadcrumbs from "../components/Breadcrumbs.jsx";
-import PageShell from "../components/PageShell.jsx";
 
 const Projects = () => {
   const featured = projects.filter((p) => p.type === 'featured');
   const gallery = projects.filter((p) => p.type !== 'featured');
+
   return (
-    <PageShell variant="projects">
-      <div className="space-y-8"></div>
     <div className="space-y-10">
       <Breadcrumbs current="Projects" />
       <PageHeader
@@ -54,8 +52,8 @@ const Projects = () => {
         </section>
       )}
     </div>
-    </PageShell>
   );
 };
+
 
 export default Projects;
