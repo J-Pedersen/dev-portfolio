@@ -249,7 +249,7 @@ const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
         {iconSrc && (
           <div
             className="
-              absolute -top-10 -right-10 z-20
+              absolute -top-8 -right-8 z-20
               h-20 w-20 rounded-full
               border-2 border-brand
               bg-slate-950/30 backdrop-blur-sm
@@ -261,7 +261,7 @@ const TechTooltip = ({ visible, anchorRect, label, description, iconSrc }) => {
               src={iconSrc}
               alt=""
               draggable="false"
-              className="h-16 w-16 object-contain"
+              className="h-12 w-12 object-contain"
             />
           </div>
         )}
