@@ -143,9 +143,11 @@ Local Image Storage`,
 
     cardTech: [
       "Java",
+      "Jakarta EE",
       "HTML",
       "CSS",
       "Server-Side",
+      "GitHub",
     ],
 
     githubUrl:
