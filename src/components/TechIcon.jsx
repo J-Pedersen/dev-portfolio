@@ -255,19 +255,17 @@ const TechTooltip = ({
       >
         {iconSrc && (
           <div
-            className={`
-              absolute -top-8 -right-8 z-20
-              h-20 w-20 rounded-full
+            className="
+              absolute -top-7 -right-7 z-20
               flex items-center justify-center
-              shadow-[0_0_18px_rgba(99,102,241,0.35)]
-              ${bgColor}
-            `}
+              drop-shadow-[0_0_12px_rgba(99,102,241,0.35)]
+            "
           >
             <img
               src={iconSrc}
               alt=""
               draggable="false"
-              className="h-12 w-12 object-contain"
+              className="h-16 w-16 object-contain"
             />
           </div>
         )}
