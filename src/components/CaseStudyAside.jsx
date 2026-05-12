@@ -24,7 +24,7 @@ const CaseStudyAside = ({
         <div className="space-y-2 text-center w-full">
           <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
             <Layers size={14} />
-            <h3 className="text-sm font-semibold">Tech / Tools</h3>
+            <h3 className="text-sm font-semibold">Tech Stack</h3>
           </div>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
             {techStack.join(" · ")}
