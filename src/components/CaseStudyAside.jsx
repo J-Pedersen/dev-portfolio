@@ -25,6 +25,7 @@ const CaseStudyAside = ({
           <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
             <Tag size={20} />
             <h3 className="text-sm font-semibold">TAGS</h3>
+            
           </div>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
             {techStack.join(" · ")}
