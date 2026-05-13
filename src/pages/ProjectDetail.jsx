@@ -174,40 +174,44 @@ const ProjectDetail = () => {
 
           <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
 
-          <div className="space-y-2 text-center w-full">
-            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <h3 className="text-sm font-semibold">LINKS</h3>
-            </div>
-
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="block text-brand hover:text-brand-soft transition"
-              >
-                GitHub →
-              </a>
-            )}
-
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="block text-brand hover:text-brand-soft transition"
-              >
-                Live Demo →
-              </a>
-            )}
-
-            {project.media?.some((item) => item.type === "video") && (
-              <div className="mt-2 flex justify-center">
-                <span className="text-[11px] text-slate-500 dark:text-slate-400">
-                  Demo video included in carousel
-                </span>
+            <div className="space-y-2 text-center w-full">
+              <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
+                <Link size={20} />
+                <h3 className="text-sm font-semibold text-slate-600 dark:text-slate-300">
+                  LINKS
+                </h3>
               </div>
-            )}
+            <div className="flex flex-wrap justify-center gap-1">
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-brand hover:text-brand-soft transition"
+                >
+                  GitHub →
+                </a>
+              )}
+
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-brand hover:text-brand-soft transition"
+                >
+                  Live Demo →
+                </a>
+              )}
+
+              {project.media?.some((item) => item.type === "video") && (
+                <div className="mt-2 flex justify-center">
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400">
+                    Demo video included in carousel
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
