@@ -90,7 +90,7 @@ const CaseStudyAside = ({
           <div className="space-y-2 text-center w-full">
             <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
               <CircuitBoard size={14} />
-              <h3 className="text-sm font-semibold">Architecture</h3>
+              <h3 className="text-sm font-semibold">Structure</h3>
             </div>
 
             <p className="text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
