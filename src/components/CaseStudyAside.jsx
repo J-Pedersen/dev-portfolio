@@ -38,7 +38,7 @@ const CaseStudyAside = ({
 
           <div className="space-y-2 text-center w-full">
             <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <Layers size={14} />
+              <Layers size={20} />
               <h3 className="text-sm font-semibold">TECH</h3>
             </div>
 
