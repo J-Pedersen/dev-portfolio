@@ -1,10 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects.js";
 import PageHeader from "../components/PageHeader.jsx";
-import TagPill from "../components/TagPill.jsx";
-import { Layers, Tag, Link, Play, CircuitBoard } from "lucide-react";
 import ProjectLayout from "../layouts/ProjectLayout.jsx";
 import MediaCarousel from "../components/MediaCarousel.jsx";
+import DetailAside from "../components/DetailAside.jsx";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -16,6 +15,7 @@ const ProjectDetail = () => {
         <p className="text-sm text-slate-600 dark:text-slate-300">
           Project not found.
         </p>
+
         <Link
           to="/projects"
           className="text-xs text-brand hover:text-brand-soft"
@@ -25,6 +25,18 @@ const ProjectDetail = () => {
       </div>
     );
   }
+
+  const links = [
+    project.githubUrl && {
+      label: "GitHub",
+      href: project.githubUrl,
+    },
+
+    project.demoUrl && {
+      label: "Live Demo",
+      href: project.demoUrl,
+    },
+  ].filter(Boolean);
 
   return (
     <ProjectLayout title={project.title}>
@@ -71,42 +83,51 @@ const ProjectDetail = () => {
                 >
                   <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.397 7.868 10.918.575.11.785-.25.785-.556 0-.273-.01-1-.015-1.96-3.2.695-3.878-1.543-3.878-1.543-.523-1.33-1.277-1.685-1.277-1.685-1.044-.714.08-.7.08-.7 1.155.082 1.764 1.187 1.764 1.187 1.028 1.762 2.695 1.253 3.35.958.103-.744.402-1.253.732-1.542-2.555-.29-5.244-1.278-5.244-5.685 0-1.256.453-2.283 1.187-3.088-.12-.29-.52-1.46.112-3.044 0 0 .975-.312 3.195 1.18a11.17 11.17 0 0 1 2.91-.39c.987.005 1.98.133 2.91.39 2.22-1.492 3.193-1.18 3.193-1.18.634 1.584.234 2.754.114 3.044.737.805 1.185 1.832 1.185 3.088 0 4.42-2.694 5.392-5.256 5.675.41.35.78 1.033.78 2.084 0 1.504-.015 2.718-.015 3.088 0 .309.206.672.792.558C20.21 21.39 23.5 17.08 23.5 12 23.5 5.648 18.352.5 12 .5z" />
                 </svg>
+
                 View on GitHub
               </a>
             </div>
           ) : null}
 
+          {/* OVERVIEW */}
           <div className="space-y-3">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
               Overview
             </h2>
+
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
               {project.longDescription}
             </p>
           </div>
 
+          {/* PROBLEM */}
           <div className="space-y-3">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
               The Problem
             </h2>
+
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
               {project.problem}
             </p>
           </div>
 
+          {/* SOLUTION */}
           <div className="space-y-3">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
               The Solution
             </h2>
+
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
               {project.solution}
             </p>
           </div>
 
+          {/* DECISIONS */}
           <div className="space-y-3">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
               Key Decisions
             </h2>
+
             <ul className="list-disc pl-5 text-slate-700 dark:text-slate-300 space-y-1">
               {project.decisions.map((d, i) => (
                 <li key={i}>{d}</li>
@@ -114,10 +135,12 @@ const ProjectDetail = () => {
             </ul>
           </div>
 
+          {/* CHALLENGES */}
           <div className="space-y-3">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
               Challenges
             </h2>
+
             <ul className="list-disc pl-5 text-slate-700 dark:text-slate-300 space-y-1">
               {project.challenges.map((c, i) => (
                 <li key={i}>{c}</li>
@@ -125,108 +148,26 @@ const ProjectDetail = () => {
             </ul>
           </div>
 
+          {/* OUTCOME */}
           <div className="space-y-3 pb-10">
             <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
               Outcome
             </h2>
+
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
               {project.outcome}
             </p>
           </div>
         </div>
 
-        <aside
-          className="
-            p-5 rounded-2xl text-xs flex flex-col items-center space-y-6
-            border border-slate-300 bg-gradient-to-b from-white to-slate-100
-            dark:border-slate-800 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950
-            shadow-sidebar dark:shadow-sidebar-dark
-            ring-1 ring-indigo-400/10
-            animate-fadeInSlow
-            sticky top-24
-          "
-        >
-          <div className="space-y-2 text-center w-full">
-            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <Tag size={20} />
-              <h3 className="text-sm font-semibold">TAGS</h3>
-            </div>
-            <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-              {project.techStack.join(" · ")}
-            </p>
-          </div>
-
-          <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
-
-          {project.tags?.length > 0 && (
-            <div className="space-y-2 text-center w-full">
-              <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-                <Layers size={20} />
-                <h3 className="text-sm font-semibold">TECH</h3>
-              </div>
-              <div className="flex flex-wrap justify-center gap-1">
-                {project.tags.map((tag) => (
-                  <TagPill key={tag} label={tag} />
-                ))}
-              </div>
-            </div>
-          )}
-
-          <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
-
-            <div className="space-y-2 text-center w-full">
-              <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-                <Link size={20} />
-                <h3 className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-                  LINKS
-                </h3>
-              </div>
-            <div className="flex flex-wrap justify-center gap-1">
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block text-brand hover:text-brand-soft transition"
-                >
-                  GitHub →
-                </a>
-              )}
-
-              {project.demoUrl && (
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block text-brand hover:text-brand-soft transition"
-                >
-                  Live Demo →
-                </a>
-              )}
-
-              {project.media?.some((item) => item.type === "video") && (
-                <div className="mt-2 flex justify-center">
-                  <span className="text-[11px] text-slate-500 dark:text-slate-400">
-                    Demo video included in carousel
-                  </span>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
-
-          <div className="space-y-2 text-center w-full">
-            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <CircuitBoard size={20} />
-              <h3 className="text-sm font-semibold">STRUCTURE</h3>
-            </div>
-
-            <p className="text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
-              {project.architecture}
-            </p>
-          </div>
-        </aside>
+        {/* SHARED ASIDE */}
+        <DetailAside
+          techStack={project.techStack}
+          tags={project.tags}
+          links={links}
+          media={project.media}
+          architecture={project.architecture}
+        />
       </section>
     </ProjectLayout>
   );
