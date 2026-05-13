@@ -56,22 +56,25 @@ const CaseStudyAside = ({
           <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
 
           <div className="space-y-2 text-center w-full">
-            <Link size={20} />
-            <h3 className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-              LINKS
-            </h3>
-
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noreferrer"
-                className="block text-brand hover:text-brand-soft transition"
-              >
-                {link.label} →
-              </a>
-            ))}
+            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
+              <Link size={20} />
+              <h3 className="text-sm font-semibold text-slate-600 dark:text-slate-300">
+                LINKS
+              </h3>
+            </div>
+            <div className="flex flex-wrap justify-center gap-1">
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-brand hover:text-brand-soft transition"
+                >
+                  {link.label} →
+                </a>
+              ))}
+            </div>
 
             {media?.some((item) => item.type === "video") && (
               <div className="mt-2 flex justify-center">
