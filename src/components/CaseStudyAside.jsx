@@ -1,4 +1,4 @@
-import { Layers, Tag, Link, CircuitBoard } from "lucide-react";
+import { Layers, Tag, Link, Boxes } from "lucide-react";
 import TagPill from "./TagPill.jsx";
 
 const CaseStudyAside = ({
@@ -93,7 +93,7 @@ const CaseStudyAside = ({
 
           <div className="space-y-2 text-center w-full">
             <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <CircuitBoard size={20} />
+              <Boxes size={20} />
               <h3 className="text-sm font-semibold">STRUCTURE</h3>
             </div>
 
