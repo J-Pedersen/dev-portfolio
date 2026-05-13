@@ -24,7 +24,7 @@ const CaseStudyAside = ({
         <div className="space-y-2 text-center w-full">
           <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
             <Tag size={14} />
-            <h3 className="text-sm font-semibold">TAGs</h3>
+            <h3 className="text-sm font-semibold">TAGS</h3>
           </div>
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
             {techStack.join(" · ")}
@@ -57,7 +57,7 @@ const CaseStudyAside = ({
 
           <div className="space-y-2 text-center w-full">
             <h3 className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-              LINKs
+              LINKS
             </h3>
 
             {links.map((link) => (
