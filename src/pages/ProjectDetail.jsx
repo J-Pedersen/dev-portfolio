@@ -149,7 +149,7 @@ const ProjectDetail = () => {
           <div className="space-y-2 text-center w-full">
             <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
               <Tag size={14} />
-              <h3 className="text-sm font-semibold">Tags</h3>
+              <h3 className="text-sm font-semibold">TAGS</h3>
             </div>
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
               {project.techStack.join(" · ")}
@@ -162,7 +162,7 @@ const ProjectDetail = () => {
             <div className="space-y-2 text-center w-full">
               <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
                 <Layers size={14} />
-                <h3 className="text-sm font-semibold">Tech</h3>
+                <h3 className="text-sm font-semibold">TECH</h3>
               </div>
               <div className="flex flex-wrap justify-center gap-1">
                 {project.tags.map((tag) => (
@@ -176,7 +176,7 @@ const ProjectDetail = () => {
 
           <div className="space-y-2 text-center w-full">
             <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <h3 className="text-sm font-semibold">Links</h3>
+              <h3 className="text-sm font-semibold">LINKS</h3>
             </div>
 
             {project.githubUrl && (
@@ -215,7 +215,7 @@ const ProjectDetail = () => {
           <div className="space-y-2 text-center w-full">
             <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
               <CircuitBoard size={14} />
-              <h3 className="text-sm font-semibold">Structure</h3>
+              <h3 className="text-sm font-semibold">STRUCTURE</h3>
             </div>
 
             <p className="text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
