@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects.js";
 import PageHeader from "../components/PageHeader.jsx";
 import TagPill from "../components/TagPill.jsx";
-import { Layers, Tag, Link, Play, Boxes } from "lucide-react";
+import { Layers, Tag, Link, Play, CircuitBoard } from "lucide-react";
 import ProjectLayout from "../layouts/ProjectLayout.jsx";
 import MediaCarousel from "../components/MediaCarousel.jsx";
 
@@ -218,7 +218,7 @@ const ProjectDetail = () => {
 
           <div className="space-y-2 text-center w-full">
             <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <Boxes size={20} />
+              <CircuitBoard size={20} />
               <h3 className="text-sm font-semibold">STRUCTURE</h3>
             </div>
 
