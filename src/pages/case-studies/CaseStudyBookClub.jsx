@@ -1,7 +1,7 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
 import MediaCarousel from "../../components/MediaCarousel.jsx";
-import CaseStudyAside from "../../components/CaseStudyAside.jsx";
+import DetailAside from "../../components/DetailAside.jsx";
 import { caseStudies } from "../../data/caseStudies.js";
 
 const CaseStudyBookClub = () => {
@@ -162,12 +162,13 @@ const CaseStudyBookClub = () => {
           </section>
         </div>
 
-        <CaseStudyAside
-          techStack={caseStudy.techStack}
-          tags={caseStudy.tags}
-          media={caseStudy.media}
+        {/* ASIDE */}
+        <DetailAside
+          techStack={project.techStack}
+          tags={project.tags}
           links={links}
-          architecture={caseStudy.architecture}
+          media={project.media}
+          architecture={project.architecture}
         />
       </section>
     </CaseStudyLayout>
