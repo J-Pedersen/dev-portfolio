@@ -111,6 +111,7 @@ const DetailAside = ({
         </>
       )}
     </aside>
+    
   );
 };
 
