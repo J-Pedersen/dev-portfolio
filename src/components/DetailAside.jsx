@@ -5,10 +5,10 @@ const AsideHeader = ({ icon: Icon, title }) => {
   return (
     <div
       className="
-        mx-auto flex w-full items-center justify-center gap-2
+        mx-auto flex w-full max-w-[220px] items-center justify-center gap-2
         rounded-full px-3 py-1
         text-slate-100
-        bg-gradient-to-r from-transparent via-brand to-transparent
+        bg-gradient-to-r from-transparent via-brand/80 to-transparent
         dark:via-brand-soft
       "
     >
