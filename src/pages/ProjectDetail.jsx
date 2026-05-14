@@ -160,7 +160,7 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* SHARED ASIDE */}
+        {/* ASIDE */}
         <DetailAside
           techStack={project.techStack}
           tags={project.tags}
