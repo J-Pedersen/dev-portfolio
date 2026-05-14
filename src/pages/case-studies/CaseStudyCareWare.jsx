@@ -193,11 +193,11 @@ const CaseStudyCareWare = () => {
 
         {/* ASIDE */}
         <DetailAside
-          techStack={project.techStack}
-          tags={project.tags}
+          techStack={caseStudy.techStack}
+          tags={caseStudy.tags}
           links={links}
-          media={project.media}
-          architecture={project.architecture}
+          media={caseStudy.media}
+          architecture={caseStudy.architecture}
         />
       </section>
     </CaseStudyLayout>
