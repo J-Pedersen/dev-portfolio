@@ -1,7 +1,7 @@
 import PageHeader from "../../components/PageHeader.jsx";
 import CaseStudyLayout from "../../layouts/CaseStudyLayout.jsx";
 import MediaCarousel from "../../components/MediaCarousel.jsx";
-import DetailAside from "../components/DetailAside.jsx";
+import DetailAside from "../../components/DetailAside.jsx";
 import { caseStudies } from "../../data/caseStudies.js";
 
 const CaseStudyMoffatBayMarina = () => {
