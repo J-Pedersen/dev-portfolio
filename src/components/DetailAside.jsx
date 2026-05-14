@@ -1,6 +1,23 @@
 import { Layers, Tag, Link, CircuitBoard } from "lucide-react";
 import TagPill from "./TagPill.jsx";
 
+const AsideHeader = ({ icon: Icon, title }) => {
+  return (
+    <div
+      className="
+        mx-auto flex w-full items-center justify-center gap-2
+        rounded-full px-3 py-1
+        text-slate-100
+        bg-gradient-to-r from-transparent via-brand to-transparent
+        dark:via-brand-soft
+      "
+    >
+      <Icon size={20} />
+      <h3 className="text-sm font-semibold">{title}</h3>
+    </div>
+  );
+};
+
 const DetailAside = ({
   techStack = [],
   tags = [],
@@ -23,10 +40,7 @@ const DetailAside = ({
       {/* TAGS */}
       {techStack.length > 0 && (
         <div className="space-y-2 text-center w-full">
-          <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-            <Tag size={20} />
-            <h3 className="text-sm font-semibold">TAGS</h3>
-          </div>
+          <AsideHeader icon={Tag} title="TAGS" />
 
           <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
             {techStack.join(" · ")}
@@ -40,10 +54,7 @@ const DetailAside = ({
           <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
 
           <div className="space-y-2 text-center w-full">
-            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <Layers size={20} />
-              <h3 className="text-sm font-semibold">TECH</h3>
-            </div>
+            <AsideHeader icon={Layers} title="TECH" />
 
             <div className="flex flex-wrap justify-center gap-1">
               {tags.map((tag) => (
@@ -60,12 +71,7 @@ const DetailAside = ({
           <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
 
           <div className="space-y-2 text-center w-full">
-            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <Link size={20} />
-              <h3 className="text-sm font-semibold text-slate-600 dark:text-slate-300">
-                LINKS
-              </h3>
-            </div>
+            <AsideHeader icon={Link} title="LINKS" />
 
             <div className="flex flex-col items-center justify-center gap-1">
               {links.map((link) => (
@@ -96,10 +102,7 @@ const DetailAside = ({
           <div className="w-10 h-px bg-slate-300/60 dark:bg-slate-700/60" />
 
           <div className="space-y-2 text-center w-full">
-            <div className="flex items-center justify-center gap-1 text-slate-600 dark:text-slate-300">
-              <CircuitBoard size={20} />
-              <h3 className="text-sm font-semibold">STRUCTURE</h3>
-            </div>
+            <AsideHeader icon={CircuitBoard} title="STRUCTURE" />
 
             <p className="text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed">
               {architecture}
