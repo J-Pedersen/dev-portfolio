@@ -157,11 +157,16 @@ const Timeline = ({ items, mobile = false }) => {
           <div key={year} className="space-y-8">
             <div
               className={`
-                px-3 py-2 font-semibold text-slate-900 dark:text-slate-100 z-20 text-center
+                z-20 mx-auto flex w-full max-w-[220px]
+                items-center justify-center
+                rounded-full px-3 py-1
+                text-sm font-semibold text-slate-100
+                bg-gradient-to-r from-transparent via-brand/80 to-transparent
+                dark:via-brand-soft
                 ${
                   mobile
-                    ? "border border-brand-soft/50 bg-brand/50 backdrop-blur shadow-sm"
-                    : "sticky top-0 bg-brand/50 backdrop-blur-md border border-brand-soft/50 rounded-md shadow-sm"
+                    ? ""
+                    : "sticky top-0"
                 }
               `}
             >
