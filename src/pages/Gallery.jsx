@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import PageHeader from "../components/PageHeader.jsx";
 import Breadcrumbs from "../components/Breadcrumbs.jsx";
 import { galleryImages, galleryVideos } from "../data/galleryMedia.js";
+import BackToTopButton from "../components/BackToTopButton.jsx";
 
 const Gallery = () => {
   const [selectedProject, setSelectedProject] = useState("All");
@@ -889,37 +890,10 @@ const Gallery = () => {
           </div>
         </div>
       )}
-
-      {/* BACK TO TOP */}
-      {showBackToTop && !selectedItem && (
-        <button
-          type="button"
-          aria-label="Back to top"
-          onClick={scrollToTop}
-          className="
-            fixed bottom-6 right-6 z-50
-            h-12 w-12 rounded-full
-            border border-brand-soft
-            bg-brand text-white
-            shadow-card dark:shadow-card-dark
-            flex items-center justify-center
-            transition
-            hover:scale-110 hover:shadow-card-hover
-            focus:outline-none focus:ring-2 focus:ring-brand/40
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <polyline points="18 15 12 9 6 15" />
-          </svg>
-        </button>
-      )}
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };

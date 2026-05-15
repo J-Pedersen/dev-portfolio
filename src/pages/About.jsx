@@ -5,6 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs.jsx";
 import PageHeader from "../components/PageHeader.jsx";
 import Timeline from "../components/Timeline.jsx";
 import { timelineItems } from "../data/timeline.js";
+import BackToTopButton from "../components/BackToTopButton.jsx";
 
 const About = () => {
   const [openTimeline, setOpenTimeline] = useState(false);
@@ -201,6 +202,10 @@ const About = () => {
           <Timeline items={timelineItems} />
         </div>
       </div>
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import PageHeader from '../components/PageHeader.jsx';
 import ProjectCard from '../components/ProjectCard.jsx';
 import { projects } from '../data/projects.js';
 import Breadcrumbs from "../components/Breadcrumbs.jsx";
+import BackToTopButton from "../components/BackToTopButton.jsx";
 
 const Projects = () => {
   const featured = projects.filter((p) => p.type === 'featured');
@@ -51,6 +52,10 @@ const Projects = () => {
           </div>
         </section>
       )}
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };
