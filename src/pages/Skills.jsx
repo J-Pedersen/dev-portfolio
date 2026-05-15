@@ -5,6 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs.jsx";
 import Card from '../components/ui/Card.jsx';
 import CardHeader from '../components/ui/CardHeader.jsx';
 import CardBody from '../components/ui/CardBody.jsx';
+import BackToTopButton from "../components/BackToTopButton.jsx";
 
 const skills = {
   Languages: [
@@ -171,6 +172,10 @@ const Skills = () => {
           and maintain.
         </p>
       </section>
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };
