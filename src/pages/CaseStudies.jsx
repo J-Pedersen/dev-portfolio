@@ -33,6 +33,10 @@ const CaseStudies = () => {
           </div>
         </section>
       )}
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };
