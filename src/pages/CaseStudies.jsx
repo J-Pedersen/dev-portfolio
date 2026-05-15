@@ -2,6 +2,7 @@ import PageHeader from "../components/PageHeader.jsx";
 import { caseStudies } from "../data/caseStudies.js";
 import CaseStudyCard from "../components/CaseStudyCard.jsx";
 import Breadcrumbs from "../components/Breadcrumbs.jsx";
+import BackToTopButton from "../components/BackToTopButton.jsx";
 
 const CaseStudies = () => {
   const technical = caseStudies.filter((c) => c.category === "technical");
@@ -33,6 +34,10 @@ const CaseStudies = () => {
           </div>
         </section>
       )}
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };
