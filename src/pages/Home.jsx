@@ -5,6 +5,8 @@ import Card from '../components/ui/Card.jsx';
 import CardHeader from '../components/ui/CardHeader.jsx';
 import CardBody from '../components/ui/CardBody.jsx';
 import CardFooter from '../components/ui/CardFooter.jsx';
+import BackToTopButton from '../components/BackToTopButton.jsx';
+import BreadcrumbSpacer from "../components/BreadcrumbSpacer.jsx";
 
 const Home = () => {
   const featured = projects.filter((p) => p.type === 'featured').slice(0, 3);
@@ -26,6 +28,7 @@ const Home = () => {
 
   return (
     <div className="space-y-10">
+      <BreadcrumbSpacer />
       <section className="grid gap-8 md:grid-cols-[2fr,1.2fr] items-center">
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-brand mb-2">
@@ -184,6 +187,10 @@ const Home = () => {
           })}
         </div>
       </section>
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };
