@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
 import Breadcrumbs from "../components/Breadcrumbs.jsx";
+import BackToTopButton from "../components/BackToTopButton.jsx";
 
 const Contact = () => {
   const email = 'obsidiancodedesigns@gmail.com';
@@ -299,6 +300,10 @@ const Contact = () => {
           </p>
         </aside>
       </section>
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };

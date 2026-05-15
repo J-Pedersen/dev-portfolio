@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
 import Breadcrumbs from "../components/Breadcrumbs.jsx";
+import BackToTopButton from "../components/BackToTopButton.jsx";
 
 const Resume = () => {
   const base = import.meta.env.BASE_URL;
@@ -162,6 +163,10 @@ const Resume = () => {
           )}
         </div>
       </div>
+      <BackToTopButton
+        showAfter={500}
+        label="Back to Top"
+      />
     </div>
   );
 };
