@@ -297,7 +297,7 @@ const Gallery = () => {
                 ${
                   mediaFilter === type
                     ? "bg-brand text-white shadow-card dark:shadow-card-dark"
-                    : "bg-slate-100 text-slate-700 hover:bg-brand hover:text-white dark:bg-slate-900 dark:text-slate-300"
+                    : "bg-slate-100 text-slate-700 hover:bg-brand hover:text-white hover:border-brand-soft dark:bg-slate-900 dark:text-slate-300"
                 }
               `}
             >
