@@ -415,7 +415,9 @@ const Gallery = () => {
                     }}
                     className="
                       rounded-2xl overflow-hidden
-                      bg-brand-soft/30
+                      hover:text-brand
+                      hover:bg-brand-soft
+                      bg-brand-soft/40
                       border border-brand-soft
                       shadow-card dark:shadow-card-dark
                       dark:border-brand-soft
