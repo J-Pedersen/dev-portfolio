@@ -236,7 +236,7 @@ const MediaCarousel = ({ media = [] }) => {
                   bg-slate-100/90 dark:bg-slate-900/90
                   flex items-center justify-center
                   text-slate-800 dark:text-slate-100
-                  hover:border-brand hover:text-brand
+                  hover:dark:border-brand hover:dark:text-brand
                   transition
                 "
                 aria-label="Previous media"
