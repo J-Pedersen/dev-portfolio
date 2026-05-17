@@ -636,7 +636,7 @@ const Gallery = () => {
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                       <div
                         className="
-                          rounded-full bg-black/60 p-4 text-white
+                          rounded-full bg-brand p-4 text-white
                           backdrop-blur-sm transition group-hover:scale-110
                         "
                       >
