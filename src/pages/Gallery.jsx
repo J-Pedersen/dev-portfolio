@@ -637,7 +637,7 @@ const Gallery = () => {
                       <div
                         className="
                           rounded-full bg-brand-soft/60 hover:bg-brand p-4 text-white
-                          backdrop-blur-sm transition group-hover:scale-110
+                          backdrop-blur-sm
                         "
                       >
                         <svg
