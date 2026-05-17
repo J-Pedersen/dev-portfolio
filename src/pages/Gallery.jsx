@@ -416,7 +416,8 @@ const Gallery = () => {
                     className="
                       rounded-2xl overflow-hidden
                       hover:text-brand
-                      hover:bg-brand-soft
+                      hover:bg-brand-soft/60
+                      hover:border-brand-soft
                       bg-brand-soft/40
                       border border-brand-soft
                       shadow-card dark:shadow-card-dark
