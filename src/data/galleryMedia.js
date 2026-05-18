@@ -560,6 +560,7 @@ export const galleryImages = [
     src: `${base}screenshots/zelda-fansite-asp.net/Zelda-Fansite-ASP.net(VB)-Resources1.jpg`,
     title: "Resources Page",
   },
+
   // -------- OutsideDown Wordpress --------
   {
     project: "OutsideDown",
@@ -791,6 +792,64 @@ export const galleryImages = [
     title: "Contact Page 3",
   },
 
+  // -------- Bacchus Winery Python --------
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Arrival Dates.jpg`,
+    title: "Arrival Dates Report Output",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Delivery Report Code.png`,
+    title: "Delivery Report Code",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Distributor Report Code.png`,
+    title: "Distributor Report Code",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Distributor Report.jpg`,
+    title: "Distributor Report Output",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Employee Hours Worked Report Code.png`,
+    title: "Employee Hours Worked Report Code",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - ERD.png`,
+    title: "Entity Relationship Diagram",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Hours worked.jpg`,
+    title: "Hours Worked Report Output",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Monthly Sales Report Code.png`,
+    title: "Monthly Sales Report Code",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Monthly Sales.jpg`,
+    title: "Monthly Sales Report Output",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Wine Sold.jpg`,
+    title: "Wine Sold Report Output",
+  },
+  {
+    project: "Bacchus Winery",
+    src: `${base}screenshots/bacchus-winery-python/Bacchus Winery - Wines Sold Report Code.png`,
+    title: "Wines Sold Report Code",
+  },  
+
+
 ];
 
 export const galleryVideos = [
@@ -878,4 +937,10 @@ export const galleryVideos = [
     poster: `${base}screenshots/outsidedown-productions-wordpress/Outsidedown_Productions-Home1.png`,
     title: "OutsideDown",
   },
+  {
+    project: "Bacchus Winery",
+    src: `${base}videos/bacchus-winery-presentation.mp4`,
+    poster: `${base}screenshots/bacchus-winery-python/Bacchus-Winery-Home.jpg`,
+    title: "Bacchus Winery",
+  }, 
 ];
